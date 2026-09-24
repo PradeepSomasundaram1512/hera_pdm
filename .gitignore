@@ -14,3 +14,7 @@ results/_discarded_v0/
 results/*_stdout.txt
 paper/missfont.log
 paper/mfput.log
+.venv.nosync/
+data/raw.nosync/
+.venv
+data/raw
