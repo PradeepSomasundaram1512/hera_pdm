@@ -1,0 +1,1486 @@
+policy,eps,seed,fold,bearing,outcome,rul_at_alarm_s,lambda,esc_frac,bytes_per_snapshot,life_s
+"HERA-v3 (onset-gated, CRC)",0.1,0,0,Bearing1_1,premature,7080.0,4762.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,0,Bearing2_1,premature,29160.0,4762.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,0,Bearing3_1,premature,151980.0,4762.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,0,Bearing1_1,premature,7080.0,4762.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,0,Bearing2_1,premature,29160.0,4762.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,0,Bearing3_1,premature,151980.0,4762.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,0,Bearing1_1,premature,6900.0,4200.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,0,Bearing2_1,premature,29160.0,4200.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,0,Bearing3_1,premature,151980.0,4200.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,0,Bearing1_1,timely,2460.0,3772.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,0,Bearing2_1,premature,29160.0,3772.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,0,Bearing3_1,premature,151980.0,3772.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,0,Bearing1_1,timely,2460.0,3772.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,0,Bearing2_1,premature,29160.0,3772.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,0,Bearing3_1,premature,151980.0,3772.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,0,Bearing1_1,late,,2377.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,0,Bearing2_1,late,780.0,2377.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,0,Bearing3_1,premature,7260.0,2377.5,0.9992119779353822,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,0,Bearing1_1,premature,6480.0,6000.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,0,Bearing2_1,premature,28560.0,6000.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,0,Bearing3_1,premature,151380.0,6000.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,0,Bearing1_1,premature,6480.0,6000.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,0,Bearing2_1,premature,28560.0,6000.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,0,Bearing3_1,premature,151380.0,6000.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,0,Bearing1_1,premature,6480.0,5145.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,0,Bearing2_1,premature,28560.0,5145.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,0,Bearing3_1,premature,151380.0,5145.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,0,Bearing1_1,timely,2580.0,4200.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,0,Bearing2_1,premature,28140.0,4200.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,0,Bearing3_1,premature,145920.0,4200.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,0,Bearing1_1,timely,2580.0,4200.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,0,Bearing2_1,premature,28140.0,4200.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,0,Bearing3_1,premature,145920.0,4200.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,0,Bearing1_1,late,,2377.5,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,0,Bearing2_1,late,780.0,2377.5,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,0,Bearing3_1,premature,7260.0,2377.5,0.9952718676122931,124.0,152220.0
+"Always-cloud, CRC + burn-in",0.1,0,0,Bearing1_1,premature,6600.0,5145.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.1,0,0,Bearing2_1,premature,28680.0,5145.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.1,0,0,Bearing3_1,premature,151500.0,5145.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.15,0,0,Bearing1_1,premature,6600.0,5145.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.15,0,0,Bearing2_1,premature,28680.0,5145.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.15,0,0,Bearing3_1,premature,151500.0,5145.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.2,0,0,Bearing1_1,timely,2580.0,4200.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.2,0,0,Bearing2_1,premature,28140.0,4200.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.2,0,0,Bearing3_1,premature,151500.0,4200.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.25,0,0,Bearing1_1,timely,2520.0,4132.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.25,0,0,Bearing2_1,premature,28080.0,4132.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.25,0,0,Bearing3_1,premature,145860.0,4132.5,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.3,0,0,Bearing1_1,timely,2520.0,4132.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.3,0,0,Bearing2_1,premature,28080.0,4132.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.3,0,0,Bearing3_1,premature,145860.0,4132.5,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.4,0,0,Bearing1_1,late,,2377.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.4,0,0,Bearing2_1,late,780.0,2377.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.4,0,0,Bearing3_1,premature,7260.0,2377.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.1,0,0,Bearing1_1,premature,7200.0,4762.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.1,0,0,Bearing2_1,premature,29280.0,4762.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.1,0,0,Bearing3_1,premature,152100.0,4762.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.15,0,0,Bearing1_1,premature,7200.0,4762.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.15,0,0,Bearing2_1,premature,29280.0,4762.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.15,0,0,Bearing3_1,premature,152100.0,4762.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.2,0,0,Bearing1_1,premature,6900.0,4200.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.2,0,0,Bearing2_1,premature,29280.0,4200.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.2,0,0,Bearing3_1,premature,152100.0,4200.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.25,0,0,Bearing1_1,timely,2460.0,3772.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.25,0,0,Bearing2_1,premature,29280.0,3772.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.25,0,0,Bearing3_1,premature,152100.0,3772.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.3,0,0,Bearing1_1,timely,2460.0,3772.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.3,0,0,Bearing2_1,premature,29280.0,3772.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.3,0,0,Bearing3_1,premature,152100.0,3772.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.4,0,0,Bearing1_1,late,,2377.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.4,0,0,Bearing2_1,late,780.0,2377.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.4,0,0,Bearing3_1,premature,7260.0,2377.5,1.0,112.0,152220.0
+"Always-edge, CRC",0.1,0,0,Bearing1_1,premature,7020.0,1545.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.1,0,0,Bearing2_1,premature,29280.0,1545.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.1,0,0,Bearing3_1,premature,152100.0,1545.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.15,0,0,Bearing1_1,premature,7020.0,1545.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.15,0,0,Bearing2_1,premature,29280.0,1545.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.15,0,0,Bearing3_1,premature,152100.0,1545.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.2,0,0,Bearing1_1,premature,7020.0,1522.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.2,0,0,Bearing2_1,premature,29280.0,1522.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.2,0,0,Bearing3_1,premature,152100.0,1522.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.25,0,0,Bearing1_1,premature,6900.0,1275.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.25,0,0,Bearing2_1,premature,29280.0,1275.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.25,0,0,Bearing3_1,premature,152100.0,1275.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.3,0,0,Bearing1_1,premature,6900.0,1275.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.3,0,0,Bearing2_1,premature,29280.0,1275.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.3,0,0,Bearing3_1,premature,152100.0,1275.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.4,0,0,Bearing1_1,premature,6840.0,982.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.4,0,0,Bearing2_1,premature,29280.0,982.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.4,0,0,Bearing3_1,premature,152100.0,982.5,0.0,0.0,152220.0
+"Cloud point, fixed thr. H_p",,0,0,Bearing1_1,late,,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_p",,0,0,Bearing2_1,late,780.0,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_p",,0,0,Bearing3_1,premature,7260.0,0.0,1.0,112.0,152220.0
+"Cloud point, fixed thr. H_c",,0,0,Bearing1_1,late,,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_c",,0,0,Bearing2_1,late,,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_c",,0,0,Bearing3_1,late,,0.0,1.0,112.0,152220.0
+Anomaly threshold,,0,0,Bearing1_1,late,,0.0,0.0,0.0,7320.0
+Anomaly threshold,,0,0,Bearing2_1,late,,0.0,0.0,0.0,29400.0
+Anomaly threshold,,0,0,Bearing3_1,late,,0.0,0.0,0.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,1,Bearing1_2,premature,9360.0,4582.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,1,Bearing2_2,premature,9360.0,4582.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,1,Bearing3_2,premature,149460.0,4582.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,1,Bearing1_2,premature,9360.0,4582.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,1,Bearing2_2,premature,9360.0,4582.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,1,Bearing3_2,premature,149460.0,4582.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,1,Bearing1_2,premature,9360.0,3952.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,1,Bearing2_2,premature,9360.0,3952.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,1,Bearing3_2,premature,148680.0,3952.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,1,Bearing1_2,premature,9360.0,3525.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,1,Bearing2_2,premature,9360.0,3525.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,1,Bearing3_2,premature,148500.0,3525.0,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,1,Bearing1_2,premature,9360.0,3525.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,1,Bearing2_2,premature,9360.0,3525.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,1,Bearing3_2,premature,148500.0,3525.0,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,1,Bearing1_2,timely,5700.0,1590.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,1,Bearing2_2,premature,6660.0,1590.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,1,Bearing3_2,late,,1590.0,0.999198717948718,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,1,Bearing1_2,premature,8760.0,4852.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,1,Bearing2_2,premature,8760.0,4852.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,1,Bearing3_2,premature,148860.0,4852.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,1,Bearing1_2,premature,8760.0,4852.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,1,Bearing2_2,premature,8760.0,4852.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,1,Bearing3_2,premature,148860.0,4852.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,1,Bearing1_2,premature,7500.0,3952.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,1,Bearing2_2,premature,8760.0,3952.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,1,Bearing3_2,premature,148680.0,3952.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,1,Bearing1_2,premature,6780.0,3525.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,1,Bearing2_2,premature,8280.0,3525.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,1,Bearing3_2,premature,148500.0,3525.0,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,1,Bearing1_2,premature,6780.0,3525.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,1,Bearing2_2,premature,8280.0,3525.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,1,Bearing3_2,premature,148500.0,3525.0,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,1,Bearing1_2,timely,5700.0,1590.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,1,Bearing2_2,premature,6660.0,1590.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,1,Bearing3_2,late,,1590.0,0.9951923076923077,124.0,149700.0
+"Always-cloud, CRC + burn-in",0.1,0,1,Bearing1_2,premature,8880.0,4740.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,0,1,Bearing2_2,premature,8880.0,4740.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,0,1,Bearing3_2,premature,148980.0,4740.0,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.15,0,1,Bearing1_2,premature,8880.0,4740.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,0,1,Bearing2_2,premature,8880.0,4740.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,0,1,Bearing3_2,premature,148980.0,4740.0,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.2,0,1,Bearing1_2,premature,7500.0,3952.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,0,1,Bearing2_2,premature,8880.0,3952.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,0,1,Bearing3_2,premature,148680.0,3952.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.25,0,1,Bearing1_2,premature,6780.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,0,1,Bearing2_2,premature,8280.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,0,1,Bearing3_2,premature,148500.0,3525.0,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.3,0,1,Bearing1_2,premature,6780.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,0,1,Bearing2_2,premature,8280.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,0,1,Bearing3_2,premature,148500.0,3525.0,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.4,0,1,Bearing1_2,timely,5700.0,1590.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,0,1,Bearing2_2,premature,6660.0,1590.0,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,0,1,Bearing3_2,late,,1590.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.1,0,1,Bearing1_2,premature,9480.0,4470.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,0,1,Bearing2_2,premature,9480.0,4470.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,0,1,Bearing3_2,premature,149580.0,4470.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.15,0,1,Bearing1_2,premature,9480.0,4470.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,0,1,Bearing2_2,premature,9480.0,4470.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,0,1,Bearing3_2,premature,149580.0,4470.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.2,0,1,Bearing1_2,premature,9480.0,3952.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,0,1,Bearing2_2,premature,9480.0,3952.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,0,1,Bearing3_2,premature,148680.0,3952.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.25,0,1,Bearing1_2,premature,9480.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,0,1,Bearing2_2,premature,9480.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,0,1,Bearing3_2,premature,148500.0,3525.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.3,0,1,Bearing1_2,premature,9480.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,0,1,Bearing2_2,premature,9480.0,3525.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,0,1,Bearing3_2,premature,148500.0,3525.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.4,0,1,Bearing1_2,timely,5700.0,1590.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,0,1,Bearing2_2,premature,6660.0,1590.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,0,1,Bearing3_2,late,,1590.0,1.0,112.0,149700.0
+"Always-edge, CRC",0.1,0,1,Bearing1_2,premature,9480.0,1635.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,0,1,Bearing2_2,premature,9480.0,1635.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,0,1,Bearing3_2,premature,149220.0,1635.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.15,0,1,Bearing1_2,premature,9480.0,1635.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,0,1,Bearing2_2,premature,9480.0,1635.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,0,1,Bearing3_2,premature,149220.0,1635.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.2,0,1,Bearing1_2,premature,9480.0,1522.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,0,1,Bearing2_2,premature,9480.0,1522.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,0,1,Bearing3_2,premature,149220.0,1522.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.25,0,1,Bearing1_2,premature,9480.0,1027.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,0,1,Bearing2_2,premature,9480.0,1027.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,0,1,Bearing3_2,premature,149100.0,1027.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.3,0,1,Bearing1_2,premature,9480.0,1027.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,0,1,Bearing2_2,premature,9480.0,1027.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,0,1,Bearing3_2,premature,149100.0,1027.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.4,0,1,Bearing1_2,timely,3840.0,510.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,0,1,Bearing2_2,timely,2220.0,510.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,0,1,Bearing3_2,premature,148380.0,510.0,0.0,0.0,149700.0
+"Cloud point, fixed thr. H_p",,0,1,Bearing1_2,premature,9480.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,0,1,Bearing2_2,premature,7560.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,0,1,Bearing3_2,late,,0.0,1.0,112.0,149700.0
+"Cloud point, fixed thr. H_c",,0,1,Bearing1_2,late,,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,0,1,Bearing2_2,premature,6300.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,0,1,Bearing3_2,late,,0.0,1.0,112.0,149700.0
+Anomaly threshold,,0,1,Bearing1_2,timely,5760.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,0,1,Bearing2_2,premature,6120.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,0,1,Bearing3_2,late,,0.0,0.0,0.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,2,Bearing1_3,premature,9180.0,4672.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,2,Bearing2_3,premature,31680.0,4672.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,2,Bearing3_3,premature,21960.0,4672.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,2,Bearing1_3,premature,9180.0,4672.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,2,Bearing2_3,premature,31680.0,4672.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,2,Bearing3_3,premature,21960.0,4672.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,2,Bearing1_3,premature,9180.0,4312.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,2,Bearing2_3,premature,31680.0,4312.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,2,Bearing3_3,premature,21960.0,4312.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,2,Bearing1_3,timely,5640.0,3277.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,2,Bearing2_3,premature,23940.0,3277.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,2,Bearing3_3,timely,1500.0,3277.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,2,Bearing1_3,timely,5640.0,3277.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,2,Bearing2_3,premature,23940.0,3277.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,2,Bearing3_3,timely,1500.0,3277.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,2,Bearing1_3,timely,5280.0,1477.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,2,Bearing2_3,premature,12720.0,1477.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,2,Bearing3_3,late,600.0,1477.5,0.9946091644204852,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,2,Bearing1_3,premature,8580.0,4672.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,2,Bearing2_3,premature,31080.0,4672.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,2,Bearing3_3,premature,21360.0,4672.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,2,Bearing1_3,premature,8580.0,4672.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,2,Bearing2_3,premature,31080.0,4672.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,2,Bearing3_3,premature,21360.0,4672.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,2,Bearing1_3,premature,8580.0,4312.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,2,Bearing2_3,premature,31080.0,4312.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,2,Bearing3_3,premature,21360.0,4312.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,2,Bearing1_3,timely,5640.0,3277.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,2,Bearing2_3,premature,23940.0,3277.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,2,Bearing3_3,timely,1500.0,3277.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,2,Bearing1_3,timely,5640.0,3277.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,2,Bearing2_3,premature,23940.0,3277.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,2,Bearing3_3,timely,1500.0,3277.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,2,Bearing1_3,timely,5280.0,1477.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,2,Bearing2_3,premature,12720.0,1477.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,2,Bearing3_3,late,600.0,1477.5,0.967654986522911,124.0,22200.0
+"Always-cloud, CRC + burn-in",0.1,0,2,Bearing1_3,premature,8700.0,4672.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.1,0,2,Bearing2_3,premature,31200.0,4672.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.1,0,2,Bearing3_3,premature,21480.0,4672.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.15,0,2,Bearing1_3,premature,8700.0,4672.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.15,0,2,Bearing2_3,premature,31200.0,4672.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.15,0,2,Bearing3_3,premature,21480.0,4672.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.2,0,2,Bearing1_3,premature,8700.0,4312.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.2,0,2,Bearing2_3,premature,31200.0,4312.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.2,0,2,Bearing3_3,premature,21480.0,4312.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.25,0,2,Bearing1_3,timely,5640.0,3277.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.25,0,2,Bearing2_3,premature,23940.0,3277.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.25,0,2,Bearing3_3,timely,1500.0,3277.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.3,0,2,Bearing1_3,timely,5640.0,3277.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.3,0,2,Bearing2_3,premature,23940.0,3277.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.3,0,2,Bearing3_3,timely,1500.0,3277.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.4,0,2,Bearing1_3,timely,5280.0,1477.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.4,0,2,Bearing2_3,premature,12720.0,1477.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.4,0,2,Bearing3_3,late,600.0,1477.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.1,0,2,Bearing1_3,premature,9300.0,4672.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.1,0,2,Bearing2_3,premature,31800.0,4672.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.1,0,2,Bearing3_3,premature,22080.0,4672.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.15,0,2,Bearing1_3,premature,9300.0,4672.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.15,0,2,Bearing2_3,premature,31800.0,4672.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.15,0,2,Bearing3_3,premature,22080.0,4672.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.2,0,2,Bearing1_3,premature,9300.0,4312.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.2,0,2,Bearing2_3,premature,31800.0,4312.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.2,0,2,Bearing3_3,premature,22080.0,4312.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.25,0,2,Bearing1_3,timely,5640.0,3142.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.25,0,2,Bearing2_3,premature,23160.0,3142.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.25,0,2,Bearing3_3,timely,1500.0,3142.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.3,0,2,Bearing1_3,timely,5640.0,3142.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.3,0,2,Bearing2_3,premature,23160.0,3142.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.3,0,2,Bearing3_3,timely,1500.0,3142.5,1.0,112.0,22200.0
+"Always-cloud, CRC",0.4,0,2,Bearing1_3,timely,5280.0,1477.5,1.0,112.0,9420.0
+"Always-cloud, CRC",0.4,0,2,Bearing2_3,premature,12720.0,1477.5,1.0,112.0,31920.0
+"Always-cloud, CRC",0.4,0,2,Bearing3_3,late,600.0,1477.5,1.0,112.0,22200.0
+"Always-edge, CRC",0.1,0,2,Bearing1_3,premature,9300.0,1927.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.1,0,2,Bearing2_3,premature,31620.0,1927.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.1,0,2,Bearing3_3,premature,21960.0,1927.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.15,0,2,Bearing1_3,premature,9300.0,1927.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.15,0,2,Bearing2_3,premature,31620.0,1927.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.15,0,2,Bearing3_3,premature,21960.0,1927.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.2,0,2,Bearing1_3,premature,9180.0,1815.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.2,0,2,Bearing2_3,premature,31620.0,1815.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.2,0,2,Bearing3_3,premature,21900.0,1815.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.25,0,2,Bearing1_3,premature,9000.0,1140.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.25,0,2,Bearing2_3,premature,31440.0,1140.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.25,0,2,Bearing3_3,late,0.0,1140.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.3,0,2,Bearing1_3,premature,9000.0,1140.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.3,0,2,Bearing2_3,premature,31440.0,1140.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.3,0,2,Bearing3_3,late,0.0,1140.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.4,0,2,Bearing1_3,late,,555.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.4,0,2,Bearing2_3,late,,555.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.4,0,2,Bearing3_3,late,,555.0,0.0,0.0,22200.0
+"Cloud point, fixed thr. H_p",,0,2,Bearing1_3,timely,5460.0,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_p",,0,2,Bearing2_3,premature,22560.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_p",,0,2,Bearing3_3,timely,1260.0,0.0,1.0,112.0,22200.0
+"Cloud point, fixed thr. H_c",,0,2,Bearing1_3,timely,2520.0,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_c",,0,2,Bearing2_3,premature,12180.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_c",,0,2,Bearing3_3,late,,0.0,1.0,112.0,22200.0
+Anomaly threshold,,0,2,Bearing1_3,timely,3360.0,0.0,0.0,0.0,9420.0
+Anomaly threshold,,0,2,Bearing2_3,premature,12300.0,0.0,0.0,0.0,31920.0
+Anomaly threshold,,0,2,Bearing3_3,timely,1320.0,0.0,0.0,0.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,3,Bearing1_4,premature,7020.0,4785.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,3,Bearing2_4,timely,2220.0,4785.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,3,Bearing3_4,premature,90180.0,4785.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,3,Bearing1_4,premature,7020.0,4785.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,3,Bearing2_4,timely,2220.0,4785.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,3,Bearing3_4,premature,90180.0,4785.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,3,Bearing1_4,late,,3052.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,3,Bearing2_4,late,360.0,3052.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,3,Bearing3_4,timely,5340.0,3052.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,3,Bearing1_4,late,,3007.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,3,Bearing2_4,late,360.0,3007.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,3,Bearing3_4,timely,5340.0,3007.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,3,Bearing1_4,late,,3007.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,3,Bearing2_4,late,360.0,3007.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,3,Bearing3_4,timely,5340.0,3007.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,3,Bearing1_4,late,,1635.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,3,Bearing2_4,late,0.0,1635.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,3,Bearing3_4,timely,4020.0,1635.0,0.9986798679867986,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,3,Bearing1_4,premature,6420.0,4920.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,3,Bearing2_4,timely,1620.0,4920.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,3,Bearing3_4,premature,90000.0,4920.0,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,3,Bearing1_4,premature,6420.0,4920.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,3,Bearing2_4,timely,1620.0,4920.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,3,Bearing3_4,premature,90000.0,4920.0,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,3,Bearing1_4,late,,3052.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,3,Bearing2_4,late,360.0,3052.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,3,Bearing3_4,timely,5340.0,3052.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,3,Bearing1_4,late,,3007.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,3,Bearing2_4,late,360.0,3007.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,3,Bearing3_4,timely,5340.0,3007.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,3,Bearing1_4,late,,3007.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,3,Bearing2_4,late,360.0,3007.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,3,Bearing3_4,timely,5340.0,3007.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,3,Bearing1_4,late,,1635.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,3,Bearing2_4,late,0.0,1635.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,3,Bearing3_4,timely,4020.0,1635.0,0.9920792079207921,124.0,90840.0
+"Always-cloud, CRC + burn-in",0.1,0,3,Bearing1_4,premature,6540.0,4852.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.1,0,3,Bearing2_4,timely,1740.0,4852.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.1,0,3,Bearing3_4,premature,90120.0,4852.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.15,0,3,Bearing1_4,premature,6540.0,4852.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.15,0,3,Bearing2_4,timely,1740.0,4852.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.15,0,3,Bearing3_4,premature,90120.0,4852.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.2,0,3,Bearing1_4,late,,3052.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.2,0,3,Bearing2_4,late,360.0,3052.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.2,0,3,Bearing3_4,timely,5340.0,3052.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.25,0,3,Bearing1_4,late,,3007.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.25,0,3,Bearing2_4,late,360.0,3007.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.25,0,3,Bearing3_4,timely,5340.0,3007.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.3,0,3,Bearing1_4,late,,3007.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.3,0,3,Bearing2_4,late,360.0,3007.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.3,0,3,Bearing3_4,timely,5340.0,3007.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.4,0,3,Bearing1_4,late,,1635.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.4,0,3,Bearing2_4,late,0.0,1635.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.4,0,3,Bearing3_4,timely,4020.0,1635.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.1,0,3,Bearing1_4,premature,7140.0,4560.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.1,0,3,Bearing2_4,timely,1980.0,4560.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.1,0,3,Bearing3_4,premature,90120.0,4560.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.15,0,3,Bearing1_4,premature,7140.0,4560.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.15,0,3,Bearing2_4,timely,1980.0,4560.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.15,0,3,Bearing3_4,premature,90120.0,4560.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.2,0,3,Bearing1_4,premature,7140.0,3052.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.2,0,3,Bearing2_4,late,360.0,3052.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.2,0,3,Bearing3_4,timely,5340.0,3052.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.25,0,3,Bearing1_4,premature,7140.0,3007.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.25,0,3,Bearing2_4,late,360.0,3007.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.25,0,3,Bearing3_4,timely,5340.0,3007.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.3,0,3,Bearing1_4,premature,7140.0,3007.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.3,0,3,Bearing2_4,late,360.0,3007.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.3,0,3,Bearing3_4,timely,5340.0,3007.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.4,0,3,Bearing1_4,late,,1635.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.4,0,3,Bearing2_4,late,0.0,1635.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.4,0,3,Bearing3_4,timely,4020.0,1635.0,1.0,112.0,90840.0
+"Always-edge, CRC",0.1,0,3,Bearing1_4,premature,7020.0,2152.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.1,0,3,Bearing2_4,timely,2220.0,2152.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.1,0,3,Bearing3_4,premature,90720.0,2152.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.15,0,3,Bearing1_4,premature,7020.0,2152.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.15,0,3,Bearing2_4,timely,2220.0,2152.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.15,0,3,Bearing3_4,premature,90720.0,2152.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.2,0,3,Bearing1_4,premature,6960.0,1477.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.2,0,3,Bearing2_4,timely,2100.0,1477.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.2,0,3,Bearing3_4,premature,90720.0,1477.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.25,0,3,Bearing1_4,late,,982.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.25,0,3,Bearing2_4,late,,982.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.25,0,3,Bearing3_4,late,,982.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.3,0,3,Bearing1_4,late,,982.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.3,0,3,Bearing2_4,late,,982.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.3,0,3,Bearing3_4,late,,982.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.4,0,3,Bearing1_4,late,,825.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.4,0,3,Bearing2_4,late,,825.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.4,0,3,Bearing3_4,late,,825.0,0.0,0.0,90840.0
+"Cloud point, fixed thr. H_p",,0,3,Bearing1_4,late,,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_p",,0,3,Bearing2_4,late,240.0,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_p",,0,3,Bearing3_4,timely,4260.0,0.0,1.0,112.0,90840.0
+"Cloud point, fixed thr. H_c",,0,3,Bearing1_4,late,,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_c",,0,3,Bearing2_4,late,,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_c",,0,3,Bearing3_4,timely,2580.0,0.0,1.0,112.0,90840.0
+Anomaly threshold,,0,3,Bearing1_4,late,,0.0,0.0,0.0,7260.0
+Anomaly threshold,,0,3,Bearing2_4,late,,0.0,0.0,0.0,2460.0
+Anomaly threshold,,0,3,Bearing3_4,late,,0.0,0.0,0.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,4,Bearing1_5,timely,2820.0,4695.0,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,4,Bearing2_5,premature,19380.0,4695.0,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.1,0,4,Bearing3_5,premature,6540.0,4695.0,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,4,Bearing1_5,timely,2820.0,4695.0,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,4,Bearing2_5,premature,19380.0,4695.0,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.15,0,4,Bearing3_5,premature,6540.0,4695.0,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,4,Bearing1_5,late,840.0,4087.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,4,Bearing2_5,premature,11040.0,4087.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.2,0,4,Bearing3_5,timely,6000.0,4087.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,4,Bearing1_5,late,,2400.0,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,4,Bearing2_5,premature,8580.0,2400.0,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.25,0,4,Bearing3_5,timely,5160.0,2400.0,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,4,Bearing1_5,late,,2400.0,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,4,Bearing2_5,premature,8580.0,2400.0,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.3,0,4,Bearing3_5,timely,5160.0,2400.0,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,4,Bearing1_5,late,,2332.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,4,Bearing2_5,premature,8580.0,2332.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.4,0,4,Bearing3_5,timely,5160.0,2332.5,0.9824561403508771,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,4,Bearing1_5,timely,2040.0,4785.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,4,Bearing2_5,premature,9420.0,4785.0,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,0,4,Bearing3_5,timely,5940.0,4785.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,4,Bearing1_5,timely,2040.0,4785.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,4,Bearing2_5,premature,9420.0,4785.0,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,0,4,Bearing3_5,timely,5940.0,4785.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,4,Bearing1_5,late,840.0,4087.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,4,Bearing2_5,premature,9420.0,4087.5,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,0,4,Bearing3_5,timely,5940.0,4087.5,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,4,Bearing1_5,late,,2400.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,4,Bearing2_5,premature,8580.0,2400.0,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,0,4,Bearing3_5,timely,5160.0,2400.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,4,Bearing1_5,late,,2400.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,4,Bearing2_5,premature,8580.0,2400.0,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,0,4,Bearing3_5,timely,5160.0,2400.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,4,Bearing1_5,late,,2332.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,4,Bearing2_5,premature,8580.0,2332.5,0.471976401179941,75.10324483775811,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,0,4,Bearing3_5,timely,5160.0,2332.5,0.8947368421052632,124.0,6780.0
+"Always-cloud, CRC + burn-in",0.1,0,4,Bearing1_5,timely,2340.0,4785.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.1,0,4,Bearing2_5,premature,19560.0,4785.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.1,0,4,Bearing3_5,premature,6060.0,4785.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.15,0,4,Bearing1_5,timely,2340.0,4785.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.15,0,4,Bearing2_5,premature,19560.0,4785.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.15,0,4,Bearing3_5,premature,6060.0,4785.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.2,0,4,Bearing1_5,late,840.0,4087.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.2,0,4,Bearing2_5,premature,11040.0,4087.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.2,0,4,Bearing3_5,timely,6000.0,4087.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.25,0,4,Bearing1_5,late,,2400.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.25,0,4,Bearing2_5,premature,8580.0,2400.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.25,0,4,Bearing3_5,timely,5160.0,2400.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.3,0,4,Bearing1_5,late,,2400.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.3,0,4,Bearing2_5,premature,8580.0,2400.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.3,0,4,Bearing3_5,timely,5160.0,2400.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.4,0,4,Bearing1_5,late,,2332.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.4,0,4,Bearing2_5,premature,8580.0,2332.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.4,0,4,Bearing3_5,timely,5160.0,2332.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.1,0,4,Bearing1_5,timely,2940.0,4695.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.1,0,4,Bearing2_5,premature,19380.0,4695.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.1,0,4,Bearing3_5,premature,6660.0,4695.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.15,0,4,Bearing1_5,timely,2940.0,4695.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.15,0,4,Bearing2_5,premature,19380.0,4695.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.15,0,4,Bearing3_5,premature,6660.0,4695.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.2,0,4,Bearing1_5,late,780.0,3885.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.2,0,4,Bearing2_5,premature,10560.0,3885.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.2,0,4,Bearing3_5,timely,5940.0,3885.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.25,0,4,Bearing1_5,late,,2400.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.25,0,4,Bearing2_5,premature,8580.0,2400.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.25,0,4,Bearing3_5,timely,5160.0,2400.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.3,0,4,Bearing1_5,late,,2400.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.3,0,4,Bearing2_5,premature,8580.0,2400.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.3,0,4,Bearing3_5,timely,5160.0,2400.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.4,0,4,Bearing1_5,late,,2332.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.4,0,4,Bearing2_5,premature,8580.0,2332.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.4,0,4,Bearing3_5,timely,5160.0,2332.5,1.0,112.0,6780.0
+"Always-edge, CRC",0.1,0,4,Bearing1_5,timely,2820.0,1905.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.1,0,4,Bearing2_5,premature,19920.0,1905.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.1,0,4,Bearing3_5,premature,6660.0,1905.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.15,0,4,Bearing1_5,timely,2820.0,1905.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.15,0,4,Bearing2_5,premature,19920.0,1905.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.15,0,4,Bearing3_5,premature,6660.0,1905.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.2,0,4,Bearing1_5,timely,2820.0,1860.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.2,0,4,Bearing2_5,premature,19920.0,1860.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.2,0,4,Bearing3_5,premature,6660.0,1860.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.25,0,4,Bearing1_5,late,,1005.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.25,0,4,Bearing2_5,timely,4680.0,1005.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.25,0,4,Bearing3_5,premature,6120.0,1005.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.3,0,4,Bearing1_5,late,,1005.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.3,0,4,Bearing2_5,timely,4680.0,1005.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.3,0,4,Bearing3_5,premature,6120.0,1005.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.4,0,4,Bearing1_5,late,,915.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.4,0,4,Bearing2_5,timely,4680.0,915.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.4,0,4,Bearing3_5,late,,915.0,0.0,0.0,6780.0
+"Cloud point, fixed thr. H_p",,0,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_p",,0,4,Bearing2_5,premature,8580.0,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_p",,0,4,Bearing3_5,timely,5160.0,0.0,1.0,112.0,6780.0
+"Cloud point, fixed thr. H_c",,0,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_c",,0,4,Bearing2_5,timely,5760.0,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_c",,0,4,Bearing3_5,late,,0.0,1.0,112.0,6780.0
+Anomaly threshold,,0,4,Bearing1_5,late,,0.0,0.0,0.0,3060.0
+Anomaly threshold,,0,4,Bearing2_5,late,,0.0,0.0,0.0,20280.0
+Anomaly threshold,,0,4,Bearing3_5,late,,0.0,0.0,0.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,0,Bearing1_1,premature,6840.0,4290.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,0,Bearing2_1,premature,29160.0,4290.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,0,Bearing3_1,premature,151980.0,4290.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,0,Bearing1_1,premature,6840.0,4290.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,0,Bearing2_1,premature,29160.0,4290.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,0,Bearing3_1,premature,151980.0,4290.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,0,Bearing1_1,timely,2580.0,3885.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,0,Bearing2_1,premature,29160.0,3885.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,0,Bearing3_1,premature,151980.0,3885.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,0,Bearing1_1,timely,2460.0,3525.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,0,Bearing2_1,timely,2040.0,3525.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,0,Bearing3_1,premature,151980.0,3525.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,0,Bearing1_1,timely,2460.0,3525.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,0,Bearing2_1,timely,2040.0,3525.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,0,Bearing3_1,premature,151980.0,3525.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,0,Bearing1_1,late,,1050.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,0,Bearing2_1,late,,1050.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,0,Bearing3_1,late,240.0,1050.0,0.9992119779353822,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,0,Bearing1_1,premature,6480.0,4582.5,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,0,Bearing2_1,premature,28560.0,4582.5,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,0,Bearing3_1,premature,151380.0,4582.5,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,0,Bearing1_1,premature,6480.0,4582.5,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,0,Bearing2_1,premature,28560.0,4582.5,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,0,Bearing3_1,premature,151380.0,4582.5,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,0,Bearing1_1,premature,6480.0,4290.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,0,Bearing2_1,premature,27960.0,4290.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,0,Bearing3_1,premature,151380.0,4290.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,0,Bearing1_1,timely,2520.0,3750.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,0,Bearing2_1,timely,2040.0,3750.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,0,Bearing3_1,premature,144960.0,3750.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,0,Bearing1_1,timely,2520.0,3750.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,0,Bearing2_1,timely,2040.0,3750.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,0,Bearing3_1,premature,144960.0,3750.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,0,Bearing1_1,late,,1050.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,0,Bearing2_1,late,,1050.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,0,Bearing3_1,late,240.0,1050.0,0.9952718676122931,124.0,152220.0
+"Always-cloud, CRC + burn-in",0.1,1,0,Bearing1_1,premature,6600.0,4447.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.1,1,0,Bearing2_1,premature,28140.0,4447.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.1,1,0,Bearing3_1,premature,151500.0,4447.5,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.15,1,0,Bearing1_1,premature,6600.0,4447.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.15,1,0,Bearing2_1,premature,28140.0,4447.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.15,1,0,Bearing3_1,premature,151500.0,4447.5,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.2,1,0,Bearing1_1,premature,6600.0,4290.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.2,1,0,Bearing2_1,premature,27960.0,4290.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.2,1,0,Bearing3_1,premature,151500.0,4290.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.25,1,0,Bearing1_1,timely,2520.0,3750.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.25,1,0,Bearing2_1,timely,2040.0,3750.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.25,1,0,Bearing3_1,premature,144960.0,3750.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.3,1,0,Bearing1_1,timely,2520.0,3750.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.3,1,0,Bearing2_1,timely,2040.0,3750.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.3,1,0,Bearing3_1,premature,144960.0,3750.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.4,1,0,Bearing1_1,late,,1050.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.4,1,0,Bearing2_1,late,,1050.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.4,1,0,Bearing3_1,late,240.0,1050.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.1,1,0,Bearing1_1,premature,6840.0,4290.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.1,1,0,Bearing2_1,premature,29280.0,4290.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.1,1,0,Bearing3_1,premature,152100.0,4290.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.15,1,0,Bearing1_1,premature,6840.0,4290.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.15,1,0,Bearing2_1,premature,29280.0,4290.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.15,1,0,Bearing3_1,premature,152100.0,4290.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.2,1,0,Bearing1_1,timely,2520.0,3750.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.2,1,0,Bearing2_1,premature,29280.0,3750.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.2,1,0,Bearing3_1,premature,152100.0,3750.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.25,1,0,Bearing1_1,timely,2460.0,3435.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.25,1,0,Bearing2_1,premature,29280.0,3435.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.25,1,0,Bearing3_1,premature,152100.0,3435.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.3,1,0,Bearing1_1,timely,2460.0,3435.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.3,1,0,Bearing2_1,premature,29280.0,3435.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.3,1,0,Bearing3_1,premature,152100.0,3435.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.4,1,0,Bearing1_1,late,,892.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.4,1,0,Bearing2_1,late,,892.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.4,1,0,Bearing3_1,late,,892.5,1.0,112.0,152220.0
+"Always-edge, CRC",0.1,1,0,Bearing1_1,premature,6900.0,1297.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.1,1,0,Bearing2_1,premature,29280.0,1297.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.1,1,0,Bearing3_1,premature,152100.0,1297.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.15,1,0,Bearing1_1,premature,6900.0,1297.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.15,1,0,Bearing2_1,premature,29280.0,1297.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.15,1,0,Bearing3_1,premature,152100.0,1297.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.2,1,0,Bearing1_1,premature,6840.0,1185.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.2,1,0,Bearing2_1,premature,29280.0,1185.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.2,1,0,Bearing3_1,premature,152100.0,1185.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.25,1,0,Bearing1_1,premature,6840.0,1095.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.25,1,0,Bearing2_1,premature,29280.0,1095.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.25,1,0,Bearing3_1,premature,152100.0,1095.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.3,1,0,Bearing1_1,premature,6840.0,1095.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.3,1,0,Bearing2_1,premature,29280.0,1095.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.3,1,0,Bearing3_1,premature,152100.0,1095.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.4,1,0,Bearing1_1,premature,6840.0,892.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.4,1,0,Bearing2_1,premature,29280.0,892.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.4,1,0,Bearing3_1,premature,152100.0,892.5,0.0,0.0,152220.0
+"Cloud point, fixed thr. H_p",,1,0,Bearing1_1,timely,2280.0,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_p",,1,0,Bearing2_1,timely,1860.0,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_p",,1,0,Bearing3_1,premature,6120.0,0.0,1.0,112.0,152220.0
+"Cloud point, fixed thr. H_c",,1,0,Bearing1_1,late,,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_c",,1,0,Bearing2_1,late,,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_c",,1,0,Bearing3_1,late,,0.0,1.0,112.0,152220.0
+Anomaly threshold,,1,0,Bearing1_1,late,,0.0,0.0,0.0,7320.0
+Anomaly threshold,,1,0,Bearing2_1,late,,0.0,0.0,0.0,29400.0
+Anomaly threshold,,1,0,Bearing3_1,late,,0.0,0.0,0.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,1,Bearing1_2,premature,9360.0,4672.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,1,Bearing2_2,premature,9360.0,4672.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,1,Bearing3_2,premature,149460.0,4672.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,1,Bearing1_2,premature,9360.0,4672.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,1,Bearing2_2,premature,9360.0,4672.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,1,Bearing3_2,premature,149460.0,4672.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,1,Bearing1_2,premature,9360.0,3705.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,1,Bearing2_2,premature,9360.0,3705.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,1,Bearing3_2,premature,148860.0,3705.0,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,1,Bearing1_2,premature,9360.0,3142.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,1,Bearing2_2,premature,9360.0,3142.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,1,Bearing3_2,premature,148320.0,3142.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,1,Bearing1_2,premature,9360.0,3142.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,1,Bearing2_2,premature,9360.0,3142.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,1,Bearing3_2,premature,148320.0,3142.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,1,Bearing1_2,timely,4260.0,1410.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,1,Bearing2_2,premature,7320.0,1410.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,1,Bearing3_2,late,,1410.0,0.999198717948718,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,1,Bearing1_2,premature,8760.0,4672.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,1,Bearing2_2,premature,8760.0,4672.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,1,Bearing3_2,premature,148860.0,4672.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,1,Bearing1_2,premature,8760.0,4672.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,1,Bearing2_2,premature,8760.0,4672.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,1,Bearing3_2,premature,148860.0,4672.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,1,Bearing1_2,premature,7620.0,4492.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,1,Bearing2_2,premature,8760.0,4492.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,1,Bearing3_2,premature,148860.0,4492.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,1,Bearing1_2,premature,7560.0,3997.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,1,Bearing2_2,premature,8760.0,3997.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,1,Bearing3_2,premature,148860.0,3997.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,1,Bearing1_2,premature,7560.0,3997.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,1,Bearing2_2,premature,8760.0,3997.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,1,Bearing3_2,premature,148860.0,3997.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,1,Bearing1_2,timely,5580.0,1567.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,1,Bearing2_2,premature,7320.0,1567.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,1,Bearing3_2,late,,1567.5,0.9951923076923077,124.0,149700.0
+"Always-cloud, CRC + burn-in",0.1,1,1,Bearing1_2,premature,8880.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,1,1,Bearing2_2,premature,8880.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,1,1,Bearing3_2,premature,148980.0,4672.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.15,1,1,Bearing1_2,premature,8880.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,1,1,Bearing2_2,premature,8880.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,1,1,Bearing3_2,premature,148980.0,4672.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.2,1,1,Bearing1_2,premature,7620.0,4402.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,1,1,Bearing2_2,premature,8880.0,4402.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,1,1,Bearing3_2,premature,148980.0,4402.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.25,1,1,Bearing1_2,premature,7560.0,3997.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,1,1,Bearing2_2,premature,8880.0,3997.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,1,1,Bearing3_2,premature,148980.0,3997.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.3,1,1,Bearing1_2,premature,7560.0,3997.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,1,1,Bearing2_2,premature,8880.0,3997.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,1,1,Bearing3_2,premature,148980.0,3997.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.4,1,1,Bearing1_2,timely,5580.0,1567.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,1,1,Bearing2_2,premature,7320.0,1567.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,1,1,Bearing3_2,late,,1567.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.1,1,1,Bearing1_2,premature,9480.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,1,1,Bearing2_2,premature,9480.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,1,1,Bearing3_2,premature,149580.0,4672.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.15,1,1,Bearing1_2,premature,9480.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,1,1,Bearing2_2,premature,9480.0,4672.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,1,1,Bearing3_2,premature,149580.0,4672.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.2,1,1,Bearing1_2,premature,9480.0,3705.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,1,1,Bearing2_2,premature,9480.0,3705.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,1,1,Bearing3_2,premature,148860.0,3705.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.25,1,1,Bearing1_2,premature,9480.0,2805.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,1,1,Bearing2_2,premature,9480.0,2805.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,1,1,Bearing3_2,premature,148200.0,2805.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.3,1,1,Bearing1_2,premature,9480.0,2805.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,1,1,Bearing2_2,premature,9480.0,2805.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,1,1,Bearing3_2,premature,148200.0,2805.0,1.0,112.0,149700.0
+"Always-cloud, CRC",0.4,1,1,Bearing1_2,timely,4260.0,1410.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,1,1,Bearing2_2,premature,7320.0,1410.0,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,1,1,Bearing3_2,late,,1410.0,1.0,112.0,149700.0
+"Always-edge, CRC",0.1,1,1,Bearing1_2,premature,9480.0,1005.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,1,1,Bearing2_2,premature,9360.0,1005.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,1,1,Bearing3_2,premature,149100.0,1005.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.15,1,1,Bearing1_2,premature,9480.0,1005.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,1,1,Bearing2_2,premature,9360.0,1005.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,1,1,Bearing3_2,premature,149100.0,1005.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.2,1,1,Bearing1_2,premature,9480.0,825.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,1,1,Bearing2_2,premature,6240.0,825.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,1,1,Bearing3_2,premature,149100.0,825.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.25,1,1,Bearing1_2,premature,9480.0,780.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,1,1,Bearing2_2,premature,6120.0,780.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,1,1,Bearing3_2,premature,149100.0,780.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.3,1,1,Bearing1_2,premature,9480.0,780.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,1,1,Bearing2_2,premature,6120.0,780.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,1,1,Bearing3_2,premature,149100.0,780.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.4,1,1,Bearing1_2,premature,9480.0,577.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,1,1,Bearing2_2,timely,2460.0,577.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,1,1,Bearing3_2,premature,149040.0,577.5,0.0,0.0,149700.0
+"Cloud point, fixed thr. H_p",,1,1,Bearing1_2,premature,9480.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,1,1,Bearing2_2,premature,9480.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,1,1,Bearing3_2,premature,147960.0,0.0,1.0,112.0,149700.0
+"Cloud point, fixed thr. H_c",,1,1,Bearing1_2,late,,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,1,1,Bearing2_2,premature,6600.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,1,1,Bearing3_2,late,,0.0,1.0,112.0,149700.0
+Anomaly threshold,,1,1,Bearing1_2,timely,5760.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,1,1,Bearing2_2,premature,6120.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,1,1,Bearing3_2,late,,0.0,0.0,0.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,2,Bearing1_3,premature,9180.0,4560.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,2,Bearing2_3,premature,31680.0,4560.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,2,Bearing3_3,premature,21960.0,4560.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,2,Bearing1_3,premature,9180.0,4560.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,2,Bearing2_3,premature,31680.0,4560.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,2,Bearing3_3,premature,21960.0,4560.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,2,Bearing1_3,premature,7740.0,3007.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,2,Bearing2_3,premature,23640.0,3007.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,2,Bearing3_3,timely,1380.0,3007.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,2,Bearing1_3,timely,5340.0,1792.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,2,Bearing2_3,premature,22920.0,1792.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,2,Bearing3_3,late,1080.0,1792.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,2,Bearing1_3,timely,5340.0,1792.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,2,Bearing2_3,premature,22920.0,1792.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,2,Bearing3_3,late,1080.0,1792.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,2,Bearing1_3,timely,5280.0,1545.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,2,Bearing2_3,premature,20880.0,1545.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,2,Bearing3_3,late,1080.0,1545.0,0.9946091644204852,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,2,Bearing1_3,premature,8580.0,4560.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,2,Bearing2_3,premature,31080.0,4560.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,2,Bearing3_3,premature,21360.0,4560.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,2,Bearing1_3,premature,8580.0,4560.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,2,Bearing2_3,premature,31080.0,4560.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,2,Bearing3_3,premature,21360.0,4560.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,2,Bearing1_3,premature,8580.0,4537.5,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,2,Bearing2_3,premature,31080.0,4537.5,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,2,Bearing3_3,premature,21360.0,4537.5,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,2,Bearing1_3,premature,8160.0,3390.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,2,Bearing2_3,premature,23760.0,3390.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,2,Bearing3_3,timely,1560.0,3390.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,2,Bearing1_3,premature,8160.0,3390.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,2,Bearing2_3,premature,23760.0,3390.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,2,Bearing3_3,timely,1560.0,3390.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,2,Bearing1_3,timely,5280.0,1545.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,2,Bearing2_3,premature,20880.0,1545.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,2,Bearing3_3,late,1080.0,1545.0,0.967654986522911,124.0,22200.0
+"Always-cloud, CRC + burn-in",0.1,1,2,Bearing1_3,premature,8700.0,4560.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.1,1,2,Bearing2_3,premature,31200.0,4560.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.1,1,2,Bearing3_3,premature,21480.0,4560.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.15,1,2,Bearing1_3,premature,8700.0,4560.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.15,1,2,Bearing2_3,premature,31200.0,4560.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.15,1,2,Bearing3_3,premature,21480.0,4560.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.2,1,2,Bearing1_3,premature,8700.0,4312.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.2,1,2,Bearing2_3,premature,31200.0,4312.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.2,1,2,Bearing3_3,premature,21480.0,4312.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.25,1,2,Bearing1_3,premature,8160.0,3390.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.25,1,2,Bearing2_3,premature,23760.0,3390.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.25,1,2,Bearing3_3,timely,1560.0,3390.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.3,1,2,Bearing1_3,premature,8160.0,3390.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.3,1,2,Bearing2_3,premature,23760.0,3390.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.3,1,2,Bearing3_3,timely,1560.0,3390.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.4,1,2,Bearing1_3,timely,5280.0,1545.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.4,1,2,Bearing2_3,premature,20880.0,1545.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.4,1,2,Bearing3_3,late,1080.0,1545.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.1,1,2,Bearing1_3,premature,9300.0,4560.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.1,1,2,Bearing2_3,premature,31800.0,4560.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.1,1,2,Bearing3_3,premature,22080.0,4560.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.15,1,2,Bearing1_3,premature,9300.0,4560.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.15,1,2,Bearing2_3,premature,31800.0,4560.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.15,1,2,Bearing3_3,premature,22080.0,4560.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.2,1,2,Bearing1_3,timely,5580.0,2895.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.2,1,2,Bearing2_3,premature,23580.0,2895.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.2,1,2,Bearing3_3,timely,1260.0,2895.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.25,1,2,Bearing1_3,timely,5340.0,1725.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.25,1,2,Bearing2_3,premature,22560.0,1725.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.25,1,2,Bearing3_3,late,1080.0,1725.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.3,1,2,Bearing1_3,timely,5340.0,1725.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.3,1,2,Bearing2_3,premature,22560.0,1725.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.3,1,2,Bearing3_3,late,1080.0,1725.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.4,1,2,Bearing1_3,timely,5280.0,1455.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.4,1,2,Bearing2_3,premature,20700.0,1455.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.4,1,2,Bearing3_3,late,1020.0,1455.0,1.0,112.0,22200.0
+"Always-edge, CRC",0.1,1,2,Bearing1_3,premature,9000.0,1522.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.1,1,2,Bearing2_3,premature,31560.0,1522.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.1,1,2,Bearing3_3,premature,21780.0,1522.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.15,1,2,Bearing1_3,premature,9000.0,1522.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.15,1,2,Bearing2_3,premature,31560.0,1522.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.15,1,2,Bearing3_3,premature,21780.0,1522.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.2,1,2,Bearing1_3,premature,9000.0,1455.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.2,1,2,Bearing2_3,premature,31560.0,1455.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.2,1,2,Bearing3_3,premature,21780.0,1455.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.25,1,2,Bearing1_3,premature,8220.0,1162.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.25,1,2,Bearing2_3,premature,12360.0,1162.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.25,1,2,Bearing3_3,late,,1162.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.3,1,2,Bearing1_3,premature,8220.0,1162.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.3,1,2,Bearing2_3,premature,12360.0,1162.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.3,1,2,Bearing3_3,late,,1162.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.4,1,2,Bearing1_3,late,,667.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.4,1,2,Bearing2_3,premature,6720.0,667.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.4,1,2,Bearing3_3,late,,667.5,0.0,0.0,22200.0
+"Cloud point, fixed thr. H_p",,1,2,Bearing1_3,timely,5460.0,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_p",,1,2,Bearing2_3,premature,23100.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_p",,1,2,Bearing3_3,timely,1200.0,0.0,1.0,112.0,22200.0
+"Cloud point, fixed thr. H_c",,1,2,Bearing1_3,timely,2460.0,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_c",,1,2,Bearing2_3,premature,9540.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_c",,1,2,Bearing3_3,late,,0.0,1.0,112.0,22200.0
+Anomaly threshold,,1,2,Bearing1_3,timely,3360.0,0.0,0.0,0.0,9420.0
+Anomaly threshold,,1,2,Bearing2_3,premature,12300.0,0.0,0.0,0.0,31920.0
+Anomaly threshold,,1,2,Bearing3_3,timely,1320.0,0.0,0.0,0.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,3,Bearing1_4,premature,7020.0,2760.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,3,Bearing2_4,late,300.0,2760.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,3,Bearing3_4,timely,4260.0,2760.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,3,Bearing1_4,premature,7020.0,2760.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,3,Bearing2_4,late,300.0,2760.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,3,Bearing3_4,timely,4260.0,2760.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,3,Bearing1_4,premature,7020.0,2715.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,3,Bearing2_4,late,300.0,2715.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,3,Bearing3_4,timely,4260.0,2715.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,3,Bearing1_4,premature,7020.0,2647.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,3,Bearing2_4,late,300.0,2647.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,3,Bearing3_4,timely,4200.0,2647.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,3,Bearing1_4,premature,7020.0,2647.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,3,Bearing2_4,late,300.0,2647.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,3,Bearing3_4,timely,4200.0,2647.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,3,Bearing1_4,late,,2062.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,3,Bearing2_4,late,180.0,2062.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,3,Bearing3_4,timely,4020.0,2062.5,0.9986798679867986,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,3,Bearing1_4,premature,6420.0,5032.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,3,Bearing2_4,timely,1620.0,5032.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,3,Bearing3_4,premature,90000.0,5032.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,3,Bearing1_4,premature,6420.0,5032.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,3,Bearing2_4,timely,1620.0,5032.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,3,Bearing3_4,premature,90000.0,5032.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,3,Bearing1_4,late,,2760.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,3,Bearing2_4,late,300.0,2760.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,3,Bearing3_4,timely,4260.0,2760.0,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,3,Bearing1_4,late,,2647.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,3,Bearing2_4,late,300.0,2647.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,3,Bearing3_4,timely,4200.0,2647.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,3,Bearing1_4,late,,2647.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,3,Bearing2_4,late,300.0,2647.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,3,Bearing3_4,timely,4200.0,2647.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,3,Bearing1_4,late,,2062.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,3,Bearing2_4,late,180.0,2062.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,3,Bearing3_4,timely,4020.0,2062.5,0.9920792079207921,124.0,90840.0
+"Always-cloud, CRC + burn-in",0.1,1,3,Bearing1_4,premature,6540.0,4920.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.1,1,3,Bearing2_4,timely,1740.0,4920.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.1,1,3,Bearing3_4,premature,90120.0,4920.0,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.15,1,3,Bearing1_4,premature,6540.0,4920.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.15,1,3,Bearing2_4,timely,1740.0,4920.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.15,1,3,Bearing3_4,premature,90120.0,4920.0,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.2,1,3,Bearing1_4,late,,2760.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.2,1,3,Bearing2_4,late,300.0,2760.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.2,1,3,Bearing3_4,timely,4260.0,2760.0,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.25,1,3,Bearing1_4,late,,2647.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.25,1,3,Bearing2_4,late,300.0,2647.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.25,1,3,Bearing3_4,timely,4200.0,2647.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.3,1,3,Bearing1_4,late,,2647.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.3,1,3,Bearing2_4,late,300.0,2647.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.3,1,3,Bearing3_4,timely,4200.0,2647.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.4,1,3,Bearing1_4,late,,2062.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.4,1,3,Bearing2_4,late,180.0,2062.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.4,1,3,Bearing3_4,timely,4020.0,2062.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.1,1,3,Bearing1_4,premature,7140.0,2760.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.1,1,3,Bearing2_4,late,300.0,2760.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.1,1,3,Bearing3_4,timely,4260.0,2760.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.15,1,3,Bearing1_4,premature,7140.0,2760.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.15,1,3,Bearing2_4,late,300.0,2760.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.15,1,3,Bearing3_4,timely,4260.0,2760.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.2,1,3,Bearing1_4,premature,7140.0,2647.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.2,1,3,Bearing2_4,late,300.0,2647.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.2,1,3,Bearing3_4,timely,4200.0,2647.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.25,1,3,Bearing1_4,premature,7140.0,2400.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.25,1,3,Bearing2_4,late,240.0,2400.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.25,1,3,Bearing3_4,timely,4140.0,2400.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.3,1,3,Bearing1_4,premature,7140.0,2400.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.3,1,3,Bearing2_4,late,240.0,2400.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.3,1,3,Bearing3_4,timely,4140.0,2400.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.4,1,3,Bearing1_4,premature,7140.0,2062.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.4,1,3,Bearing2_4,late,180.0,2062.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.4,1,3,Bearing3_4,timely,4020.0,2062.5,1.0,112.0,90840.0
+"Always-edge, CRC",0.1,1,3,Bearing1_4,premature,6960.0,1545.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.1,1,3,Bearing2_4,timely,2160.0,1545.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.1,1,3,Bearing3_4,premature,90480.0,1545.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.15,1,3,Bearing1_4,premature,6960.0,1545.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.15,1,3,Bearing2_4,timely,2160.0,1545.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.15,1,3,Bearing3_4,premature,90480.0,1545.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.2,1,3,Bearing1_4,premature,6840.0,1185.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.2,1,3,Bearing2_4,timely,2040.0,1185.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.2,1,3,Bearing3_4,premature,90240.0,1185.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.25,1,3,Bearing1_4,late,,915.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.25,1,3,Bearing2_4,late,,915.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.25,1,3,Bearing3_4,timely,2460.0,915.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.3,1,3,Bearing1_4,late,,915.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.3,1,3,Bearing2_4,late,,915.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.3,1,3,Bearing3_4,timely,2460.0,915.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.4,1,3,Bearing1_4,late,,847.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.4,1,3,Bearing2_4,late,,847.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.4,1,3,Bearing3_4,late,,847.5,0.0,0.0,90840.0
+"Cloud point, fixed thr. H_p",,1,3,Bearing1_4,premature,7140.0,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_p",,1,3,Bearing2_4,late,240.0,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_p",,1,3,Bearing3_4,timely,4140.0,0.0,1.0,112.0,90840.0
+"Cloud point, fixed thr. H_c",,1,3,Bearing1_4,late,,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_c",,1,3,Bearing2_4,late,,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_c",,1,3,Bearing3_4,late,,0.0,1.0,112.0,90840.0
+Anomaly threshold,,1,3,Bearing1_4,late,,0.0,0.0,0.0,7260.0
+Anomaly threshold,,1,3,Bearing2_4,late,,0.0,0.0,0.0,2460.0
+Anomaly threshold,,1,3,Bearing3_4,late,,0.0,0.0,0.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,4,Bearing1_5,timely,2820.0,4672.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,4,Bearing2_5,premature,19860.0,4672.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.1,1,4,Bearing3_5,premature,6540.0,4672.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,4,Bearing1_5,timely,2820.0,4672.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,4,Bearing2_5,premature,19860.0,4672.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.15,1,4,Bearing3_5,premature,6540.0,4672.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,4,Bearing1_5,late,,2872.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,4,Bearing2_5,premature,9360.0,2872.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.2,1,4,Bearing3_5,timely,5160.0,2872.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,4,Bearing1_5,late,,2827.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,4,Bearing2_5,premature,9360.0,2827.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.25,1,4,Bearing3_5,timely,5160.0,2827.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,4,Bearing1_5,late,,2827.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,4,Bearing2_5,premature,9360.0,2827.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.3,1,4,Bearing3_5,timely,5160.0,2827.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,4,Bearing1_5,late,,2107.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,4,Bearing2_5,premature,8700.0,2107.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.4,1,4,Bearing3_5,timely,2580.0,2107.5,0.9824561403508771,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,4,Bearing1_5,timely,2100.0,4672.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,4,Bearing2_5,premature,9360.0,4672.5,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,1,4,Bearing3_5,timely,5940.0,4672.5,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,4,Bearing1_5,timely,2100.0,4672.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,4,Bearing2_5,premature,9360.0,4672.5,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,1,4,Bearing3_5,timely,5940.0,4672.5,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,4,Bearing1_5,late,660.0,3840.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,4,Bearing2_5,premature,9360.0,3840.0,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,1,4,Bearing3_5,timely,5940.0,3840.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,4,Bearing1_5,late,,2872.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,4,Bearing2_5,premature,9360.0,2872.5,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,1,4,Bearing3_5,timely,5160.0,2872.5,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,4,Bearing1_5,late,,2872.5,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,4,Bearing2_5,premature,9360.0,2872.5,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,1,4,Bearing3_5,timely,5160.0,2872.5,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,4,Bearing1_5,late,,2310.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,4,Bearing2_5,premature,8880.0,2310.0,0.4690265486725664,74.77286135693215,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,1,4,Bearing3_5,timely,4740.0,2310.0,0.8947368421052632,124.0,6780.0
+"Always-cloud, CRC + burn-in",0.1,1,4,Bearing1_5,timely,2340.0,4672.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.1,1,4,Bearing2_5,premature,13920.0,4672.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.1,1,4,Bearing3_5,premature,6060.0,4672.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.15,1,4,Bearing1_5,timely,2340.0,4672.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.15,1,4,Bearing2_5,premature,13920.0,4672.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.15,1,4,Bearing3_5,premature,6060.0,4672.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.2,1,4,Bearing1_5,late,660.0,3840.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.2,1,4,Bearing2_5,premature,10200.0,3840.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.2,1,4,Bearing3_5,timely,5940.0,3840.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.25,1,4,Bearing1_5,late,,2872.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.25,1,4,Bearing2_5,premature,9360.0,2872.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.25,1,4,Bearing3_5,timely,5160.0,2872.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.3,1,4,Bearing1_5,late,,2872.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.3,1,4,Bearing2_5,premature,9360.0,2872.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.3,1,4,Bearing3_5,timely,5160.0,2872.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.4,1,4,Bearing1_5,late,,2310.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.4,1,4,Bearing2_5,premature,8880.0,2310.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.4,1,4,Bearing3_5,timely,4740.0,2310.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.1,1,4,Bearing1_5,timely,2940.0,4672.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.1,1,4,Bearing2_5,premature,19860.0,4672.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.1,1,4,Bearing3_5,premature,6660.0,4672.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.15,1,4,Bearing1_5,timely,2940.0,4672.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.15,1,4,Bearing2_5,premature,19860.0,4672.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.15,1,4,Bearing3_5,premature,6660.0,4672.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.2,1,4,Bearing1_5,late,,2872.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.2,1,4,Bearing2_5,premature,9360.0,2872.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.2,1,4,Bearing3_5,timely,5160.0,2872.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.25,1,4,Bearing1_5,late,,2827.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.25,1,4,Bearing2_5,premature,9360.0,2827.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.25,1,4,Bearing3_5,timely,5160.0,2827.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.3,1,4,Bearing1_5,late,,2827.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.3,1,4,Bearing2_5,premature,9360.0,2827.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.3,1,4,Bearing3_5,timely,5160.0,2827.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.4,1,4,Bearing1_5,late,,1837.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.4,1,4,Bearing2_5,premature,8580.0,1837.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.4,1,4,Bearing3_5,timely,2280.0,1837.5,1.0,112.0,6780.0
+"Always-edge, CRC",0.1,1,4,Bearing1_5,timely,2880.0,1950.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.1,1,4,Bearing2_5,premature,19980.0,1950.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.1,1,4,Bearing3_5,premature,6660.0,1950.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.15,1,4,Bearing1_5,timely,2880.0,1950.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.15,1,4,Bearing2_5,premature,19980.0,1950.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.15,1,4,Bearing3_5,premature,6660.0,1950.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.2,1,4,Bearing1_5,timely,2640.0,1410.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.2,1,4,Bearing2_5,premature,19920.0,1410.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.2,1,4,Bearing3_5,premature,6240.0,1410.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.25,1,4,Bearing1_5,timely,2640.0,1320.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.25,1,4,Bearing2_5,premature,19860.0,1320.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.25,1,4,Bearing3_5,premature,6240.0,1320.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.3,1,4,Bearing1_5,timely,2640.0,1320.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.3,1,4,Bearing2_5,premature,19860.0,1320.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.3,1,4,Bearing3_5,premature,6240.0,1320.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.4,1,4,Bearing1_5,late,,1230.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.4,1,4,Bearing2_5,premature,19860.0,1230.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.4,1,4,Bearing3_5,premature,6240.0,1230.0,0.0,0.0,6780.0
+"Cloud point, fixed thr. H_p",,1,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_p",,1,4,Bearing2_5,premature,8940.0,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_p",,1,4,Bearing3_5,timely,4860.0,0.0,1.0,112.0,6780.0
+"Cloud point, fixed thr. H_c",,1,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_c",,1,4,Bearing2_5,timely,5640.0,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_c",,1,4,Bearing3_5,late,,0.0,1.0,112.0,6780.0
+Anomaly threshold,,1,4,Bearing1_5,late,,0.0,0.0,0.0,3060.0
+Anomaly threshold,,1,4,Bearing2_5,late,,0.0,0.0,0.0,20280.0
+Anomaly threshold,,1,4,Bearing3_5,late,,0.0,0.0,0.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,0,Bearing1_1,timely,3300.0,4042.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,0,Bearing2_1,premature,29160.0,4042.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,0,Bearing3_1,premature,151980.0,4042.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,0,Bearing1_1,timely,3300.0,4042.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,0,Bearing2_1,premature,29160.0,4042.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,0,Bearing3_1,premature,151980.0,4042.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,0,Bearing1_1,timely,3120.0,3997.5,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,0,Bearing2_1,premature,29160.0,3997.5,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,0,Bearing3_1,premature,151980.0,3997.5,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,0,Bearing1_1,timely,2880.0,3795.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,0,Bearing2_1,timely,2160.0,3795.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,0,Bearing3_1,premature,151980.0,3795.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,0,Bearing1_1,timely,2880.0,3795.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,0,Bearing2_1,timely,2160.0,3795.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,0,Bearing3_1,premature,151980.0,3795.0,0.9992119779353822,124.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,0,Bearing1_1,late,,2265.0,0.983739837398374,124.0,7320.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,0,Bearing2_1,late,660.0,2265.0,0.9959266802443992,124.0,29400.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,0,Bearing3_1,timely,4200.0,2265.0,0.9992119779353822,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,0,Bearing1_1,premature,6480.0,6000.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,0,Bearing2_1,premature,28560.0,6000.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,0,Bearing3_1,premature,151380.0,6000.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,0,Bearing1_1,premature,6480.0,6000.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,0,Bearing2_1,premature,28560.0,6000.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,0,Bearing3_1,premature,151380.0,6000.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,0,Bearing1_1,timely,3300.0,4042.5,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,0,Bearing2_1,premature,28140.0,4042.5,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,0,Bearing3_1,premature,145860.0,4042.5,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,0,Bearing1_1,timely,3000.0,3885.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,0,Bearing2_1,premature,15900.0,3885.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,0,Bearing3_1,premature,145320.0,3885.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,0,Bearing1_1,timely,3000.0,3885.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,0,Bearing2_1,premature,15900.0,3885.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,0,Bearing3_1,premature,145320.0,3885.0,0.9952718676122931,124.0,152220.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,0,Bearing1_1,late,,2265.0,0.9024390243902439,124.0,7320.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,0,Bearing2_1,late,660.0,2265.0,0.9755600814663951,124.0,29400.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,0,Bearing3_1,timely,4200.0,2265.0,0.9952718676122931,124.0,152220.0
+"Always-cloud, CRC + burn-in",0.1,2,0,Bearing1_1,premature,6600.0,4470.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.1,2,0,Bearing2_1,premature,28680.0,4470.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.1,2,0,Bearing3_1,premature,151500.0,4470.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.15,2,0,Bearing1_1,premature,6600.0,4470.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.15,2,0,Bearing2_1,premature,28680.0,4470.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.15,2,0,Bearing3_1,premature,151500.0,4470.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.2,2,0,Bearing1_1,timely,3300.0,4042.5,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.2,2,0,Bearing2_1,premature,28140.0,4042.5,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.2,2,0,Bearing3_1,premature,145860.0,4042.5,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.25,2,0,Bearing1_1,timely,3000.0,3885.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.25,2,0,Bearing2_1,premature,15900.0,3885.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.25,2,0,Bearing3_1,premature,145320.0,3885.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.3,2,0,Bearing1_1,timely,3000.0,3885.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.3,2,0,Bearing2_1,premature,15900.0,3885.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.3,2,0,Bearing3_1,premature,145320.0,3885.0,1.0,112.0,152220.0
+"Always-cloud, CRC + burn-in",0.4,2,0,Bearing1_1,late,,2265.0,1.0,112.0,7320.0
+"Always-cloud, CRC + burn-in",0.4,2,0,Bearing2_1,late,660.0,2265.0,1.0,112.0,29400.0
+"Always-cloud, CRC + burn-in",0.4,2,0,Bearing3_1,timely,4200.0,2265.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.1,2,0,Bearing1_1,timely,3300.0,4042.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.1,2,0,Bearing2_1,premature,29280.0,4042.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.1,2,0,Bearing3_1,premature,152100.0,4042.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.15,2,0,Bearing1_1,timely,3300.0,4042.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.15,2,0,Bearing2_1,premature,29280.0,4042.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.15,2,0,Bearing3_1,premature,152100.0,4042.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.2,2,0,Bearing1_1,timely,3120.0,3997.5,1.0,112.0,7320.0
+"Always-cloud, CRC",0.2,2,0,Bearing2_1,premature,29280.0,3997.5,1.0,112.0,29400.0
+"Always-cloud, CRC",0.2,2,0,Bearing3_1,premature,152100.0,3997.5,1.0,112.0,152220.0
+"Always-cloud, CRC",0.25,2,0,Bearing1_1,timely,2580.0,3660.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.25,2,0,Bearing2_1,timely,2160.0,3660.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.25,2,0,Bearing3_1,premature,152100.0,3660.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.3,2,0,Bearing1_1,timely,2580.0,3660.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.3,2,0,Bearing2_1,timely,2160.0,3660.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.3,2,0,Bearing3_1,premature,152100.0,3660.0,1.0,112.0,152220.0
+"Always-cloud, CRC",0.4,2,0,Bearing1_1,late,,2265.0,1.0,112.0,7320.0
+"Always-cloud, CRC",0.4,2,0,Bearing2_1,late,660.0,2265.0,1.0,112.0,29400.0
+"Always-cloud, CRC",0.4,2,0,Bearing3_1,timely,4200.0,2265.0,1.0,112.0,152220.0
+"Always-edge, CRC",0.1,2,0,Bearing1_1,premature,7020.0,1972.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.1,2,0,Bearing2_1,premature,29280.0,1972.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.1,2,0,Bearing3_1,premature,152100.0,1972.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.15,2,0,Bearing1_1,premature,7020.0,1972.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.15,2,0,Bearing2_1,premature,29280.0,1972.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.15,2,0,Bearing3_1,premature,152100.0,1972.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.2,2,0,Bearing1_1,premature,6900.0,1545.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.2,2,0,Bearing2_1,premature,29280.0,1545.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.2,2,0,Bearing3_1,premature,151980.0,1545.0,0.0,0.0,152220.0
+"Always-edge, CRC",0.25,2,0,Bearing1_1,premature,6840.0,1387.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.25,2,0,Bearing2_1,premature,29040.0,1387.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.25,2,0,Bearing3_1,premature,151860.0,1387.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.3,2,0,Bearing1_1,premature,6840.0,1387.5,0.0,0.0,7320.0
+"Always-edge, CRC",0.3,2,0,Bearing2_1,premature,29040.0,1387.5,0.0,0.0,29400.0
+"Always-edge, CRC",0.3,2,0,Bearing3_1,premature,151860.0,1387.5,0.0,0.0,152220.0
+"Always-edge, CRC",0.4,2,0,Bearing1_1,late,,1095.0,0.0,0.0,7320.0
+"Always-edge, CRC",0.4,2,0,Bearing2_1,late,,1095.0,0.0,0.0,29400.0
+"Always-edge, CRC",0.4,2,0,Bearing3_1,timely,4080.0,1095.0,0.0,0.0,152220.0
+"Cloud point, fixed thr. H_p",,2,0,Bearing1_1,late,,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_p",,2,0,Bearing2_1,late,720.0,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_p",,2,0,Bearing3_1,timely,5700.0,0.0,1.0,112.0,152220.0
+"Cloud point, fixed thr. H_c",,2,0,Bearing1_1,late,,0.0,1.0,112.0,7320.0
+"Cloud point, fixed thr. H_c",,2,0,Bearing2_1,late,,0.0,1.0,112.0,29400.0
+"Cloud point, fixed thr. H_c",,2,0,Bearing3_1,late,,0.0,1.0,112.0,152220.0
+Anomaly threshold,,2,0,Bearing1_1,late,,0.0,0.0,0.0,7320.0
+Anomaly threshold,,2,0,Bearing2_1,late,,0.0,0.0,0.0,29400.0
+Anomaly threshold,,2,0,Bearing3_1,late,,0.0,0.0,0.0,152220.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,1,Bearing1_2,premature,9360.0,4357.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,1,Bearing2_2,premature,9360.0,4357.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,1,Bearing3_2,premature,149460.0,4357.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,1,Bearing1_2,premature,9360.0,4357.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,1,Bearing2_2,premature,9360.0,4357.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,1,Bearing3_2,premature,149460.0,4357.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,1,Bearing1_2,premature,9360.0,4177.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,1,Bearing2_2,premature,9360.0,4177.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,1,Bearing3_2,premature,149460.0,4177.5,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,1,Bearing1_2,premature,9360.0,3840.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,1,Bearing2_2,premature,9360.0,3840.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,1,Bearing3_2,premature,148860.0,3840.0,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,1,Bearing1_2,premature,9360.0,3840.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,1,Bearing2_2,premature,9360.0,3840.0,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,1,Bearing3_2,premature,148860.0,3840.0,0.999198717948718,124.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,1,Bearing1_2,timely,5700.0,2062.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,1,Bearing2_2,premature,7680.0,2062.5,0.9875776397515528,124.0,9600.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,1,Bearing3_2,late,,2062.5,0.999198717948718,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,1,Bearing1_2,premature,8760.0,6000.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,1,Bearing2_2,premature,8760.0,6000.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,1,Bearing3_2,premature,148860.0,6000.0,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,1,Bearing1_2,premature,8760.0,6000.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,1,Bearing2_2,premature,8760.0,6000.0,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,1,Bearing3_2,premature,148860.0,6000.0,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,1,Bearing1_2,premature,7500.0,4222.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,1,Bearing2_2,premature,8760.0,4222.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,1,Bearing3_2,premature,148860.0,4222.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,1,Bearing1_2,premature,7500.0,4177.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,1,Bearing2_2,premature,8760.0,4177.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,1,Bearing3_2,premature,148860.0,4177.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,1,Bearing1_2,premature,7500.0,4177.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,1,Bearing2_2,premature,8760.0,4177.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,1,Bearing3_2,premature,148860.0,4177.5,0.9951923076923077,124.0,149700.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,1,Bearing1_2,timely,5700.0,2062.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,1,Bearing2_2,premature,7680.0,2062.5,0.9254658385093167,124.0,9600.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,1,Bearing3_2,late,,2062.5,0.9951923076923077,124.0,149700.0
+"Always-cloud, CRC + burn-in",0.1,2,1,Bearing1_2,premature,7500.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,2,1,Bearing2_2,premature,8880.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.1,2,1,Bearing3_2,premature,148980.0,4357.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.15,2,1,Bearing1_2,premature,7500.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,2,1,Bearing2_2,premature,8880.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.15,2,1,Bearing3_2,premature,148980.0,4357.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.2,2,1,Bearing1_2,premature,7500.0,4222.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,2,1,Bearing2_2,premature,8880.0,4222.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.2,2,1,Bearing3_2,premature,148980.0,4222.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.25,2,1,Bearing1_2,premature,7500.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,2,1,Bearing2_2,premature,8880.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.25,2,1,Bearing3_2,premature,148980.0,4177.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.3,2,1,Bearing1_2,premature,7500.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,2,1,Bearing2_2,premature,8880.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.3,2,1,Bearing3_2,premature,148980.0,4177.5,1.0,112.0,149700.0
+"Always-cloud, CRC + burn-in",0.4,2,1,Bearing1_2,timely,5700.0,2062.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,2,1,Bearing2_2,premature,7680.0,2062.5,1.0,112.0,9600.0
+"Always-cloud, CRC + burn-in",0.4,2,1,Bearing3_2,late,,2062.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.1,2,1,Bearing1_2,premature,9480.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,2,1,Bearing2_2,premature,9480.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.1,2,1,Bearing3_2,premature,149580.0,4357.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.15,2,1,Bearing1_2,premature,9480.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,2,1,Bearing2_2,premature,9480.0,4357.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.15,2,1,Bearing3_2,premature,149580.0,4357.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.2,2,1,Bearing1_2,premature,9480.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,2,1,Bearing2_2,premature,9480.0,4177.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.2,2,1,Bearing3_2,premature,149580.0,4177.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.25,2,1,Bearing1_2,premature,9480.0,3502.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,2,1,Bearing2_2,premature,9480.0,3502.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.25,2,1,Bearing3_2,premature,148500.0,3502.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.3,2,1,Bearing1_2,premature,9480.0,3502.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,2,1,Bearing2_2,premature,9480.0,3502.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.3,2,1,Bearing3_2,premature,148500.0,3502.5,1.0,112.0,149700.0
+"Always-cloud, CRC",0.4,2,1,Bearing1_2,timely,5700.0,2062.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,2,1,Bearing2_2,premature,7680.0,2062.5,1.0,112.0,9600.0
+"Always-cloud, CRC",0.4,2,1,Bearing3_2,late,,2062.5,1.0,112.0,149700.0
+"Always-edge, CRC",0.1,2,1,Bearing1_2,premature,9480.0,1882.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,2,1,Bearing2_2,premature,9480.0,1882.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.1,2,1,Bearing3_2,premature,149340.0,1882.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.15,2,1,Bearing1_2,premature,9480.0,1882.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,2,1,Bearing2_2,premature,9480.0,1882.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.15,2,1,Bearing3_2,premature,149340.0,1882.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.2,2,1,Bearing1_2,premature,9480.0,1185.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,2,1,Bearing2_2,premature,9420.0,1185.0,0.0,0.0,9600.0
+"Always-edge, CRC",0.2,2,1,Bearing3_2,premature,149040.0,1185.0,0.0,0.0,149700.0
+"Always-edge, CRC",0.25,2,1,Bearing1_2,premature,9480.0,1162.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,2,1,Bearing2_2,premature,6360.0,1162.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.25,2,1,Bearing3_2,premature,149040.0,1162.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.3,2,1,Bearing1_2,premature,9480.0,1162.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,2,1,Bearing2_2,premature,6360.0,1162.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.3,2,1,Bearing3_2,premature,149040.0,1162.5,0.0,0.0,149700.0
+"Always-edge, CRC",0.4,2,1,Bearing1_2,premature,9480.0,982.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,2,1,Bearing2_2,premature,6300.0,982.5,0.0,0.0,9600.0
+"Always-edge, CRC",0.4,2,1,Bearing3_2,premature,148320.0,982.5,0.0,0.0,149700.0
+"Cloud point, fixed thr. H_p",,2,1,Bearing1_2,premature,9480.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,2,1,Bearing2_2,premature,7980.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_p",,2,1,Bearing3_2,premature,147660.0,0.0,1.0,112.0,149700.0
+"Cloud point, fixed thr. H_c",,2,1,Bearing1_2,late,,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,2,1,Bearing2_2,premature,6600.0,0.0,1.0,112.0,9600.0
+"Cloud point, fixed thr. H_c",,2,1,Bearing3_2,late,,0.0,1.0,112.0,149700.0
+Anomaly threshold,,2,1,Bearing1_2,timely,5760.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,2,1,Bearing2_2,premature,6120.0,0.0,0.0,0.0,9600.0
+Anomaly threshold,,2,1,Bearing3_2,late,,0.0,0.0,0.0,149700.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,2,Bearing1_3,premature,9180.0,4740.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,2,Bearing2_3,premature,31680.0,4740.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,2,Bearing3_3,premature,21960.0,4740.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,2,Bearing1_3,premature,9180.0,4740.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,2,Bearing2_3,premature,31680.0,4740.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,2,Bearing3_3,premature,21960.0,4740.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,2,Bearing1_3,premature,8940.0,4312.5,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,2,Bearing2_3,premature,31560.0,4312.5,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,2,Bearing3_3,premature,21960.0,4312.5,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,2,Bearing1_3,timely,5520.0,2985.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,2,Bearing2_3,premature,23820.0,2985.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,2,Bearing3_3,timely,1500.0,2985.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,2,Bearing1_3,timely,5520.0,2985.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,2,Bearing2_3,premature,23820.0,2985.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,2,Bearing3_3,timely,1500.0,2985.0,0.9946091644204852,124.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,2,Bearing1_3,timely,5400.0,2175.0,0.9873417721518988,124.0,9420.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,2,Bearing2_3,premature,23040.0,2175.0,0.9962476547842402,124.0,31920.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,2,Bearing3_3,timely,1380.0,2175.0,0.9946091644204852,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,2,Bearing1_3,premature,8580.0,6000.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,2,Bearing2_3,premature,31080.0,6000.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,2,Bearing3_3,premature,21360.0,6000.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,2,Bearing1_3,premature,8580.0,6000.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,2,Bearing2_3,premature,31080.0,6000.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,2,Bearing3_3,premature,21360.0,6000.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,2,Bearing1_3,premature,8580.0,6000.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,2,Bearing2_3,premature,31080.0,6000.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,2,Bearing3_3,premature,21360.0,6000.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,2,Bearing1_3,premature,8580.0,4740.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,2,Bearing2_3,premature,31080.0,4740.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,2,Bearing3_3,premature,21360.0,4740.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,2,Bearing1_3,premature,8580.0,4740.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,2,Bearing2_3,premature,31080.0,4740.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,2,Bearing3_3,premature,21360.0,4740.0,0.967654986522911,124.0,22200.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,2,Bearing1_3,timely,5400.0,2175.0,0.9240506329113924,124.0,9420.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,2,Bearing2_3,premature,23040.0,2175.0,0.9774859287054409,124.0,31920.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,2,Bearing3_3,timely,1380.0,2175.0,0.967654986522911,124.0,22200.0
+"Always-cloud, CRC + burn-in",0.1,2,2,Bearing1_3,premature,8700.0,4740.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.1,2,2,Bearing2_3,premature,31200.0,4740.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.1,2,2,Bearing3_3,premature,21480.0,4740.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.15,2,2,Bearing1_3,premature,8700.0,4740.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.15,2,2,Bearing2_3,premature,31200.0,4740.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.15,2,2,Bearing3_3,premature,21480.0,4740.0,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.2,2,2,Bearing1_3,premature,8700.0,4582.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.2,2,2,Bearing2_3,premature,31200.0,4582.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.2,2,2,Bearing3_3,premature,21480.0,4582.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.25,2,2,Bearing1_3,premature,8400.0,3817.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.25,2,2,Bearing2_3,premature,24180.0,3817.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.25,2,2,Bearing3_3,timely,1560.0,3817.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.3,2,2,Bearing1_3,premature,8400.0,3817.5,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.3,2,2,Bearing2_3,premature,24180.0,3817.5,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.3,2,2,Bearing3_3,timely,1560.0,3817.5,1.0,112.0,22200.0
+"Always-cloud, CRC + burn-in",0.4,2,2,Bearing1_3,timely,5400.0,2175.0,1.0,112.0,9420.0
+"Always-cloud, CRC + burn-in",0.4,2,2,Bearing2_3,premature,23040.0,2175.0,1.0,112.0,31920.0
+"Always-cloud, CRC + burn-in",0.4,2,2,Bearing3_3,timely,1380.0,2175.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.1,2,2,Bearing1_3,premature,9300.0,4740.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.1,2,2,Bearing2_3,premature,31800.0,4740.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.1,2,2,Bearing3_3,premature,22080.0,4740.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.15,2,2,Bearing1_3,premature,9300.0,4740.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.15,2,2,Bearing2_3,premature,31800.0,4740.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.15,2,2,Bearing3_3,premature,22080.0,4740.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.2,2,2,Bearing1_3,premature,8640.0,4155.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.2,2,2,Bearing2_3,premature,31140.0,4155.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.2,2,2,Bearing3_3,premature,21600.0,4155.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.25,2,2,Bearing1_3,timely,5520.0,2985.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.25,2,2,Bearing2_3,premature,23820.0,2985.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.25,2,2,Bearing3_3,timely,1500.0,2985.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.3,2,2,Bearing1_3,timely,5520.0,2985.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.3,2,2,Bearing2_3,premature,23820.0,2985.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.3,2,2,Bearing3_3,timely,1500.0,2985.0,1.0,112.0,22200.0
+"Always-cloud, CRC",0.4,2,2,Bearing1_3,timely,5400.0,2175.0,1.0,112.0,9420.0
+"Always-cloud, CRC",0.4,2,2,Bearing2_3,premature,23040.0,2175.0,1.0,112.0,31920.0
+"Always-cloud, CRC",0.4,2,2,Bearing3_3,timely,1380.0,2175.0,1.0,112.0,22200.0
+"Always-edge, CRC",0.1,2,2,Bearing1_3,premature,9180.0,2220.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.1,2,2,Bearing2_3,premature,31680.0,2220.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.1,2,2,Bearing3_3,premature,21960.0,2220.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.15,2,2,Bearing1_3,premature,9180.0,2220.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.15,2,2,Bearing2_3,premature,31680.0,2220.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.15,2,2,Bearing3_3,premature,21960.0,2220.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.2,2,2,Bearing1_3,premature,8580.0,1545.0,0.0,0.0,9420.0
+"Always-edge, CRC",0.2,2,2,Bearing2_3,premature,31560.0,1545.0,0.0,0.0,31920.0
+"Always-edge, CRC",0.2,2,2,Bearing3_3,timely,1260.0,1545.0,0.0,0.0,22200.0
+"Always-edge, CRC",0.25,2,2,Bearing1_3,premature,8100.0,1477.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.25,2,2,Bearing2_3,premature,31560.0,1477.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.25,2,2,Bearing3_3,timely,1200.0,1477.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.3,2,2,Bearing1_3,premature,8100.0,1477.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.3,2,2,Bearing2_3,premature,31560.0,1477.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.3,2,2,Bearing3_3,timely,1200.0,1477.5,0.0,0.0,22200.0
+"Always-edge, CRC",0.4,2,2,Bearing1_3,late,,937.5,0.0,0.0,9420.0
+"Always-edge, CRC",0.4,2,2,Bearing2_3,premature,9180.0,937.5,0.0,0.0,31920.0
+"Always-edge, CRC",0.4,2,2,Bearing3_3,late,60.0,937.5,0.0,0.0,22200.0
+"Cloud point, fixed thr. H_p",,2,2,Bearing1_3,timely,5460.0,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_p",,2,2,Bearing2_3,premature,23160.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_p",,2,2,Bearing3_3,timely,1440.0,0.0,1.0,112.0,22200.0
+"Cloud point, fixed thr. H_c",,2,2,Bearing1_3,late,,0.0,1.0,112.0,9420.0
+"Cloud point, fixed thr. H_c",,2,2,Bearing2_3,premature,8820.0,0.0,1.0,112.0,31920.0
+"Cloud point, fixed thr. H_c",,2,2,Bearing3_3,late,,0.0,1.0,112.0,22200.0
+Anomaly threshold,,2,2,Bearing1_3,timely,3360.0,0.0,0.0,0.0,9420.0
+Anomaly threshold,,2,2,Bearing2_3,premature,12300.0,0.0,0.0,0.0,31920.0
+Anomaly threshold,,2,2,Bearing3_3,timely,1320.0,0.0,0.0,0.0,22200.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,3,Bearing1_4,premature,7020.0,3480.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,3,Bearing2_4,late,420.0,3480.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,3,Bearing3_4,timely,5520.0,3480.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,3,Bearing1_4,premature,7020.0,3480.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,3,Bearing2_4,late,420.0,3480.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,3,Bearing3_4,timely,5520.0,3480.0,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,3,Bearing1_4,premature,7020.0,3322.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,3,Bearing2_4,late,360.0,3322.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,3,Bearing3_4,timely,5520.0,3322.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,3,Bearing1_4,premature,7020.0,2872.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,3,Bearing2_4,late,240.0,2872.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,3,Bearing3_4,timely,5400.0,2872.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,3,Bearing1_4,premature,7020.0,2872.5,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,3,Bearing2_4,late,240.0,2872.5,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,3,Bearing3_4,timely,5400.0,2872.5,0.9986798679867986,124.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,3,Bearing1_4,late,,1725.0,0.9836065573770492,124.0,7260.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,3,Bearing2_4,late,0.0,1725.0,0.9523809523809523,124.0,2460.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,3,Bearing3_4,timely,4080.0,1725.0,0.9986798679867986,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,3,Bearing1_4,timely,2100.0,4447.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,3,Bearing2_4,late,480.0,4447.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,3,Bearing3_4,premature,90000.0,4447.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,3,Bearing1_4,timely,2100.0,4447.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,3,Bearing2_4,late,480.0,4447.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,3,Bearing3_4,premature,90000.0,4447.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,3,Bearing1_4,late,,3480.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,3,Bearing2_4,late,420.0,3480.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,3,Bearing3_4,timely,5520.0,3480.0,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,3,Bearing1_4,late,,3322.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,3,Bearing2_4,late,360.0,3322.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,3,Bearing3_4,timely,5520.0,3322.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,3,Bearing1_4,late,,3322.5,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,3,Bearing2_4,late,360.0,3322.5,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,3,Bearing3_4,timely,5520.0,3322.5,0.9920792079207921,124.0,90840.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,3,Bearing1_4,late,,2805.0,0.9016393442622951,124.0,7260.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,3,Bearing2_4,late,240.0,2805.0,0.7142857142857143,124.0,2460.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,3,Bearing3_4,timely,5340.0,2805.0,0.9920792079207921,124.0,90840.0
+"Always-cloud, CRC + burn-in",0.1,2,3,Bearing1_4,timely,1740.0,4177.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.1,2,3,Bearing2_4,late,480.0,4177.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.1,2,3,Bearing3_4,premature,87360.0,4177.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.15,2,3,Bearing1_4,timely,1740.0,4177.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.15,2,3,Bearing2_4,late,480.0,4177.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.15,2,3,Bearing3_4,premature,87360.0,4177.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.2,2,3,Bearing1_4,late,,3480.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.2,2,3,Bearing2_4,late,420.0,3480.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.2,2,3,Bearing3_4,timely,5520.0,3480.0,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.25,2,3,Bearing1_4,late,,3322.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.25,2,3,Bearing2_4,late,360.0,3322.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.25,2,3,Bearing3_4,timely,5520.0,3322.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.3,2,3,Bearing1_4,late,,3322.5,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.3,2,3,Bearing2_4,late,360.0,3322.5,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.3,2,3,Bearing3_4,timely,5520.0,3322.5,1.0,112.0,90840.0
+"Always-cloud, CRC + burn-in",0.4,2,3,Bearing1_4,late,,2805.0,1.0,112.0,7260.0
+"Always-cloud, CRC + burn-in",0.4,2,3,Bearing2_4,late,240.0,2805.0,1.0,112.0,2460.0
+"Always-cloud, CRC + burn-in",0.4,2,3,Bearing3_4,timely,5340.0,2805.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.1,2,3,Bearing1_4,premature,7140.0,3480.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.1,2,3,Bearing2_4,late,420.0,3480.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.1,2,3,Bearing3_4,timely,5520.0,3480.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.15,2,3,Bearing1_4,premature,7140.0,3480.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.15,2,3,Bearing2_4,late,420.0,3480.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.15,2,3,Bearing3_4,timely,5520.0,3480.0,1.0,112.0,90840.0
+"Always-cloud, CRC",0.2,2,3,Bearing1_4,premature,7140.0,3322.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.2,2,3,Bearing2_4,late,360.0,3322.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.2,2,3,Bearing3_4,timely,5520.0,3322.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.25,2,3,Bearing1_4,premature,7140.0,2872.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.25,2,3,Bearing2_4,late,240.0,2872.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.25,2,3,Bearing3_4,timely,5400.0,2872.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.3,2,3,Bearing1_4,premature,7140.0,2872.5,1.0,112.0,7260.0
+"Always-cloud, CRC",0.3,2,3,Bearing2_4,late,240.0,2872.5,1.0,112.0,2460.0
+"Always-cloud, CRC",0.3,2,3,Bearing3_4,timely,5400.0,2872.5,1.0,112.0,90840.0
+"Always-cloud, CRC",0.4,2,3,Bearing1_4,premature,7140.0,1725.0,1.0,112.0,7260.0
+"Always-cloud, CRC",0.4,2,3,Bearing2_4,late,0.0,1725.0,1.0,112.0,2460.0
+"Always-cloud, CRC",0.4,2,3,Bearing3_4,timely,4080.0,1725.0,1.0,112.0,90840.0
+"Always-edge, CRC",0.1,2,3,Bearing1_4,premature,7020.0,2017.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.1,2,3,Bearing2_4,timely,2100.0,2017.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.1,2,3,Bearing3_4,premature,90720.0,2017.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.15,2,3,Bearing1_4,premature,7020.0,2017.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.15,2,3,Bearing2_4,timely,2100.0,2017.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.15,2,3,Bearing3_4,premature,90720.0,2017.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.2,2,3,Bearing1_4,premature,7020.0,1725.0,0.0,0.0,7260.0
+"Always-edge, CRC",0.2,2,3,Bearing2_4,timely,2100.0,1725.0,0.0,0.0,2460.0
+"Always-edge, CRC",0.2,2,3,Bearing3_4,premature,90540.0,1725.0,0.0,0.0,90840.0
+"Always-edge, CRC",0.25,2,3,Bearing1_4,premature,6840.0,1387.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.25,2,3,Bearing2_4,timely,1980.0,1387.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.25,2,3,Bearing3_4,timely,2880.0,1387.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.3,2,3,Bearing1_4,premature,6840.0,1387.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.3,2,3,Bearing2_4,timely,1980.0,1387.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.3,2,3,Bearing3_4,timely,2880.0,1387.5,0.0,0.0,90840.0
+"Always-edge, CRC",0.4,2,3,Bearing1_4,late,,1162.5,0.0,0.0,7260.0
+"Always-edge, CRC",0.4,2,3,Bearing2_4,late,,1162.5,0.0,0.0,2460.0
+"Always-edge, CRC",0.4,2,3,Bearing3_4,timely,2820.0,1162.5,0.0,0.0,90840.0
+"Cloud point, fixed thr. H_p",,2,3,Bearing1_4,premature,7140.0,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_p",,2,3,Bearing2_4,late,120.0,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_p",,2,3,Bearing3_4,timely,4440.0,0.0,1.0,112.0,90840.0
+"Cloud point, fixed thr. H_c",,2,3,Bearing1_4,late,,0.0,1.0,112.0,7260.0
+"Cloud point, fixed thr. H_c",,2,3,Bearing2_4,late,,0.0,1.0,112.0,2460.0
+"Cloud point, fixed thr. H_c",,2,3,Bearing3_4,late,,0.0,1.0,112.0,90840.0
+Anomaly threshold,,2,3,Bearing1_4,late,,0.0,0.0,0.0,7260.0
+Anomaly threshold,,2,3,Bearing2_4,late,,0.0,0.0,0.0,2460.0
+Anomaly threshold,,2,3,Bearing3_4,late,,0.0,0.0,0.0,90840.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,4,Bearing1_5,timely,2820.0,4852.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,4,Bearing2_5,premature,19920.0,4852.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.1,2,4,Bearing3_5,premature,6540.0,4852.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,4,Bearing1_5,timely,2820.0,4852.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,4,Bearing2_5,premature,19920.0,4852.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.15,2,4,Bearing3_5,premature,6540.0,4852.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,4,Bearing1_5,late,780.0,3300.0,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,4,Bearing2_5,premature,10020.0,3300.0,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.2,2,4,Bearing3_5,timely,5580.0,3300.0,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,4,Bearing1_5,late,720.0,3187.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,4,Bearing2_5,premature,9960.0,3187.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.25,2,4,Bearing3_5,timely,5460.0,3187.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,4,Bearing1_5,late,720.0,3187.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,4,Bearing2_5,premature,9960.0,3187.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.3,2,4,Bearing3_5,timely,5460.0,3187.5,0.9824561403508771,124.0,6780.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,4,Bearing1_5,late,,2197.5,0.9615384615384616,124.0,3060.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,4,Bearing2_5,premature,9120.0,2197.5,0.9941002949852508,124.0,20280.0
+"HERA-v3 (onset-gated, CRC)",0.4,2,4,Bearing3_5,timely,4200.0,2197.5,0.9824561403508771,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,4,Bearing1_5,timely,2220.0,6000.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,4,Bearing2_5,premature,8400.0,6000.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.1,2,4,Bearing3_5,timely,5940.0,6000.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,4,Bearing1_5,timely,2220.0,6000.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,4,Bearing2_5,premature,8400.0,6000.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.15,2,4,Bearing3_5,timely,5940.0,6000.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,4,Bearing1_5,timely,2220.0,6000.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,4,Bearing2_5,premature,8400.0,6000.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.2,2,4,Bearing3_5,timely,5940.0,6000.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,4,Bearing1_5,late,780.0,3300.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,4,Bearing2_5,premature,8400.0,3300.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.25,2,4,Bearing3_5,timely,5580.0,3300.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,4,Bearing1_5,late,780.0,3300.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,4,Bearing2_5,premature,8400.0,3300.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.3,2,4,Bearing3_5,timely,5580.0,3300.0,0.8947368421052632,124.0,6780.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,4,Bearing1_5,late,600.0,3075.0,0.7692307692307693,124.0,3060.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,4,Bearing2_5,premature,8400.0,3075.0,0.4218289085545723,69.48672566371681,20280.0
+"HERA-v3b (onset gate + burn-in, CRC)",0.4,2,4,Bearing3_5,timely,5400.0,3075.0,0.8947368421052632,124.0,6780.0
+"Always-cloud, CRC + burn-in",0.1,2,4,Bearing1_5,timely,2340.0,4852.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.1,2,4,Bearing2_5,premature,19560.0,4852.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.1,2,4,Bearing3_5,premature,6060.0,4852.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.15,2,4,Bearing1_5,timely,2340.0,4852.5,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.15,2,4,Bearing2_5,premature,19560.0,4852.5,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.15,2,4,Bearing3_5,premature,6060.0,4852.5,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.2,2,4,Bearing1_5,late,780.0,3435.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.2,2,4,Bearing2_5,premature,10080.0,3435.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.2,2,4,Bearing3_5,timely,5640.0,3435.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.25,2,4,Bearing1_5,late,780.0,3300.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.25,2,4,Bearing2_5,premature,10020.0,3300.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.25,2,4,Bearing3_5,timely,5580.0,3300.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.3,2,4,Bearing1_5,late,780.0,3300.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.3,2,4,Bearing2_5,premature,10020.0,3300.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.3,2,4,Bearing3_5,timely,5580.0,3300.0,1.0,112.0,6780.0
+"Always-cloud, CRC + burn-in",0.4,2,4,Bearing1_5,late,600.0,3075.0,1.0,112.0,3060.0
+"Always-cloud, CRC + burn-in",0.4,2,4,Bearing2_5,premature,9840.0,3075.0,1.0,112.0,20280.0
+"Always-cloud, CRC + burn-in",0.4,2,4,Bearing3_5,timely,5400.0,3075.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.1,2,4,Bearing1_5,timely,2940.0,4807.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.1,2,4,Bearing2_5,premature,19860.0,4807.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.1,2,4,Bearing3_5,premature,6660.0,4807.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.15,2,4,Bearing1_5,timely,2940.0,4807.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.15,2,4,Bearing2_5,premature,19860.0,4807.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.15,2,4,Bearing3_5,premature,6660.0,4807.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.2,2,4,Bearing1_5,late,780.0,3300.0,1.0,112.0,3060.0
+"Always-cloud, CRC",0.2,2,4,Bearing2_5,premature,10020.0,3300.0,1.0,112.0,20280.0
+"Always-cloud, CRC",0.2,2,4,Bearing3_5,timely,5580.0,3300.0,1.0,112.0,6780.0
+"Always-cloud, CRC",0.25,2,4,Bearing1_5,late,720.0,3187.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.25,2,4,Bearing2_5,premature,9960.0,3187.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.25,2,4,Bearing3_5,timely,5460.0,3187.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.3,2,4,Bearing1_5,late,720.0,3187.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.3,2,4,Bearing2_5,premature,9960.0,3187.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.3,2,4,Bearing3_5,timely,5460.0,3187.5,1.0,112.0,6780.0
+"Always-cloud, CRC",0.4,2,4,Bearing1_5,late,,2197.5,1.0,112.0,3060.0
+"Always-cloud, CRC",0.4,2,4,Bearing2_5,premature,9120.0,2197.5,1.0,112.0,20280.0
+"Always-cloud, CRC",0.4,2,4,Bearing3_5,timely,4200.0,2197.5,1.0,112.0,6780.0
+"Always-edge, CRC",0.1,2,4,Bearing1_5,timely,2880.0,2265.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.1,2,4,Bearing2_5,premature,20040.0,2265.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.1,2,4,Bearing3_5,premature,6660.0,2265.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.15,2,4,Bearing1_5,timely,2880.0,2265.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.15,2,4,Bearing2_5,premature,20040.0,2265.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.15,2,4,Bearing3_5,premature,6660.0,2265.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.2,2,4,Bearing1_5,timely,2820.0,2040.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.2,2,4,Bearing2_5,premature,19980.0,2040.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.2,2,4,Bearing3_5,premature,6660.0,2040.0,0.0,0.0,6780.0
+"Always-edge, CRC",0.25,2,4,Bearing1_5,late,,1612.5,0.0,0.0,3060.0
+"Always-edge, CRC",0.25,2,4,Bearing2_5,timely,5760.0,1612.5,0.0,0.0,20280.0
+"Always-edge, CRC",0.25,2,4,Bearing3_5,premature,6240.0,1612.5,0.0,0.0,6780.0
+"Always-edge, CRC",0.3,2,4,Bearing1_5,late,,1612.5,0.0,0.0,3060.0
+"Always-edge, CRC",0.3,2,4,Bearing2_5,timely,5760.0,1612.5,0.0,0.0,20280.0
+"Always-edge, CRC",0.3,2,4,Bearing3_5,premature,6240.0,1612.5,0.0,0.0,6780.0
+"Always-edge, CRC",0.4,2,4,Bearing1_5,late,,1320.0,0.0,0.0,3060.0
+"Always-edge, CRC",0.4,2,4,Bearing2_5,timely,4740.0,1320.0,0.0,0.0,20280.0
+"Always-edge, CRC",0.4,2,4,Bearing3_5,timely,4740.0,1320.0,0.0,0.0,6780.0
+"Cloud point, fixed thr. H_p",,2,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_p",,2,4,Bearing2_5,premature,9240.0,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_p",,2,4,Bearing3_5,timely,4560.0,0.0,1.0,112.0,6780.0
+"Cloud point, fixed thr. H_c",,2,4,Bearing1_5,late,,0.0,1.0,112.0,3060.0
+"Cloud point, fixed thr. H_c",,2,4,Bearing2_5,late,,0.0,1.0,112.0,20280.0
+"Cloud point, fixed thr. H_c",,2,4,Bearing3_5,late,,0.0,1.0,112.0,6780.0
+Anomaly threshold,,2,4,Bearing1_5,late,,0.0,0.0,0.0,3060.0
+Anomaly threshold,,2,4,Bearing2_5,late,,0.0,0.0,0.0,20280.0
+Anomaly threshold,,2,4,Bearing3_5,late,,0.0,0.0,0.0,6780.0
