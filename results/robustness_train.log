@@ -1,0 +1,110 @@
+fold0 seed4 GRU+DT-point: 3s
+fold0 seed3 GRU+DT-point: 3s
+fold1 seed4 GRU+DT-point: 5s
+fold1 seed3 GRU+DT-point: 5s
+fold2 seed3 GRU+DT-point: 5s
+fold2 seed4 GRU+DT-point: 4s
+fold3 seed3 GRU+DT-point: 5s
+fold4 seed3 GRU+DT-point: 4s
+fold4 seed4 GRU+DT-point: 4s
+fold3 seed4 GRU+DT-point: 4s
+== xjtu: runner-up edge Edge-GRU, cloud TCN; 25 CV+ jobs
+cv+ fold0 seed3 Edge-CNN: 20s
+cv+ fold0 seed3 GRU+DT: 12s
+cv+ fold0 seed4 Edge-CNN: 20s
+cv+ fold0 seed4 GRU+DT: 12s
+cv+ fold1 seed4 Edge-CNN: 21s
+cv+ fold1 seed4 GRU+DT: 13s
+cv+ fold1 seed3 Edge-CNN: 21s
+cv+ fold1 seed3 GRU+DT: 13s
+cv+ fold2 seed3 Edge-CNN: 25s
+cv+ fold2 seed3 GRU+DT: 16s
+cv+ fold3 seed4 Edge-CNN: 21s
+cv+ fold3 seed4 GRU+DT: 15s
+cv+ fold3 seed3 Edge-CNN: 23s
+cv+ fold3 seed3 GRU+DT: 15s
+cv+ fold2 seed4 Edge-CNN: 22s
+cv+ fold2 seed4 GRU+DT: 16s
+cv+ fold4 seed3 Edge-CNN: 26s
+cv+ fold4 seed3 GRU+DT: 17s
+cv+ fold4 seed4 Edge-CNN: 22s
+cv+ fold4 seed4 GRU+DT: 17s
+cv+ fold0 seed0 Edge-GRU: 2s
+cv+ fold0 seed0 TCN+DT: 118s
+cv+ fold0 seed2 Edge-GRU: 2s
+cv+ fold0 seed2 TCN+DT: 119s
+cv+ fold0 seed1 Edge-GRU: 2s
+cv+ fold0 seed1 TCN+DT: 120s
+cv+ fold1 seed0 Edge-GRU: 2s
+cv+ fold1 seed0 TCN+DT: 125s
+cv+ fold1 seed1 Edge-GRU: 2s
+cv+ fold1 seed1 TCN+DT: 124s
+cv+ fold1 seed2 Edge-GRU: 2s
+cv+ fold1 seed2 TCN+DT: 126s
+cv+ fold2 seed0 Edge-GRU: 2s
+cv+ fold2 seed0 TCN+DT: 159s
+cv+ fold2 seed1 Edge-GRU: 2s
+cv+ fold2 seed1 TCN+DT: 159s
+cv+ fold3 seed0 Edge-GRU: 2s
+cv+ fold3 seed0 TCN+DT: 148s
+cv+ fold2 seed2 Edge-GRU: 2s
+cv+ fold2 seed2 TCN+DT: 158s
+cv+ fold3 seed1 Edge-GRU: 2s
+cv+ fold3 seed1 TCN+DT: 150s
+cv+ fold3 seed2 Edge-GRU: 2s
+cv+ fold3 seed2 TCN+DT: 146s
+cv+ fold4 seed1 Edge-GRU: 2s
+cv+ fold4 seed1 TCN+DT: 162s
+cv+ fold4 seed0 Edge-GRU: 2s
+cv+ fold4 seed0 TCN+DT: 164s
+cv+ fold4 seed2 Edge-GRU: 2s
+cv+ fold4 seed2 TCN+DT: 158s
+fold0 seed4 LSTM+DT-point: 41s
+fold0 seed3 LSTM+DT-point: 42s
+fold2 seed3 LSTM+DT-point: 45s
+fold1 seed3 LSTM+DT-point: 49s
+fold1 seed4 LSTM+DT-point: 50s
+fold2 seed4 LSTM+DT-point: 40s
+fold3 seed3 LSTM+DT-point: 46s
+fold3 seed4 LSTM+DT-point: 45s
+== femto: runner-up edge Edge-CNN, cloud TCN; 20 CV+ jobs
+cv+ fold0 seed4 Edge-GRU: 11s
+cv+ fold0 seed4 LSTM+DT: 160s
+cv+ fold0 seed3 Edge-GRU: 11s
+cv+ fold0 seed3 LSTM+DT: 160s
+cv+ fold2 seed3 Edge-GRU: 11s
+cv+ fold2 seed3 LSTM+DT: 174s
+cv+ fold1 seed4 Edge-GRU: 13s
+cv+ fold1 seed4 LSTM+DT: 196s
+cv+ fold1 seed3 Edge-GRU: 13s
+cv+ fold1 seed3 LSTM+DT: 198s
+cv+ fold2 seed4 Edge-GRU: 11s
+cv+ fold2 seed4 LSTM+DT: 162s
+cv+ fold3 seed3 Edge-GRU: 14s
+cv+ fold3 seed3 LSTM+DT: 191s
+cv+ fold3 seed4 Edge-GRU: 13s
+cv+ fold3 seed4 LSTM+DT: 190s
+cv+ fold0 seed0 Edge-CNN: 53s
+cv+ fold0 seed0 TCN+DT: 1884s
+cv+ fold0 seed1 Edge-CNN: 53s
+cv+ fold0 seed1 TCN+DT: 1900s
+cv+ fold0 seed2 Edge-CNN: 50s
+cv+ fold0 seed2 TCN+DT: 1884s
+cv+ fold1 seed1 Edge-CNN: 61s
+cv+ fold1 seed1 TCN+DT: 2226s
+cv+ fold1 seed0 Edge-CNN: 64s
+cv+ fold1 seed0 TCN+DT: 2263s
+cv+ fold2 seed0 Edge-CNN: 57s
+cv+ fold2 seed0 TCN+DT: 1753s
+cv+ fold2 seed1 Edge-CNN: 46s
+cv+ fold2 seed1 TCN+DT: 1718s
+cv+ fold1 seed2 Edge-CNN: 65s
+cv+ fold1 seed2 TCN+DT: 1976s
+cv+ fold2 seed2 Edge-CNN: 47s
+cv+ fold2 seed2 TCN+DT: 1692s
+cv+ fold3 seed0 Edge-CNN: 55s
+cv+ fold3 seed0 TCN+DT: 1970s
+cv+ fold3 seed1 Edge-CNN: 60s
+cv+ fold3 seed1 TCN+DT: 1718s
+cv+ fold3 seed2 Edge-CNN: 62s
+cv+ fold3 seed2 TCN+DT: 1683s

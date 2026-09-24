@@ -134,7 +134,7 @@ def rul_tables():
 
 POLICY_ORDER = [
     ("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"), ("Cloud point+threshold", "Cloud point + fixed thr."),
-    ("HERA-full", r"\textbf{HERA-full}"), ("HERA w/o anomaly term", "HERA w/o anomaly term"), ("HERA-no-DT", "HERA-no-DT"),
+    ("HERA-full", "HERA-full"), ("HERA w/o anomaly term", "HERA w/o anomaly term"), ("HERA-no-DT", "HERA-no-DT"),
     ("HERA-no-UQ", "HERA-no-UQ (point margin)"), ("HERA-fixed (anomaly trigger)", "HERA-fixed (anomaly trig.)"),
     ("Width gate (matched)", "Width gate$^\\ddagger$"), ("Linear score gate (matched)", "Linear score gate$^\\ddagger$"),
     ("Random gate (matched)", "Random gate$^\\ddagger$")]
@@ -186,7 +186,7 @@ def timing_table():
     tim = {p: pd.read_csv(R(ds) / "alarm_timing.csv").set_index("policy") for p, ds in DS.items()}
     info = {p: json.loads((R(ds) / "run_info.json").read_text()) for p, ds in DS.items()}
     order = [("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"), ("Cloud point+threshold", "Point + thr."),
-             ("HERA-full", r"\textbf{HERA-full}"), ("Width gate (matched)", "Width gate")]
+             ("HERA-full", "HERA-full"), ("Width gate (matched)", "Width gate")]
     L = [r"\begin{table}[t]", r"\centering",
          r"\caption{Top: outcome of each bearing's first sustained (3 snapshots) schedule/urgent recommendation "
          r"(number of bearings, mean over 3 seeds): T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), "
@@ -340,8 +340,8 @@ def fleet_table():
         return x.iloc[0]
     rows = [("Edge, fixed $p{\\ge}0.5$", "edge_fixed0.5", None, 0), ("Cloud, fixed $p{\\ge}0.5$", "cloud_fixed0.5", None, 0),
             ("Cloud, CRC $\\varepsilon{=}0.1$", "cloud", 0.1, 12), ("Cloud, CRC $\\varepsilon{=}0.1$", "cloud", 0.1, 1000),
-            ("Edge, CRC $\\varepsilon{=}0.1$", "edge", 0.1, 1000), ("\\textbf{HERA}, CRC $\\varepsilon{=}0.1$", "hera", 0.1, 1000),
-            ("\\textbf{HERA}, CRC $\\varepsilon{=}0.05$", "hera", 0.05, 1000), ("\\textbf{HERA}, CRC $\\varepsilon{=}0.2$", "hera", 0.2, 1000)]
+            ("Edge, CRC $\\varepsilon{=}0.1$", "edge", 0.1, 1000), ("HERA, CRC $\\varepsilon{=}0.1$", "hera", 0.1, 1000),
+            ("HERA, CRC $\\varepsilon{=}0.05$", "hera", 0.05, 1000), ("HERA, CRC $\\varepsilon{=}0.2$", "hera", 0.2, 1000)]
     L = [r"\begin{table}[t]", r"\centering",
          r"\caption{Fleet scale (SCANIA Component X, " + f"{info['n_vehicles']:,}".replace(",", "{,}") + r" trucks, "
          + f"{info['n_failing']:,}".replace(",", "{,}") + r" failing; 50 random calibration/test splits). Late: failing trucks "
@@ -402,6 +402,51 @@ def device_macros():
     macro("armParity", f"$10^{{{int(np.ceil(np.log10(d)))}}}$")
 
 
+def coverage_macros():
+    """Per-bearing coverage of the fog/cloud CQR-CV+ intervals (seeds averaged per bearing)."""
+    for p, ds in DS.items():
+        pb = pd.read_csv(R(ds) / "per_bearing.csv")
+        macro(f"{p}PbCovMed", f"{pb.cov_cloud.median():.2f}")
+        macro(f"{p}PbCovMin", f"{pb.cov_cloud.min():.2f}")
+        macro(f"{p}PbCovLow", str(int((pb.cov_cloud < 0.9).sum())))
+
+
+def robustness_macros():
+    """Seed (5 vs 3) and runner-up-architecture checks (experiments/robustness_seeds_arch.py)."""
+    f = ROOT / "results" / "robustness_seeds_arch.json"
+    if not f.exists():
+        return
+    rb = json.loads(f.read_text())
+    for p, ds in DS.items():
+        base, five, alt = rb[f"{ds}/selected_3seeds"], rb[f"{ds}/selected_5seeds"], rb[f"{ds}/runnerup_3seeds"]
+        macro(f"{p}RobNzFmWidth", str(base["tests"]["fm_hera_vs_width"]["n_nonzero"]))
+        macro(f"{p}RobFmWidthDiff", f"{abs(base['tests']['fm_hera_vs_width']['mean_diff_pp']):.2f}")
+        for tag, d in (("Five", five), ("Alt", alt)):
+            macro(f"{p}Rob{tag}UnsafeHera", f"{d['pooled_pct']['hera']['unsafe']:.1f}")
+            macro(f"{p}Rob{tag}FmHera", f"{d['pooled_pct']['hera']['fm']:.1f}")
+            macro(f"{p}Rob{tag}EscHera", f"{d['pooled_pct']['hera']['esc']:.1f}")
+            macro(f"{p}Rob{tag}UnsafePoint", f"{d['pooled_pct']['point']['unsafe']:.1f}")
+            macro(f"{p}Rob{tag}PPoint", fmt_p(d["tests"]["unsafe_hera_vs_point"]["p"]))
+            macro(f"{p}Rob{tag}NzUnsafeWidth", str(d["tests"]["unsafe_hera_vs_width"]["n_nonzero"]))
+            macro(f"{p}Rob{tag}NzFmWidth", str(d["tests"]["fm_hera_vs_width"]["n_nonzero"]))
+        macro(f"{p}RobAltFmWidthDiff", f"{abs(alt['tests']['fm_hera_vs_width']['mean_diff_pp']):.1f}")
+        macro(f"{p}RobAltPFmWidth", fmt_p(alt["tests"]["fm_hera_vs_width"]["p"]))
+        macro(f"{p}RobAltEdge", alt["edge"])
+        macro(f"{p}RobAltCloud", alt["cloud"])
+
+
+def holm_macro():
+    """Holm-adjusted maximum p over the five primary bearing-level tests reported in the text."""
+    fam = [("femto", "unsafe_hera_vs_unsafe_point"), ("femto", "fm_hera_vs_fm_point"),
+           ("xjtu", "unsafe_hera_vs_unsafe_point"), ("xjtu", "fm_hera_vs_fm_point"), ("xjtu", "fm_hera_vs_fm_edge")]
+    ps = sorted(json.loads((R(ds) / "stat_tests.json").read_text())[k]["p_wilcoxon"] for ds, k in fam)
+    adj, run = [], 0.0
+    for i, pv in enumerate(ps):
+        run = max(run, min(1.0, (len(ps) - i) * pv))
+        adj.append(run)
+    macro("holmMaxP", fmt_p(max(adj)))
+
+
 def write_macros():
     lines = ["% Auto-generated by experiments/make_tables.py -- do not edit"]
     lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(MACROS.items())]
@@ -410,5 +455,5 @@ def write_macros():
 
 
 if __name__ == "__main__":
-    rul_tables(); policy_tables(); timing_table(); detection_table(); fleet_table(); device_macros(); other_macros(); card(); write_macros()
+    rul_tables(); policy_tables(); timing_table(); detection_table(); fleet_table(); device_macros(); coverage_macros(); robustness_macros(); holm_macro(); other_macros(); card(); write_macros()
     print(f"{len(MACROS)} macros; tables in paper/tables/")

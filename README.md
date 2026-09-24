@@ -1,4 +1,6 @@
-# HERA-PdM — Hierarchical Edge Reasoning Agents for Predictive Maintenance
+# HERA-PdM — When does uncertainty-gated edge–cloud predictive maintenance help?
+
+Code, results and paper for *"When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet"*. HERA-PdM (Hierarchical Edge Reasoning Agents) is used as an experimental framework, not as a claimed best system.
 
 Research code, data pipeline, experiment outputs and IEEE conference manuscript for
 **“HERA-PdM: When Does Uncertainty-Gated Escalation Help Hierarchical Edge–Digital-Twin Predictive Maintenance? Evidence from Two Bearing Datasets”** (v2: FEMTO + XJTU-SY, CQR-CV+). Run everything with `experiments/run_all_v2.sh`; set `HERA_DATASET=femto|xjtu` for single stages.
@@ -80,6 +82,13 @@ python run_experiments.py --stage train --workers 5
 # 4. evaluation (all metrics, policies, ablations, statistics)
 python run_experiments.py --stage analyze
 python src/explainability.py
+# 4b. XJTU-SY (HERA_DATASET=xjtu), CV+ stage, R_max sensitivity, SCANIA fleet study
+HERA_DATASET=xjtu python run_experiments.py --workers 5
+python run_experiments.py --stage cvplus --workers 5; HERA_DATASET=xjtu python run_experiments.py --stage cvplus --workers 5
+python experiments/rmax_sensitivity.py
+python src/fleet_scania.py                              # needs data/raw/SCANIA (DOI 10.5878/bnh5-ka77)
+# 4c. robustness: five seeds and runner-up architectures (≈2 h on an M2 Pro, FEMTO TCN runs dominate)
+python experiments/robustness_seeds_arch.py train && python experiments/robustness_seeds_arch.py analyze_all
 # 5. figures and LaTeX tables / numeric macros
 python run_experiments.py --stage figures
 # 6. paper
@@ -91,7 +100,8 @@ Or everything in sequence: `python run_experiments.py` (then `python src/explain
 `IEEEtran.cls`/`IEEEtran.bst` (v1.8b, CTAN) are bundled in `paper/`.
 
 ## Reproducibility notes
-* Seeds 0, 1, 2 (`utils.SEEDS`) control initialization and batch order; fold and calibration assignments are fixed in `utils.py`.
-* Hyper-parameters were chosen on inner validation bearings drawn from training bearings (`results/hparam_search.csv`).
+* Seeds 0, 1, 2 (`utils.SEEDS`) control initialization and batch order; fold, calibration and CV+ assignments are fixed lists in `utils.py`, shared by all seeds. Seeds 3-4 are used only by the five-seed robustness check.
+* Hyper-parameters and architectures were chosen once (seed 0) on two inner validation bearings from the training bearings of two folds (`results/<ds>/hparam_search.csv`, `selected_models.json`) and frozen; test bearings were never used. The protocol was revised once after a first run (see `research/novelty_audit.md` §8-9).
+* Statistics: unit = bearing (seeds averaged per bearing), two-sided Wilcoxon signed-rank, zero differences dropped, no test with <5 non-zero pairs; Holm correction over the five primary tests.
 * Latency is CPU wall-clock (1 thread, batch 1) on the host machine, **not** on embedded hardware; network RTT (50 ms) and communication volumes are analytic assumptions, labelled as such. No energy measurements were made.
 * The system is a simulation over recorded data, not an industrial deployment.

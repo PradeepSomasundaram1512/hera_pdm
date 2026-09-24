@@ -13,13 +13,21 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+URLS = {"demsar2006statistical": "https://www.jmlr.org/papers/v7/demsar06a.html",
+        "geifman2017selective": "https://proceedings.neurips.cc/paper/2017/hash/4a8423d5e91fda00bb7e46540e2b0cf1-Abstract.html"}
+
 CLAIMS = {
+    "geifman2017selective": ("NeurIPS proceedings page (NIPS 2017, vol. 30)", "yes - selective classifier rejects inputs to meet a user-specified risk (proceedings abstract)"),
+    "barber2023beyond": ("Crossref DOI + Semantic Scholar abstract", "yes - conformal prediction when exchangeability is violated; weighted quantiles (abstract)"),
+    "dunn2023hierarchical": ("Crossref DOI + Semantic Scholar abstract", "yes - exchangeability fails with multiple observations per unit; conformal methods for two-layer hierarchical data (abstract)"),
+    "foygel2021limits": ("Crossref DOI", "yes - impossibility of distribution-free test-conditional predictive coverage (title/record, well-known result)"),
+    "demsar2006statistical": ("JMLR paper page (vol. 7, pp. 1-30)", "yes - recommends Wilcoxon signed-rank test for paired comparisons over multiple data sets (JMLR abstract)"),
     "nectoux2012pronostia": ("HAL API (hal-00719503)", "yes - dataset source (PRONOSTIA platform, PHM'12)"),
     "lei2018machinery": ("Crossref DOI", "yes - review: data acquisition, HI construction, health-stage division, RUL prediction (abstract); cited for PdM definition and health-stage division"),
     "zheng2017lstm": ("Crossref DOI", "yes - LSTM for RUL estimation (title/record)"),
     "zhu2019mscnn": ("Crossref DOI", "yes - multiscale CNN for bearing RUL (abstract)"),
     "bai2018tcn": ("arXiv API", "yes - generic TCN architecture used as baseline (abstract)"),
-    "tao2019dt": ("Crossref DOI", "yes (title + widely known survey content; abstract not inspected in this session) - DT in industry survey; cited for DT as synchronized virtual state"),
+    "tao2019dt": ("Crossref DOI + Semantic Scholar abstract", "yes - DTs characterized by seamless cyber-physical integration (abstract); cited to contrast our lightweight state record"),
     "xu2021industry5": ("Crossref DOI", "yes (title + widely known editorial content; abstract not inspected in this session) - Industry 5.0 perspective; cited for human-centric motivation"),
     "ren2021cloudedge": ("Crossref DOI", "yes - edge real-time RUL + cloud refinement with history (abstract)"),
     "saleh2026hama": ("Crossref DOI + authors' public repository README", "yes - edge z-score pre-filter, fog ensembles, SHAP, small-LM operator text"),
@@ -31,7 +39,7 @@ CLAIMS = {
     "romano2019cqr": ("arXiv API + NeurIPS proceedings page", "yes - CQR method and coverage guarantee"),
     "angelopoulos2023gentle": ("Crossref DOI", "yes - conformal prediction tutorial; finite-sample coverage"),
     "huang2025cab": ("arXiv API", "yes - conformal-alignment edge-cloud cascade for classification (abstract)"),
-    "jitkrittum2023cascade": ("arXiv API + Semantic Scholar venue (NeurIPS 2023)", "yes - confidence-based cascade deferral (abstract)"),
+    "jitkrittum2023cascade": ("Crossref DOI 10.52202/075280-0431 + Semantic Scholar abstract", "yes - confidence-based deferral often works well; characterizes when it fails (abstract)"),
     "xu2025riskrl": ("Crossref DOI", "yes - probabilistic RUL feeding risk-aware RL maintenance policy (abstract)"),
     "lundberg2017shap": ("arXiv API + Semantic Scholar venue/pages", "yes - SHAP"),
     "vanoudenhoven2023pdm5": ("Crossref DOI", "yes - decision-makers often do not adopt system-generated PdM advice (abstract)"),
@@ -59,7 +67,7 @@ def main():
         arx = re.search(r"arXiv:(\d{4}\.\d{4,5})", e)
         url = f"https://doi.org/{doi}" if doi else (f"https://arxiv.org/abs/{arx.group(1)}" if arx else
                                                       "https://hal.science/hal-00719503" if "hal" in e else
-                                                      "https://proceedings.neurips.cc")
+                                                      URLS.get(key, "https://proceedings.neurips.cc"))
         venue = field(e, "journal") or field(e, "booktitle") or field(e, "howpublished")
         src, claim = CLAIMS[key]
         rows.append({"citation_key": key, "title": field(e, "title"), "authors": field(e, "author"),
