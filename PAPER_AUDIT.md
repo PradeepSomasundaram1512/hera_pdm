@@ -42,4 +42,4 @@ None (validator check 5).
 25, all verified (research/reference_verification.csv).
 
 ## O. Reproducibility
-All numbers generated as macros from results/ (validator check 9); commands in README; coding matrix and search logs in research/ (repository currently private).
+All numbers generated as macros from results/ (validator check 9); commands in README; coding matrix and search logs in research/; repository public at https://github.com/PradeepSomasundaram1512/hera_pdm (cited in the paper).
