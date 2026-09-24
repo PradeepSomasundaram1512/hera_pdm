@@ -65,6 +65,38 @@ def channel_features(x: np.ndarray, prefix: str) -> dict:
     return f
 
 
+_HP = {}
+
+
+def envelope_features(x: np.ndarray, prefix: str) -> dict:
+    """Geometry-free envelope-analysis indicators: bearing defects produce repetitive
+    impacts that amplitude-modulate high-frequency resonances. After a 1 kHz
+    high-pass (4th-order Butterworth), the Hilbert envelope is summarized by its
+    RMS and kurtosis, the peakiness of its spectrum in 5-1000 Hz (max / median),
+    and log energies in 5-100, 100-300 and 300-1000 Hz."""
+    from scipy.signal import butter, hilbert, sosfiltfilt
+    if "sos" not in _HP:
+        _HP["sos"] = butter(4, 1000, btype="highpass", fs=FS, output="sos")
+    y = sosfiltfilt(_HP["sos"], x - x.mean())
+    env = np.abs(hilbert(y))
+    env = env - env.mean()
+    spec = np.abs(np.fft.rfft(env)) ** 2
+    f = np.fft.rfftfreq(len(env), 1 / FS)
+    band = (f >= 5) & (f <= 1000)
+    out = {f"{prefix}_env_rms": float(np.sqrt(np.mean(env ** 2))),
+           f"{prefix}_env_kurt": float(stats.kurtosis(env, fisher=False)),
+           f"{prefix}_env_peak": float(spec[band].max() / (np.median(spec[band]) + 1e-12))}
+    for lo, hi in [(5, 100), (100, 300), (300, 1000)]:
+        m = (f >= lo) & (f < hi)
+        out[f"{prefix}_env_b{lo}_{hi}"] = float(np.log10(spec[m].sum() + 1e-12))
+    return out
+
+
+import os  # noqa: E402
+ENV = {"on": os.environ.get("HERA_FEATSET", "base") == "env"}
+SFX = "_env" if ENV["on"] else ""
+
+
 def read_snapshot(path: Path) -> np.ndarray:
     sep = ";" if ";" in path.open().readline() else ","
     arr = pd.read_csv(path, sep=sep, header=None).to_numpy()
@@ -80,6 +112,9 @@ def process_bearing(args) -> pd.DataFrame:
         feats = {"snapshot": i}
         feats.update(channel_features(sig[:, 0], "h"))
         feats.update(channel_features(sig[:, 1], "v"))
+        if ENV["on"]:
+            feats.update(envelope_features(sig[:, 0], "h"))
+            feats.update(envelope_features(sig[:, 1], "v"))
         rows.append(feats)
     df = pd.DataFrame(rows)
     T = len(df)
@@ -109,6 +144,9 @@ def process_xjtu_bearing(args) -> pd.DataFrame:
         feats = {"snapshot": i}
         feats.update(channel_features(sig[:, 0], "h"))
         feats.update(channel_features(sig[:, 1], "v"))
+        if ENV["on"]:
+            feats.update(envelope_features(sig[:, 0], "h"))
+            feats.update(envelope_features(sig[:, 1], "v"))
         rows.append(feats)
     df = pd.DataFrame(rows)
     T = len(df)
@@ -131,10 +169,10 @@ def main_xjtu(workers: int):
     with ProcessPoolExecutor(workers) as ex:
         dfs = list(ex.map(process_xjtu_bearing, jobs))
     data = pd.concat(dfs, ignore_index=True)
-    data.to_csv(PROC / "xjtu_features.csv.gz", index=False)
+    data.to_csv(PROC / f"xjtu_features{SFX}.csv.gz", index=False)
     summary = data.groupby("bearing").agg(condition=("condition", "first"), snapshots=("snapshot", "size"),
                                           life_s=("time_s", "max")).reset_index()
-    summary.to_csv(PROC / "xjtu_dataset_summary.csv", index=False)
+    summary.to_csv(PROC / f"xjtu_dataset_summary{SFX}.csv", index=False)
     print(summary.to_string(index=False))
 
 
@@ -156,14 +194,14 @@ def main():
     with ProcessPoolExecutor(a.workers) as ex:
         dfs = list(ex.map(process_bearing, jobs))
     data = pd.concat(dfs, ignore_index=True)
-    data.to_csv(PROC / "femto_features.csv.gz", index=False)
+    data.to_csv(PROC / f"femto_features{SFX}.csv.gz", index=False)
     cut = truncation_points()
     pd.Series(cut, name="truncation_index").to_csv(PROC / "test_truncation.csv")
     summary = data.groupby("bearing").agg(condition=("condition", "first"), snapshots=("snapshot", "size"),
                                           life_s=("time_s", "max")).reset_index()
     summary["split"] = np.where(summary.bearing.isin(TRAIN_SPLIT), "train", "test")
     summary["official_cut"] = summary.bearing.map(cut)
-    summary.to_csv(PROC / "dataset_summary.csv", index=False)
+    summary.to_csv(PROC / f"dataset_summary{SFX}.csv", index=False)
     print(summary.to_string(index=False))
 
 

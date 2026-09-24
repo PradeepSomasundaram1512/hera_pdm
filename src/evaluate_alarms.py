@@ -26,7 +26,8 @@ EDGE, CLOUD = SEL["edge_model"], SEL["cloud_model"] + "+DT"
 GRID = np.linspace(-H_CRIT, R_MAX, 321)
 EPS_MAIN = (0.1, 0.2)
 EPS_SWEEP = (0.1, 0.15, 0.2, 0.25, 0.3, 0.4)
-FEAT_B, SYNC_B = 28 * 4, 3 * 4
+from utils import n_features  # noqa: E402
+FEAT_B, SYNC_B = n_features() * 4, 3 * 4
 
 
 def tau_anomaly(fold):

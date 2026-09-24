@@ -64,9 +64,16 @@ QUANTILES = (ALPHA / 2, 0.5, 1 - ALPHA / 2)
 SEEDS = (0, 1, 2)
 N_INNER = 4                                                 # CV+ inner folds
 
-_TAG = DATASET + ("" if "HERA_RMAX" not in os.environ else f"_rmax{int(R_MAX)}")
+FEATSET = os.environ.get("HERA_FEATSET", "base")          # "base" (28 features) | "env" (+12 envelope features)
+_TAG = DATASET + ("" if FEATSET == "base" else f"_{FEATSET}") + \
+    ("" if "HERA_RMAX" not in os.environ else f"_rmax{int(R_MAX)}")
 RESULTS = ROOT / "results" / _TAG
-FEATURES = PROC / f"{DATASET}_features.csv.gz"
+FEATURES = PROC / (f"{DATASET}_features.csv.gz" if FEATSET == "base" else f"{DATASET}_features_{FEATSET}.csv.gz")
+
+
+def n_features() -> int:
+    import pandas as pd
+    return sum(c[:2] in ("h_", "v_") for c in pd.read_csv(FEATURES, nrows=1).columns)
 
 
 def set_seed(seed: int) -> None:

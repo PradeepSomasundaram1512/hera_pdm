@@ -42,12 +42,15 @@ CLOUD_ARCHS = ["LSTM", "GRU", "TCN", "CNN-LSTM"]
 EDGE_ARCHS = ["Edge-CNN", "Edge-GRU"]
 TAU_Q = 0.99               # alarm threshold = 99th pct of a_t on healthy (y >= R_MAX) training snapshots
 RTT_MS = 50.0              # assumed edge<->fog/cloud round-trip time (not measured)
-FEAT_BYTES = 28 * 4        # one feature vector, float32
+FEAT_BYTES = None          # set in main(): n_features * 4 bytes (float32)
 SYNC_BYTES = 3 * 4         # DT sync message: (t, HI, a_t)
 RAW_BYTES = CONFIGS[DATASET]["snapshot_samples"] * 2 * 2   # one raw 2-channel snapshot at 16 bit
 SUSTAIN = 3                # consecutive snapshots for a sustained alarm (per-bearing timing)
 
 SEL = json.loads((BASE / "selected_models.json").read_text())
+from utils import n_features  # noqa: E402
+NF = n_features()
+FEAT_BYTES = NF * 4
 EDGE_TAG, CLOUD = SEL["edge_model"], SEL["cloud_model"]
 CV_TAGS = {EDGE_TAG, CLOUD + "+DT", CLOUD}
 
@@ -336,9 +339,9 @@ def system_metrics():
             (f"{a}+DT", a, W_CLOUD, N_CTX) for a in CLOUD_ARCHS] + [(a, a, W_CLOUD, 0) for a in CLOUD_ARCHS]:
         torch.manual_seed(0)
         ck = torch.load(RESULTS / "checkpoints" / f"fold0_seed0_{tag}.pt", weights_only=False)
-        m = build_model(arch, 28, dctx, width=ck["hp"]["width"])
+        m = build_model(arch, NF, dctx, width=ck["hp"]["width"])
         m.load_state_dict(ck["state"])
-        out[tag] = {"params": count_params(m), "macs": count_macs(m, 28, W, dctx), **measure_latency(m, 28, W, dctx)}
+        out[tag] = {"params": count_params(m), "macs": count_macs(m, NF, W, dctx), **measure_latency(m, NF, W, dctx)}
     out["assumptions"] = {"rtt_ms": RTT_MS, "feature_bytes": FEAT_BYTES, "sync_bytes": SYNC_BYTES,
                           "raw_snapshot_bytes": RAW_BYTES,
                           "latency_note": "CPU wall-clock, 1 thread, batch 1, Apple M2 Pro (host, not an MCU)"}
