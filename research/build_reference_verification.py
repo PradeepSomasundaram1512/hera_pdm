@@ -39,6 +39,7 @@ CLAIMS = {
     "moccardi2025robust": ("Crossref DOI", "yes - conformal RUL on C-MAPSS; recommends weighted conformal under non-exchangeability (abstract)"),
     "barber2021jackknife": ("Crossref DOI", "yes - jackknife+/CV+ predictive intervals with 1-2alpha guarantee (Ann. Stat.); used for CQR-CV+"),
     "wang2020xjtu": ("Crossref DOI + dataset author's official repository README", "yes - XJTU-SY dataset source paper requested by the dataset authors"),
+    "angelopoulos2024crc": ("arXiv API (2208.02814) + official ICLR 2024 proceedings page", "yes - conformal risk control of expected monotone losses; used for bearing-level lateness control"),
     "hou2025online": ("arXiv API", "yes - conformal calibration with adaptive edge-cloud offloading for probabilistic linear solvers (abstract)"),
 }
 

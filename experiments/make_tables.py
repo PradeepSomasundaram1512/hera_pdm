@@ -274,6 +274,19 @@ def other_macros():
             macro(f"{p}ShapAdd", f"{e['additivity_mae_s']:.1f}")
             macro(f"{p}ShapRel", f"{100 * e['additivity_rel']:.0f}")
     macro("rttMs", "50")
+    # bearing-level conformal risk control (v3 exploration; src/evaluate_alarms.py)
+    for p, ds in DS.items():
+        a = pd.read_csv(R(ds) / "alarm_eps_sweep.csv")
+        for pol, n in [("HERA-v3 (onset-gated, CRC)", "Crc"), ("Always-cloud, CRC", "CrcCloud"),
+                       ("Cloud point, fixed thr. H_p", "PointHp")]:
+            for eps, en in [(0.1, "Ten"), (0.3, "Thirty"), (None, "")]:
+                x = a[(a.policy == pol) & ((a.eps.isna()) if eps is None else np.isclose(a.eps, eps if eps else 0))]
+                if x.empty:
+                    continue
+                x = x.iloc[0]
+                macro(f"{p}Late{n}{en}", f"{100 * x.late_rate_mean:.1f}")
+                macro(f"{p}Prem{n}{en}", f"{100 * x.premature_rate_mean:.1f}")
+                macro(f"{p}Esc{n}{en}", f"{100 * x.esc_frac_mean:.1f}")
 
 
 def card():
