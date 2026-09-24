@@ -187,8 +187,8 @@ def main():
     if a.stage in ("all", "analyze"):
         subprocess.run([py, str(ROOT / "src/evaluation.py")], check=True)
     if a.stage in ("all", "figures"):
-        subprocess.run([py, str(ROOT / "experiments/make_figures.py")], check=True)
-        subprocess.run([py, str(ROOT / "experiments/make_tables.py")], check=True)
+        subprocess.run([py, str(ROOT / "manuscript/tools/make_figures.py")], check=True)
+        subprocess.run([py, str(ROOT / "manuscript/tools/make_tables.py")], check=True)
 
 
 if __name__ == "__main__":

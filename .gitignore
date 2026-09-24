@@ -2,21 +2,23 @@
 data/raw/
 __pycache__/
 *.pyc
-paper/*.aux
-paper/*.log
-paper/*.bbl
-paper/*.blg
-paper/*.out
-paper/*.fls
-paper/*.fdb_latexmk
 .DS_Store
-results/_discarded_v0/
 results/*_stdout.txt
-paper/missfont.log
-paper/mfput.log
 .venv.nosync/
 data/raw.nosync/
 .venv
 data/raw
-results/_v1/
 data/raw.nosync/SCANIA/
+# LaTeX build products (the submitted PDFs are tracked under their own names)
+manuscript/**/*.aux
+manuscript/**/*.log
+manuscript/**/*.bbl
+manuscript/**/*.blg
+manuscript/**/*.out
+manuscript/**/*.fls
+manuscript/**/*.fdb_latexmk
+manuscript/**/main.pdf
+# local-only working folders (large or duplicate files stay off GitHub)
+presentation/
+submission_ready/
+archive_old_versions/

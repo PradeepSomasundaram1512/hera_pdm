@@ -18,7 +18,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 PROC = ROOT / "data" / "processed"
-FIGS = ROOT / "figures"
+FIGS = ROOT / "manuscript" / "icaiet2027" / "figures"
 
 
 def _femto_folds():

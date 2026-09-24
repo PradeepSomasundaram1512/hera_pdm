@@ -1,107 +1,106 @@
-# HERA-PdM: when does uncertainty-gated edge–cloud predictive maintenance help?
+# When does uncertainty-gated edge–cloud predictive maintenance help?
 
-Code, results and paper for *"When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet"*. HERA-PdM (Hierarchical Edge Reasoning Agents) is used as an experimental framework, not as a claimed best system.
+Code, data pipeline, results and manuscript for
 
-Research code, data pipeline, experiment outputs and IEEE conference manuscript for
-**“HERA-PdM: When Does Uncertainty-Gated Escalation Help Hierarchical Edge–Digital-Twin Predictive Maintenance? Evidence from Two Bearing Datasets”** (v2: FEMTO + XJTU-SY, CQR-CV+). Run everything with `experiments/run_all_v2.sh`; set `HERA_DATASET=femto|xjtu` for single stages.
+> P. Somasundaram, *When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet*, submitted to ICAIET 2027.
 
-**Headline result (v2):** calibration cuts unsafe point-threshold decisions (49.5 % → 0.6 % FEMTO; 34.2 % → 9.2 % XJTU-SY); uncertainty-gated escalation beats always-cloud only on gradually degrading XJTU-SY bearings; the decision-sufficiency gate equals a width gate; bearing-level alarms are premature. See `PAPER_AUDIT.md`. XJTU-SY: author mirror https://drive.google.com/open?id=1_ycmG46PARiykt82ShfnFfyQsaXv3_VK (6 RAR parts; extract with `unar`) into `data/raw/XJTU`, then `python src/preprocessing.py --dataset xjtu`.
+HERA-PdM (Hierarchical Edge Reasoning Agents) is the experimental framework used in the paper, not a claimed best system. Conformalized quantile regression with CV+ (CQR-CV+) gives remaining-useful-life (RUL) intervals, and the edge escalates to a fog/cloud model only when its interval spans a maintenance-decision boundary. The study asks when that is worth doing.
 
-## Research objective
-Hierarchical (edge → fog/cloud) predictive maintenance usually escalates on anomaly
-thresholds or heuristic confidence. We study whether a **conformally calibrated RUL
-interval computed on the edge** can serve as the escalation signal: the edge resolves a
-snapshot locally only if its interval is *decision-sufficient* (lies inside one
-maintenance-action region), which bounds unsafe edge-resolved decisions by the edge
-miscoverage level. The gate is compared with anomaly-trigger, width/confidence,
-linear-score, point-margin and random gates at matched escalation budgets, with
-accuracy, calibration, decision-safety, communication, latency and compute reported.
-See `research/novelty_audit.md` for the literature audit behind this framing.
+**Main findings**
+* Calibrated decisions leave far fewer critical snapshots without action than point thresholds (0.6 % vs. 49.5 % on FEMTO, 9.2 % vs. 34.2 % on XJTU-SY) but raise false maintenance.
+* Pooled coverage is close to nominal, yet 8 of 15 XJTU-SY bearings fall below 0.90.
+* Escalation helps only under gradual degradation (XJTU-SY). Under abrupt failures (FEMTO) the edge escalates almost everything.
+* A simple interval-width gate gives the same unsafe rate as the decision-aware gate on every bearing.
+* Unit-level conformal risk control is infeasible with about 12 bearings per fold but works on 23,550 Scania trucks, where calibrated edge-only inference nearly matches the hierarchy.
 
-## Dataset
-FEMTO-ST / PRONOSTIA bearing run-to-failure data (IEEE PHM 2012 Prognostic Challenge;
-Nectoux et al., PHM'12), obtained from the NASA PCoE data repository mirror
-`https://phm-datasets.s3.amazonaws.com/NASA/10.+FEMTO+Bearing.zip` (FEMTOBearingDataSet.zip:
-Learning_set, Test_set, Full_Test_Set).
+Every number in the paper is generated from `results/` by `manuscript/tools/make_tables.py`.
 
-| | |
-|---|---|
-| Units | 17 bearings run to failure (6 `Learning_set` + 11 `Full_Test_Set`) |
-| Conditions | 1: 1800 rpm / 4000 N (7 bearings), 2: 1650 rpm / 4200 N (7), 3: 1500 rpm / 5000 N (3) |
-| Sensors | horizontal + vertical accelerometers, 25.6 kHz, 0.1 s snapshot every 10 s |
-| Features | 14 per channel (RMS, kurtosis, skewness, peak-to-peak, crest, impulse, shape, spectral centroid, 6 log band energies) → 28 |
-| Normalization | per-asset z-score against its first 50 snapshots (healthy baseline) + signed log |
-| Label | piecewise-linear RUL = min(time to last snapshot, 3000 s) |
-| Split | 4 bearing-grouped folds (every bearing tested once); per fold 1 calibration bearing per condition; remaining bearings train |
-| Temperature files | not used (removed after extraction) |
-
-`data/raw/` is not versioned (≈3 GB); `data/processed/` (features, split summary) is.
-
-## Layout
+## Repository layout
 ```
 hera_pdm/
-├── data/processed/           # extracted features, dataset summary, challenge truncation points
-├── src/
-│   ├── preprocessing.py      # FEMTO feature extraction
-│   ├── digital_twin.py       # Digital Twin State Agent (baseline normalization, HI, context c_t, DT_t record)
-│   ├── edge_agent.py         # Edge Monitoring Agent, Isolation-Forest baseline, detection metrics
-│   ├── prognostics.py        # RUL models (LSTM/GRU/TCN/CNN-LSTM, Edge-CNN/GRU), training, latency/MACs
-│   ├── uncertainty.py        # split CQR, asymmetric CQR, coverage metrics
-│   ├── escalation.py         # decision regions, HERA gate, baseline gates, decision metrics
-│   ├── explainability.py     # SHAP (GradientExplainer) + explanation cards (no LLM)
-│   ├── evaluation.py         # all metrics, policies, ablations, trade-off curves, tests
-│   └── utils.py              # constants, folds, seeds
-├── experiments/              # tune_hparams.py, make_figures.py, make_tables.py, validate_paper.py
-├── results/                  # CSV/JSON outputs (every paper number comes from here)
-├── figures/                  # vector figures
-├── paper/                    # main.tex, references.bib, tables/, numbers.tex, main.pdf
-├── research/                 # literature search, matrix, novelty audit, reference verification
-├── run_experiments.py
-└── requirements.txt
+├── README.md, requirements.txt
+├── run_experiments.py              entry point: preprocess, tune, train, cvplus, analyze, figures
+├── src/                            library code
+│   ├── preprocessing.py            FEMTO and XJTU-SY feature extraction (28 features)
+│   ├── digital_twin.py             state-based twin record: baseline normalization, health index, context c_t
+│   ├── edge_agent.py               anomaly score, Isolation-Forest baseline, detection metrics
+│   ├── prognostics.py              quantile RUL models (LSTM, GRU, TCN, CNN-LSTM, Edge-CNN/GRU), MACs, latency
+│   ├── uncertainty.py              split CQR, CQR-CV+, coverage metrics
+│   ├── escalation.py               decision regions, HERA gate, baseline gates, decision metrics
+│   ├── evaluation.py               policies, ablations, trade-offs, per-bearing statistics
+│   ├── explainability.py           SHAP attributions and explanation cards (no LLM)
+│   ├── alarm_crc.py, evaluate_alarms.py   bearing-level conformal risk control for alarm timing
+│   ├── fleet_scania.py             SCANIA fleet study (unit-level risk control)
+│   └── utils.py                    dataset configs, folds, seeds, paths
+├── experiments/                    analysis drivers
+│   ├── tune_hparams.py             per-architecture selection on inner validation bearings
+│   ├── rmax_sensitivity.py         R_max halved/doubled
+│   ├── bootstrap_offsets.py        bearing-level bootstrap CIs, required alarm offsets
+│   ├── robustness_seeds_arch.py    five seeds and runner-up architectures
+│   └── run_all.sh                  full compute pipeline for both bearing datasets
+├── manuscript/
+│   ├── icaiet2027/                 main.tex, references.bib, numbers.tex, tables/, figures/,
+│   │                               ICAIET2027_Somasundaram_EdgeCloud_PdM.pdf (submitted PDF)
+│   ├── design_note/                2-page design note (HERA-PdM_design_note.pdf)
+│   └── tools/                      make_figures.py, make_tables.py, validate_paper.py
+├── docs/
+│   ├── PAPER_AUDIT.md              claims, evidence, limitations
+│   └── literature/                 search scripts and raw hits, 42-paper coding matrix,
+│                                   novelty audit, reference verification
+├── edge_kit/                       exported models, on-device benchmark, parity check, container runs
+├── data/processed/                 extracted features (raw data are not versioned)
+└── results/                        per-dataset outputs (femto, xjtu, *_rmax*, scania), logs/
 ```
+
+## Data
+| Dataset | Source | Place raw data in |
+|---|---|---|
+| FEMTO-ST/PRONOSTIA (17 bearings) | NASA PCoE mirror `https://phm-datasets.s3.amazonaws.com/NASA/10.+FEMTO+Bearing.zip` | `data/raw/FEMTO` |
+| XJTU-SY (15 bearings) | authors' mirror `https://drive.google.com/open?id=1_ycmG46PARiykt82ShfnFfyQsaXv3_VK` (6 RAR parts, extract with `unar`) | `data/raw/XJTU` |
+| SCANIA Component X (23,550 trucks) | DOI 10.5878/bnh5-ka77, CC BY 4.0 | `data/raw/SCANIA` |
+
+Features: 14 per accelerometer channel (RMS, kurtosis, skewness, peak-to-peak, crest, impulse and shape factors, spectral centroid, six log band energies), z-scored against each asset's first snapshots and log-compressed.
 
 ## Installation
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
-Tested with Python 3.13.5, PyTorch 2.14 (CPU), scikit-learn 1.9.1, SHAP 0.52 on macOS (Apple M2 Pro).
+Tested with Python 3.13.5, PyTorch 2.14 (CPU), scikit-learn 1.9.1 and SHAP 0.52 on macOS (Apple M2 Pro).
 
 ## Reproduction
 ```bash
-# 1. data (≈1.2 GB download, ≈3 GB extracted)
-mkdir -p data/raw && cd data/raw
-curl -L -o femto.zip "https://phm-datasets.s3.amazonaws.com/NASA/10.+FEMTO+Bearing.zip"
-unzip femto.zip && unzip "10. FEMTO Bearing/FEMTOBearingDataSet.zip" -d femto_outer
-mkdir FEMTO && for z in Training_set Test_set Validation_Set; do unzip -o femto_outer/$z.zip -d FEMTO; done
-cd ../..
-# 2. preprocessing
-python src/preprocessing.py
-# 3. hyper-parameter selection (inner splits of training bearings only) + training (4 folds × 3 seeds × 14 configs)
-python run_experiments.py --stage train --workers 5
-# 4. evaluation (all metrics, policies, ablations, statistics)
-python run_experiments.py --stage analyze
+# 1. features (after placing the raw data as above)
+python src/preprocessing.py --dataset femto
+python src/preprocessing.py --dataset xjtu
+
+# 2. tuning, training, CV+ calibration for both bearing datasets, then R_max sensitivity
+bash experiments/run_all.sh
+
+# 3. evaluation, explanations, bootstrap CIs, alarm-timing risk control
+HERA_DATASET=femto python run_experiments.py --stage analyze
+HERA_DATASET=xjtu  python run_experiments.py --stage analyze
 python src/explainability.py
-# 4b. XJTU-SY (HERA_DATASET=xjtu), CV+ stage, R_max sensitivity, SCANIA fleet study
-HERA_DATASET=xjtu python run_experiments.py --workers 5
-python run_experiments.py --stage cvplus --workers 5; HERA_DATASET=xjtu python run_experiments.py --stage cvplus --workers 5
-python experiments/rmax_sensitivity.py
-python src/fleet_scania.py                              # needs data/raw/SCANIA (DOI 10.5878/bnh5-ka77)
-# 4c. robustness: five seeds and runner-up architectures (≈2 h on an M2 Pro, FEMTO TCN runs dominate)
-python experiments/robustness_seeds_arch.py train && python experiments/robustness_seeds_arch.py analyze_all
-# 5. figures and LaTeX tables / numeric macros
-python run_experiments.py --stage figures
-# 6. paper
-cd paper && latexmk -pdf main.tex      # or: pdflatex main && bibtex main && pdflatex main && pdflatex main
-cd .. && python experiments/validate_paper.py
+python experiments/bootstrap_offsets.py
+HERA_DATASET=femto python src/evaluate_alarms.py; HERA_DATASET=xjtu python src/evaluate_alarms.py
+
+# 4. fleet study and robustness checks (the FEMTO TCN runs take about 2 h on an M2 Pro)
+python src/fleet_scania.py
+python experiments/robustness_seeds_arch.py train
+python experiments/robustness_seeds_arch.py analyze_all
+
+# 5. figures, tables and numeric macros, then the paper and its checks
+python manuscript/tools/make_figures.py
+python manuscript/tools/make_tables.py
+cd manuscript/icaiet2027 && pdflatex main && bibtex main && pdflatex main && pdflatex main && cd ../..
+python manuscript/tools/validate_paper.py
 ```
-Or everything in sequence: `python run_experiments.py` (then `python src/explainability.py`, `python experiments/make_figures.py`, `python experiments/make_tables.py` and the paper build).
-`results/_discarded_v0/` (not versioned) held outputs of a first run with a defective anomaly score; they are not used anywhere.
-`IEEEtran.cls`/`IEEEtran.bst` (v1.8b, CTAN) are bundled in `paper/`.
+`IEEEtran.cls`/`IEEEtran.bst` (v1.8b, CTAN) are bundled with each manuscript.
 
 ## Reproducibility notes
-* Seeds 0, 1, 2 (`utils.SEEDS`) control initialization and batch order; fold, calibration and CV+ assignments are fixed lists in `utils.py`, shared by all seeds. Seeds 3-4 are used only by the five-seed robustness check.
-* Hyper-parameters and architectures were chosen once (seed 0) on two inner validation bearings from the training bearings of two folds (`results/<ds>/hparam_search.csv`, `selected_models.json`) and frozen; test bearings were never used. The protocol was revised once after a first run (see `research/novelty_audit.md` §8-9).
-* Statistics: unit = bearing (seeds averaged per bearing), two-sided Wilcoxon signed-rank, zero differences dropped, no test with <5 non-zero pairs; Holm correction over the five primary tests.
-* Latency is CPU wall-clock (1 thread, batch 1) on the host machine, **not** on embedded hardware; network RTT (50 ms) and communication volumes are analytic assumptions, labelled as such. No energy measurements were made.
-* The system is a simulation over recorded data, not an industrial deployment.
+* Seeds 0, 1, 2 control initialization, batch order and input noise; seeds 3 and 4 are used only by the five-seed check. Fold, calibration and CV+ assignments are fixed lists in `src/utils.py`, shared by all seeds.
+* Hyper-parameters and architectures were chosen once (seed 0) on two inner validation bearings from the training bearings of two folds (`results/<dataset>/hparam_search.csv`, `selected_models.json`) and then frozen. Test bearings were never used. The protocol was revised once after a first run; see `docs/literature/novelty_audit.md`, sections 8 to 12.
+* Statistics: the unit is the bearing (seed-averaged per bearing), with two-sided Wilcoxon signed-rank tests, zero differences dropped, no test below five non-zero pairs, and Holm correction over the five primary tests.
+* Latency is single-thread CPU time on the host, not on embedded hardware. The 50 ms RTT and the communication volumes are analytic. No energy was measured.
+* This is an offline study on recorded data, not an industrial deployment.
+* `archive_old_versions/fig_escalation_v1.pdf` is the escalation diagram from the first manuscript version; it is kept for history and is not used by either paper.
