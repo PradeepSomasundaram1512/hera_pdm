@@ -1,0 +1,16 @@
+{
+  "n_vehicles": 23550,
+  "n_failing": 2272,
+  "n_readouts": 1122452,
+  "auroc": {
+    "edge": 0.8278344365100934,
+    "cloud": 0.8259385600053702
+  },
+  "n_edge_features": 105,
+  "n_cloud_features": 219,
+  "H_C": 12.0,
+  "H_P": 48.0,
+  "R_MAX": 96.0,
+  "K": 2,
+  "reps": 50
+}

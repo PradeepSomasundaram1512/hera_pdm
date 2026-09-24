@@ -78,11 +78,6 @@ def rul_tables():
         L.append(f"{m}{marks} (split) & " + " & ".join(row("fe", m, "split")) + " & "
                  + " & ".join(row("xj", m, "split")) + r" \\")
     L.append(r"\midrule")
-    for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"]:
-        m = a + "+DT-point"
-        L.append(f"{a}+DT (MSE point) & " + " & ".join(row("fe", m, "split", True)) + " & "
-                 + " & ".join(row("xj", m, "split", True)) + r" \\")
-    L.append(r"\midrule")
     for lab, key in [("Selected edge (CV+)", "edge"), ("Selected cloud+DT (CV+)", "cloud_dt"),
                      ("Selected cloud, no DT (CV+)", "cloud")]:
         cells = []
@@ -224,7 +219,7 @@ def timing_table():
                       f"\\multicolumn{{2}}{{c{'|' if p == 'fe' else ''}}}{{{100 * h.loc['Cloud point+threshold', 'unsafe_rate']:.0f}/"
                       f"{100 * h.loc['Cloud point+threshold', 'false_maint']:.0f}}}"]
         L.append(f"$H_c,H_p{{=}}{fc},{fp}R_{{\\max}}$ & " + " & ".join(cells) + r" \\")
-    for mult, lab in [(0, r"$R_{\max}\times\frac12$ (seed 0)"), (1, r"$R_{\max}\times 2$ (seed 0)")]:
+    for mult, lab in [(0, r"$R_{\max}\times\frac12$ (3 seeds)"), (1, r"$R_{\max}\times 2$ (3 seeds)")]:
         cells = []
         for p, ds in DS.items():
             f = ROOT / "results" / f"{ds}_rmax{RMAX_GRID[ds][mult]}" / "light_summary.json"
@@ -336,6 +331,47 @@ def detection_table():
     (OUT / "tables" / "table6_detect.tex").write_text("\n".join(L) + "\n")
 
 
+def fleet_table():
+    f = pd.read_csv(ROOT / "results" / "scania" / "fleet_summary.csv")
+    info = json.loads((ROOT / "results" / "scania" / "fleet_info.json").read_text())
+
+    def get(pol, eps, n):
+        x = f[(f.policy == pol) & ((f.eps.isna()) if eps is None else np.isclose(f.eps, eps if eps else 0)) & (f.n_cal == n)]
+        return x.iloc[0]
+    rows = [("Edge, fixed $p{\\ge}0.5$", "edge_fixed0.5", None, 0), ("Cloud, fixed $p{\\ge}0.5$", "cloud_fixed0.5", None, 0),
+            ("Cloud, CRC $\\varepsilon{=}0.1$", "cloud", 0.1, 12), ("Cloud, CRC $\\varepsilon{=}0.1$", "cloud", 0.1, 1000),
+            ("Edge, CRC $\\varepsilon{=}0.1$", "edge", 0.1, 1000), ("\\textbf{HERA}, CRC $\\varepsilon{=}0.1$", "hera", 0.1, 1000),
+            ("\\textbf{HERA}, CRC $\\varepsilon{=}0.05$", "hera", 0.05, 1000), ("\\textbf{HERA}, CRC $\\varepsilon{=}0.2$", "hera", 0.2, 1000)]
+    L = [r"\begin{table}[t]", r"\centering",
+         r"\caption{Fleet scale (SCANIA Component X, " + f"{info['n_vehicles']:,}".replace(",", "{,}") + r" trucks, "
+         + f"{info['n_failing']:,}".replace(",", "{,}") + r" failing; 50 random calibration/test splits). Late: failing trucks "
+         r"without alarm before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the cloud.}",
+         r"\label{tab:fleet}", r"\footnotesize\setlength{\tabcolsep}{2.2pt}",
+         r"\begin{tabular}{lrccc}", r"\toprule",
+         r"Policy & $n_{\mathrm{cal}}$ & Late (\%) & FA (\%) & Esc.\ (\%) \\", r"\midrule"]
+    for lab, pol, eps, n in rows:
+        x = get(pol, eps, n)
+        late = f"{100 * x.late:.1f}" + ("" if eps is None else f" [{100 * x.late_q95:.1f}]")
+        L.append(f"{lab} & {'--' if n == 0 else n} & {late} & {100 * x.false_alarm:.1f} & {100 * x.esc:.0f} \\\\")
+        if pol == "cloud_fixed0.5" or (pol == "cloud" and n == 12):
+            L.append(r"\midrule")
+    L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+    (OUT / "tables" / "table7_fleet.tex").write_text("\n".join(L) + "\n")
+    macro("flN", f"{info['n_vehicles']:,}".replace(",", "{,}"))
+    macro("flNf", f"{info['n_failing']:,}".replace(",", "{,}"))
+    macro("flAucEdge", f"{info['auroc']['edge']:.2f}")
+    macro("flAucCloud", f"{info['auroc']['cloud']:.2f}")
+    for key, (pol, eps, n) in {"FixCl": ("cloud_fixed0.5", None, 0), "FixEd": ("edge_fixed0.5", None, 0),
+                              "ClSmall": ("cloud", 0.1, 12), "ClBig": ("cloud", 0.1, 1000), "EdBig": ("edge", 0.1, 1000),
+                              "HeBig": ("hera", 0.1, 1000), "HeFive": ("hera", 0.05, 1000), "HeTwenty": ("hera", 0.2, 1000),
+                              "ClFiveSmall": ("cloud", 0.05, 12), "ClFiveBig": ("cloud", 0.05, 1000)}.items():
+        x = get(pol, eps, n)
+        macro(f"fl{key}Late", f"{100 * x.late:.1f}")
+        macro(f"fl{key}LateQ", f"{100 * x.late_q95:.1f}")
+        macro(f"fl{key}Fa", f"{100 * x.false_alarm:.1f}")
+        macro(f"fl{key}Esc", f"{100 * x.esc:.0f}")
+
+
 def card():
     c = json.loads((R("femto") / "explanation_cards.json").read_text())["cards"][0]
     top = ", ".join(f"{t['feature'].replace('_', chr(92) + '_')} ({t['shap_s']:+.0f}\\,s)" for t in c["top_contributors"])
@@ -357,5 +393,5 @@ def write_macros():
 
 
 if __name__ == "__main__":
-    rul_tables(); policy_tables(); timing_table(); detection_table(); other_macros(); card(); write_macros()
+    rul_tables(); policy_tables(); timing_table(); detection_table(); fleet_table(); other_macros(); card(); write_macros()
     print(f"{len(MACROS)} macros; tables in paper/tables/")

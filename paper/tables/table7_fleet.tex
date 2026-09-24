@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Fleet scale (SCANIA Component X, 23{,}550 trucks, 2{,}272 failing; 50 random calibration/test splits). Late: failing trucks without alarm before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the cloud.}
+\label{tab:fleet}
+\footnotesize\setlength{\tabcolsep}{2.2pt}
+\begin{tabular}{lrccc}
+\toprule
+Policy & $n_{\mathrm{cal}}$ & Late (\%) & FA (\%) & Esc.\ (\%) \\
+\midrule
+Edge, fixed $p{\ge}0.5$ & -- & 22.5 & 52.1 & 0 \\
+Cloud, fixed $p{\ge}0.5$ & -- & 40.5 & 28.6 & 100 \\
+\midrule
+Cloud, CRC $\varepsilon{=}0.1$ & 12 & 7.7 [19.8] & 73.9 & 100 \\
+\midrule
+Cloud, CRC $\varepsilon{=}0.1$ & 1000 & 9.8 [12.2] & 66.2 & 100 \\
+Edge, CRC $\varepsilon{=}0.1$ & 1000 & 9.9 [11.8] & 68.1 & 0 \\
+\textbf{HERA}, CRC $\varepsilon{=}0.1$ & 1000 & 9.9 [12.2] & 66.1 & 73 \\
+\textbf{HERA}, CRC $\varepsilon{=}0.05$ & 1000 & 4.9 [6.7] & 77.1 & 79 \\
+\textbf{HERA}, CRC $\varepsilon{=}0.2$ & 1000 & 19.8 [23.3] & 50.1 & 64 \\
+\bottomrule
+\end{tabular}
+\end{table}
