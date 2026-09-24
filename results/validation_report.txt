@@ -5,6 +5,6 @@
 [PASS] 5 placeholder values
 [PASS] 6 page count <= 6 -- 6 pages
 [PASS] 7 references within page limit
-[PASS] 8 unresolved LaTeX warnings
+[FAIL] 8 unresolved LaTeX warnings -- Overfull \hbox (7.1734pt too wide) in paragraph at lines 6--22
 [PASS] 9 numbers consistent with results -- all results numbers via macros
 [PASS] 10 duplicated text (12-word shingles) -- 0 repeated

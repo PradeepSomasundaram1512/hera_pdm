@@ -4,6 +4,7 @@
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{array}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \input{numbers.tex}
@@ -145,6 +146,10 @@ and false local \textsc{urgent} actions are bounded likewise. Unlike a width thr
 
 \textit{Bearing-level risk control.} We also calibrated the alarm offset directly for timing: an onset-gated two-stage alarm whose offset $\lambda$ was chosen by conformal risk control~\cite{angelopoulos2024crc} on the CV+ out-of-fold predictions of the non-test bearings, so that $\Pr(\text{late or missing alarm})\le\varepsilon$ per bearing. At $\varepsilon{=}0.1$ the held-out late rate stayed within the target (\feLateCrcTen\% FEMTO, \xjLateCrcTen\% XJTU-SY vs.\ \feLatePointHp\% and \xjLatePointHp\% for the point policy), but only by alarming early: \fePremCrcTen\% and \xjPremCrcTen\% of alarms were premature and the onset gate escalated \feEscCrcTen\% and \xjEscCrcTen\% of snapshots. The reason is a heavy tail of required offsets: the median bearing needed an offset of \feReqOffMed{} (FEMTO) and \xjReqOffMed{} (XJTU-SY) of $R_{\max}$ to be warned in time, but the two least predictable bearings needed \feReqOffTop{} and \xjReqOffTop. With $n$ calibration units, CRC with a binary loss is feasible only if the fraction $\pi$ of warning-free units satisfies $\pi<\varepsilon$ and $n\ge(1-\varepsilon)/(\varepsilon-\pi)$; e.g., $\varepsilon{=}0.1$ with $\pi{=}0.05$ needs $n\ge\nMinTenFive$, beyond the $\approx$12 bearings per fold available here.
 
+\input{tables/table6_detect.tex}
+
+\textit{Detection and compute.} Table~\ref{tab:detect} shows why no simple trigger suffices: the edge anomaly score reached AUROC \feDetAnomAuroc{} and \xjDetAnomAuroc{} but recall of only \feDetAnomRec{} and \xjDetAnomRec{} at its training-calibrated threshold, whereas the calibrated lower bounds recalled \feDetEdgeLBRec--\xjDetEdgeLBRec{} of critical snapshots at low precision, the safety/false-alarm trade-off seen in Fig.~\ref{fig:tradeoff}. The edge models need tens of thousands of MACs and well under a millisecond; the fog/cloud models need roughly 20--120 times more MACs.
+
 \textit{Explainability and oversight.} Expected-gradient SHAP on 300 degradation-phase snapshots ranked low-frequency band energies and the spectral centroid (FEMTO) and the DT fast health-index average and mid- and high-frequency band energies (XJTU-SY) highest; additivity errors were \feShapRel\% and \xjShapRel\% of the explained deviation. An automatically generated card (FEMTO) reads:
 
 \smallskip\noindent\input{tables/card.tex}
@@ -157,7 +162,7 @@ and false local \textsc{urgent} actions are bounded likewise. Unlike a width thr
 \caption{Deployment guide derived from the measured results (FEMTO / XJTU-SY).}
 \label{tab:guide}
 \footnotesize\setlength{\tabcolsep}{2pt}
-\begin{tabular}{p{2.35cm}p{2.3cm}p{3.3cm}}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{1.75cm}>{\raggedright\arraybackslash}p{1.95cm}>{\raggedright\arraybackslash}p{4.3cm}@{}}
 \toprule
 Plant condition & Recommended policy & Evidence \\
 \midrule

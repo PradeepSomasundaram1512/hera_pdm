@@ -303,6 +303,39 @@ def other_macros():
                 macro(f"{p}Esc{n}{en}", f"{100 * x.esc_frac_mean:.1f}")
 
 
+def detection_table():
+    det = {p: pd.read_csv(R(ds) / "detection_metrics.csv").set_index("detector") for p, ds in DS.items()}
+    sysm = {p: json.loads((R(ds) / "system_metrics.json").read_text()) for p, ds in DS.items()}
+    sel = {p: json.loads((R(ds) / "run_info.json").read_text()) for p, ds in DS.items()}
+    L = [r"\begin{table}[t]", r"\centering",
+         r"\caption{Top: detection of imminent failure (RUL $\le H_c$) per snapshot, thresholds set on training data "
+         r"(mean over 3 seeds). Bottom: compute of the selected edge and fog/cloud models (host CPU, 1 thread, batch 1).}",
+         r"\label{tab:detect}", r"\footnotesize\setlength{\tabcolsep}{2.4pt}",
+         r"\begin{tabular}{l|ccc|ccc}", r"\toprule",
+         r" & \multicolumn{3}{c|}{FEMTO} & \multicolumn{3}{c}{XJTU-SY} \\",
+         r"Detector & Prec. & Rec. & AUROC & Prec. & Rec. & AUROC \\", r"\midrule"]
+    for key, lab in [("Anomaly score $a_t$ (edge)", "Anomaly score $a_t$"), ("Isolation Forest", "Isolation Forest"),
+                     ("Edge CQR lower bound", "Edge interval $L^e_t\\le H_c$"),
+                     ("Cloud CQR lower bound (+DT)", "Cloud interval $L^c_t\\le H_c$")]:
+        cells = []
+        for p in DS:
+            x = det[p].loc[key]
+            cells += [f"{x.precision_mean:.2f}", f"{x.recall_mean:.2f}", f"{x.auroc_mean:.2f}"]
+        L.append(f"{lab} & " + " & ".join(cells) + r" \\")
+    L += [r"\midrule", r"Model & Params & MACs & ms & Params & MACs & ms \\", r"\midrule"]
+    for role in ("edge", "cloud"):
+        cells = []
+        names = []
+        for p in DS:
+            tag = sel[p]["edge_model"] if role == "edge" else sel[p]["cloud_model"] + "+DT"
+            names.append(tag)
+            x = sysm[p][tag]
+            cells += [f"{x['params'] / 1e3:.1f}k", f"{x['macs'] / 1e6:.2f}M", f"{x['median_ms']:.2f}"]
+        L.append(f"{role.capitalize()} model & " + " & ".join(cells) + r" \\")
+    L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+    (OUT / "tables" / "table6_detect.tex").write_text("\n".join(L) + "\n")
+
+
 def card():
     c = json.loads((R("femto") / "explanation_cards.json").read_text())["cards"][0]
     top = ", ".join(f"{t['feature'].replace('_', chr(92) + '_')} ({t['shap_s']:+.0f}\\,s)" for t in c["top_contributors"])
@@ -324,5 +357,5 @@ def write_macros():
 
 
 if __name__ == "__main__":
-    rul_tables(); policy_tables(); timing_table(); other_macros(); card(); write_macros()
+    rul_tables(); policy_tables(); timing_table(); detection_table(); other_macros(); card(); write_macros()
     print(f"{len(MACROS)} macros; tables in paper/tables/")

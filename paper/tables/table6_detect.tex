@@ -1,0 +1,22 @@
+\begin{table}[t]
+\centering
+\caption{Top: detection of imminent failure (RUL $\le H_c$) per snapshot, thresholds set on training data (mean over 3 seeds). Bottom: compute of the selected edge and fog/cloud models (host CPU, 1 thread, batch 1).}
+\label{tab:detect}
+\footnotesize\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}{l|ccc|ccc}
+\toprule
+ & \multicolumn{3}{c|}{FEMTO} & \multicolumn{3}{c}{XJTU-SY} \\
+Detector & Prec. & Rec. & AUROC & Prec. & Rec. & AUROC \\
+\midrule
+Anomaly score $a_t$ & 0.27 & 0.26 & 0.81 & 0.21 & 0.34 & 0.80 \\
+Isolation Forest & 0.27 & 0.15 & 0.77 & 0.15 & 0.13 & 0.81 \\
+Edge interval $L^e_t\le H_c$ & 0.07 & 0.68 & 0.70 & 0.06 & 0.94 & 0.82 \\
+Cloud interval $L^c_t\le H_c$ & 0.05 & 0.82 & 0.65 & 0.17 & 0.76 & 0.81 \\
+\midrule
+Model & Params & MACs & ms & Params & MACs & ms \\
+\midrule
+Edge model & 2.5k & 0.03M & 0.15 & 2.7k & 0.02M & 0.07 \\
+Cloud model & 62.1k & 3.61M & 1.11 & 13.6k & 0.38M & 0.62 \\
+\bottomrule
+\end{tabular}
+\end{table}
