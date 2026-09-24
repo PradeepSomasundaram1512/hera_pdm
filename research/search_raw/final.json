@@ -1,0 +1,1366 @@
+{
+ "uncertainty controlled hierarchical predictive maintenance": [
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.7471442",
+   "title": "From State-of-Health Uncertainty to Maintenance Decisions: Risk-Aware Predictive Maintenance of Lithium-Ion Batteries under Supply Uncertainty",
+   "authors": "Bin Li; Fan Ma",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.5287998",
+   "title": "Hierarchical Temporal Feature Attention for Effective Predictive\u00a0Maintenance in Industrial Systems",
+   "authors": "Srividya Shenoy; Narendiran B S; Sumith N.",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.5815303",
+   "title": "Enhanced Risk-Aware EVA: A Hierarchical Memory-Based Predictive Maintenance System Using Multi-Head Attention Mechanisms",
+   "authors": "Lefliti Mohamed",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6045156",
+   "title": "Dynamic predictive maintenance optimization of offshore wind turbines considering cognitive uncertainty",
+   "authors": "Lujie Liu; Lvjie Jiang; Yang Fu",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.20944/preprints202510.0688.v1",
+   "title": "Multidimensional Maintenance Maturity Modeling: Fuzzy Predictive Model and Case Study on Ensuring Operational Continuity Under Uncertainty",
+   "authors": "Lech Bukowski; Sylwia Werbinska-Wojciechowska",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.5739198",
+   "title": "Integrated Optimization of Aircraft Line Maintenance: Scheduling under Uncertainty and Predictive Part Failure Modelling",
+   "authors": "Dionysios Peteinatos; Konstantia Kontodimou; Vassilis Andronis; Konstantinos Kepaptsoglou",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1108/jqme-12-2024-0109",
+   "title": "Reliability-driven constrained Pareto optimization for knowledge-informed predictive maintenance decisions under uncertainty",
+   "authors": "Kong Fah Tee; Milad Zarchi",
+   "year": 2025,
+   "venue": "Journal of Quality in Maintenance Engineering",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3850/978-981-18-2016-8_336-cd",
+   "title": "A Hierarchical Predictive Maintenance Model for Networks",
+   "authors": "Zhenglin Liang; Yan-Fu Li",
+   "year": 2021,
+   "venue": "Proceedings of the 31st European Safety and Reliability Conference (ESREL 2021)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.21203/rs.3.rs-9568678/v1",
+   "title": "Integrated Optimization of Aircraft Line Maintenance: Scheduling under Uncertainty and Predictive Part Failure Modelling",
+   "authors": "Dionysios Peteinatos; Konstantia Kontodimou; Vassilios Andronis; Konstantinos Kepaptsoglou",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.21203/rs.3.rs-9665787/v1",
+   "title": "From Prediction to Action: A Controlled Benchmarkof Multilayer Graph Embeddings for Substation-Level Predictive Maintenance",
+   "authors": "Muhammad Kazim; Harun Pirim",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icahs66950.2025.11553007",
+   "title": "Predictive maintenance under uncertainty in smart hospitals: Decision support with belief functions",
+   "authors": "Safa Ben Ayed",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Advanced Healthcare Systems (ICAHS)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/siu66497.2025.11112410",
+   "title": "Rashomon Perspective for Measuring Uncertainty in the Survival Predictive Maintenance Models",
+   "authors": "Yi\u011fitcan Yard\u0131mc\u0131; Mustafa \u00c7avu\u015f",
+   "year": 2025,
+   "venue": "2025 33rd Signal Processing and Communications Applications Conference (SIU)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.ress.2026.113432",
+   "title": "Predictive maintenance for aero-engine fleets integrating uncertainty-aware remaining useful life estimation and maintenance decisions",
+   "authors": "Zhengbo Zhu; Lubing Wang; Xufeng Zhao",
+   "year": 2027,
+   "venue": "Reliability Engineering &amp; System Safety",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.cie.2021.107475",
+   "title": "Hierarchical multi-agent predictive maintenance scheduling for trains using price-based approach",
+   "authors": "Pegah Rokhforoz; Olga Fink",
+   "year": 2021,
+   "venue": "Computers &amp; Industrial Engineering",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s43684-025-00104-1",
+   "title": "Optimizing predictive maintenance and mission assignment to enhance fleet readiness under uncertainty",
+   "authors": "Ryan O\u2019Neil; Abdelhakim Khatab; Claver Diallo",
+   "year": 2025,
+   "venue": "Autonomous Intelligent Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/access.2025.3557405",
+   "title": "Enhancing Predictive Maintenance in Mining Mobile Machinery Through a Hierarchical Inference Network",
+   "authors": "Ra\u00fal de la Fuente; Luciano Radrigan; Anibal S. Morales",
+   "year": 2025,
+   "venue": "IEEE Access",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.oceaneng.2026.127795",
+   "title": "Uncertainty-aware predictive maintenance and inspection for offshore wind farms with air-surface-underwater coordination",
+   "authors": "Feng Ye; Xinghai Guo; Haichao Li",
+   "year": 2026,
+   "venue": "Ocean Engineering",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3390/app152212236",
+   "title": "Multidimensional Maintenance Maturity Modeling: Fuzzy Predictive Model and Case Study on Ensuring Operational Continuity Under Uncertainty",
+   "authors": "Lech Bukowski; Sylwia Werbinska-Wojciechowska",
+   "year": 2025,
+   "venue": "Applied Sciences",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.51257/a-v1-mt9573",
+   "title": "Maintenance pr\u00e9visionnelle-pr\u00e9dictive : technologies et m\u00e9thodes",
+   "authors": "Gilles ZWINGELSTEIN",
+   "year": 2025,
+   "venue": "Maintenance",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.12783/shm2025/37393",
+   "title": "Vibration-Controlled UAV Tap Testing for Predictive Maintenance Using Machine Learning",
+   "authors": "PIEDAD MIRANDA; FERNANDO MOREU",
+   "year": 2025,
+   "venue": "Proceedings of the 15th International Workshop on Structural Health Monitoring",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  }
+ ],
+ "conformal RUL adaptive edge cloud inference": [
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6094246",
+   "title": "Hierarchical Adaptive Conformal Inference for Reliable Uncertainty Quantification in Edge-Deployable Medical Wearables",
+   "authors": "Oussama EL ALLAM; Mohamed Hamlich",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/southeastcon63549.2026.11476596",
+   "title": "Adaptive Token Routing for Heterogeneous LLM Inference in Edge-Cloud Continuum",
+   "authors": "Tejas Pravinbhai Patel",
+   "year": 2026,
+   "venue": "SoutheastCon 2026",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.measurement.2026.121765",
+   "title": "Hierarchical adaptive conformal inference for reliable uncertainty quantification in edge-deployable medical wearables",
+   "authors": "Oussama EL ALLAM; Mohamed HAMLICH",
+   "year": 2026,
+   "venue": "Measurement",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.7195880",
+   "title": "Stage-Adaptive Conformal Calibration for Degradation\u2013Recovery-Aware Partial-Cycle RUL Prediction",
+   "authors": "Jingfan Gao; Jing Sun; Yunlong Shang",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.53106/199115992021083204017",
+   "title": "Research on Cloud-edge Joint Task Inference Algorithm in Edge Intelligence",
+   "authors": "Yaping Zheng Yaping Zheng",
+   "year": 2021,
+   "venue": "\u96fb\u8166\u5b78\u520a",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1038/s41598-026-59234-y",
+   "title": "A cloud-edge adaptive lightweight network with dynamic inference enables real-time ultrasound image segmentation",
+   "authors": "Chaoyu Li; Jiexia Tan",
+   "year": 2026,
+   "venue": "Scientific Reports",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.patcog.2025.111999",
+   "title": "Beyond conformal predictors: Adaptive Conformal Inference with confidence predictors",
+   "authors": "Johan Hallberg Szabadv\u00e1ry; Tuwe L\u00f6fstr\u00f6m",
+   "year": 2026,
+   "venue": "Pattern Recognition",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1038/s41598-026-65658-3",
+   "title": "Link-adaptive edge-cloud inference for UAV-based plastic mulch residue assessment",
+   "authors": "Xinmiao Zhao; Jingjing Zhang; Dilxat Dolkun; Jin Xu; Si An",
+   "year": 2026,
+   "venue": "Scientific Reports",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/cipae60493.2023.00014",
+   "title": "Adaptive Deep Inference Framework for Cloud-Edge Collaboration",
+   "authors": "Ze Kou; Zhen Liu; Xinxin Yang; Xiang He",
+   "year": 2023,
+   "venue": "2023 International Conference on Computers, Information Processing and Advanced Education (CIPAE)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4870068",
+   "title": "Adaptive Conformal Inference to Quantify Uncertainty in Lstm Based Solar Power Forecasting Models",
+   "authors": "Vishnu Suresh",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/cloudcom67567.2025.11331467",
+   "title": "A Lightweight Framework for Adaptive VisionModel Inference Across Edge and Cloud Devices",
+   "authors": "Ding Wang; Junchen Pan; Fengqi Liang; Yufeng Zeng; Yang Zhou; Xiaoyi Fan",
+   "year": 2025,
+   "venue": "2025 lEEE International Conference on Cloud Computing Technology and Science (CloudCom)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/mobilecloud55333.2022.00009",
+   "title": "Adaptive Acceleration of Inference Services at the Network Edge",
+   "authors": "Carl Mofjeld; Yang Peng; Hua Qin",
+   "year": 2022,
+   "venue": "2022 10th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/scecs69812.2026.11566016",
+   "title": "Load-Aware Cloud-Edge Collaborative Inference Scheduling Strategy",
+   "authors": "Haoxin Yang; Tianyu Hu; Dao Xiang",
+   "year": 2026,
+   "venue": "2026 International Conference on Sensor-Cloud and Edge Computing System (SCECS)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.55640/ijcsis/volume11issue08-06",
+   "title": "Scalable AI Inference Pipelines Across Edge and Cloud Computing Environments",
+   "authors": "Dr. Khalid Al- Mansour",
+   "year": 2026,
+   "venue": "International Journal of Computer Science &amp; Information System",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/edgecom66327.2025.00024",
+   "title": "ByteShield: A Cybersecurity Aware AI Co-Inference Architecture for Edge Cloud Systems",
+   "authors": "Alok Tibrewala",
+   "year": 2025,
+   "venue": "2025 IEEE 11th International Conference on Edge Computing and Scalable Cloud (EdgeCom)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4867321",
+   "title": "Adaptive Conformal Inference for Computing Market Risk Measures: an Analysis with Four Thousands Crypto-Assets",
+   "authors": "Dean Fantazzini",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1145/3769696.3771217",
+   "title": "Cloud-Edge Collaborative Semantic Segmentation with Complexity-Aware Inference",
+   "authors": "Yijun Song; Peng Fu",
+   "year": 2025,
+   "venue": "Proceedings of the 2025 ACM CoNEXT Workshop Edge-Cloud Collaboration for AI",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s11432-023-3957-4",
+   "title": "Adaptive joint configuration optimization for collaborative inference in edge-cloud systems",
+   "authors": "Zheming Yang; Wen Ji; Zhi Wang",
+   "year": 2024,
+   "venue": "Science China Information Sciences",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icdcs51616.2021.00061",
+   "title": "Complexity-aware Adaptive Training and Inference for Edge-Cloud Distributed AI Systems",
+   "authors": "Yinghan Long; Indranil Chakraborty; Gopalakrishnan Srinivasan; Kaushik Roy",
+   "year": 2021,
+   "venue": "2021 IEEE 41st International Conference on Distributed Computing Systems (ICDCS)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3390/fi18040213",
+   "title": "Heterogeneity-Aware Dynamic Federated Split Learning with Adaptive Compression (HADFL-AC) Edge\u2013Cloud Inference in IoT Environments",
+   "authors": "Norah Alrusayni; Asma A. Al-Shargabi",
+   "year": 2026,
+   "venue": "Future Internet",
+   "type": "journal-article"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  }
+ ],
+ "uncertainty aware escalation predictive maintenance": [
+  {
+   "source": "crossref",
+   "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.bibliographic=uncertainty+aware+escalation+predictive+maintenance&rows=20&filter=from-pub-date%3A2020-01-01&select=DOI"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  }
+ ],
+ "prediction interval edge cloud predictive maintenance": [
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4932094",
+   "title": "An Edge-Cloud Iiot Framework for Predictive Maintenance in Manufacturing Systems",
+   "authors": "Nivethitha Somu; Nirupam Sannagowdara Dasappa",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.17531/ein/203458",
+   "title": "Optimal Imperfect Predictive Maintenance Based on Interval Remaining Useful\nLife Prediction",
+   "authors": "Xiaoliang He; Chun Su; Yuru Zhang; Jiuqiang Tang",
+   "year": 2025,
+   "venue": "Eksploatacja i Niezawodno\u015b\u0107 \u2013 Maintenance and Reliability",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.21203/rs.3.rs-9410185/v1",
+   "title": "Digital Twin-Driven Edge\u2013Cloud Collaborative Remote Fault Diagnosis and Intelligent Predictive Maintenance for Critical Hydropower Equipment",
+   "authors": "Dong Yang; Zhile Jiang; Kai Zheng; Yuxuan Wang",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/978-3-031-18034-7_8",
+   "title": "Integration of Predictive Analytics and Cloud Computing for Mental Health Prediction",
+   "authors": "Akash Nag; Maddhuja Sen; Jyotiraditya Saha",
+   "year": 2022,
+   "venue": "Predictive Analytics in Cloud, Fog, and Edge Computing",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.aei.2025.103388",
+   "title": "An edge-cloud IIoT framework for predictive maintenance in manufacturing systems",
+   "authors": "Nivethitha Somu; Nirupam Sannagowdara Dasappa",
+   "year": 2025,
+   "venue": "Advanced Engineering Informatics",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.20944/preprints202507.2205.v1",
+   "title": "Framework for Next-Generation Predictive Maintenance of Software-Defined Vehicles Using Cloud, Edge Computing and Modern AI",
+   "authors": "Kamal Pandey; Anoop Narang; Ben Bellash",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/iecon55916.2024.10905820",
+   "title": "A Cloud-Edge Adaptive Framework for Equipment Predictive Maintenance in IIoT",
+   "authors": "Zidi Jia; Lei Ren",
+   "year": 2024,
+   "venue": "IECON 2024 - 50th Annual Conference of the IEEE Industrial Electronics Society",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icosaas68663.2026.11649395",
+   "title": "Edge\u2013Cloud Intelligent Fusion for Digital Twin-based Predictive Maintenance in Smart Manufacturing Systems",
+   "authors": "Natrayan L",
+   "year": 2026,
+   "venue": "2026 International Conference on Intelligent and Sustainable AI Systems (ICOSAAS)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icca66035.2025.11430844",
+   "title": "Hybrid Edge-Cloud Federated Learning Framework for Predictive Maintenance in Industrial IoT",
+   "authors": "Nahla Nabil Skaik; Hasan Ali Razzaqi",
+   "year": 2025,
+   "venue": "2025 International Conference on Computer and Applications (ICCA)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.47363/jaicc/2025(4)444",
+   "title": "Generative AI for Edge-Based Predictive Maintenance in Smart Factories",
+   "authors": "Nirup Kumar Reddy Pothireddy Reddy Pothireddy",
+   "year": 2025,
+   "venue": "Journal of Artificial Intelligence &amp; Cloud Computing",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icmi68585.2026.11539916",
+   "title": "Edge\u2013Cloud Predictive Maintenance Models for Industry 4.0",
+   "authors": "Ahmad Junaid; Abuzar Khan; Abid Iqbal; Ghassan Husnain",
+   "year": 2026,
+   "venue": "2026 IEEE 5th International Conference on Computing and Machine Intelligence (ICMI)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/repc48665.2021.00009",
+   "title": "Mobile Edge Computing Sensors and Cloud Machine Learning Advance Grid Predictive Maintenance",
+   "authors": "John Lauletta; Rachana Shukthija Dasari; Yilmaz Sozer; Alexis de Abreu Garcia",
+   "year": 2021,
+   "venue": "2021 IEEE Rural Electric Power Conference (REPC)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s00607-025-01585-x",
+   "title": "Intelligent predictive maintenance: multivariate ML model optimization in an Edge-Fog-Cloud environment",
+   "authors": "Preeti Jain; Koustav Kumar Mondal; Debasis Das; Arpit Khandelwal",
+   "year": 2025,
+   "venue": "Computing",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.63282/3050-9262.ijaidsml-v6i1p108",
+   "title": "AI-Driven Predictive Maintenance in Industrial IoT using Cloud &amp; Edge Computing",
+   "authors": "Karthik Allam",
+   "year": 2025,
+   "venue": "International Journal of Artificial Intelligence, Data Science, and Machine Learning",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s10791-025-09653-8",
+   "title": "Analyzing the impact of edge, fog and cloud computing on predictive maintenance in the Industrial Internet of Things",
+   "authors": "Dimple Kapoor; Deepali Gupta; Mudita Uppal",
+   "year": 2025,
+   "venue": "Discover Computing",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.34218/ijrcait_07_02_218",
+   "title": "PREDICTIVE MAINTENANCE: INTEGRATING EDGE AI WITH CLOUD COMPUTING FOR INDUSTRIAL IOT",
+   "authors": "Akhilesh Kota",
+   "year": 2024,
+   "venue": "INTERNATIONAL JOURNAL OF RESEARCH IN COMPUTER APPLICATIONS AND INFORMATION TECHNOLOGY",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.53555/nveo.v10i1.5751",
+   "title": "PREDICTIVE MAINTENANCE IN CLOUD COMPUTING AND DEVOPS: ML MODELS FOR ANTICIPATING AND PREVENTING SYSTEM FAILURES",
+   "authors": "Sukender Reddy Mallreddy; Yeshwanth Vasa",
+   "year": 2024,
+   "venue": "PREDICTIVE MAINTENANCE IN CLOUD COMPUTING AND DEVOPS: ML MODELS FOR ANTICIPATING AND PREVENTING SYSTEM FAILURES",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.5228213",
+   "title": "PREDICTIVE MAINTENANCE IN CLOUD INFRASTRUCTURE: A MACHINE LEARNING FRAMEWORK",
+   "authors": "Ravikumar Perumallaplli",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/icvadv67766.2026.11470384",
+   "title": "Intelligent Hybrid Edge\u2013Cloud AI Predictive Maintenance for Industrial Electrical Systems",
+   "authors": "S. Brindha; Haripriya V; Ishvarya K; Pavithran M; Abishek M",
+   "year": 2026,
+   "venue": "2026 International Conference on Visual Analytics and Data Visualization (ICVADV)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.24321/2395.3802.202502",
+   "title": "IoT-Enabled Predictive Maintenance of Electrical Machines Using Edge Intelligence",
+   "authors": "Alpesh  Sureshchandra Adeshara",
+   "year": 2025,
+   "venue": "Journal of Advanced Research in Embedded System",
+   "type": "journal-article"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/ICMI68585.2026.11539916",
+   "arxiv": null,
+   "title": "Edge\u2013Cloud Predictive Maintenance Models for Industry 4.0",
+   "authors": "Ahmad Junaid; Abuzar Khan; Abid Iqbal; Ghassan Husnain",
+   "year": 2026,
+   "venue": "International Conference on Multimodal Interaction",
+   "citations": 0,
+   "abstract": "This paper presents a predictive maintenance framework for Industry 4.0 that combines preprocessing, feature engineering, machine learning, deep learning, explainability and prescriptive optimization within a single unified system. The dataset was first cleaned, balanced and engineered to retain 10 key features, with torque identified as the most important predictor. Baseline models such as CatBoost, LightGBM, and TabNet showed strong performance, with CatBoost achieving an accuracy of 0.994 and a ROC-AUC of 0.994. Deep learning simulations were also compared with lightweight edge models and cloud based architectures, and the shallow MLP achieved an accuracy of 0.962 with a latency of 1.2 milliseconds. SHAP and LIME further showed that torque related ratios and failure type labels played an important role in accurate prediction. This helps make the system more transparent and easier to trust in real-world industrial use. Final benchmarking showed that edge models delivered inference nearly 10 times faster, whereas the highest accuracy of 0.993 and F1 score of 0.992 were obtained by the cloud models. Overall, the results indicate a scalable, balanced and sustainable predictive maint"
+  },
+  {
+   "source": "s2",
+   "doi": "10.32996/jcsts.2025.7.2.7",
+   "arxiv": null,
+   "title": "Leveraging Hybrid Edge-Cloud Predictive Maintenance in Pharmaceutical MES: An Industry 4.0 Approach Using Big Data",
+   "authors": "Shriprakashan. L. Parapalli; J. Shetty",
+   "year": 2025,
+   "venue": "Journal of Computer Science and Technology Studies",
+   "citations": 4,
+   "abstract": "The pharmaceutical sector relies on stringent manufacturing environments to safeguard product integrity and uphold regulatory standards. Unexpected equipment failures can lead to costly downtime, regulatory exposure, and compromised quality. To address these challenges, this paper presents an integrated Hybrid Edge-Cloud Predictive Maintenance (HEC-PdM) framework embedded within a Manufacturing Execution System (MES). By combining edge computing for real-time anomaly detection with cloud-based machine learning (ML) analytics, manufacturers can transition from reactive to predictive and prescriptive maintenance strategies. The methodology includes data collection and preprocessing at the edge, federated learning in the cloud, and seamless MES integration to automate maintenance workflows and compliance documentation. Case studies highlight significant benefits, such as a 45% reduction in maintenance costs, minimized downtime, and improved production quality. Finally, the paper discusses future directions, including enhanced security protocols for federated learning, self-adaptive AI systems, and quantum ML to further address the complexities of pharmaceutical manufacturing."
+  },
+  {
+   "source": "s2",
+   "doi": "10.3390/s24247918",
+   "arxiv": null,
+   "title": "Edge-Cloud Synergy for AI-Enhanced Sensor Network Data: A Real-Time Predictive Maintenance Framework",
+   "authors": "Kaushik Sathupadi; Sandesh Achar; Shinoy Vengaramkode Bhaskaran; Nuruzzaman Faruqui; M. Abdullah-Al-Wadud; J. Uddin",
+   "year": 2024,
+   "venue": "Italian National Conference on Sensors",
+   "citations": 85,
+   "abstract": "Sensor networks generate vast amounts of data in real-time, which challenges existing predictive maintenance frameworks due to high latency, energy consumption, and bandwidth requirements. This research addresses these limitations by proposing an edge-cloud hybrid framework, leveraging edge devices for immediate anomaly detection and cloud servers for in-depth failure prediction. A K-Nearest Neighbors (KNNs) model is deployed on edge devices to detect anomalies in real-time, reducing the need for continuous data transfer to the cloud. Meanwhile, a Long Short-Term Memory (LSTM) model in the cloud analyzes time-series data for predictive failure analysis, enhancing maintenance scheduling and operational efficiency. The framework\u2019s dynamic workload management algorithm optimizes task distribution between edge and cloud resources, balancing latency, bandwidth usage, and energy consumption. Experimental results show that the hybrid approach achieves a 35% reduction in latency, a 28% decrease in energy consumption, and a 60% reduction in bandwidth usage compared to cloud-only solutions. This framework offers a scalable, efficient solution for real-time predictive maintenance, making it h"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1016/j.aei.2025.103388",
+   "arxiv": null,
+   "title": "An edge-cloud IIoT framework for predictive maintenance in manufacturing systems",
+   "authors": "Nivethitha Somu; Nirupam Sannagowdara Dasappa",
+   "year": 2025,
+   "venue": "Advanced Engineering Informatics",
+   "citations": 30,
+   "abstract": ""
+  },
+  {
+   "source": "s2",
+   "doi": "10.1007/s00607-025-01585-x",
+   "arxiv": null,
+   "title": "Intelligent predictive maintenance: multivariate ML model optimization in an Edge-Fog-Cloud environment",
+   "authors": "Preeti Jain; Koustav Kumar Mondal; Debasis Das; Arpit Khandelwal",
+   "year": 2025,
+   "venue": "Computing",
+   "citations": 2,
+   "abstract": ""
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/ICVADV67766.2026.11470384",
+   "arxiv": null,
+   "title": "Intelligent Hybrid Edge\u2013Cloud AI Predictive Maintenance for Industrial Electrical Systems",
+   "authors": "S. Brindha; H. V.; Ishvarya K; P. M; A. M.",
+   "year": 2026,
+   "venue": "2026 International Conference on Visual Analytics and Data Visualization (ICVADV)",
+   "citations": 0,
+   "abstract": "The growing adoption of Industrial Internet of Things technologies has increased the need for intelligent and cost-efficient predictive maintenance in industrial electrical systems and equipment such as motors, transformers, capacitors, relays, and IGBTs. Traditional cloud-only approaches often suffer from high latency, heavy bandwidth usage, and reliance on stable connectivity. This paper presents a hybrid Edge\u2013Cloud AI framework designed to overcome these limitations by enabling real-time anomaly detection at the edge and advanced predictive analysis in the cloud. The edge module performs immediate monitoring and generates compact fault signatures, while the cloud module analyses these signatures using historical data and AI-based prediction models to deliver actionable maintenance insights. By combining localized processing with selective cloud analysis, the framework significantly reduces data transfer requirements, operational costs, and response time. The proposed system offers a scalable and practical foundation for future deployment of intelligent fault prediction solutions across diverse industrial environments."
+  },
+  {
+   "source": "s2",
+   "doi": "10.18517/ijaseit.16.4.22215",
+   "arxiv": null,
+   "title": "Explainable Predictive Maintenance for Smart Factories Using FPGA-GPU Edge\u2013Cloud Hybrid Computing",
+   "authors": "Hyunwook Kim; Ki-Tae Kim; Se-Jin Lee; Hyun Sim",
+   "year": 2026,
+   "venue": "International Journal on Advanced Science, Engineering and Information Technology",
+   "citations": 0,
+   "abstract": "Predictive maintenance in smart factories requires not only high prediction accuracy but also low-latency processing, adaptability to data drift, and understandable explanations for field operators. However, many existing approaches remain cloud-centered, label-dependent, and weak in practical explainability. This study proposes an explainable predictive maintenance framework based on FPGA-GPU Edge\u2013Cloud hybrid computing for large-scale multivariate time-series environments. In the proposed system, FPGA modules perform streaming-oriented signal preprocessing and low-latency feature extraction, while GPU modules execute deep learning-based anomaly detection and fault prediction. To reduce dependence on labeled fault data, the framework incorporates masked autoencoder-based self-supervised representation learning. To improve long-term robustness in changing manufacturing environments, the framework also considers continual learning based on Elastic Weight Consolidation. In addition, a lightweight large language model with parameter-efficient fine-tuning and retrieval-augmented generation generates root-cause-oriented explanations and maintenance guidance. The method is organized as a"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1007/s44163-026-01998-3",
+   "arxiv": null,
+   "title": "Digital twin-driven edge\u2013cloud collaborative remote fault diagnosis and intelligent predictive maintenance for critical hydropower equipment",
+   "authors": "Dong Yang; Zhi-Le Jiang; Kai Zheng; Yuxuan Wang",
+   "year": 2026,
+   "venue": "Discover Artificial Intelligence",
+   "citations": 0,
+   "abstract": "To address the problems of lagging remote monitoring, complex fault mechanisms, and inefficient maintenance decisions for key equipment in hydropower stations, this paper proposes a remote diagnosis and intelligent maintenance method based on edge-cloud collaboration and digital twin-driven approaches. A layered architecture encompassing equipment, perception, transmission, analysis, and service layers is constructed. A physical-geometric-behavior coupled digital twin model is established, and PLC-SCADA control systems, multi-source monitoring data, fault diagnosis models, and remaining life prediction methods are integrated to achieve a closed loop of equipment status perception, anomaly identification, degradation assessment, and maintenance optimization. Experimental verification is conducted on a dual-unit Pelton hydropower system. Results show that the proposed method exhibits higher fault diagnosis accuracy, better life prediction performance, and superior maintenance economy under complex operating conditions. Unlike existing digital twin-based monitoring systems, the proposed framework integrates edge\u2013cloud collaboration, real-time physical\u2013virtual synchronization, fault di"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/ICOSAAS68663.2026.11649395",
+   "arxiv": null,
+   "title": "Edge\u2013Cloud Intelligent Fusion for Digital Twin-based Predictive Maintenance in Smart Manufacturing Systems",
+   "authors": "N. L",
+   "year": 2026,
+   "venue": "2026 International Conference on Intelligent and Sustainable AI Systems (ICOSAAS)",
+   "citations": 0,
+   "abstract": "Smart Manufacturing systems are findings its place in almost all the sectors of various applications. It completely depends on the real-time data from the machines where the predictions and other monitoring processes are carried out. The virtual replica of the physical machines that function similarly to the machines using the equivalent virtual model helps in understanding the functionality of the machines' operations over time. Digital twin helps the smart manufacturing systems for the prediction processes using the real time data from the IoT network. The data handling and consideration of temporal analysis are limited in the digital twin-based smart manufacturing systems. Hence, the proposed work uses the dual fusion strategy at the Edge and Cloud level that helps in the prediction of the machine conditions based on the abnormal behaviour study. The anomaly score-based feature fusion is carried out, which undergoes the weight-based aggregation process that results in the prediction of 96.26% accuracy and 95.11% F1 score using the NASA-C-Turbofan-based Engine Degradation Dataset."
+  },
+  {
+   "source": "s2",
+   "doi": "10.1007/s10791-025-09653-8",
+   "arxiv": null,
+   "title": "Analyzing the impact of edge, fog and cloud computing on predictive maintenance in the Industrial Internet of Things",
+   "authors": "Dimple Kapoor; Deepali Gupta; Mudita Uppal",
+   "year": 2025,
+   "venue": "Discover Computing",
+   "citations": 17,
+   "abstract": "The Industrial Internet of Things is transforming industrial processes through the integration of edge, fog, and cloud computing to offer predictive maintenance to reduce unexpected downtime and increase operational effectiveness. Limited use of predictive maintenance is due to antiquated legacy systems, the availability and security of dependable communication networks, and the provision of big datasets in real time. This study proposes a novel multilayer framework that uses MQTT protocol for transferring data across the layers along with systematically integrating pre-processing and machine learning algorithms to ensure robust and accurate predictions. It uses real-time data collection, low-latency processing, and advanced analytics to predict and prevent equipment failures. Bibliometric analysis of 1,281 publications between 2015 and 2024 shows the rapid growth in IIoT-based predictive maintenance research, where India and China are emerging leaders in contributions and citations. This paper discusses the key enabling technologies, including IoT sensors, edge computing, fog computing, cloud computing, machine learning, and blockchain, and also discusses the challenges such as en"
+  },
+  {
+   "source": "s2",
+   "doi": "10.47392/irjaeh.2025.0459",
+   "arxiv": null,
+   "title": "A Scalable and Interpretable Machine Learning Framework for Predictive Maintenance of Soil Sensors in Precision Farming Using Edge\u2013Cloud Architecture",
+   "authors": "Seema Khairna; Alok Kumar",
+   "year": 2025,
+   "venue": "International Research Journal on Advanced Engineering Hub (IRJAEH)",
+   "citations": 0,
+   "abstract": "Precision agriculture and efficient environmental management depend on the dependability of sensor-based monitoring systems in soil and climatic applications. The upkeep and long-term dependability of the sensors producing this data have received little attention, despite the widespread use of machine learning (ML) for agronomic parameter estimation. A scalable and interpretable machine learning system for environmental sensor monitoring, diagnostics, and predictive maintenance is presented in this paper. The system can identify both sudden sensor failures and slow performance deterioration by combining time-series forecasting models with unsupervised anomaly detection methods. Through the use of SHAP and LIME, interpretability is integrated, allowing for clear and understandable diagnostics. With lightweight models appropriate for edge devices in low-resource contexts, the suggested architecture facilitates deployment in dispersed environments via edge-cloud integration.\u00a0 The system's efficacy in problem detection, data quality preservation, and actionable insights is demonstrated by experimental findings using real-world sensor datasets and generated degradation scenarios.\u00a0 An im"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/ICCA66035.2025.11430844",
+   "arxiv": null,
+   "title": "Hybrid Edge-Cloud Federated Learning Framework for Predictive Maintenance in Industrial IoT",
+   "authors": "Nahla Nabil Skaik; Hasan Razzaqi",
+   "year": 2025,
+   "venue": "International Conferences on Computing Advancements",
+   "citations": 0,
+   "abstract": "Industry 4.0 has enabled the use of Internet of Things (IoT) sensing and automated data analytics, making Predictive Maintenance (PdM) essential for identifying early equipment faults. However, many PdM systems rely on centralized cloud processing, which raises privacy concerns and struggles with heterogeneous Non-Independent and Identically Distributed (Non-IID) industrial data. To address these limitations, this paper introduces a Hybrid Edge\u2013Cloud Federated Learning (FL) framework that performs local training on edge devices while aggregating global updates in the cloud. The proposed method is evaluated using the Case Western Reserve University (CWRU) bearing dataset, a widely-adopted benchmark in industrial fault diagnosis research. Results show that the federated model achieves accuracy comparable to centralized learning while preserving data privacy and maintaining robustness under Independent and Identically Distributed (IID) and Non-IID conditions. SHapley Additive exPlanations (SHAP) explainability further highlights the most influential features for fault classification, supporting transparent deployment in industrial environments."
+  },
+  {
+   "source": "s2",
+   "doi": "10.1002/qre.70043",
+   "arxiv": null,
+   "title": "Predictive Maintenance Strategies for Aero\u2010Engines Considering Remaining Useful Life Prediction Interval",
+   "authors": "Zheng-Bo Zhu; Lu-Bing Wang; Ming-Chih Chen; Xufeng Zhao",
+   "year": 2025,
+   "venue": "Quality and Reliability Engineering International",
+   "citations": 4,
+   "abstract": "Reliable and effective aero\u2010engine remaining useful life (RUL) prediction plays a vital part in predictive maintenance strategy. However, the inherent complexity of the aero\u2010engine operating environment makes it difficult to achieve effective maintenance with traditional point estimation methods. To enhance the reliability of the maintenance strategy, this study proposes a novel method for RUL prediction interval (PI), which quantifies the uncertainty in RUL forecasts and integrates the resulting RUL interval predictions into predictive maintenance. First, RUL PI is estimated using a hybrid deep learning model combined with Monte Carlo dropout. The predicted RUL PI is then transformed into a probability distribution to facilitate real\u2010time monitoring of the aero\u2010engine's operational status. Meanwhile, an effective maintenance threshold is introduced to ensure timely aero\u2010engine maintenance. In addition, the constructed RUL distribution is linked to the predictive maintenance strategy by considering the maintenance cost rate (MCR). Optimizing the MCR for the maintenance economy requirement determines the best maintenance strategy. Finally, the proposed method is demonstrated using N"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1117/12.3048402",
+   "arxiv": null,
+   "title": "Research on cloud edge collaboration technology based on root cause analysis and predictive maintenance of communication station",
+   "authors": "Ting Fu; Yu-Xiang Cai; Hao-Song Sun",
+   "year": 2024,
+   "venue": "Other Conferences",
+   "citations": 0,
+   "abstract": "Cloud computing has problems such as untimeliness and poor network stability. In order to solve this problem, the predictive maintenance model of information and communication station owners based on edge computing is under indepth research. On the basis of existing research literature and case description analysis, the technical principles, key technologies and application cases of this model are studied, and the relevant operation and maintenance costs are compared and analyzed. Specifically, through real-time information monitoring and fault prediction technology, it can detect faults at any time and carry out corresponding maintenance in a timely manner, thereby reducing the use of human resources and production downtime. The results show that the maintenance time of this method is about 5-12 minutes, and the predictive maintenance model of the information and communication station based on edge computing has obvious effects and great advantages. It can solve the current problems in cloud computing well and improve the accuracy and efficiency of cloud computing."
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/SPERT67079.2025.11469237",
+   "arxiv": null,
+   "title": "Edge\u2014Cloud Collaborative Predictive Analytics for Smart Grid Fault Detection and Maintenance",
+   "authors": "Anup Gade; Anil Kumar; D. Yadav; Akhil Gupta; Monali Gulhane; Pawan Kumar",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Smart Power, Energy, Renewables, and Transportation (SPERT)",
+   "citations": 0,
+   "abstract": "The process of assembling smart grids has been accelerated through modernization of power systems. In such systems, fault discovery and pre-empting maintenance are major concerns towards ensuring that the systems run very well. Conventional deterministic approaches tend to show latency problems, bandwidth problems and the inability to respond to grid conditions that vary rapidly. Through this study, it is demonstrated how edge and cloud predictive analytics can be applied together to detect and correct faults in smart grids. This is supposed to assist in these problems. This structure functions by having the edge devices and the cloud systems collaborate to learn with time and react in real time. It obtains sensor and Internet of Things (IoT) information at the edge continuously on various aspects of the grid, such as power lines, substations, and spread green sources. The existence of edge computer units allows identifying problems in real time and categorizing them due to their preparation, noise reduction, and feature extraction. The cloud infrastructure generates enormous real and artificial data databases to update advanced machine learning and deep learning models. This is to"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/JIOT.2024.3521248",
+   "arxiv": null,
+   "title": "A Real-Time Lightweight Perceptron for Cloud\u2013Edge Collaborative Predictive Maintenance of Online Service Systems",
+   "authors": "Lin-Zi Zhang; Yong Shi; Donghan Wang",
+   "year": 2025,
+   "venue": "IEEE Internet of Things Journal",
+   "citations": 9,
+   "abstract": "In the era of expanding cloud\u2013edge online service systems, predictive maintenance (PdM) based on key performance indicators (KPIs), such as CPU utilization, response rate, and network bandwidth, is essential for system operational reliability and security. Traditional data-driven PdM approaches for cloud\u2013edge services often monitor individual indicators in isolation, neglecting their interrelationships. Although convolutional modules have been utilized for collaborative representation learning of localized high-dimensional KPIs, the high-computational complexity of CNNs and the limited kernel size hinder their efficacy in modeling high-dimensional, time-sensitive KPIs. To address these challenges, we propose a lightweight multichannel multilayer perceptron (MCMLP) framework for collaborative PdM. This framework enables efficient pointwise manipulation to capture inner-indicator hidden patterns within KPIs sequences without relying on grid-based convolution. Our MCMLP enhances locality through a two-stage dual-channel feature extraction process that captures spatial and temporal dependencies, integrating inner-indicator and cross-timeline features. The proposed MCMLP can also be eas"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/TCE.2025.3644387",
+   "arxiv": null,
+   "title": "A Hybrid Edge Cloud Predictive Framework for Smart Home Energy Management in Consumer Electronics Using Distilled-Tree and Gradient Boosting Models",
+   "authors": "Rajesh Kumar Dhanaraj; Maragatharajan Muthusamy; Aanjankumar Sureshkumar; Rakesh Keshava; Milan Parikh; Poonkuntran Shanmugam",
+   "year": 2026,
+   "venue": "IEEE transactions on consumer electronics",
+   "citations": 2,
+   "abstract": "In recent days, the rapid growth of advanced communication links among smart consumer appliances has enabled the integration of intelligent energy management system which combines sensing, communication, computing and control technologies within consumer electronics. A synthetic IoT sensor stream is developed to simulate real-time electricity consumption data from multiple utilities, transmitting sensor packets over a wireless uplink with realistic network conditions including jitter and packet loss. The main objective of this study is to design a lightweight hybrid framework which ensures convergence between cloud-level learning and edge-level control while maintaining bounded prediction error and latency. The convergence of the distilled-tree inference model with the cloud-based XGBoost model is achieved through minimization of distillation loss, guaranteeing stable edge predictions with steady-state variance below 3% across iterative updates. The proposed model ensures lightweight inference while the gradient boosting contributes to high predictive accuracy. The experimental results shows that the proposed model achieves about 17.6% simulated energy savings compared to tradition"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1145/3774905.3793127",
+   "arxiv": null,
+   "title": "ECLAD: An Edge-Cloud Collaborative Agentic Framework for Interpretable Anomaly Detection in Predictive Maintenance",
+   "authors": "Songyuan Sui; Zhan-Qi Deng; Yahui Zhuang; S. Liu; Leisheng Yu; Alfredo Costilla Reyes",
+   "year": 2026,
+   "venue": "The Web Conference",
+   "citations": 0,
+   "abstract": "Modern industrial machinery generates massive multivariate sensor data, creating opportunities for predictive maintenance but also posing challenges for real-time anomaly detection and interpretability. Cloud-centric solutions suffer from bandwidth and latency limitations, while purely edge-centric models lack the capacity to deliver accurate and explainable results. We introduce ECLAD, an edge--cloud collaborative framework for interpretable anomaly detection in predictive maintenance. ECLAD combines lightweight edge anomaly screening, cloud-based verification using a higher-capacity sequence model, and LLM-based interpretability agents that generate natural-language diagnostic reports and maintain a self-evolving anomaly classification tree. This hybrid design preserves real-time responsiveness at the edge while leveraging cloud resources for high-precision and interpretable analysis. We demonstrate the end-to-end system through a web-based interface supporting interactive time-series exploration and anomaly category browsing. Code and demonstration video are available at: https://github.com/SongyuanSui/EdgeCloud-AD."
+  },
+  {
+   "source": "s2",
+   "doi": "10.51583/ijltemas.2026.150500164",
+   "arxiv": null,
+   "title": "Predictive Maintenance of Industrial Equipment Using Machine Learning and IOT Data Analytics: A Context-Aware, Edge-Cloud Framework with Operator-in-the-Loop Adaptation",
+   "authors": "Jitam Saha; Shaleen Singh; Shreyanjan Neogi; Anirban Bhatta; Sampurna Majumder; Anuvab Sen",
+   "year": 2026,
+   "venue": "International Journal of Latest Technology in Engineering Management &amp; Applied Science",
+   "citations": 0,
+   "abstract": "The reliable functioning of any manufacturing sys-tem presupposes smooth equipment performance; however, un-scheduled interruptions remain a major source of loss in terms of efficiency, safety, and costly maintenance expenses. Traditional approaches including proactive or reactive maintenance methods prove ineffective in highly dynamic and unpredictable production environments. While IoT technology-driven predictive mainte-nance offers superior alternatives, current solutions suffer from critical limitations concerning long response times, reliance on network infrastructure, fast model decay due to changing load regimes and aging systems, and low credibility and transparency of predictions. This paper presents a context-aware framework for predictive maintenance incorporating a hybrid cloud-edge architecture and adaptive maintenance techniques based on operator involvement. The proposed model uses real-time context data to continuously update its ability to detect anomalies and forecast gradual equipment deterioration. \nThe edge component carries out preliminary filtering of incoming raw data, performs feature engineering, and provides basic classification results, sending extracte"
+  },
+  {
+   "source": "s2",
+   "doi": "10.1109/PICC67314.2025.11291518",
+   "arxiv": null,
+   "title": "AI-Powered Predictive Maintenance Framework for Industrial SCADA Systems with Cloud-Edge Orchestration",
+   "authors": "B. Rambabu; Mallareddy Adudhodla; K. P. Rao; P. Manellore; Vasavi Bande; Jakkala Ravichandra Reddy",
+   "year": 2025,
+   "venue": "2025 International Conference on Power, Instrumentation, Control, and Computing (PICC)",
+   "citations": 2,
+   "abstract": "This paper introduces an AI-powered predictive maintenance framework for industrial SCADA systems, leveraging a cloud-edge orchestration model to achieve realtime fault diagnosis and proactive asset management. The architecture incorporates lightweight anomaly detection models at the edge layer for immediate response and cloud-based deep learning models for historical pattern analysis and adaptive model refinement. The system continuously analyzes sensor data from critical infrastructure components to predict potential failures before they impact operations. To validate the framework, experiments were conducted on a simulated SCADA testbed representing a typical industrial setup. Results show a 28% reduction in unplanned downtime and a 32% improvement in fault detection accuracy compared to traditional threshold-based systems. The hybrid cloud-edge approach also reduced average latency for failure alerts from 2.1 seconds to 0.7 seconds, enabling faster maintenance actions. Furthermore, the framework demonstrated scalability by supporting up to 500 concurrent sensor nodes without performance degradation. These results highlight the feasibility and effectiveness of the proposed solut"
+  }
+ ],
+ "hierarchical multi-agent RUL uncertainty": [
+  {
+   "source": "crossref",
+   "doi": "10.21203/rs.3.rs-9941816/v1",
+   "title": "MedAgent-X: A Multi-Agent Explainable Clinical Decision Support System via Knowledge Graph-Guided Hierarchical Reasoning and Uncertainty-Aware Transformer Networks",
+   "authors": "Aritrik Ghosh",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6750577",
+   "title": "Tail-Risk-Aware Hierarchical Multi-Agent Reinforcement Learning with Co-Optimized Market Mechanism for Multi-Stakeholder Microgrid Energy Dispatch Under Carbon Market Uncertainty",
+   "authors": "Yunzhang Liu; Zihe Li; Zidong Yue; Haoxuan Song",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.knosys.2025.115143",
+   "title": "MELON: Hierarchical multi-agent trajectory prediction with spatio-temporal uncertainty adaptation",
+   "authors": "Yang Cui; Dong Guo; Yi Han",
+   "year": 2026,
+   "venue": "Knowledge-Based Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.jhydrol.2020.125294",
+   "title": "An evidential reasoning-based leader-follower game for hierarchical multi-agent decision making under uncertainty",
+   "authors": "Kasra Motlaghzadeh; Reza Kerachian; Aidin Tavvafi",
+   "year": 2020,
+   "venue": "Journal of Hydrology",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.5220/0011698000003393",
+   "title": "Hierarchical Constraint Logic Programming for Multi-Agent Systems",
+   "authors": "Hiroshi Hosobe; Ken Satoh",
+   "year": 2023,
+   "venue": "Proceedings of the 15th International Conference on Agents and Artificial Intelligence",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4853373",
+   "title": "Hierarchical Value Alignment in Multi-Agent Systems",
+   "authors": "Ana-Maria Petcu",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.71465/mrcis153",
+   "title": "Hierarchical Multi-Agent Reinforcement Learning for Dynamic Inventory Allocation with Demand Uncertainty",
+   "authors": "Yiming Zhao; Christopher Hayes",
+   "year": 2025,
+   "venue": "Multidisciplinary Research in Computing Information Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.36227/techrxiv.177211798.85464735/v1",
+   "title": "Society Agent: A Hierarchical Multi-Agent Architecture with Autonomous Persistent and Ephemeral Agents and Persistent Evolving Knowledge",
+   "authors": "Ioannis Chrysochos",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6238041",
+   "title": "Velocity Degradation in Hierarchical Multi-Agent Systems Under Discard",
+   "authors": "James Roy Dennis",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s10458-020-09451-0",
+   "title": "Model primitives for hierarchical lifelong reinforcement learning",
+   "authors": "Bohan Wu; Jayesh K. Gupta; Mykel Kochenderfer",
+   "year": 2020,
+   "venue": "Autonomous Agents and Multi-Agent Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4666277",
+   "title": "Hisoma: A Hierarchical Multi-Agent Model Integrating\u00a0Self-Organizing Neural Networks with Multi-Agent Deep Reinforcement Learning",
+   "authors": "Minghong GENG; Shubham PATERIA; Budhitama SUBAGDJA; Ah-Hwee TAN",
+   "year": 2023,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6025576",
+   "title": "A Safe, Secure, and Uncertainty-Aware Demand Response Architecture Using LLM-Guided Hierarchical Multi-Agent Deep Reinforcement Learning in Integrated Energy System",
+   "authors": "Reza Sepehrzad; Nima Khosravi; Milad Moafi; HOSSEIN HOSSEINALIBEIKI; Ahmed Al durra; Mahdieh S. Sadabadi",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/access.2021.3126424",
+   "title": "Iterative LMI Approach to Robust Hierarchical Control of Homogenous Linear Multi-Agent Systems Subject to Polytopic Uncertainty and External Disturbance",
+   "authors": "Tuynh Van Pham; Dinh Hoa Nguyen; David Banjerdpongchai",
+   "year": 2021,
+   "venue": "IEEE Access",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6811638",
+   "title": "GoodGlinda-7B: Hierarchical Multi-Agent Verification (HMAV) for Edge Computing",
+   "authors": "Sachleen Singh Dhanjal",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1201/9781003097242-8",
+   "title": "Uncertainty Management and the Confidence of RUL Predictions",
+   "authors": "Diego Galar; Kai Goebel; Peter Sandborn; Uday Kumar",
+   "year": 2021,
+   "venue": "Prognostics and Remaining Useful Life (RUL) Estimation",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/bigdata66926.2025.11401664",
+   "title": "Towards Hierarchical Multi-Agent Decision-Making for Uncertainty-Aware EV Charging",
+   "authors": "Lo Pang-Yun Ting; Ali \u015eenol; Huan-Yang Wang; Hsu-Chao Lai; Kun-Ta Chuang; Huan Liu",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Big Data (BigData)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/tr.2026.3668558",
+   "title": "Hierarchical Bayesian Multimodal Learning for Probabilistic RUL Prediction: An Evidential Framework with Uncertainty-Calibrated Fusion",
+   "authors": "Yuan Wang; Yu Liu; Suk Joo Bae; Jun Wu; Yaguo Lei",
+   "year": 2026,
+   "venue": "IEEE Transactions on Reliability",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s10458-022-09579-1",
+   "title": "Automated privacy negotiations with preference uncertainty",
+   "authors": "Dorota Filipczuk; Tim Baarslag; Enrico H. Gerding; m. c. schraefel",
+   "year": 2022,
+   "venue": "Autonomous Agents and Multi-Agent Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.7198890",
+   "title": "Formal Verification of Epistemic States with Uncertainty in Multi-Agent Systems",
+   "authors": "Jefferson Andrade",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1007/s10458-026-09755-7",
+   "title": "Multi-level graph partition via hierarchical learning for large-scale vehicle routing problems",
+   "authors": "Yuxin Pan; Ruohong Liu; Yize Chen; Zhiguang Cao; Fangzhen Lin",
+   "year": 2026,
+   "venue": "Autonomous Agents and Multi-Agent Systems",
+   "type": "journal-article"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  }
+ ],
+ "digital twin adaptive inference RUL": [
+  {
+   "source": "crossref",
+   "doi": "10.1201/9781003097242-10",
+   "title": "Principles of Digital Twin",
+   "authors": "Diego Galar; Kai Goebel; Peter Sandborn; Uday Kumar",
+   "year": 2021,
+   "venue": "Prognostics and Remaining Useful Life (RUL) Estimation",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.56726/irjmets81350",
+   "title": "Modeling Adaptive Cyber Fraud Patterns Using Causal Inference and Digital Twin Simulations in Critical Infrastructure Protection Systems.",
+   "authors": "",
+   "year": 2025,
+   "venue": "International Research Journal of Modernization in Engineering Technology &amp; Science",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1080/27525783.2025.2537841",
+   "title": "A theoretical method to adaptive design of complex engineering systems based on digital twin",
+   "authors": "Hongjun Zhang; Tian Bai; Liu Shi",
+   "year": 2025,
+   "venue": "Digital Twin",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/globecom48099.2022.10001005",
+   "title": "Digital Twin-Assisted Adaptive DNN Inference in Industrial Internet of Things",
+   "authors": "Shisheng Hu; Mushu Li; Jie Gao; Conghao Zhou; Xuemin Sherman Shen",
+   "year": 2022,
+   "venue": "GLOBECOM 2022 - 2022 IEEE Global Communications Conference",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3390/math12081229",
+   "title": "RUL Prediction for Piezoelectric Vibration Sensors Based on Digital-Twin and LSTM Network",
+   "authors": "Chengcheng Fu; Cheng Gao; Weifang Zhang",
+   "year": 2024,
+   "venue": "Mathematics",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3390/w17091324",
+   "title": "Underwater Digital Twin Sensor Network-Based Maritime Communication and Monitoring Using Exponential Hyperbolic Crisp Adaptive Network-Based Fuzzy Inference System",
+   "authors": "Bala Anand Muthu; Claudia Cherubini",
+   "year": 2025,
+   "venue": "Water",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/rams48030.2020.9153669",
+   "title": "Optimal RUL Estimation: A State-of-Art Digital Twin Application",
+   "authors": "Mohamad Danish Anis; Sharareh Taghipour; Chi-Guhn Lee",
+   "year": 2020,
+   "venue": "2020 Annual Reliability and Maintainability Symposium (RAMS)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1080/27525783.2025.2570262",
+   "title": "Dynamic adaptive mechanism for construction investment decision-making under multi-factor interactions: risk-oriented modelling framework with pathways to digital twin",
+   "authors": "Guangfeng Cheng; Dong Luo",
+   "year": 2025,
+   "venue": "Digital Twin",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.46720/fwc2023-dgt-013",
+   "title": "Electric Vehicle Battery SoH and RUL Prediction Using Digital Twin Hybrid ML Model Considering Effect Of Driving Behaviour",
+   "authors": "Prasanta Sarkar",
+   "year": 2023,
+   "venue": "Proceedings of the FISITA - Technology and Mobility Conference Europe 2023",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.4018/979-8-2600-1669-5.ch005",
+   "title": "Resilient Smart Buildings Using Adaptive Digital Twin Frameworks",
+   "authors": "Sophia Weber; Valdrin Dervishaj",
+   "year": 2026,
+   "venue": "Digital Twin Applications and Cognitive Enterprise Transformation Across Industries",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.4271/2026-26-0718",
+   "title": "Hybrid Digital Twin for Aero-Engine Bearing Prognostics: A Physics-Informed Machine Learning Approach to RUL Prediction",
+   "authors": "Abbas Mohamed",
+   "year": 2026,
+   "venue": "SAE Technical Paper Series",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.55677/ijlsar/v05i03y2026-07",
+   "title": "Causal Inference and Digital-Twin MRV Architectures for Biodiversity Conservation in Andean Coffee Landscapes",
+   "authors": "Javier Burgos-Salcedo; Carolina Sierra",
+   "year": 2026,
+   "venue": "International Journal of Life Science and Agriculture Research",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/ice/itmc65658.2025.11106621",
+   "title": "Digital Twin-Supported BESS Decision Support of RUL-Based Maintenance",
+   "authors": "Kai Zhao; Ying Liu; Wenlong Ming; Yue Zhou; Jianzhong Wu",
+   "year": 2025,
+   "venue": "2025 IEEE International Conference on Engineering, Technology, and Innovation (ICE/ITMC)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/phm-beijing63284.2024.10874559",
+   "title": "Construction of Bearing HI Based on Digital Twin and KOA-CNN-LSTM RUL Model",
+   "authors": "Qiu Shenglong. Qiu Guangqi; Liu Jin",
+   "year": 2024,
+   "venue": "2024 Global Reliability and Prognostics and Health Management Conference (PHM-Beijing)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1162/2e3983f5.cc8ac55b",
+   "title": "Review 1: \"Population Scale Proteomics Enables Adaptive Digital Twin Modelling in Sepsis\"",
+   "authors": "Shamim Nemati",
+   "year": 2024,
+   "venue": "",
+   "type": "peer-review"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1162/2e3983f5.2872b5ae",
+   "title": "Review of \"Population Scale Proteomics Enables Adaptive Digital Twin Modelling in Sepsis\"",
+   "authors": "Shamim Nemati",
+   "year": 2024,
+   "venue": "",
+   "type": "peer-review"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.4018/979-8-2600-1674-9.ch002",
+   "title": "Conceptual Foundations of Self-Adaptive Learning Systems With Digital Twin Integration",
+   "authors": "Hamed Nozari; K. Tanya; Seema P. Suthar; Jaanavi Bakshi",
+   "year": 2026,
+   "venue": "Digital Twin-Driven Lifelong Learning Systems",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4313616",
+   "title": "Direct Bayesian Inference for Fault Severity Assessment in Digital-Twin-Based Fault Diagnosis",
+   "authors": "Tat Nghia Nguyen; Richard  B. Vilim",
+   "year": 2022,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.4018/978-1-7998-0108-5.ch004",
+   "title": "Enterprise Digital Twin",
+   "authors": "Souvik Barat",
+   "year": 2020,
+   "venue": "Advances in E-Business Research",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6168942",
+   "title": "A Probabilistic Physics-Based Framework for Robust and Adaptive Digital Twin Development",
+   "authors": "Charbel Farhat",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  },
+  {
+   "source": "arxiv",
+   "error": "429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=all%3Adigital+AND+all%3Atwin+AND+all%3Aadaptive+AND+all%3Ainference+AND+all%3ARUL&max_results=15&sortBy=rel"
+  }
+ ],
+ "conformal prediction selective offloading edge cloud": [
+  {
+   "source": "crossref",
+   "error": "429 Client Error: Too Many Requests for url: https://api.crossref.org/works?query.bibliographic=conformal+prediction+selective+offloading+edge+cloud&rows=20&filter=from-pub-date%3A2020-01-01&select=DO"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  },
+  {
+   "source": "arxiv",
+   "error": "503 Server Error: Service Unavailable for url: https://export.arxiv.org/api/query?search_query=all%3Aconformal+AND+all%3Aprediction+AND+all%3Aselective+AND+all%3Aoffloading+AND+all%3Aedge+AND+all%3Acl"
+  }
+ ],
+ "cascade inference remaining useful life edge": [
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.eij.2026.100897",
+   "title": "Fuzzy Inference System-Based Prognostics for Remaining Useful Life Estimation",
+   "authors": "Mahmut Sami \u015ea\u015fmazt\u00fcrk; Ferhat Yuna",
+   "year": 2026,
+   "venue": "Egyptian Informatics Journal",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1201/9781003330998-6",
+   "title": "Remaining Useful Life Prediction of Industrial Components with Filter-Based Methods",
+   "authors": "Yong Zhang; Zidong Wang; Ye Yuan",
+   "year": 2023,
+   "venue": "Filter-Based Fault Diagnosis and Remaining Useful Life Prediction",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/access.2020.2970444",
+   "title": "Cascade Fusion Convolutional Long-Short Time Memory Network for Remaining Useful Life Prediction of Rolling Bearing",
+   "authors": "Qiong Wu; Changsheng Zhang",
+   "year": 2020,
+   "venue": "IEEE Access",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1201/9781003330998-7",
+   "title": "Remaining Useful Life Prediction of Industrial Components with Machine Learning Methods",
+   "authors": "Yong Zhang; Zidong Wang; Ye Yuan",
+   "year": 2023,
+   "venue": "Filter-Based Fault Diagnosis and Remaining Useful Life Prediction",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.5975446",
+   "title": "Edge Oriented Approach for Multi-Class and Data-Driven Remaining Useful Life Prediction",
+   "authors": "Silvia Onofri; Alex Marchioni; Luciano Prono; Gianluca Setti; Mauro Mangia; Riccardo Rovatti",
+   "year": 2025,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.36001/phmconf.2024.v16i1.4071",
+   "title": "Data-Driven Remaining Useful Life Estimation",
+   "authors": "Ark Ifeanyi; Mattia Zanotelli; Jamie Coble",
+   "year": 2024,
+   "venue": "Annual Conference of the PHM Society",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.3934/math.2023379",
+   "title": "Reliability inference and remaining useful life prediction for the doubly accelerated degradation model based on Wiener process",
+   "authors": "Peihua Jiang; Xilong Yang",
+   "year": 2023,
+   "venue": "AIMS Mathematics",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1201/9781003250685",
+   "title": "Modeling Remaining Useful Life Dynamics in Reliability Engineering",
+   "authors": "Pierre Dersin",
+   "year": 2023,
+   "venue": "",
+   "type": "monograph"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.36001/ijphm.2013.v4i2.2122",
+   "title": "Remaining useful tool life predictions in turning using Bayesian inference",
+   "authors": "Jaydeep M. Karandikar; Ali Abbas; Tony L. Schmitz",
+   "year": 2020,
+   "venue": "International Journal of Prognostics and Health Management",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4639816",
+   "title": "Joint Prediction of the State of Health and Remaining Useful Life for Lithium-Ion Batteries Based on Wrapper Cascade-Stacking",
+   "authors": "Zhijian Qu; Shuaijun Ma; Lin Zhu; Xinxing Hou; Chen Yuan; Yang He",
+   "year": 2023,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.microrel.2026.116131",
+   "title": "Remaining useful life prediction of high-power LEDs based on empirical mode decomposition and fuzzy inference system",
+   "authors": "Quoc Tiep La; David Vali\u0161; Zden\u011bk Vintr",
+   "year": 2026,
+   "venue": "Microelectronics Reliability",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1016/j.energy.2026.141483",
+   "title": "A physics-informed neural network enhanced by fuzzy inference for remaining useful life prediction of lithium-ion batteries",
+   "authors": "Linbin Mao; Fahui Miao; Chunyu Liu; Xuanzhe Ma",
+   "year": 2026,
+   "venue": "Energy",
+   "type": "journal-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/iccit68739.2025.11491433",
+   "title": "Adaptive Clustered Personalized Federated Learning for Non-IID Remaining Useful Life Prediction in Edge-Based Industrial Systems",
+   "authors": "Fardin Kaiser",
+   "year": 2025,
+   "venue": "2025 28th International Conference on Computer and Information Technology (ICCIT)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1142/9789811272493_0010",
+   "title": "Remaining Useful Life Prediction",
+   "authors": "",
+   "year": 2023,
+   "venue": "Advanced Wind Turbines",
+   "type": "book-chapter"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/fmec65595.2025.11119371",
+   "title": "Optimizing Remaining Useful Life Prediction in the Industrial Metaverse with TinyFL",
+   "authors": "Sai Ananya Katakam; Abhishek Hazra; Mohan Gurusamy",
+   "year": 2025,
+   "venue": "2025 10th International Conference on Fog and Mobile Edge Computing (FMEC)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.1109/srse59585.2023.10336067",
+   "title": "Remaining Useful Life Prediction for Heterogeneous Wearing Cutting Tools Based on Inverse Gaussian Process and Bayesian Inference",
+   "authors": "Yumei Luo; Biao Lu",
+   "year": 2023,
+   "venue": "2023 5th International Conference on System Reliability and Safety Engineering (SRSE)",
+   "type": "proceedings-article"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.31224/8145",
+   "title": "Auditing Operating-Condition Normalization in C-MAPSS Remaining Useful Life Evaluation",
+   "authors": "Aaditya Gupta",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.6305259",
+   "title": "Optimizing Solid-State Battery Performance Through Intelligent Remaining Useful Life Estimation",
+   "authors": "David Brian",
+   "year": 2026,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4772178",
+   "title": "Engine Remaining Useful Life Prediction Based on Multi-Source Information Fusion",
+   "authors": "\u5b89 \u5f90",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "crossref",
+   "doi": "10.2139/ssrn.4864843",
+   "title": "Deep State Space Models for Remaining Useful Life Estimation",
+   "authors": "Marco Star; Kristoffer Mckee",
+   "year": 2024,
+   "venue": "",
+   "type": "posted-content"
+  },
+  {
+   "source": "s2",
+   "error": "rate-limited"
+  },
+  {
+   "source": "arxiv",
+   "error": "429 Client Error: Too Many Requests for url: https://export.arxiv.org/api/query?search_query=all%3Acascade+AND+all%3Ainference+AND+all%3Aremaining+AND+all%3Auseful+AND+all%3Alife+AND+all%3Aedge&max_re"
+  }
+ ]
+}

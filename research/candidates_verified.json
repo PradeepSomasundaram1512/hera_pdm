@@ -1,0 +1,809 @@
+[
+ {
+  "query": "10.1109/jiot.2020.3008170",
+  "verified": true,
+  "doi": "10.1109/jiot.2020.3008170",
+  "title": "Cloud\u2013Edge-Based Lightweight Temporal Convolutional Networks for Remaining Useful Life Prediction in IIoT",
+  "authors": [
+   "Lei Ren",
+   "Yuxin Liu",
+   "Xiaokang Wang",
+   "Jinhu Lu",
+   "M. Jamal Deen"
+  ],
+  "year": 2021,
+  "venue": "IEEE Internet of Things Journal",
+  "volume": "8",
+  "issue": "16",
+  "pages": "12578-12587",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "abstract": "Industrial Internet of Things (IIoT), as an important industrial branch of the Internet of Things (IoT), has an essential purpose to improve intelligent industrial production. For this purpose, IIoT big data should be efficiently processed to mine valuable information. In handing the IIoT big data, cloud\u2013edge computing is getting more attention to reduce the interaction latency to meet the real-time requirement, especially in the field of prognostic and health management (PHM). It is expected that artificial intelligence (AI) technologies will significantly change the manner of processing IIoT big data. Therefore, new methods about PHM, combining cloud\u2013edge computing with AI technologies, are required to process the IIoT big data for intelligent industrial manufacturing. As an essential element of PHM, predicting the remaining useful life (RUL) of industrial equipment plays an increasingly crucial role, especially for industrial intelligence. However, traditional methods pay much attention on prediction accuracy and neglect the influence of computing time. In this article, by combining cloud\u2013edge computing with AI technology, a new data-driven method, namely, cloud\u2013edge-based lightweight temporal convolutional networks (LTCNs), for RUL prediction is proposed. First, to meet the real-time requirement, a cloud\u2013edge computing and AI-based framework for RUL prediction is presented. Second, a new model structure named LTCN is proposed and applied in the framework. Real-time prediction results will be obtained in the edge plane and higher accuracy prediction results will be obtained through historical information in the cloud plane. Third, an incremental learning approach based on updating partial parameters of LTCN is discussed to improve the accuracy of prediction models with newly collected data. Experiments show that our method can improve the prediction accuracy and reduce the computational time of RUL.",
+  "citations": 124
+ },
+ {
+  "query": "10.1007/s10845-026-02897-1",
+  "verified": true,
+  "doi": "10.1007/s10845-026-02897-1",
+  "title": "EC-Distill-ZeroDiag: a cloud-edge collaborative framework for zero-shot industrial fault diagnosis via large language model distillation",
+  "authors": [
+   "Zhiwen Yao",
+   "Yuhui Xu",
+   "Tangbin Xia",
+   "Zhen Chen",
+   "Ershun Pan",
+   "Lifeng Xi"
+  ],
+  "year": 2026,
+  "venue": "Journal of Intelligent Manufacturing",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "abstract": null,
+  "citations": 0
+ },
+ {
+  "query": "10.1016/j.eng.2026.02.029",
+  "verified": true,
+  "doi": "10.1016/j.eng.2026.02.029",
+  "title": "Cloud-Edge-Terminal Collaborative AI Agent for Compound Fault Detection and Diagnosis",
+  "authors": [
+   "Yiming He",
+   "Xiaoxi Hu",
+   "Weiming Shen"
+  ],
+  "year": 2026,
+  "venue": "Engineering",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "abstract": null,
+  "citations": 2
+ },
+ {
+  "query": "10.1007/978-3-032-11946-9_13",
+  "verified": true,
+  "doi": "10.1007/978-3-032-11946-9_13",
+  "title": "Cloud-Edge-End Collaborative Inference Framework for Efficient Predictive Maintenance in Industrial Internet of Things",
+  "authors": [
+   "Yi Hu",
+   "Yongze Ma",
+   "Yanqing Zhao",
+   "Xingyu He"
+  ],
+  "year": 2026,
+  "venue": "Lecture Notes in Networks and Systems; Advances in Information, Computing and Technology",
+  "volume": null,
+  "issue": null,
+  "pages": "147-160",
+  "type": "book-chapter",
+  "publisher": "Springer Nature Switzerland",
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "10.1007/s00607-025-01585-x",
+  "verified": true,
+  "doi": "10.1007/s00607-025-01585-x",
+  "title": "Intelligent predictive maintenance: multivariate ML model optimization in an Edge-Fog-Cloud environment",
+  "authors": [
+   "Preeti Jain",
+   "Koustav Kumar Mondal",
+   "Debasis Das",
+   "Arpit Khandelwal"
+  ],
+  "year": 2025,
+  "venue": "Computing",
+  "volume": "107",
+  "issue": "12",
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "abstract": null,
+  "citations": 2
+ },
+ {
+  "query": "Distributed Predictive Maintenance Through Edge Computing",
+  "verified": true,
+  "doi": "10.1109/indin58382.2024.10774467",
+  "title": "Distributed Predictive Maintenance Through Edge Computing",
+  "authors": [
+   "Rakiba Rayhana",
+   "Hongguang Yun",
+   "Teng Wang",
+   "Johnson Chen",
+   "Yanshuo Fan",
+   "Zheng Liu",
+   "Wendy Gao"
+  ],
+  "year": 2024,
+  "venue": "2024 IEEE 22nd International Conference on Industrial Informatics (INDIN)",
+  "volume": null,
+  "issue": null,
+  "pages": "1-6",
+  "type": "proceedings-article",
+  "publisher": "IEEE",
+  "match_score": 1.0,
+  "abstract": "This study presents a framework for distributed predictive maintenance using the BaSyx platform and edge computing devices. By integrating predictive maintenance algorithms, the system can estimate remaining useful life, detect early faults, and identify anomalies without prior failure data. The real-time processing capabilities of edge devices, combined with a local server, aid in immediate data integration and decision-making to optimize maintenance scheduling and improve operational reliability. While vehicles are used as a specific example in this research, the proposed framework is adaptable and applicable to predictive maintenance across various industrial assets. This study provides a baseline for advanced predictive maintenance strategies",
+  "citations": 0
+ },
+ {
+  "query": "arXiv:2510.17543",
+  "verified": true,
+  "arxiv": "2510.17543",
+  "title": "Reliable Inference in Edge-Cloud Model Cascades via Conformal Alignment",
+  "authors": [
+   "Jiayi Huang",
+   "Sangwoo Park",
+   "Nicola Paoletti",
+   "Osvaldo Simeone"
+  ],
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Edge intelligence enables low-latency inference via compact on-device models, but assuring reliability remains challenging. We study edge-cloud cascades that must preserve conditional coverage: whenever the edge returns a prediction set, it should contain the true label with a user-specified probability, as if produced by the cloud model. We formalize conditional coverage with respect to the cloud predictive distribution, and introduce a conformal alignment-based (CAb) cascading mechanism that certifies this property with user control over the risk level. Our method casts escalation from edge to cloud models as a multiple-hypothesis testing (MHT) problem, tailoring conformal alignment (CA) to select which inputs can be safely handled at the edge. The proposed CAb model cascading method yields statistical guarantees on the average fraction of edge decisions that satisfy cloud-level conditional coverage. The procedure applies to arbitrary edge prediction sets, including variants of conformal prediction (CP), and exposes a tunable trade-off among coverage, deferral rate, and set size. Experiments on CIFAR-100 image classification and the TeleQnA question-answering (QA) benchmark show that the proposed CAb cascade maintains the target conditional coverage for edge predictions while substantially reducing offloading to the cloud and incurring modest increases in prediction-set size.",
+  "citations": 1
+ },
+ {
+  "query": "arXiv:2607.25018",
+  "verified": true,
+  "arxiv": "2607.25018",
+  "title": "Conformal Cascade: Distribution-Free Accuracy Guarantees for Multi-Tier LLM Inference",
+  "authors": [
+   "Yifan Dou",
+   "Shikan Lian",
+   "Shibo Li"
+  ],
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Large language model (LLM) cascades reduce inference cost by routing easy queries to a small model and deferring hard queries to a larger one. Production cascades govern this deferral through a confidence threshold, but LLM confidence scores are miscalibrated, the threshold must be tuned per model pair and per domain, and no setting yields a formal bound on cascade accuracy. We introduce \\textbf{Conformal Cascade} (CC), a multi-tier inference framework that uses conformal prediction set size as the deferral rule: accept when the calibrated set collapses to a single answer, defer otherwise. The procedure delivers a distribution-free, finite-sample accuracy guarantee. By a per-tier union bound, the prediction set at the accepting tier covers the correct answer with probability at least $1 - K\u03b1$ for any user-specified $\u03b1$; under a selection-preservation condition (consistent with, but not strictly implied by, our marginal coverage results), the bound tightens to $1 - \u03b1$. We further characterise expected cascade cost as an explicit function of $\u03b1$ and the calibration-set acceptance rate. Across 18 multiple-choice benchmarks spanning science, medicine, commonsense, and standardized exams, evaluated on two-tier cascades drawn from four open-weight model families, CC strictly improves over the strongest calibration-tuned heuristic cascade on the majority of family--benchmark pairs, with the largest gains on reasoning-heavy benchmarks where majority vote is unreliable; on easier benchmarks the cascade commits the vast majority of queries to the small model at no accuracy cost. Extension to open-ended generation requires an answer-clustering step that we leave for future work. The method requires no model training and only black-box API access.",
+  "citations": 1
+ },
+ {
+  "query": "arXiv:2307.02764",
+  "verified": true,
+  "arxiv": "2307.02764",
+  "title": "When Does Confidence-Based Cascade Deferral Suffice?",
+  "authors": [
+   "Wittawat Jitkrittum",
+   "Neha Gupta",
+   "Aditya Krishna Menon",
+   "Harikrishna Narasimhan",
+   "Ankit Singh Rawat",
+   "Sanjiv Kumar"
+  ],
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Cascades are a classical strategy to enable inference cost to vary adaptively across samples, wherein a sequence of classifiers are invoked in turn. A deferral rule determines whether to invoke the next classifier in the sequence, or to terminate prediction. One simple deferral rule employs the confidence of the current classifier, e.g., based on the maximum predicted softmax probability. Despite being oblivious to the structure of the cascade -- e.g., not modelling the errors of downstream models -- such confidence-based deferral often works remarkably well in practice. In this paper, we seek to better understand the conditions under which confidence-based deferral may fail, and when alternate deferral strategies can perform better. We first present a theoretical characterisation of the optimal deferral rule, which precisely characterises settings under which confidence-based deferral may suffer. We then study post-hoc deferral mechanisms, and demonstrate they can significantly improve upon confidence-based deferral in settings where (i) downstream models are specialists that only work well on a subset of inputs, (ii) samples are subject to label noise, and (iii) there is distribution shift between the train and test set.",
+  "citations": 69
+ },
+ {
+  "query": "arXiv:2607.21873",
+  "verified": true,
+  "arxiv": "2607.21873",
+  "title": "Multi-Agent System-driven Digital Twins for predictive maintenance: architectures, technologies and open research challenges",
+  "authors": [
+   "Korota Ars\u00e8ne Coulibaly",
+   "Mohamed Hamlich"
+  ],
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Digital twins have emerged as a foundational technology within the context of Industry 4.0, offering a paradigm for the real-time virtual representation of physical systems. However, managing their growing complexity, particularly in distributed industrial environments, requires intelligent architectures capable of autonomous decision-making, dynamic adaptability, and inter-agent coordination. This systematic review explores the intersection between Multi-Agent Systems and Digital Twins, with a particular focus on predictive maintenance applications in resource-constrained contexts. Through a critical analysis of over 547 papers published in high-impact journals (IEEE Transactions, Nature, Elsevier, MDPI), we establish a taxonomy of existing hybrid architectures, identify persistent technological bottlenecks, and formulate three open research questions concerning: (i) the deployment of artificial intelligence on resource-constrained microcontrollers, (ii) distributed multi-node coordination via lightweight communication protocols, and (iii) the hierarchical orchestration of Digital Twins toward smart factory control integrating residual life estimation and explainable Artificial Intelligence. The results of this analysis reveal that, despite significant progress, no existing system offers an integrated embedded-distributed hierarchical solution that simultaneously meets the requirements of Industry 5.0.",
+  "citations": 0
+ },
+ {
+  "query": "arXiv:2608.11679",
+  "verified": true,
+  "arxiv": "2608.11679",
+  "title": "AgenticTwin: An Agentic LLM Framework Integrated with Digital Twin for Anomaly Detection",
+  "authors": [
+   "Touseef Hasan",
+   "Mounika Ghanta",
+   "Souvika Sarkar",
+   "Ujjwal Guin"
+  ],
+  "year": 2026,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Digital twins are increasingly used to monitor and simulate the behavior of cyber-physical systems. Even with skilled operators, interpreting anomalies detected within digital twin pipelines is challenging, as the sheer complexity and volume of raw sensor data make thorough analysis difficult. Recent advances in large language models (LLMs) offer promising capabilities for reasoning and explanation, yet their integration into digital twin-driven anomaly analysis remains underexplored. In this work, we propose AgenticTwin, an agentic framework that integrates LLM-driven reasoning with a digital twin-based anomaly detection pipeline. The framework grounds LLM-generated explanations in outputs from a digital twin-driven anomaly classifier and enables human operators to ask relevant natural-language questions about the system. Beyond the framework itself, we introduce a benchmark-oriented evaluation pipeline constructed over synthetic anomalies injected into a real-world weather sensor dataset, enabling controlled generation of operator queries over anomaly events. We further evaluate the feasibility of deploying lightweight, open-source LLMs for practical cyber-physical environments. Experimental results demonstrate that structured agent collaboration and knowledge-grounded reasoning improve diagnosis quality, contextual retrieval, and mitigation quality across diverse possible anomaly scenarios.",
+  "citations": 0
+ },
+ {
+  "query": "arXiv:2505.02076",
+  "verified": true,
+  "arxiv": "2505.02076",
+  "title": "Leveraging LLM Agents and Digital Twins for Fault Handling in Process Plants",
+  "authors": [
+   "Milapji Singh Gill",
+   "Javal Vyas",
+   "Artan Markaj",
+   "Felix Gehlhoff",
+   "Mehmet Mercang\u00f6z"
+  ],
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "published_doi": "10.1109/ETFA65518.2025.11205597",
+  "journal_ref": null,
+  "abstract": "Advances in Automation and Artificial Intelligence continue to enhance the autonomy of process plants in handling various operational scenarios. However, certain tasks, such as fault handling, remain challenging, as they rely heavily on human expertise. This highlights the need for systematic, knowledge-based methods. To address this gap, we propose a methodological framework that integrates Large Language Model (LLM) agents with a Digital Twin environment. The LLM agents continuously interpret system states and initiate control actions, including responses to unexpected faults, with the goal of returning the system to normal operation. In this context, the Digital Twin acts both as a structured repository of plant-specific engineering knowledge for agent prompting and as a simulation platform for the systematic validation and verification of the generated corrective control actions. The evaluation using a mixing module of a process plant demonstrates that the proposed framework is capable not only of autonomously controlling the mixing module, but also of generating effective corrective actions to mitigate a pipe clogging with only a few reprompts.",
+  "citations": 18
+ },
+ {
+  "query": "arXiv:2507.01376",
+  "verified": true,
+  "arxiv": "2507.01376",
+  "title": "AI Agents and Agentic AI-Navigating a Plethora of Concepts for Future Manufacturing",
+  "authors": [
+   "Yinwang Ren",
+   "Yangyang Liu",
+   "Tang Ji",
+   "Xun Xu"
+  ],
+  "year": 2025,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "AI agents are autonomous systems designed to perceive, reason, and act within dynamic environments. With the rapid advancements in generative AI (GenAI), large language models (LLMs) and multimodal large language models (MLLMs) have significantly improved AI agents' capabilities in semantic comprehension, complex reasoning, and autonomous decision-making. At the same time, the rise of Agentic AI highlights adaptability and goal-directed autonomy in dynamic and complex environments. LLMs-based AI Agents (LLM-Agents), MLLMs-based AI Agents (MLLM-Agents), and Agentic AI contribute to expanding AI's capabilities in information processing, environmental perception, and autonomous decision-making, opening new avenues for smart manufacturing. However, the definitions, capability boundaries, and practical applications of these emerging AI paradigms in smart manufacturing remain unclear. To address this gap, this study systematically reviews the evolution of AI and AI agent technologies, examines the core concepts and technological advancements of LLM-Agents, MLLM-Agents, and Agentic AI, and explores their potential applications in and integration into manufacturing, along with the potential challenges they may face.",
+  "citations": 58
+ },
+ {
+  "query": "10.1007/s43069-025-00579-x",
+  "verified": true,
+  "doi": "10.1007/s43069-025-00579-x",
+  "title": "A Multi-agent Digital Twin Framework for Predictive Maintenance Using Machine Learning and Genetic Algorithms: A Case Study Morocco, Tangier Med Port",
+  "authors": [
+   "Hamza Garmouch",
+   "Otman Abdoun"
+  ],
+  "year": 2025,
+  "venue": "Operations Research Forum",
+  "volume": "6",
+  "issue": "4",
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "abstract": null,
+  "citations": 1
+ },
+ {
+  "query": "Multi-Agent Systems for Manufacturing Digital Twins: A Perspective on Agency and Large Language Models",
+  "verified": true,
+  "doi": "10.1016/j.ifacol.2025.09.271",
+  "title": "Multi-Agent Systems for Manufacturing Digital Twins: A Perspective on Agency and Large Language Models",
+  "authors": [
+   "Noel P Greis",
+   "Harish P. Cherukuri",
+   "Jose C.M. Outeiro"
+  ],
+  "year": 2025,
+  "venue": "IFAC-PapersOnLine",
+  "volume": "59",
+  "issue": "10",
+  "pages": "1612-1617",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 5
+ },
+ {
+  "query": "Prediction of bearing remaining useful life based on a two-stage updated digital twin",
+  "verified": true,
+  "doi": "10.1016/j.aei.2025.103123",
+  "title": "Prediction of bearing remaining useful life based on a two-stage updated digital twin",
+  "authors": [
+   "Deqiang He",
+   "Jiayang Zhao",
+   "Zhenzhen Jin",
+   "Chenggeng Huang",
+   "Fan Zhang",
+   "Jinxin Wu"
+  ],
+  "year": 2025,
+  "venue": "Advanced Engineering Informatics",
+  "volume": "65",
+  "issue": null,
+  "pages": "103123",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 120
+ },
+ {
+  "query": "Conformal Prediction Intervals for Remaining Useful Lifetime Estimation",
+  "verified": true,
+  "doi": "10.36001/ijphm.2023.v14i2.3417",
+  "title": "Conformal Prediction Intervals for Remaining Useful Lifetime Estimation",
+  "authors": [
+   "Alireza Javanmardi",
+   "Eyke H\u00fcllermeier"
+  ],
+  "year": 2023,
+  "venue": "International Journal of Prognostics and Health Management",
+  "volume": "14",
+  "issue": "2",
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "PHM Society",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "10.36001/phme.2026.v9i1.4902",
+  "verified": true,
+  "doi": "10.36001/phme.2026.v9i1.4902",
+  "title": "Uncertainty-Aware Bearing Remaining Useful Life Prediction Based on Conformal Prediction",
+  "authors": [
+   "Shun Wang",
+   "Yolanda Vidal",
+   "Francesc Pozo"
+  ],
+  "year": 2026,
+  "venue": "PHM Society European Conference",
+  "volume": "9",
+  "issue": "1",
+  "pages": "1-10",
+  "type": "journal-article",
+  "publisher": "PHM Society",
+  "abstract": "Accurate prediction of the remaining useful life of rolling element bearings is a critical task in prognostics and health management. Although deep learning methods have shown strong predictive capability, purely data-driven approaches still face two important limitations: they may produce physically inconsistent predictions that contradict the irreversible nature of bearing degradation and often fail to provide reliable uncertainty estimates. To address these issues, this paper proposes a physics-informed probabilistic framework to predict the remaining useful life. First, a health index is constructed from logarithmic envelope spectrum features using a variational autoencoder, enabling the extraction of a monotonic degradation indicator without requiring labeled fault data. Second, a Transformer-based predictor is trained with a monotonicity constraint that explicitly enforces the predicted remaining useful life to be non-increasing over time. Third, Monte Carlo dropout is used to quantify epistemic uncertainty, and a post-hoc conformal calibration strategy is applied to construct finite-sample prediction intervals with guaranteed marginal coverage by leveraging historical degradation data. Experiments on the XJTU-SY full-lifecycle bearing dataset show that the proposed framework improves point prediction accuracy relative to controlled feature and model ablations. More importantly, the uncertainty results reveal a substantial mismatch between raw Monte Carlo dropout intervals and the observed prediction errors: the average prediction interval coverage probability increases from 0.4835 before calibration to 0.9445 after conformal calibration. The resulting wider intervals should not be interpreted only as a loss of sharpness, but as a correction of the severe overconfidence of the uncalibrated model under heterogeneous degradation trajectories. Bearings with more irregular or non-stationary degradation behavior require wider calibrated intervals to maintain reliable coverage, indicating that the proposed framework can expose trajectory-dependent prediction difficulty and support risk-aware maintenance decisions.",
+  "citations": 0
+ },
+ {
+  "query": "A General Data-Driven Framework for Remaining Useful Life Estimation with Uncertainty Quantification Using Split Conformal Prediction",
+  "verified": true,
+  "doi": "10.1109/icsrs59833.2023.10381131",
+  "title": "A General Data-Driven Framework for Remaining Useful Life Estimation with Uncertainty Quantification Using Split Conformal Prediction",
+  "authors": [
+   "Weijun Xu",
+   "Enrico Zio"
+  ],
+  "year": 2023,
+  "venue": "2023 7th International Conference on System Reliability and Safety (ICSRS)",
+  "volume": null,
+  "issue": null,
+  "pages": "67-74",
+  "type": "proceedings-article",
+  "publisher": "IEEE",
+  "match_score": 1.0,
+  "abstract": "Remaining useful life estimation utilizes historical data and advanced analytic techniques to estimate the remaining lifespan of systems, components or assets, for enabling proactive decision-making and efficient resource management. However, existing data-driven prognostic technologies often provide deterministic values of remaining useful life which do not represent uncertainties. In practice, uncertainties are due to factors such as noise, measurement errors in the prediction and limited availability of data to train the predictive models. In this work, we propose a novel framework that addresses the issue of prognostic unertainty by generating prediction intervals for single-point estimators, thereby enabling robust uncertainty quantification. The proposed framework overcomes the drawbacks of previous conformal prediction methods, which lacked interval adaptivity and relied on the assumption of data exchangeability. To validate our framework, we performed experiments using the Commercial Modular Aero-Propulsion System Simulation (CMAPSS) datasets. Results demonstrate that both conventional machine learning estimators and modern deep learning estimators yield reasonable prediction intervals within the proposed framework. The superiority of our framework over previous conformal prediction methods is demonstrated.",
+  "citations": 4
+ },
+ {
+  "query": "10.3390/s26072249",
+  "verified": true,
+  "doi": "10.3390/s26072249",
+  "title": "Turbofan Engine Remaining Useful Life Prediction with Reliable Prediction Intervals via LSTM-Based Quantile Regression and Conformal Calibration",
+  "authors": [
+   "Runsheng Diao",
+   "Mingzhe Zhou",
+   "Guanglei Meng",
+   "Shanze Wang"
+  ],
+  "year": 2026,
+  "venue": "Sensors",
+  "volume": "26",
+  "issue": "7",
+  "pages": "2249",
+  "type": "journal-article",
+  "publisher": "MDPI AG",
+  "abstract": "To overcome the inability of point estimates to adequately characterize uncertainty and the unstable coverage of prediction intervals in turbofan engine remaining useful life (RUL) prediction, this study proposes an LSTM-based quantile regression framework (LSTM-QR). The framework generates a point prediction together with upper and lower predictive bounds in a single forward pass, thereby directly constructing a prediction interval with a nominal coverage of 80%. During training, a weighted pinball loss and an overestimation penalty are introduced to improve the robustness of quantile estimation. During inference, Conformalized Quantile Regression (CQR) is further applied for post hoc interval calibration. Experiments on the NASA C-MAPSS dataset show that the proposed method maintains stable point-prediction performance while substantially improving interval reliability after calibration. Under the same operating condition, PICP increases from 0.590 \u00b1 0.035 to 0.800 \u00b1 0.026 for FD001 \u2192 FD001 and from 0.722 \u00b1 0.050 to 0.793 \u00b1 0.032 for FD002 \u2192 FD002, corresponding to gains of 21.0 and 7.1 percentage points, respectively, with calibrated RMSE values of 16.235 \u00b1 1.297 and 18.323 \u00b1 0.411. Under cross-condition transfer, where the raw intervals exhibit clear under-coverage, CQR further raises PICP from 0.696 \u00b1 0.046 to 0.806 \u00b1 0.032 for FD001 \u2192 FD002 and from 0.593 \u00b1 0.071 to 0.803 \u00b1 0.021 for FD002 \u2192 FD001, corresponding to gains of 11.0 and 21.0 percentage points, respectively, while preserving RMSE at 21.758 \u00b1 1.208 and 17.562 \u00b1 0.062. These results indicate that the proposed method provides more reliable and interpretable prediction intervals under varying operating conditions, thereby offering effective support for predictive maintenance decision-making.",
+  "citations": 0
+ },
+ {
+  "query": "A benchmark on uncertainty quantification for deep learning prognostics",
+  "verified": true,
+  "doi": "10.1016/j.ress.2024.110513",
+  "title": "A benchmark on uncertainty quantification for deep learning prognostics",
+  "authors": [
+   "Luis Basora",
+   "Arthur Viens",
+   "Manuel Arias Chao",
+   "Xavier Olive"
+  ],
+  "year": 2025,
+  "venue": "Reliability Engineering &amp; System Safety",
+  "volume": "253",
+  "issue": null,
+  "pages": "110513",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "Uncertainty-aware remaining useful life prediction for predictive maintenance using deep learning",
+  "verified": true,
+  "doi": "10.1016/j.procir.2023.06.021",
+  "title": "Uncertainty-aware remaining useful life prediction for predictive maintenance using deep learning",
+  "authors": [
+   "Quy Le Xuan",
+   "Yeremia G. Adhisantoso",
+   "Marco Munderloh",
+   "J\u00f6rn Ostermann"
+  ],
+  "year": 2023,
+  "venue": "Procedia CIRP",
+  "volume": "118",
+  "issue": null,
+  "pages": "116-121",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": "Reliably predicting Remaining Useful Life (RUL) is crucial for reducing asset maintenance costs. Deep learning emerges as a powerful data-driven method capable of predicting RUL based on historical operating data. However, standard deep learning tools typically do not account for the uncertainty inherent in prediction tasks. This paper presents an uncertainty-aware approach that predicts not only the RUL but also the associated confidence interval, capturing both aleatoric and epistemic uncertainty. The proposed approach",
+  "citations": 18
+ },
+ {
+  "query": "Robust uncertainty quantification for online remaining useful life prediction with randomly missing and partially faulty sensor data",
+  "verified": true,
+  "doi": "10.1016/j.ress.2025.111177",
+  "title": "Robust uncertainty quantification for online remaining useful life prediction with randomly missing and partially faulty sensor data",
+  "authors": [
+   "Wei Wang",
+   "Zhaoqiang Wang",
+   "Zhiqiang Cai",
+   "Changhua Hu",
+   "Shubin Si"
+  ],
+  "year": 2025,
+  "venue": "Reliability Engineering &amp; System Safety",
+  "volume": "262",
+  "issue": null,
+  "pages": "111177",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 19
+ },
+ {
+  "query": "Predictive maintenance optimization for industrial equipment via reliable prognosis and risk-aware reinforcement learning",
+  "verified": true,
+  "doi": "10.1007/s40747-025-02127-w",
+  "title": "Predictive maintenance optimization for industrial equipment via reliable prognosis and risk-aware reinforcement learning",
+  "authors": [
+   "Zifei Xu",
+   "Qiang Zhang"
+  ],
+  "year": 2025,
+  "venue": "Complex &amp; Intelligent Systems",
+  "volume": "12",
+  "issue": "1",
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "match_score": 1.0,
+  "abstract": "Predictive maintenance (PdM) based on Remaining Useful Life (RUL) prediction plays a crucial role in improving performance and reducing lifecycle costs of industrial equipment. This study proposes an intelligent PdM framework that integrates a RUL prediction model based on probabilistic neural network with a distributional reinforcement learning agent based on QR-DQN. In the first stage, the RUL prediction model is developed to process sensor data to generate accurate RUL predictions, quantify predictive uncertainty, and estimate the probability of failure within a given horizon. Building on the health condition assessment, the QR-DQN agent learns the distribution of long-term maintenance returns and makes sequential decisions among multiple actions. By adopting risk-sensitive decision rules, the agent explicitly accounts for uncertainty and failure risk, achieving a balance between safety, cost efficiency, and timeliness of interventions. Experimental evaluations on complex system degradation demonstrate that the proposed intelligent PdM outperforms conventional baselines by reducing catastrophic failures, optimizing maintenance schedules, and improving overall reliability.",
+  "citations": 7
+ },
+ {
+  "query": "Interpretable ensemble remaining useful life prediction enables dynamic maintenance scheduling for aircraft engines",
+  "verified": true,
+  "doi": "10.1038/s41598-025-23473-2",
+  "title": "Interpretable ensemble remaining useful life prediction enables dynamic maintenance scheduling for aircraft engines",
+  "authors": [
+   "Hikmetcan \u00d6zcan"
+  ],
+  "year": 2025,
+  "venue": "Scientific Reports",
+  "volume": "15",
+  "issue": "1",
+  "pages": null,
+  "type": "journal-article",
+  "publisher": "Springer Science and Business Media LLC",
+  "match_score": 1.0,
+  "abstract": "This study introduces a predictive-maintenance framework for aircraft engines that integrates accurate remaining-useful-life (RUL) estimation with a cost-aware scheduling strategy. The predictive layer employs ensemble learning by combining LightGBM, CatBoost, and Gradient Boosting, thereby enhancing both accuracy and stability. The scheduling layer initiates maintenance once the predicted RUL falls below a tunable threshold \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$\\tau$$\\end{document} (set to 15 cycles in experiments) and allocates service slots under cost and risk tolerance constraints, ensuring flexibility for conservative operation when necessary. The framework is evaluated on the NASA C-MAPSS dataset (FD001\u2013FD004), covering single- and multi-condition as well as single- and multi-fault scenarios. Experimental results demonstrate strong performance on FD001 and FD003, with competitive results on FD002 and FD004. For instance, the LightGBM+CatBoost ensemble achieves RMSE = 6.62 and RUL Score = \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$2.951 \\times 10^{3}$$\\end{document} on FD001, while the three-model ensemble yields RMSE = 9.71 and RUL Score = \\documentclass[12pt]{minimal} \\usepackage{amsmath} \\usepackage{wasysym} \\usepackage{amsfonts} \\usepackage{amssymb} \\usepackage{amsbsy} \\usepackage{mathrsfs} \\usepackage{upgreek} \\setlength{\\oddsidemargin}{-69pt} \\begin{document}$$1.037 \\times 10^{4}$$\\end{document} on FD003. To ensure transparency and reliability, SHAP-based interpretability analysis is applied, highlighting critical sensors and operational cycles. The ensemble approach provides more balanced attributions, which enhances auditability and supports engineering validation in safety-critical domains. Overall, this study contributes to aviation predictive maintenance by delivering robust and interpretable RUL predictions and by translating them into tunable maintenance policies; however, these contributions are demonstrated on C-MAPSS and with a fixed illustrative threshold, so the reported gains should be interpreted as benchmark-specific until confirmed on real fleets and under alternative risk-aware policies.",
+  "citations": 13
+ },
+ {
+  "query": "10.3390/electronics14173384",
+  "verified": true,
+  "doi": "10.3390/electronics14173384",
+  "title": "Human-in-the-Loop XAI for Predictive Maintenance: A Systematic Review of Interactive Systems and Their Effectiveness in Maintenance Decision-Making",
+  "authors": [
+   "Nuuraan Risqi Amaliah",
+   "Benny Tjahjono",
+   "Vasile Palade"
+  ],
+  "year": 2025,
+  "venue": "Electronics",
+  "volume": "14",
+  "issue": "17",
+  "pages": "3384",
+  "type": "journal-article",
+  "publisher": "MDPI AG",
+  "abstract": "Artificial intelligence (AI) plays a pivotal role in Industry 4.0, with predictive maintenance (PdM) emerging as a core application for improving operational efficiency by reducing unplanned downtime and extending asset life. Despite these advancements, the black-box nature of AI models remains a significant barrier to adoption, as industry stakeholders require systems that are both transparent and trustworthy. This study presents a systematic literature review examining how human-in-the-loop explainable AI (HITL-XAI) approaches can enhance the effectiveness and adoption of AI systems in PdM contexts. This review followed the PRISMA methodology, employing predefined search strings across Scopus, ProQuest, and EBSCO databases. Sixty-three peer-reviewed journal articles, published between 2019 and early 2025, were included in the final analysis. The selected studies span various domains, including industrial manufacturing, energy, and transportation, with findings synthesized through both descriptive and thematic analyses. A key gap identified is the limited empirical exploration of generative AI (GenAI) in improving the usability, interpretability, and trustworthiness of HITL-XAI systems in PdM applications. This review outlines actionable insights for integrating explainability and GenAI into existing rule-based PdM systems to support more adaptive and reliable maintenance strategies. Ultimately, the findings underscore the importance of designing HITL-XAI systems that not only demonstrate high model performance but are also effectively aligned with operational workflows and the cognitive needs of maintenance personnel.",
+  "citations": 18
+ },
+ {
+  "query": "10.1080/00207543.2022.2154403",
+  "verified": true,
+  "doi": "10.1080/00207543.2022.2154403",
+  "title": "Predictive maintenance for industry 5.0: behavioural inquiries from a work system perspective",
+  "authors": [
+   "Bas van Oudenhoven",
+   "Philippe Van de Calseyde",
+   "Rob Basten",
+   "Evangelia Demerouti"
+  ],
+  "year": 2022,
+  "venue": "International Journal of Production Research",
+  "volume": "61",
+  "issue": "22",
+  "pages": "7846-7865",
+  "type": "journal-article",
+  "publisher": "Informa UK Limited",
+  "abstract": "ABSTRACT Predictive Maintenance (PdM) solutions assist decision-makers by predicting equipment health and scheduling maintenance actions, but their implementation in industry remains problematic. Specifically, prior research repeatedly indicates that decision-makers often refuse to adopt the data-driven, system-generated advice in their working procedures. In this paper, we address these acceptance issues by studying how PdM implementation changes the nature of decision-makers\u2019 work and how these changes affect their acceptance of PdM systems. We build on the human-centric Smith-Carayon Work System model to synthesise literature from research areas where system acceptance has been explored in more detail. Consequently, we expand the maintenance literature by investigating the human-, task-, and organisational characteristics of PdM implementation. Following the literature review, we distil ten propositions regarding decision-making behaviour in PdM settings. Next, we verify each proposition\u2019s relevance through in-depth interviews with experts from both academia and industry. Based on the propositions and interviews, we identify four factors that facilitate PdM adoption: trust between decision-maker and model (maker), control in the decision-making process, availability of sufficient cognitive resources, and proper organisational allocation of decision-making. Our results contribute to a fundamental understanding of acceptance behaviour in a PdM context and provide recommendations to increase the effectiveness of PdM implementations.",
+  "citations": 73
+ },
+ {
+  "query": "From predictive maintenance 4.0 to 5.0: bringing humans back into the loop with a self-learning platform and implementation roadmap on automated production lines",
+  "verified": true,
+  "doi": "10.1108/jqme-12-2025-0147",
+  "title": "From predictive maintenance 4.0 to 5.0: bringing humans back into the loop with a self-learning platform and implementation roadmap on automated production lines",
+  "authors": [
+   "Laura Lucantoni",
+   "Filippo Emanuele Ciarapica",
+   "Maurizio Bevilacqua"
+  ],
+  "year": 2026,
+  "venue": "Journal of Quality in Maintenance Engineering",
+  "volume": "32",
+  "issue": "5",
+  "pages": "58-75",
+  "type": "journal-article",
+  "publisher": "Emerald",
+  "match_score": 1.0,
+  "abstract": "\n \n Industry 5.0 (I5.0) emphasises human-centric collaboration between operators and intelligent systems. This paper presents a Predictive Maintenance 5.0 (PdM 5.0) framework that combines Industry 4.0 (I4.0) technologies with I5.0 human-centric principles.\n \n \n \n Real-time data feed artificial intelligence (AI) models that generate probabilistic failure forecasts over short time windows and are explained through explainable artificial intelligence dashboards. A decision-support interface collects feedback from different operator roles to refine the models, and an implementation roadmap supports replication in industrial settings.\n \n \n \n Applied to three production lines in an automotive plant, the platform enabled the transition from preventive maintenance to an integrated PdM 5.0 approach, bringing the humans back into the loop, and contributed to an average 20% improvement in overall equipment effectiveness (OEE), together with positive usability scores that capture the operators\u2019 perspective in a PdM 5.0 setting.\n \n \n \n By embedding operators in interaction with the self-learning platform, it supports skill development, transparency and shared control over maintenance decision and a reduced routine workload, contributing to human-centric workplaces and supporting more resource-efficient operations consistently with I5.0.\n \n \n \n The originality of this work lies in offering the first socio-technical architecture that explicitly frames the transition from PdM4.0 to PdM5.0, responding to the need for new maintenance frameworks co-designed with organisations highlighted in recent literature. Practically, the implementation roadmap makes this transition operationally actionable, showing how to keep humans in the loop in day-to-day maintenance decisions.\n",
+  "citations": 3
+ },
+ {
+  "query": "Enhanced Predictive Maintenance through Explainable Multimodal Deep Learning and Human-in-the-Loop Systems",
+  "verified": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "query": "Technician 5.0: A Hybrid Framework Integrating Chatbot, Digital Twin, and Machine Learning for Human-Centric Predictive Maintenance in Industry 5.0",
+  "verified": true,
+  "doi": "10.1007/978-981-95-5271-9_9",
+  "title": "Technician 5.0: A Hybrid Framework Integrating Chatbot, Digital Twin, and Machine Learning for Human-Centric Predictive Maintenance in Industry 5.0",
+  "authors": [
+   "Malek Masmoudi",
+   "Mariya Guerroum",
+   "Hassana Mahfoud"
+  ],
+  "year": 2026,
+  "venue": "Computational Intelligence Methods and Applications; Advanced Architectures and Techniques for Smart Industry",
+  "volume": null,
+  "issue": null,
+  "pages": "221-243",
+  "type": "book-chapter",
+  "publisher": "Springer Nature Singapore",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "arXiv:2306.05120",
+  "verified": true,
+  "arxiv": "2306.05120",
+  "title": "Explainable Predictive Maintenance",
+  "authors": [
+   "Sepideh Pashami",
+   "Slawomir Nowaczyk",
+   "Yuantao Fan",
+   "Jakub Jakubowski",
+   "Nuno Paiva",
+   "Narjes Davari",
+   "Szymon Bobek",
+   "Samaneh Jamshidi",
+   "Hamid Sarmadi",
+   "Abdallah Alabdallah",
+   "Rita P. Ribeiro",
+   "Bruno Veloso",
+   "Moamar Sayed-Mouchaweh",
+   "Lala Rajaoarisoa",
+   "Grzegorz J. Nalepa",
+   "Jo\u00e3o Gama"
+  ],
+  "year": 2023,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "Explainable Artificial Intelligence (XAI) fills the role of a critical interface fostering interactions between sophisticated intelligent systems and diverse individuals, including data scientists, domain experts, end-users, and more. It aids in deciphering the intricate internal mechanisms of ``black box'' Machine Learning (ML), rendering the reasons behind their decisions more understandable. However, current research in XAI primarily focuses on two aspects; ways to facilitate user trust, or to debug and refine the ML model. The majority of it falls short of recognising the diverse types of explanations needed in broader contexts, as different users and varied application areas necessitate solutions tailored to their specific needs. One such domain is Predictive Maintenance (PdM), an exploding area of research under the Industry 4.0 \\& 5.0 umbrella. This position paper highlights the gap between existing XAI methodologies and the specific requirements for explanations within industrial applications, particularly the Predictive Maintenance field. Despite explainability's crucial role, this subject remains a relatively under-explored area, making this paper a pioneering attempt to bring relevant challenges to the research community's attention. We provide an overview of predictive maintenance tasks and accentuate the need and varying purposes for corresponding explanations. We then list and describe XAI techniques commonly employed in the literature, discussing their suitability for PdM tasks. Finally, to make the ideas and claims more concrete, we demonstrate XAI applied in four specific industrial use cases: commercial vehicles, metro trains, steel plants, and wind farms, spotlighting areas requiring further research.",
+  "citations": 24
+ },
+ {
+  "query": "PRONOSTIA: An experimental platform for bearings accelerated degradation tests",
+  "verified": false
+ },
+ {
+  "query": "Conformalized Quantile Regression",
+  "verified": true,
+  "doi": "10.2139/ssrn.5201367",
+  "title": "Conformalized Composite Quantile Regression",
+  "authors": [
+   "Suin Kim",
+   "Yoonsuh Jung"
+  ],
+  "year": 2025,
+  "venue": "Elsevier BV",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "type": "posted-content",
+  "publisher": "Elsevier BV",
+  "match_score": 0.868,
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "Conformal Prediction: A Gentle Introduction",
+  "verified": true,
+  "doi": "10.1561/9781638281597",
+  "title": "Conformal Prediction: A Gentle Introduction",
+  "authors": [
+   "Anastasios N. Angelopoulos",
+   "Stephen Bates"
+  ],
+  "year": 2023,
+  "venue": "Now Publishers",
+  "volume": null,
+  "issue": null,
+  "pages": null,
+  "type": "monograph",
+  "publisher": "Now Publishers",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": null
+ },
+ {
+  "query": "Adaptive Conformal Inference Under Distribution Shift",
+  "verified": false
+ },
+ {
+  "query": "Industry 4.0 and Industry 5.0\u2014Inception, conception and perception",
+  "verified": true,
+  "doi": "10.1016/j.jmsy.2021.10.006",
+  "title": "Industry 4.0 and Industry 5.0\u2014Inception, conception and perception",
+  "authors": [
+   "Xun Xu",
+   "Yuqian Lu",
+   "Birgit Vogel-Heuser",
+   "Lihui Wang"
+  ],
+  "year": 2021,
+  "venue": "Journal of Manufacturing Systems",
+  "volume": "61",
+  "issue": null,
+  "pages": "530-535",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 1919
+ },
+ {
+  "query": "Digital Twin in Industry: State-of-the-Art",
+  "verified": false
+ },
+ {
+  "query": "Machinery health prognostics: A systematic review from data acquisition to RUL prediction",
+  "verified": true,
+  "doi": "10.1016/j.ymssp.2017.11.016",
+  "title": "Machinery health prognostics: A systematic review from data acquisition to RUL prediction",
+  "authors": [
+   "Yaguo Lei",
+   "Naipeng Li",
+   "Liang Guo",
+   "Ningbo Li",
+   "Tao Yan",
+   "Jing Lin"
+  ],
+  "year": 2018,
+  "venue": "Mechanical Systems and Signal Processing",
+  "volume": "104",
+  "issue": null,
+  "pages": "799-834",
+  "type": "journal-article",
+  "publisher": "Elsevier BV",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 2373
+ },
+ {
+  "query": "A Unified Approach to Interpreting Model Predictions",
+  "verified": false
+ },
+ {
+  "query": "arXiv:1803.01271",
+  "verified": true,
+  "arxiv": "1803.01271",
+  "title": "An Empirical Evaluation of Generic Convolutional and Recurrent Networks for Sequence Modeling",
+  "authors": [
+   "Shaojie Bai",
+   "J. Zico Kolter",
+   "Vladlen Koltun"
+  ],
+  "year": 2018,
+  "venue": "arXiv preprint",
+  "published_doi": null,
+  "journal_ref": null,
+  "abstract": "For most deep learning practitioners, sequence modeling is synonymous with recurrent networks. Yet recent results indicate that convolutional architectures can outperform recurrent networks on tasks such as audio synthesis and machine translation. Given a new sequence modeling task or dataset, which architecture should one use? We conduct a systematic evaluation of generic convolutional and recurrent architectures for sequence modeling. The models are evaluated across a broad range of standard tasks that are commonly used to benchmark recurrent networks. Our results indicate that a simple convolutional architecture outperforms canonical recurrent networks such as LSTMs across a diverse range of tasks and datasets, while demonstrating longer effective memory. We conclude that the common association between sequence modeling and recurrent networks should be reconsidered, and convolutional networks should be regarded as a natural starting point for sequence modeling tasks. To assist related work, we have made code available at http://github.com/locuslab/TCN .",
+  "citations": 7326
+ },
+ {
+  "query": "Neurosurgeon: Collaborative Intelligence Between the Cloud and Mobile Edge",
+  "verified": false
+ },
+ {
+  "query": "BranchyNet: Fast inference via early exiting from deep neural networks",
+  "verified": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "query": "Estimation of Bearing Remaining Useful Life Based on Multiscale Convolutional Neural Network",
+  "verified": true,
+  "doi": "10.1109/tie.2018.2844856",
+  "title": "Estimation of Bearing Remaining Useful Life Based on Multiscale Convolutional Neural Network",
+  "authors": [
+   "Jun Zhu",
+   "Nan Chen",
+   "Weiwen Peng"
+  ],
+  "year": 2019,
+  "venue": "IEEE Transactions on Industrial Electronics",
+  "volume": "66",
+  "issue": "4",
+  "pages": "3208-3216",
+  "type": "journal-article",
+  "publisher": "Institute of Electrical and Electronics Engineers (IEEE)",
+  "match_score": 1.0,
+  "abstract": "Bearing remaining useful life (RUL) prediction plays a crucial role in guaranteeing safe operation of machinery and reducing maintenance loss. In this paper, we present a new deep feature learning method for RUL estimation approach through time frequency representation (TFR) and multiscale convolutional neural network (MSCNN). TFR can reveal nonstationary property of a bearing degradation signal effectively. After acquiring time-series degradation signals, we get TFRs, which contain plenty of useful information using wavelet transform. Owing to high dimensionality, the size of these TFRs is reduced by bilinear interpolation, which are further regarded as inputs for deep learning models. Here, we introduce an MSCNN model structure, which keeps the global and local information synchronously compared to a traditional convolutional neural network (CNN). The salient features, which contribute for RUL estimation, can be learned automatically by MSCNN. The effectiveness of the presented method is validated by the experiment data. Compared to traditional data-driven and different CNN-based feature extraction methods, the proposed method shows enhanced performance in the prediction accuracy.",
+  "citations": 610
+ },
+ {
+  "query": "Remaining useful life estimation in prognostics using deep convolution neural networks",
+  "verified": false,
+  "error": "Expecting value: line 1 column 1 (char 0)"
+ },
+ {
+  "query": "Long Short-Term Memory Network for Remaining Useful Life estimation",
+  "verified": true,
+  "doi": "10.1109/icphm.2017.7998311",
+  "title": "Long Short-Term Memory Network for Remaining Useful Life estimation",
+  "authors": [
+   "Shuai Zheng",
+   "Kosta Ristovski",
+   "Ahmed Farahat",
+   "Chetan Gupta"
+  ],
+  "year": 2017,
+  "venue": "2017 IEEE International Conference on Prognostics and Health Management (ICPHM)",
+  "volume": null,
+  "issue": null,
+  "pages": "88-95",
+  "type": "proceedings-article",
+  "publisher": "IEEE",
+  "match_score": 1.0,
+  "abstract": null,
+  "citations": 800
+ },
+ {
+  "query": "Industry 5.0: Towards a sustainable, human-centric and resilient European industry",
+  "verified": false
+ }
+]

@@ -1,0 +1,29 @@
+\begin{table}[t]
+\centering
+\caption{RUL accuracy and calibration on 17 held-out FEMTO bearings (4 bearing-grouped folds; mean$\pm$std over 3 seeds; RUL capped at 3000\,s; nominal coverage 90\%). Raw: uncalibrated quantiles; CQR: conformalized. $^\dagger$selected on calibration bearings.}
+\label{tab:rul}
+\setlength{\tabcolsep}{2.6pt}\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lrcccccc}
+\toprule
+Model & Params & RMSE (s) & MAE (s) & Raw cov. & CQR cov. & MPIW (s) & CCE \\
+\midrule
+Edge-CNN & 2.7k & 1114$\pm$40 & 851$\pm$19 & 0.37 & 0.88$\pm$0.02 & 2080$\pm$120 & 0.035 \\
+Edge-GRU$^\dagger$ & 2.5k & 816$\pm$30 & 525$\pm$65 & 0.69 & 0.84$\pm$0.04 & 1879$\pm$130 & 0.054 \\
+\midrule
+LSTM & 17.5k & 1200$\pm$79 & 778$\pm$69 & 0.53 & 0.86$\pm$0.04 & 2014$\pm$184 & 0.072 \\
+LSTM+DT & 17.7k & 1202$\pm$127 & 824$\pm$119 & 0.44 & 0.86$\pm$0.01 & 1989$\pm$28 & 0.066 \\
+GRU & 13.4k & 1149$\pm$95 & 706$\pm$87 & 0.54 & 0.85$\pm$0.03 & 2009$\pm$167 & 0.067 \\
+GRU+DT & 13.6k & 1166$\pm$83 & 784$\pm$77 & 0.38 & 0.88$\pm$0.04 & 2145$\pm$244 & 0.051 \\
+TCN & 16.8k & 1112$\pm$63 & 825$\pm$79 & 0.32 & 0.87$\pm$0.02 & 2122$\pm$170 & 0.032 \\
+TCN+DT & 17.2k & 1047$\pm$77 & 808$\pm$49 & 0.31 & 0.89$\pm$0.02 & 2314$\pm$111 & 0.040 \\
+CNN-LSTM & 15.3k & 1096$\pm$104 & 676$\pm$105 & 0.47 & 0.83$\pm$0.03 & 2147$\pm$104 & 0.044 \\
+CNN-LSTM+DT$^\dagger$ & 15.7k & 1093$\pm$64 & 717$\pm$43 & 0.36 & 0.85$\pm$0.01 & 2008$\pm$75 & 0.062 \\
+\midrule
+LSTM+DT (MSE) & -- & 1288$\pm$64 & 945$\pm$76 & -- & -- & -- & -- \\
+GRU+DT (MSE) & -- & 1298$\pm$88 & 959$\pm$117 & -- & -- & -- & -- \\
+TCN+DT (MSE) & -- & 1114$\pm$26 & 879$\pm$25 & -- & -- & -- & -- \\
+CNN-LSTM+DT (MSE) & -- & 1100$\pm$66 & 789$\pm$45 & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}}
+\end{table}

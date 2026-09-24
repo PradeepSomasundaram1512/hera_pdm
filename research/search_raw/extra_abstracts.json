@@ -1,0 +1,178 @@
+{
+ "10.1109/access.2026.3731096": {
+  "title": "HAMA: A Hierarchical Adaptive Multi-Agent Architecture for Industrial IoT Predictive Maintenance",
+  "authors": [
+   "Rebin Birzo Saleh",
+   "Khanh Pham Dinh",
+   "Balazs Villanyi",
+   "Truong-Son Hy"
+  ],
+  "venue": "IEEE Access",
+  "year": 2026,
+  "volume": "14",
+  "pages": "142595-142613",
+  "abstract": ""
+ },
+ "10.1109/icit64854.2026.11491044": {
+  "title": "A Human-Centred Architecture Integrating Digital Twin and Agentic AI for Predictive Maintenance",
+  "authors": [
+   "Leonardo Mendon\u00e7a",
+   "Jos\u00e9 Barbosa",
+   "Paulo Leitao"
+  ],
+  "venue": "2026 IEEE International Conference on Industrial Technology (ICIT)",
+  "year": 2026,
+  "volume": null,
+  "pages": "1-6",
+  "abstract": ""
+ },
+ "10.1109/icdsbs69077.2026.11634862": {
+  "title": "A Safety-Constrained Agentic Digital Twin Framework for Predictive Maintenance in Smart Manufacturing Systems",
+  "authors": [
+   "Ropfuveta Sakha",
+   "Shishir Venkat",
+   "Ramesh Sekaran",
+   "Revathi Vaithiyanathan",
+   "Jeeva S",
+   "Girisha G S"
+  ],
+  "venue": "2026 International Conference on Data Science and Business Systems (ICDSBS)",
+  "year": 2026,
+  "volume": null,
+  "pages": "1-5",
+  "abstract": "Smart manufacturing systems tend to incorporate autonomous decision-making systems, sensor sensitivities, and most importantly the hard safety limits. Achieving this is non-trivial for many frameworks and most only partially address the goal. This paper proposes the Safety-Constrained Agentic Digital Twin (SCADT) framework which intercepts any action suggested by any agent and applies a three-valued safety test to each action suggestion before executing any of them. To facilitate this, two parameters are introduced. The first is the Sensor Reliability Weight which represents the decline in quality of a sensor over time and the second is Temporal Safety Horizon which instead of only looking at the current safety of an action, looks at the safety of the action in a short and therefore simulated, future."
+ },
+ "10.1109/icosaas68663.2026.11649395": {
+  "title": "Edge\u2013Cloud Intelligent Fusion for Digital Twin-based Predictive Maintenance in Smart Manufacturing Systems",
+  "authors": [
+   "Natrayan L"
+  ],
+  "venue": "2026 International Conference on Intelligent and Sustainable AI Systems (ICOSAAS)",
+  "year": 2026,
+  "volume": null,
+  "pages": "513-519",
+  "abstract": "Smart Manufacturing systems are findings its place in almost all the sectors of various applications. It completely depends on the real-time data from the machines where the predictions and other monitoring processes are carried out. The virtual replica of the physical machines that function similarly to the machines using the equivalent virtual model helps in understanding the functionality of the machines' operations over time. Digital twin helps the smart manufacturing systems for the prediction processes using the real time data from the IoT network. The data handling and consideration of temporal analysis are limited in the digital twin-based smart manufacturing systems. Hence, the proposed work uses the dual fusion strategy at the Edge and Cloud level that helps in the prediction of the machine conditions based on the abnormal behaviour study. The anomaly score-based feature fusion is carried out, which undergoes the weight-based aggregation process that results in the prediction of 96.26% accuracy and 95.11% F1 score using the NASA-C-Turbofan-based Engine Degradation Dataset."
+ },
+ "10.1016/j.ifacol.2025.12.403": {
+  "title": "An Agentic AI-based Architecture for Digital Twins Specialized in Predictive Maintenance: Application to Ball Mills",
+  "authors": [
+   "Claudio Collao",
+   "Humza Akhtar",
+   "Carlos Toro",
+   "Carlos Ocampo-Mart\u00ednez",
+   "Raphael Schor",
+   "Rami Pinto Prieto"
+  ],
+  "venue": "IFAC-PapersOnLine",
+  "year": 2025,
+  "volume": "59",
+  "pages": "96-101",
+  "abstract": ""
+ },
+ "10.3390/app152111414": {
+  "title": "Agentic AI in Smart Manufacturing: Enabling Human-Centric Predictive Maintenance Ecosystems",
+  "authors": [
+   "Andr\u00e9s Fern\u00e1ndez-Miguel",
+   "Susana Ort\u00edz-Marcos",
+   "Mariano Jim\u00e9nez-Calzado",
+   "Alfonso P. Fern\u00e1ndez del Hoyo",
+   "Fernando E. Garc\u00eda-Mui\u00f1a",
+   "Davide Settembre-Blundo"
+  ],
+  "venue": "Applied Sciences",
+  "year": 2025,
+  "volume": "15",
+  "pages": "11414",
+  "abstract": "Smart manufacturing demands adaptive, scalable, and human-centric solutions for predictive maintenance. This paper introduces the concept of Agentic AI, a paradigm that extends beyond traditional multi-agent systems and collaborative AI by emphasizing agency: the ability of AI entities to act autonomously, coordinate proactively, and remain accountable under human oversight. Through federated learning, edge computing, and distributed intelligence, the proposed framework enables intentional, goal-oriented monitoring agents to form self-organizing predictive maintenance ecosystems. Validated in a ceramic manufacturing facility, the system achieved 94% predictive accuracy, a 67% reduction in false positives, and a 43% decrease in unplanned downtime. Economic analysis confirmed financial viability with a 1.6-year payback period and a \u20ac447,300 NPV over five years. The framework also embeds explainable AI and trust calibration mechanisms, ensuring transparency and safe human\u2013machine collaboration. These results demonstrate that Agentic AI provides both conceptual and practical pathways for transitioning from reactive monitoring to resilient, autonomous, and human-centered industrial intelligence."
+ },
+ "10.21203/rs.3.rs-8941768/v1": {
+  "title": "Real Time Predictive Maintenance of Collaborative Robotic Arms Using a Physics Informed Digital Twin and Agentic Edge Computing",
+  "authors": [
+   "Zacheous Aasa"
+  ],
+  "venue": "",
+  "year": 2026,
+  "volume": null,
+  "pages": null,
+  "abstract": "Abstract\n                The integration of Industry 5.0 principles necessitates a transition from reactive to proactive maintenance models in automated manufacturing. This research addresses the critical challenge of synchronization errors caused by latency in cyber-physical systems by introducing a high-fidelity, Physics-Informed Digital Twin (P-DT) approach for real-time predictive maintenance of industrial robotic arms. The proposed architecture utilizes an Agentic Edge Computing layer to offload the computationally intensive task processing from the cloud, ensuring sub-millisecond processing of multi-modal sensor data such as torque, vibration, and thermal patterns. A new Deep Reinforcement Learning (DRL) method is also developed at the edge to optimize resource allocation and predict Remaining Useful Life (RUL) under stochastic workloads. By embedding physical kinematic constraints within the neural network\u2019s loss function, this approach shows a 28% relative improvement in fault detection sensitivity over traditional data-driven models. Simulation results in dense industrial settings show that the P-DT approach preserves a 99.7% level of synchronization accuracy while lowering unplanned downtime by 34%. Additionally, the approach facilitates proactive self-correction capabilities to compensate for mechanical degradation by adjusting motion plans. These results offer a sound solution for the deployment of autonomous and self-healing robotic systems in latency-sensitive industrial settings."
+ },
+ "10.21474/ijar01/23364": {
+  "title": "EDGE AI FOR INDUSTRIAL PREDICTIVE MAINTENANCE: A DUAL-ATTENTION APPROACH WITH EXPLAINABILITY AND UNCERTAINTY QUANTIFICATION",
+  "authors": [
+   "Sruti Ranjan Sahoo",
+   "Dr. Kanhu Charan Bhuyan"
+  ],
+  "venue": "International Journal of Advanced Research",
+  "year": 2026,
+  "volume": "14",
+  "pages": "445-450",
+  "abstract": "Industrial Internet of Things (IIoT) systems generate continuous sensor data streams from rotating machinery. Cloud based artificial intelligence achieves high accuracy for Remaining Useful Life (RUL) prediction but introduces 100-500 ms round-trip latency, which may be unacceptable for real-time failure prevention. Edge AI offers an alternative but faces computational, explainability, and security constraints that existing approaches rarely address jointly. This paper presents a unified framework integrating four dimensions: (1) a dual-attention neural architecture for RUL prediction that explicitly models channel-wise sensor importance and temporal relevance; (2) SHAP-based explainability with quantified overhead on edge hardware; (3) Monte Carlo Dropout for uncertainty calibration; and (4) a Zero Trust security layer for Operational Technology (OT) deployment. The framework targets the NVIDIA Jetson Orin Nano class of devices with an inference-latency goal of under 50 ms. This is a methodology paper; a six-phase experimental protocol benchmarks the approach against verified state-of-the-art (HMDAM: RMSE 10.82; DAST: RMSE 11.43 on NASA C-MAPSS FD001). Architecture and protocol are complete; experimental results will follow in an extended version. All quantitative claims are explicitly marked as literature-verified or target-under-validation."
+ },
+ "10.1016/j.asej.2026.103992": {
+  "title": "Uncertainty aware predictive maintenance using a hybrid Transformer with Monte Carlo Dropout and conformal prediction",
+  "authors": [
+   "Chao-Lung Yang",
+   "Tamrat Yifter Meles",
+   "Atinkut Atinafu Yilma",
+   "Melkamu Mengstnew Teshome"
+  ],
+  "venue": "Ain Shams Engineering Journal",
+  "year": 2026,
+  "volume": "17",
+  "pages": "103992",
+  "abstract": ""
+ },
+ "10.36227/techrxiv.177220374.46388084/v1": {
+  "title": "Distribution-Free Uncertainty Quantification for Turbofan Engine Remaining Useful Life Using Conformalized Quantile Regression",
+  "authors": [
+   "Moses Onilede"
+  ],
+  "venue": "",
+  "year": 2026,
+  "volume": null,
+  "pages": null,
+  "abstract": "Accurate prediction of the remaining useful life (RUL) of aircraft engines is essential for effective  predictive maintenance, especially in safety-critical aerospace applications. Traditional datadriven approaches often focus on point estimates and lack reliable uncertainty quantification,  limiting their practical value for maintenance planning.  This study presents a conformalized quantile regression framework that delivers distributionfree uncertainty intervals for turbofan engine RUL estimation. Leveraging split conformal  calibration, the method guarantees finite-sample coverage without relying on distributional  assumptions.  Experiments on the NASA C-MAPSS FD001 dataset demonstrate that the proposed method  achieves exact nominal calibration and conservative empirical coverage, outperforming both  raw quantile regression and Gaussian residual baselines. The results show that conformal  calibration corrects systematic undercoverage while maintaining practical interval sharpness,  offering a reliable and deployable solution for uncertainty-aware prognostics in aerospace  maintenance."
+ },
+ "10.1016/j.egyai.2026.100689": {
+  "title": "DFL-RUL: Decentralised Federated Learning for Battery Remaining Useful Life Estimation on Heterogeneous Edge-to-cloud",
+  "authors": [
+   "Jaber Pournazari",
+   "Mo\u2019ath El-Dalahmeh",
+   "Dong-Hwan Park",
+   "James Marco",
+   "Truong Quang Dinh",
+   "Jung-Hoon Ahn",
+   "Mona Faraji Niri"
+  ],
+  "venue": "Energy and AI",
+  "year": 2026,
+  "volume": "24",
+  "pages": "100689",
+  "abstract": ""
+ },
+ "10.5220/0014152200004932": {
+  "title": "A Digital Twin-Enabled Predictive Maintenance Framework Leveraging Multi-Agent Reinforcement Learning and Industrial IoT Data",
+  "authors": [
+   "Ravi Garapati",
+   "S K Kanna"
+  ],
+  "venue": "Proceedings of the 1st International Conference on Intelligent Methods and Advanced Computer Scientific Innovations",
+  "year": 2025,
+  "volume": null,
+  "pages": "17-23",
+  "abstract": ": This paper introduces a Digital Twin-based predictive maintenance approach in the era of the Industrial Internet of Things (IIoT) and Multi-Agent Reinforcement Learning (MARL). Recent research works in the domain suffer from lack of scalability, requirement of clean sensor data, and expensive labeled data which all limits their abilities for real-time operation in the dynamic industrial environment. This work addresses these challenges by proposing a distributed MARL agent system that can learn from noisy, incomplete, and IoT data in real time and optimize the maintenance scheduling in varied industries. The approach increases the generality of Digital Twin applications and gives a novel approach for industries limited by today's predictive maintenance approaches. The inclusion of MARL in the Digital Twin system provides for online anomaly detection, diagnosis, and action decisions, thus ensuring operational availability in hostile and uncertain conditions. This effort closes the loop between theoretical developments in Digital Twins and down-to-earth deployment issues, providing a strong and efficient solution for future-wise predictive maintenance."
+ },
+ "10.21203/rs.3.rs-10331025/v1": {
+  "title": "Edge-AI Predictive Maintenance Based on Industrial IoT and Digital Twin System",
+  "authors": [
+   "Megha Patil",
+   "Yogesh Bhirud",
+   "Dhanashree Barbole"
+  ],
+  "venue": "",
+  "year": 2026,
+  "volume": null,
+  "pages": null,
+  "abstract": "Abstract\n                A breakdown of a critical machine\u2002in the middle of production is a big deal. The line stops, schedules are blown, and now the fix is being done under duress, with even less time to do it right. Supplies that might have been ordered\u2002ahead of time now have to be completed on the same day. Labor that is planned for other work is diverted. The ultimate cost of a single failure is almost always several multiples of what early detection and prompt maintenance would have entailed. One of the problems is that many traditional systems are not smart enough at the hardware level to investigate early\u2002signs of impending failure. We observe that the current solutions suffer from three major\u2002drawbacks: a) They heavily depend on centralized servers for (sometimes real-time) inference, resulting in non-negligible latency, b) They only weakly integrate digital twin models with real-time data streams, and c) They have limited capability to adapt given evolving operational contexts. To this end, a layered predictive maintenance architecture that employs edge AI processing for Industrial IoT data collection and Digital Twin modeling was proposed to fill these gaps. In parallel, the data from various sensors (vibration, temperature, acoustic, and current signals) are gathered by the system, processed on the edge gateway, and fed to an ensemble of machine\u2002learning and deep learning models (Random Forest, SVM, LSTM, CNN-LSTM) together with a reinforcement learning scheme. The Digital Twin interacts in real time with\u2002the edge layer in a continuous feedback loop to simulate degradation patterns and dynamically tune maintenance decisions. The result of the experiment with the confusion matrix analysis and the cross-validation shows the integrated approach achieves an accuracy of detection of 97.43%. Furthermore, false negatives were decreased by about 33.33% compared to the single-sensor approaches, and the total downtime was reduced by 66.67% when compared with traditional threshold-\u2002based methods. One interesting result is that doing inference on the edge itself (even on a low-cost device like Raspberry Pi) can still reach a good level of accuracy, with the latency being reduced to less than 13 ms."
+ }
+}

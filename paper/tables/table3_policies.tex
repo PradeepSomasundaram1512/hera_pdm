@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Hierarchical policies, ablations and system cost (all 17 bearings, mean$\pm$std over 3 seeds). Esc.: escalated snapshots; Unsafe: critical snapshots ($y{\le}H_c$) left without maintenance action; FM: false maintenance on healthy snapshots ($y{>}H_p$); B/s: payload bytes per snapshot; Lat.: mean decision latency with an assumed 50\,ms RTT. $^\ddagger$escalation budget matched to HERA on calibration bearings.}
+\label{tab:policies}
+\setlength{\tabcolsep}{2.2pt}\footnotesize
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccccc}
+\toprule
+Policy & Esc.\,(\%) & Unsafe\,(\%) & FM\,(\%) & RMSE\,(s) & B/s & Lat.\,(ms) \\
+\midrule
+Always-edge & 0.0 & 6.7$\pm$5.9 & 86.8$\pm$15.4 & 809 & 0 & 0.1 \\
+Always-cloud & 100.0 & 5.4$\pm$1.3 & 84.0$\pm$5.6 & 1090 & 112 & 50.2 \\
+Cloud point + fixed thr. & 100.0 & 41.0$\pm$3.4 & 23.6$\pm$1.4 & 1100 & 112 & 50.2 \\
+\midrule
+\textbf{HERA-full} & 87.5 & 9.4$\pm$3.7 & 75.0$\pm$11.6 & 1083 & 117 & 44.1 \\
+HERA w/o anomaly term & 87.4 & 9.6$\pm$3.8 & 75.0$\pm$11.6 & 1084 & 117 & 44.0 \\
+HERA-no-DT & 87.5 & 6.5$\pm$5.7 & 82.6$\pm$11.2 & 1088 & 117 & 44.1 \\
+\midrule
+HERA-no-UQ (point margin) & 32.7 & 48.2$\pm$5.5 & 17.0$\pm$4.4 & 1014 & 69 & 16.5 \\
+HERA-fixed (anomaly trig.) & 3.9 & 6.7$\pm$5.7 & 86.8$\pm$15.4 & 811 & 27 & 2.1 \\
+\midrule
+Width gate$^\ddagger$ & 87.4 & 9.5$\pm$3.8 & 75.0$\pm$11.6 & 1084 & 117 & 44.0 \\
+Linear score gate$^\ddagger$ & 88.9 & 7.6$\pm$2.1 & 77.0$\pm$10.6 & 1086 & 117 & 44.8 \\
+Random gate$^\ddagger$ & 85.2 & 6.1$\pm$0.9 & 81.8$\pm$4.7 & 1059 & 124 & 42.9 \\
+\bottomrule
+\end{tabular}}
+\end{table}

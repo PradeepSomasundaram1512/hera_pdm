@@ -1,0 +1,105 @@
+{
+  "fold": 2,
+  "seed": 0,
+  "model": "CNN-LSTM+DT",
+  "n_explained": 300,
+  "additivity_mae_s": 154.7913660827286,
+  "cards": [
+    {
+      "asset": "Bearing1_3",
+      "snapshot": 2078,
+      "predicted_RUL_s": 434,
+      "interval_90pct_s": [
+        0,
+        2194
+      ],
+      "uncertainty_width_s": 2194,
+      "anomaly_evidence": {
+        "score": 15.8,
+        "alarm_threshold": 17.04,
+        "alarm": false
+      },
+      "top_contributors": [
+        {
+          "feature": "h_centroid",
+          "shap_s": 691.3
+        },
+        {
+          "feature": "h_band0_1k",
+          "shap_s": -507.7
+        },
+        {
+          "feature": "v_skew",
+          "shap_s": -369.0
+        }
+      ],
+      "recommended_action": "urgent maintenance",
+      "requires_human_approval": true,
+      "rationale": "The calibrated 90% interval [0, 2194] s reaches below the 600 s critical horizon; the recommendation is based on its lower bound."
+    },
+    {
+      "asset": "Bearing1_7",
+      "snapshot": 2131,
+      "predicted_RUL_s": 540,
+      "interval_90pct_s": [
+        0,
+        2499
+      ],
+      "uncertainty_width_s": 2499,
+      "anomaly_evidence": {
+        "score": 9.92,
+        "alarm_threshold": 17.04,
+        "alarm": false
+      },
+      "top_contributors": [
+        {
+          "feature": "h_centroid",
+          "shap_s": -483.5
+        },
+        {
+          "feature": "DT:excess_int",
+          "shap_s": -441.6
+        },
+        {
+          "feature": "v_impulse",
+          "shap_s": -430.7
+        }
+      ],
+      "recommended_action": "urgent maintenance",
+      "requires_human_approval": true,
+      "rationale": "The calibrated 90% interval [0, 2499] s reaches below the 600 s critical horizon; the recommendation is based on its lower bound."
+    },
+    {
+      "asset": "Bearing1_7",
+      "snapshot": 2123,
+      "predicted_RUL_s": 553,
+      "interval_90pct_s": [
+        0,
+        2556
+      ],
+      "uncertainty_width_s": 2556,
+      "anomaly_evidence": {
+        "score": 8.61,
+        "alarm_threshold": 17.04,
+        "alarm": false
+      },
+      "top_contributors": [
+        {
+          "feature": "h_centroid",
+          "shap_s": -675.1
+        },
+        {
+          "feature": "DT:excess_int",
+          "shap_s": -502.7
+        },
+        {
+          "feature": "v_impulse",
+          "shap_s": -431.0
+        }
+      ],
+      "recommended_action": "urgent maintenance",
+      "requires_human_approval": true,
+      "rationale": "The calibrated 90% interval [0, 2556] s reaches below the 600 s critical horizon; the recommendation is based on its lower bound."
+    }
+  ]
+}

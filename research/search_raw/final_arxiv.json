@@ -1,0 +1,14 @@
+{
+ "uncertainty controlled hierarchical predictive maintenance": [],
+ "conformal RUL adaptive edge cloud inference": [],
+ "uncertainty aware escalation predictive maintenance": [],
+ "prediction interval edge cloud predictive maintenance": [],
+ "hierarchical multi-agent RUL uncertainty": [],
+ "digital twin adaptive inference RUL": [],
+ "conformal prediction selective offloading edge cloud": [
+  {
+   "error": "429 Client Error: Unknown Error for url: https://export.arxiv.org/api/query?search_query=all%3Aconfo"
+  }
+ ],
+ "cascade inference remaining useful life edge": []
+}
