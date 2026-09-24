@@ -69,7 +69,7 @@ One dataset (17 bearings, several abrupt failures); approximate exchangeability 
 * IEEE Xplore and Google Scholar could not be queried directly (blocked); coverage relies on Crossref, Semantic Scholar, arXiv and web search.
 
 ## L. Placeholders remaining
-* Author names and affiliations: “Anonymous Author(s) / Affiliation withheld for review” — to be completed by the authors.
+* Author: Pradeep Somasundaram. Affiliation and contact e-mail not yet added (IEEE conference template normally expects them).
 * No `[EXPERIMENT REQUIRED]` or `[CITATION VERIFICATION REQUIRED]` markers remain.
 
 ## M. Current PDF page count
