@@ -314,9 +314,9 @@ def detection_table():
          r"\begin{tabular}{l|ccc|ccc}", r"\toprule",
          r" & \multicolumn{3}{c|}{FEMTO} & \multicolumn{3}{c}{XJTU-SY} \\",
          r"Detector & Prec. & Rec. & AUROC & Prec. & Rec. & AUROC \\", r"\midrule"]
-    for key, lab in [("Anomaly score $a_t$ (edge)", "Anomaly score $a_t$"), ("Isolation Forest", "Isolation Forest"),
-                     ("Edge CQR lower bound", "Edge interval $L^e_t\\le H_c$"),
-                     ("Cloud CQR lower bound (+DT)", "Cloud interval $L^c_t\\le H_c$")]:
+    for key, lab in [("Anomaly score $a_t$ (edge)", "Anomaly $a_t$"), ("Isolation Forest", "Isolation Forest"),
+                     ("Edge CQR lower bound", "Edge $L^e_t\\le H_c$"),
+                     ("Cloud CQR lower bound (+DT)", "Cloud $L^c_t\\le H_c$")]:
         cells = []
         for p in DS:
             x = det[p].loc[key]
