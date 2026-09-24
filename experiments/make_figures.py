@@ -22,7 +22,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 from utils import H_CRIT, H_PLAN, R_MAX  # noqa: E402
 
-RES, FIG = ROOT / "results", ROOT / "figures"
+FIG = ROOT / "figures"
 FIG.mkdir(exist_ok=True)
 plt.rcParams.update({"font.family": "serif", "font.size": 7.5, "axes.labelsize": 7.5, "legend.fontsize": 6.5,
                      "xtick.labelsize": 6.5, "ytick.labelsize": 6.5, "axes.linewidth": 0.6,
@@ -71,102 +71,110 @@ def fig1():
     plt.close(fig)
 
 
-def fig2():
-    """Illustrates the gate using real edge intervals from the saved trajectories."""
-    tr = pd.read_csv(RES / "trajectories.csv.gz")
-    b = json.loads((RES / "figure_choices.json").read_text())["fig2_bearing"]
-    d = tr[tr.bearing == b].sort_values("t")
-    t_h = d.t * 10 / 3600
-    fig, ax = plt.subplots(figsize=(W1, 1.45))
-    for lo, hi, col, lab in [(0, H_CRIT, "#fed7d7", "urgent"), (H_CRIT, H_PLAN, "#fefcbf", "schedule"),
-                             (H_PLAN, R_MAX, "#e6fffa", "continue")]:
-        ax.axhspan(lo, hi, color=col, lw=0, zorder=0)
-        ax.text(t_h.max() * 0.5, (lo + hi) / 2, lab, fontsize=5.5, va="center", ha="center", color="#2d3748",
-                bbox=dict(boxstyle="round,pad=0.15", fc="white", ec="none", alpha=0.8), zorder=5)
-    ax.fill_between(t_h, d.e_lo, d.e_hi, color=C["edge"], alpha=0.30, lw=0, label="edge 90% CQR interval")
-    ax.plot(t_h, d.y, color=C["true"], lw=0.9, label="true RUL (capped)")
-    esc = d.esc.astype(bool).to_numpy()
-    ax.fill_between(t_h, R_MAX * 1.02, R_MAX * 1.07, where=esc, color=C["cloud"], lw=0, step="mid",
-                    label="escalated ($e_t{=}1$)")
-    ax.set_ylim(0, R_MAX * 1.08); ax.set_xlabel("operating time (h)"); ax.set_ylabel("RUL (s)")
-    ax.legend(loc="lower left", frameon=False, ncol=3, bbox_to_anchor=(-0.02, 1.0), handlelength=1.2,
-              columnspacing=0.8)
-    fig.savefig(FIG / "fig2_escalation.pdf", bbox_inches="tight", pad_inches=0.01)
-    plt.close(fig)
+DSETS = [("femto", "FEMTO/PRONOSTIA"), ("xjtu", "XJTU-SY")]
 
 
-def fig3():
-    tr = pd.read_csv(RES / "trajectories.csv.gz")
-    bs = json.loads((RES / "figure_choices.json").read_text())["fig3_bearings"]
-    fig, axs = plt.subplots(1, len(bs), figsize=(W1, 1.45), sharey=True)
-    for ax, b in zip(axs, bs):
-        d = tr[tr.bearing == b].sort_values("t")
-        d = d[d.y < R_MAX + 1]
-        d = d.iloc[-min(len(d), 450):]
-        x = -(d.t.max() - d.t) * 10 / 60
-        ax.fill_between(x, d.c_lo, d.c_hi, color=C["cloud"], alpha=0.25, lw=0, label="90% CQR (fog/cloud)")
-        ax.plot(x, d.c_med, color=C["cloud"], lw=0.8, label="predicted (median)")
-        ax.plot(x, d.y, color=C["true"], lw=0.9, ls="--", label="true RUL")
-        ax.axhline(H_CRIT, color=C["red"], lw=0.5, ls=":")
-        ax.set_title(b.replace("Bearing", "Bearing "), fontsize=6.5, pad=2)
-    axs[1].set_xlabel("time to failure (min)")
-    axs[0].set_ylabel("RUL (s)")
-    axs[0].legend(loc="upper center", frameon=False, ncol=3, bbox_to_anchor=(1.6, 1.42), handlelength=1.2)
-    fig.subplots_adjust(wspace=0.08)
+def info(ds):
+    return json.loads((ROOT / "results" / ds / "run_info.json").read_text())
+
+
+def choose(ds):
+    """Deterministic choice of illustrated bearings: the two test bearings with the
+    most degradation-region snapshots (seed 0). Not chosen by performance."""
+    tr = pd.read_csv(ROOT / "results" / ds / "trajectories.csv.gz")
+    rmax = info(ds)["r_max"]
+    n_deg = tr[tr.y < rmax].groupby("bearing").size().sort_values(ascending=False)
+    return sorted(n_deg.index[:2])
+
+
+def fig_traj():
+    fig, axs = plt.subplots(1, 2, figsize=(W1, 1.45))
+    k = 0
+    choices = {}
+    for ds, title in DSETS:
+        tr = pd.read_csv(ROOT / "results" / ds / "trajectories.csv.gz")
+        I = info(ds)
+        bs = choose(ds)[:1]
+        choices[ds] = bs
+        for b in bs:
+            ax = axs[k]; k += 1
+            d = tr[tr.bearing == b].sort_values("t")
+            d = d[d.y < I["r_max"] + 1]
+            snap = 10 if ds == "femto" else 60
+            d = d.iloc[-min(len(d), int(1.5 * I["r_max"] / snap)):]
+            x = -(d.t.max() - d.t) * snap / 60
+            ax.fill_between(x, d.c_lo / 60, d.c_hi / 60, color=C["cloud"], alpha=0.25, lw=0, label="90% CQR-CV+ interval")
+            ax.plot(x, d.c_med / 60, color=C["cloud"], lw=0.8, label="predicted RUL (median)")
+            ax.plot(x, d.y / 60, color=C["true"], lw=0.9, ls="--", label="true RUL (capped)")
+            ax.axhline(I["h_crit"] / 60, color=C["red"], lw=0.5, ls=":")
+            ax.set_title(f"{title.split('/')[0]} {b.replace('Bearing', 'B')}", fontsize=6.5, pad=2)
+            ax.set_xlabel("time to failure (min)")
+            if k == 1:
+                ax.set_ylabel("RUL (min)")
+    axs[0].legend(loc="upper left", frameon=False, ncol=2, bbox_to_anchor=(-0.05, 1.55), handlelength=1.4, fontsize=5.8)
+    fig.subplots_adjust(wspace=0.28)
     fig.savefig(FIG / "fig3_trajectories.pdf", bbox_inches="tight", pad_inches=0.01)
     plt.close(fig)
+    (ROOT / "results" / "figure_choices.json").write_text(json.dumps({"trajectories": choices,
+                                                                      "rule": choose.__doc__.strip()}, indent=2))
 
 
-def fig4():
-    cv = pd.read_csv(RES / "tradeoff_curves.csv")
-    g = cv.groupby(["family", "param"]).mean(numeric_only=True).reset_index()
-    fig, axs = plt.subplots(1, 2, figsize=(W1, 1.75))
-    # (a) decision Pareto: unsafe vs false maintenance
-    pareto = {"P: Always-edge (CQR)": (C["edge"], "o", "-", "edge, CQR ($\\alpha$)"),
-              "P: Always-cloud (CQR)": (C["cloud"], "s", "-", "cloud, CQR ($\\alpha$)"),
+def fig_tradeoff():
+    fig, axs = plt.subplots(1, 4, figsize=(7.16, 1.75))
+    pareto = {"P: Always-edge (CQR)": (C["edge"], "o", "-", "edge, CQR-CV+ ($\\alpha$)"),
+              "P: Always-cloud (CQR)": (C["cloud"], "s", "-", "cloud, CQR-CV+ ($\\alpha$)"),
               "P: HERA": (C["hera"], "^", "-", "HERA ($\\alpha$)"),
-              "P: Edge point - margin": (C["edge"], "o", ":", "edge, point$-\\delta$"),
-              "P: Cloud point - margin": (C["cloud"], "s", ":", "cloud, point$-\\delta$")}
-    ax = axs[0]
-    for fam, (col, mk, ls, lab) in pareto.items():
-        d = g[g.family == fam].sort_values("false_maint")
-        ax.plot(d.false_maint * 100, d.unsafe_rate * 100, color=col, ls=ls, marker=mk, ms=2.0, lw=0.8, label=lab,
-                mfc="white" if ls == ":" else col)
-    for fam, col in [("P: Always-edge (CQR)", C["edge"]), ("P: Always-cloud (CQR)", C["cloud"]), ("P: HERA", C["hera"])]:
-        r = g[(g.family == fam) & np.isclose(g.param, 0.1)].iloc[0]
-        ax.scatter(r.false_maint * 100, r.unsafe_rate * 100, s=22, facecolor="none", edgecolor=col, lw=0.8, zorder=6)
-    r = g[(g.family == "P: Cloud point - margin") & (g.param == 0)].iloc[0]
-    ax.annotate("point, fixed\nthreshold", (r.false_maint * 100, r.unsafe_rate * 100), xytext=(2, 22), fontsize=5.5,
-                arrowprops=dict(arrowstyle="-", lw=0.5, color="#555"))
-    ax.set_xlabel("false maintenance (% healthy)"); ax.set_ylabel("unsafe decisions (% critical)")
-    ax.set_title("(a) decision trade-off", fontsize=6.5, pad=2)
-    ax.legend(frameon=False, fontsize=5.2, loc="upper right", handlelength=1.6, labelspacing=0.25)
-    ax.grid(alpha=0.25, lw=0.4)
-    # (b) escalation budget at fixed alpha = 0.1
-    ax = axs[1]
-    styles = {"Width gate": (C["edge"], "s", "--"), "Linear score gate": (C["amber"], "^", "--"),
-              "Anomaly trigger": (C["red"], "v", ":"), "Random gate": ("#a0aec0", None, ":")}
-    for fam, (col, mk, ls) in styles.items():
-        d = g[g.family == fam].sort_values("escalation_rate")
-        ax.plot(d.escalation_rate * 100, d.unsafe_rate * 100, color=col, ls=ls, marker=mk, ms=1.8, lw=0.8,
-                label=fam.replace(" gate", "").replace(" trigger", " trig."), markevery=3)
-    r = g[(g.family == "HERA (decision-sufficiency)") & np.isclose(g.param, 0.1)].iloc[0]
-    ax.scatter(r.escalation_rate * 100, r.unsafe_rate * 100, marker="*", s=40, color=C["hera"], zorder=6, label="HERA")
-    ax.set_xlabel("escalated snapshots (%)"); ax.set_ylabel("unsafe decisions (% critical)")
-    ax.set_title("(b) gates at $\\alpha{=}0.1$", fontsize=6.5, pad=2)
-    ax.set_ylim(0, 15); ax.grid(alpha=0.25, lw=0.4)
-    ax.legend(frameon=False, fontsize=5.2, loc="upper left", ncol=2, handlelength=1.4, columnspacing=0.6)
-    fig.subplots_adjust(wspace=0.42)
+              "P: Edge point - margin": (C["edge"], "o", ":", "edge point$-\\delta$"),
+              "P: Cloud point - margin": (C["cloud"], "s", ":", "cloud point$-\\delta$")}
+    gates = {"Width gate": (C["edge"], "s", "--"), "Linear score gate": (C["amber"], "^", "--"),
+             "Anomaly trigger": (C["red"], "v", ":"), "Random gate": ("#a0aec0", None, ":")}
+    for j, (ds, title) in enumerate(DSETS):
+        g = pd.read_csv(ROOT / "results" / ds / "tradeoff_curves.csv").groupby(["family", "param"]) \
+            .mean(numeric_only=True).reset_index()
+        ax = axs[2 * j]
+        for fam, (col, mk, ls, lab) in pareto.items():
+            d = g[g.family == fam].sort_values("false_maint")
+            ax.plot(d.false_maint * 100, d.unsafe_rate * 100, color=col, ls=ls, marker=mk, ms=1.8, lw=0.8, label=lab,
+                    mfc="white" if ls == ":" else col)
+        for fam, col in [("P: Always-edge (CQR)", C["edge"]), ("P: Always-cloud (CQR)", C["cloud"]), ("P: HERA", C["hera"])]:
+            r = g[(g.family == fam) & np.isclose(g.param, 0.1)].iloc[0]
+            ax.scatter(r.false_maint * 100, r.unsafe_rate * 100, s=20, facecolor="none", edgecolor=col, lw=0.8, zorder=6)
+        r = g[(g.family == "P: Cloud point - margin") & (g.param == 0)].iloc[0]
+        ax.scatter(r.false_maint * 100, r.unsafe_rate * 100, marker="x", s=18, color="k", zorder=7,
+                   label="point, fixed thr.")
+        ax.set_xlabel("false maintenance (%)")
+        ax.set_ylabel("unsafe decisions (%)")
+        ax.set_title(f"({'ac'[j]}) {title.split('/')[0]}: decision frontier", fontsize=6.3, pad=2)
+        ax.grid(alpha=0.25, lw=0.4)
+        ax = axs[2 * j + 1]
+        for fam, (col, mk, ls) in gates.items():
+            d = g[g.family == fam].sort_values("escalation_rate")
+            ax.plot(d.escalation_rate * 100, d.unsafe_rate * 100, color=col, ls=ls, marker=mk, ms=1.6, lw=0.8,
+                    label=fam.replace(" gate", "").replace(" trigger", " trig."), markevery=3)
+        h = g[g.family == "HERA (decision-sufficiency)"].sort_values("escalation_rate")
+        ax.plot(h.escalation_rate * 100, h.unsafe_rate * 100, color=C["hera"], lw=0.6, alpha=0.6)
+        r = h[np.isclose(h.param, 0.1)].iloc[0]
+        ax.scatter(r.escalation_rate * 100, r.unsafe_rate * 100, marker="*", s=40, color=C["hera"], zorder=6,
+                   label="HERA ($\\alpha_e$ sweep, $\\star$=0.1)")
+        ax.set_xlabel("escalated snapshots (%)")
+        ax.set_ylim(bottom=0, top=max(2.0, g[g.family.isin(list(gates))].unsafe_rate.max() * 110))
+        ax.set_title(f"({'bd'[j]}) {title.split('/')[0]}: gates at $\\alpha{{=}}0.1$", fontsize=6.3, pad=2)
+        ax.grid(alpha=0.25, lw=0.4)
+    h1, l1 = axs[0].get_legend_handles_labels()
+    h2, l2 = axs[1].get_legend_handles_labels()
+    fig.legend(h1 + h2, l1 + l2, loc="upper center", ncol=6, frameon=False, bbox_to_anchor=(0.5, 1.13),
+               fontsize=5.6, handlelength=1.6, columnspacing=0.9)
+    fig.subplots_adjust(wspace=0.36)
     fig.savefig(FIG / "fig4_tradeoff.pdf", bbox_inches="tight", pad_inches=0.01)
     plt.close(fig)
 
 
 def fig_shap():
-    p = RES / "shap_importance.csv"
+    p = ROOT / "results" / "femto" / "shap_importance.csv"
     if not p.exists():
         return
     d = pd.read_csv(p).head(10).iloc[::-1]
-    fig, ax = plt.subplots(figsize=(W1, 1.45))
+    fig, ax = plt.subplots(figsize=(W1, 1.35))
     cols = d.group.map({"horizontal": C["edge"], "vertical": C["cloud"], "DT context": C["hera"]})
     ax.barh(d.name.str.replace("DT:", "DT: "), d.mean_abs_shap_s, color=cols, height=0.7)
     ax.set_xlabel("mean |SHAP| on predicted RUL (s)")
@@ -174,21 +182,8 @@ def fig_shap():
     plt.close(fig)
 
 
-def choose():
-    """Deterministic choice of illustrated bearings: the three test bearings with
-    the most degradation-region snapshots (seed 0), and for Fig. 2 the bearing
-    with the median escalation rate among them. Not chosen by performance."""
-    tr = pd.read_csv(RES / "trajectories.csv.gz")
-    n_deg = tr[tr.y < R_MAX].groupby("bearing").size().sort_values(ascending=False)
-    bs = sorted(n_deg.index[:3])
-    esc = tr[tr.bearing.isin(bs)].groupby("bearing").esc.mean().sort_values()
-    out = {"fig3_bearings": bs, "fig2_bearing": esc.index[1], "rule": choose.__doc__.strip()}
-    (RES / "figure_choices.json").write_text(json.dumps(out, indent=2))
-
-
 if __name__ == "__main__":
-    choose()
-    fig1(); fig2(); fig3(); fig4(); fig_shap()
+    fig1(); fig_traj(); fig_tradeoff(); fig_shap()
     for f in FIG.glob("*.pdf"):
         shutil.copy(f, ROOT / "paper" / "figures" / f.name)
     print("figures:", sorted(p.name for p in FIG.glob("*.pdf")))

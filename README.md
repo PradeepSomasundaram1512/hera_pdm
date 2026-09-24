@@ -1,9 +1,9 @@
 # HERA-PdM — Hierarchical Edge Reasoning Agents for Predictive Maintenance
 
 Research code, data pipeline, experiment outputs and IEEE conference manuscript for
-**“HERA-PdM: Uncertainty-Calibrated Escalation in a Hierarchical Edge–Digital-Twin Predictive Maintenance Framework—An Empirical Study on Bearing Run-to-Failure Data”**.
+**“HERA-PdM: When Does Uncertainty-Gated Escalation Help Hierarchical Edge–Digital-Twin Predictive Maintenance? Evidence from Two Bearing Datasets”** (v2: FEMTO + XJTU-SY, CQR-CV+). Run everything with `experiments/run_all_v2.sh`; set `HERA_DATASET=femto|xjtu` for single stages.
 
-**Headline result (honest summary):** calibration prevented most unsafe point-threshold decisions (41.0 % → 5.4–9.4 % of critical snapshots) at a large false-maintenance cost, but the tiny edge model was the most accurate predictor and the decision-sufficiency gate escalated 87.5 % of snapshots without beating simpler gates. See `PAPER_AUDIT.md`.
+**Headline result (v2):** calibration cuts unsafe point-threshold decisions (49.5 % → 0.6 % FEMTO; 34.2 % → 9.2 % XJTU-SY); uncertainty-gated escalation beats always-cloud only on gradually degrading XJTU-SY bearings; the decision-sufficiency gate equals a width gate; bearing-level alarms are premature. See `PAPER_AUDIT.md`. XJTU-SY: author mirror https://drive.google.com/open?id=1_ycmG46PARiykt82ShfnFfyQsaXv3_VK (6 RAR parts; extract with `unar`) into `data/raw/XJTU`, then `python src/preprocessing.py --dataset xjtu`.
 
 ## Research objective
 Hierarchical (edge → fog/cloud) predictive maintenance usually escalates on anomaly

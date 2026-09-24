@@ -1,29 +1,33 @@
-\begin{table}[t]
+\begin{table*}[t]
 \centering
-\caption{RUL accuracy and calibration on 17 held-out FEMTO bearings (4 bearing-grouped folds; mean$\pm$std over 3 seeds; RUL capped at 3000\,s; nominal coverage 90\%). Raw: uncalibrated quantiles; CQR: conformalized. $^\dagger$selected on calibration bearings.}
+\caption{RUL accuracy and calibration on held-out bearings (mean$\pm$std over 3 seeds; nominal coverage 0.90). Raw: uncalibrated quantiles; split: CQR calibrated on 3 held-out bearings per fold; CV+: CQR-CV+ calibrated on all non-test bearings. Marks: architecture selected on inner-validation pinball loss for FEMTO ($^\dagger$) and XJTU-SY ($^\ast$).}
 \label{tab:rul}
-\setlength{\tabcolsep}{2.6pt}\footnotesize
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{lrcccccc}
+\setlength{\tabcolsep}{3.2pt}\footnotesize
+\begin{tabular}{l|ccccc|ccccc}
 \toprule
-Model & Params & RMSE (s) & MAE (s) & Raw cov. & CQR cov. & MPIW (s) & CCE \\
+ & \multicolumn{5}{c|}{FEMTO/PRONOSTIA (17 bearings, $R_{\max}{=}3000$\,s)} & \multicolumn{5}{c}{XJTU-SY (15 bearings, $R_{\max}{=}6000$\,s)} \\
+Model & RMSE (s) & MAE (s) & Raw cov. & Cov. & MPIW (s) & RMSE (s) & MAE (s) & Raw cov. & Cov. & MPIW (s) \\
 \midrule
-Edge-CNN & 2.7k & 1114$\pm$40 & 851$\pm$19 & 0.37 & 0.88$\pm$0.02 & 2080$\pm$120 & 0.035 \\
-Edge-GRU$^\dagger$ & 2.5k & 816$\pm$30 & 525$\pm$65 & 0.69 & 0.84$\pm$0.04 & 1879$\pm$130 & 0.054 \\
+Edge-CNN$^\ast$ (split) & 1114$\pm$40 & 851$\pm$19 & 0.37 & 0.88$\pm$0.02 & 2080 & 2278$\pm$389 & 1859$\pm$330 & 0.65 & 0.97$\pm$0.00 & 3716 \\
+Edge-GRU$^\dagger$ (split) & 820$\pm$34 & 518$\pm$62 & 0.71 & 0.84$\pm$0.04 & 1877 & 2531$\pm$642 & 2004$\pm$601 & 0.85 & 0.87$\pm$0.08 & 4184 \\
 \midrule
-LSTM & 17.5k & 1200$\pm$79 & 778$\pm$69 & 0.53 & 0.86$\pm$0.04 & 2014$\pm$184 & 0.072 \\
-LSTM+DT & 17.7k & 1202$\pm$127 & 824$\pm$119 & 0.44 & 0.86$\pm$0.01 & 1989$\pm$28 & 0.066 \\
-GRU & 13.4k & 1149$\pm$95 & 706$\pm$87 & 0.54 & 0.85$\pm$0.03 & 2009$\pm$167 & 0.067 \\
-GRU+DT & 13.6k & 1166$\pm$83 & 784$\pm$77 & 0.38 & 0.88$\pm$0.04 & 2145$\pm$244 & 0.051 \\
-TCN & 16.8k & 1112$\pm$63 & 825$\pm$79 & 0.32 & 0.87$\pm$0.02 & 2122$\pm$170 & 0.032 \\
-TCN+DT & 17.2k & 1047$\pm$77 & 808$\pm$49 & 0.31 & 0.89$\pm$0.02 & 2314$\pm$111 & 0.040 \\
-CNN-LSTM & 15.3k & 1096$\pm$104 & 676$\pm$105 & 0.47 & 0.83$\pm$0.03 & 2147$\pm$104 & 0.044 \\
-CNN-LSTM+DT$^\dagger$ & 15.7k & 1093$\pm$64 & 717$\pm$43 & 0.36 & 0.85$\pm$0.01 & 2008$\pm$75 & 0.062 \\
+LSTM (split) & 1208$\pm$118 & 772$\pm$102 & 0.50 & 0.85$\pm$0.04 & 2263 & 1516$\pm$127 & 886$\pm$104 & 0.90 & 0.91$\pm$0.01 & 2436 \\
+LSTM+DT$^\dagger$ (split) & 1124$\pm$48 & 751$\pm$54 & 0.37 & 0.84$\pm$0.04 & 2154 & 1698$\pm$58 & 1130$\pm$68 & 0.89 & 0.88$\pm$0.03 & 3107 \\
+GRU (split) & 1171$\pm$114 & 751$\pm$84 & 0.40 & 0.86$\pm$0.03 & 2151 & 1516$\pm$39 & 1027$\pm$73 & 0.89 & 0.89$\pm$0.02 & 2404 \\
+GRU+DT$^\ast$ (split) & 1140$\pm$89 & 771$\pm$66 & 0.32 & 0.89$\pm$0.03 & 2286 & 1647$\pm$94 & 1226$\pm$153 & 0.86 & 0.83$\pm$0.06 & 3042 \\
+TCN (split) & 1159$\pm$70 & 827$\pm$72 & 0.16 & 0.85$\pm$0.02 & 2241 & 1666$\pm$119 & 1303$\pm$145 & 0.52 & 0.95$\pm$0.01 & 3691 \\
+TCN+DT (split) & 1153$\pm$136 & 855$\pm$115 & 0.16 & 0.89$\pm$0.01 & 2456 & 1496$\pm$118 & 1100$\pm$138 & 0.62 & 0.81$\pm$0.11 & 3477 \\
+CNN-LSTM (split) & 1106$\pm$74 & 674$\pm$34 & 0.40 & 0.85$\pm$0.02 & 2119 & 1335$\pm$3 & 772$\pm$21 & 0.85 & 0.90$\pm$0.01 & 2416 \\
+CNN-LSTM+DT (split) & 1108$\pm$39 & 747$\pm$54 & 0.28 & 0.89$\pm$0.01 & 2355 & 1446$\pm$30 & 895$\pm$33 & 0.84 & 0.91$\pm$0.00 & 2686 \\
 \midrule
-LSTM+DT (MSE) & -- & 1288$\pm$64 & 945$\pm$76 & -- & -- & -- & -- \\
-GRU+DT (MSE) & -- & 1298$\pm$88 & 959$\pm$117 & -- & -- & -- & -- \\
-TCN+DT (MSE) & -- & 1114$\pm$26 & 879$\pm$25 & -- & -- & -- & -- \\
-CNN-LSTM+DT (MSE) & -- & 1100$\pm$66 & 789$\pm$45 & -- & -- & -- & -- \\
+LSTM+DT (MSE point) & 1090$\pm$161 & 780$\pm$129 & -- & -- & -- & 1656$\pm$41 & 1134$\pm$54 & -- & -- & -- \\
+GRU+DT (MSE point) & 1166$\pm$121 & 858$\pm$92 & -- & -- & -- & 1689$\pm$115 & 1293$\pm$159 & -- & -- & -- \\
+TCN+DT (MSE point) & 1232$\pm$110 & 925$\pm$89 & -- & -- & -- & 1539$\pm$95 & 1156$\pm$107 & -- & -- & -- \\
+CNN-LSTM+DT (MSE point) & 1135$\pm$45 & 825$\pm$37 & -- & -- & -- & 1468$\pm$29 & 897$\pm$14 & -- & -- & -- \\
+\midrule
+Selected edge (CV+) & 753$\pm$5 & 501$\pm$22 & 0.75 & 0.94$\pm$0.01 & 2193 & 1938$\pm$251 & 1677$\pm$232 & 0.69 & 0.99$\pm$0.01 & 4134 \\
+Selected cloud+DT (CV+) & 892$\pm$27 & 665$\pm$14 & 0.28 & 0.96$\pm$0.02 & 2506 & 1422$\pm$38 & 1077$\pm$59 & 0.91 & 0.93$\pm$0.01 & 3030 \\
+Selected cloud, no DT (CV+) & 954$\pm$16 & 653$\pm$13 & 0.35 & 0.95$\pm$0.02 & 2551 & 1305$\pm$54 & 757$\pm$66 & 0.90 & 0.94$\pm$0.01 & 2337 \\
 \bottomrule
-\end{tabular}}
-\end{table}
+\end{tabular}
+\end{table*}

@@ -1,0 +1,1010 @@
+=== femto tune Thu Sep 24 00:21:01 CDT 2026
+=== femto train Thu Sep 24 00:21:02 CDT 2026
+fold0 seed1 Edge-CNN: 15s
+fold0 seed1 Edge-GRU: 3s
+fold0 seed1 LSTM+DT: 42s
+fold0 seed1 LSTM: 45s
+fold0 seed1 LSTM+DT-point: 42s
+fold0 seed1 GRU+DT: 42s
+fold0 seed1 GRU: 45s
+fold0 seed1 GRU+DT-point: 44s
+fold0 seed1 TCN+DT: 505s
+fold0 seed1 TCN: 477s
+fold0 seed1 TCN+DT-point: 808s
+fold0 seed1 CNN-LSTM+DT: 515s
+fold0 seed1 CNN-LSTM: 3464s
+fold0 seed1 CNN-LSTM+DT-point: 1061s
+fold0 seed0 Edge-CNN: 16s
+fold0 seed0 Edge-GRU: 3s
+fold0 seed0 LSTM+DT: 43s
+fold0 seed0 LSTM: 46s
+fold0 seed0 LSTM+DT-point: 44s
+fold0 seed0 GRU+DT: 42s
+fold0 seed0 GRU: 45s
+fold0 seed0 GRU+DT-point: 44s
+fold0 seed0 TCN+DT: 517s
+fold0 seed0 TCN: 479s
+fold0 seed0 TCN+DT-point: 1210s
+fold0 seed0 CNN-LSTM+DT: 3153s
+fold0 seed0 CNN-LSTM: 501s
+fold0 seed0 CNN-LSTM+DT-point: 1123s
+fold0 seed2 Edge-CNN: 16s
+fold0 seed2 Edge-GRU: 3s
+fold0 seed2 LSTM+DT: 43s
+fold0 seed2 LSTM: 46s
+fold0 seed2 LSTM+DT-point: 43s
+fold0 seed2 GRU+DT: 42s
+fold0 seed2 GRU: 47s
+fold0 seed2 GRU+DT-point: 44s
+fold0 seed2 TCN+DT: 514s
+fold0 seed2 TCN: 483s
+fold0 seed2 TCN+DT-point: 1211s
+fold0 seed2 CNN-LSTM+DT: 3550s
+fold0 seed2 CNN-LSTM: 102s
+fold0 seed2 CNN-LSTM+DT-point: 1123s
+fold1 seed0 Edge-CNN: 18s
+fold1 seed0 Edge-GRU: 3s
+fold1 seed0 LSTM+DT: 51s
+fold1 seed0 LSTM: 50s
+fold1 seed0 LSTM+DT-point: 50s
+fold1 seed0 GRU+DT: 52s
+fold1 seed0 GRU: 54s
+fold1 seed0 GRU+DT-point: 46s
+fold1 seed0 TCN+DT: 570s
+fold1 seed0 TCN: 574s
+fold1 seed0 TCN+DT-point: 11150s
+fold1 seed0 CNN-LSTM+DT: 2646s
+fold1 seed0 CNN-LSTM: 3790s
+fold1 seed0 CNN-LSTM+DT-point: 870s
+fold1 seed1 Edge-CNN: 18s
+fold1 seed1 Edge-GRU: 4s
+fold1 seed1 LSTM+DT: 52s
+fold1 seed1 LSTM: 52s
+fold1 seed1 LSTM+DT-point: 52s
+fold1 seed1 GRU+DT: 54s
+fold1 seed1 GRU: 53s
+fold1 seed1 GRU+DT-point: 46s
+fold1 seed1 TCN+DT: 582s
+fold1 seed1 TCN: 593s
+fold1 seed1 TCN+DT-point: 13788s
+fold1 seed1 CNN-LSTM+DT: 3797s
+fold1 seed1 CNN-LSTM: 982s
+fold1 seed1 CNN-LSTM+DT-point: 1437s
+fold2 seed1 Edge-CNN: 1087s
+fold2 seed1 Edge-GRU: 3s
+fold2 seed1 LSTM+DT: 641s
+fold2 seed1 LSTM: 1334s
+fold2 seed1 LSTM+DT-point: 2156s
+fold2 seed1 GRU+DT: 1334s
+fold2 seed1 GRU: 5166s
+fold2 seed1 GRU+DT-point: 913s
+fold2 seed1 TCN+DT: 8770s
+fold2 seed1 TCN: 590s
+fold2 seed1 TCN+DT-point: 454s
+fold2 seed1 CNN-LSTM+DT: 31s
+fold2 seed1 CNN-LSTM: 31s
+fold2 seed1 CNN-LSTM+DT-point: 32s
+fold2 seed0 Edge-CNN: 1087s
+fold2 seed0 Edge-GRU: 3s
+fold2 seed0 LSTM+DT: 642s
+fold2 seed0 LSTM: 1334s
+fold2 seed0 LSTM+DT-point: 2157s
+fold2 seed0 GRU+DT: 2322s
+fold2 seed0 GRU: 4178s
+fold2 seed0 GRU+DT-point: 913s
+fold2 seed0 TCN+DT: 8777s
+fold2 seed0 TCN: 598s
+fold2 seed0 TCN+DT-point: 457s
+fold2 seed0 CNN-LSTM+DT: 31s
+fold2 seed0 CNN-LSTM: 31s
+fold2 seed0 CNN-LSTM+DT-point: 31s
+fold1 seed2 Edge-CNN: 148s
+fold1 seed2 Edge-GRU: 3s
+fold1 seed2 LSTM+DT: 1695s
+fold1 seed2 LSTM: 377s
+fold1 seed2 LSTM+DT-point: 3160s
+fold1 seed2 GRU+DT: 2326s
+fold1 seed2 GRU: 4235s
+fold1 seed2 GRU+DT-point: 1024s
+fold1 seed2 TCN+DT: 8668s
+fold1 seed2 TCN: 625s
+fold1 seed2 TCN+DT-point: 503s
+fold1 seed2 CNN-LSTM+DT: 40s
+fold1 seed2 CNN-LSTM: 35s
+fold1 seed2 CNN-LSTM+DT-point: 36s
+fold2 seed2 Edge-CNN: 175s
+fold2 seed2 Edge-GRU: 8s
+fold2 seed2 LSTM+DT: 1932s
+fold2 seed2 LSTM: 1549s
+fold2 seed2 LSTM+DT-point: 2839s
+fold2 seed2 GRU+DT: 124s
+fold2 seed2 GRU: 125s
+fold2 seed2 GRU+DT-point: 139s
+fold2 seed2 TCN+DT: 2248s
+fold2 seed2 TCN: 458s
+fold2 seed2 TCN+DT-point: 467s
+fold2 seed2 CNN-LSTM+DT: 29s
+fold2 seed2 CNN-LSTM: 30s
+fold2 seed2 CNN-LSTM+DT-point: 29s
+fold3 seed0 Edge-CNN: 496s
+fold3 seed0 Edge-GRU: 9s
+fold3 seed0 LSTM+DT: 1565s
+fold3 seed0 LSTM: 2864s
+fold3 seed0 LSTM+DT-point: 141s
+fold3 seed0 GRU+DT: 142s
+fold3 seed0 GRU: 146s
+fold3 seed0 GRU+DT-point: 202s
+fold3 seed0 TCN+DT: 2142s
+fold3 seed0 TCN: 500s
+fold3 seed0 TCN+DT-point: 483s
+fold3 seed0 CNN-LSTM+DT: 29s
+fold3 seed0 CNN-LSTM: 29s
+fold3 seed0 CNN-LSTM+DT-point: 29s
+fold3 seed1 Edge-CNN: 16s
+fold3 seed1 Edge-GRU: 3s
+fold3 seed1 LSTM+DT: 49s
+fold3 seed1 LSTM: 53s
+fold3 seed1 LSTM+DT-point: 49s
+fold3 seed1 GRU+DT: 39s
+fold3 seed1 GRU: 39s
+fold3 seed1 GRU+DT-point: 36s
+fold3 seed1 TCN+DT: 426s
+fold3 seed1 TCN: 419s
+fold3 seed1 TCN+DT-point: 567s
+fold3 seed1 CNN-LSTM+DT: 38s
+fold3 seed1 CNN-LSTM: 43s
+fold3 seed1 CNN-LSTM+DT-point: 45s
+fold3 seed2 Edge-CNN: 16s
+fold3 seed2 Edge-GRU: 3s
+fold3 seed2 LSTM+DT: 53s
+fold3 seed2 LSTM: 48s
+fold3 seed2 LSTM+DT-point: 48s
+fold3 seed2 GRU+DT: 39s
+fold3 seed2 GRU: 38s
+fold3 seed2 GRU+DT-point: 34s
+fold3 seed2 TCN+DT: 424s
+fold3 seed2 TCN: 419s
+fold3 seed2 TCN+DT-point: 581s
+fold3 seed2 CNN-LSTM+DT: 38s
+fold3 seed2 CNN-LSTM: 41s
+fold3 seed2 CNN-LSTM+DT-point: 40s
+=== femto cvplus Thu Sep 24 09:08:36 CDT 2026
+cv+ fold0 seed0 LSTM+DT: 251s
+cv+ fold0 seed0 LSTM: 245s
+cv+ fold0 seed2 Edge-GRU: 13s
+cv+ fold0 seed2 LSTM+DT: 242s
+cv+ fold0 seed2 LSTM: 249s
+cv+ fold0 seed1 Edge-GRU: 13s
+cv+ fold0 seed1 LSTM+DT: 252s
+cv+ fold0 seed1 LSTM: 243s
+cv+ fold1 seed1 Edge-GRU: 16s
+cv+ fold1 seed1 LSTM+DT: 318s
+cv+ fold1 seed1 LSTM: 273s
+cv+ fold1 seed0 Edge-GRU: 16s
+cv+ fold1 seed0 LSTM+DT: 319s
+cv+ fold1 seed0 LSTM: 279s
+cv+ fold2 seed0 Edge-GRU: 14s
+cv+ fold2 seed0 LSTM+DT: 218s
+cv+ fold2 seed0 LSTM: 218s
+cv+ fold2 seed1 Edge-GRU: 13s
+cv+ fold2 seed1 LSTM+DT: 218s
+cv+ fold2 seed1 LSTM: 218s
+cv+ fold1 seed2 Edge-GRU: 19s
+cv+ fold1 seed2 LSTM+DT: 246s
+cv+ fold1 seed2 LSTM: 250s
+cv+ fold2 seed2 Edge-GRU: 13s
+cv+ fold2 seed2 LSTM+DT: 214s
+cv+ fold2 seed2 LSTM: 220s
+cv+ fold3 seed0 Edge-GRU: 14s
+cv+ fold3 seed0 LSTM+DT: 255s
+cv+ fold3 seed0 LSTM: 244s
+cv+ fold3 seed1 Edge-GRU: 16s
+cv+ fold3 seed1 LSTM+DT: 209s
+cv+ fold3 seed1 LSTM: 157s
+cv+ fold3 seed2 Edge-GRU: 13s
+cv+ fold3 seed2 LSTM+DT: 209s
+cv+ fold3 seed2 LSTM: 158s
+=== xjtu tune Thu Sep 24 09:30:57 CDT 2026
+selected: Edge-CNN GRU
+    arch  epochs  width  noise  val_pinball  val_rmse_s  val_raw_cov
+CNN-LSTM       8     32    0.0       0.1176   2468.9792       0.4497
+CNN-LSTM       8     32    0.2       0.1211   2525.6420       0.4537
+CNN-LSTM       8     64    0.0       0.1509   2863.2748       0.3266
+CNN-LSTM       8    128    0.0       0.1541   2835.1879       0.2978
+CNN-LSTM       8     64    0.2       0.1564   2943.2871       0.3025
+CNN-LSTM       8    128    0.2       0.1581   2872.6598       0.2924
+CNN-LSTM      25     32    0.2       0.1889   2903.1008       0.1168
+CNN-LSTM      25     32    0.0       0.1896   2931.7981       0.0936
+CNN-LSTM      25     64    0.2       0.1927   2976.1469       0.0471
+CNN-LSTM      25    128    0.0       0.1932   2942.8206       0.0410
+CNN-LSTM      25    128    0.2       0.2082   3026.0277       0.0103
+CNN-LSTM      25     64    0.0       0.2105   3158.6116       0.0462
+Edge-CNN       8     16    0.2       0.0750   2340.0065       0.8080
+Edge-CNN       8     16    0.0       0.0774   2348.5864       0.7428
+Edge-CNN      25     16    0.2       0.1143   2454.0104       0.5601
+Edge-CNN      25     16    0.0       0.1251   2606.6808       0.6075
+Edge-GRU       8     16    0.0       0.0818   2335.9678       0.8434
+Edge-GRU       8     16    0.2       0.0836   2384.2100       0.8370
+Edge-GRU      25     16    0.2       0.1405   2768.4338       0.3730
+Edge-GRU      25     16    0.0       0.1437   2768.0364       0.3730
+     GRU       8     32    0.0       0.0998   2394.3672       0.5697
+     GRU       8     32    0.2       0.1004   2376.3838       0.5707
+     GRU       8     64    0.2       0.1229   2771.8175       0.4291
+     GRU       8     64    0.0       0.1261   2808.4446       0.4525
+     GRU       8    128    0.2       0.1450   2843.0280       0.3979
+     GRU       8    128    0.0       0.1513   2922.6490       0.3552
+     GRU      25     32    0.0       0.1747   2918.6833       0.2338
+     GRU      25     32    0.2       0.1790   3013.0460       0.2490
+     GRU      25     64    0.2       0.1807   2819.9192       0.0626
+     GRU      25     64    0.0       0.1878   2927.6548       0.0678
+     GRU      25    128    0.0       0.1906   2890.8654       0.0567
+     GRU      25    128    0.2       0.1920   2883.4720       0.0401
+    LSTM       8     32    0.0       0.1321   2762.1633       0.4521
+    LSTM       8     32    0.2       0.1369   2836.3138       0.4565
+    LSTM       8     64    0.2       0.1432   2685.1279       0.2985
+    LSTM       8     64    0.0       0.1524   2857.3269       0.3468
+    LSTM       8    128    0.0       0.1790   2954.4189       0.2610
+    LSTM       8    128    0.2       0.1810   3004.0032       0.2260
+    LSTM      25    128    0.2       0.1929   2958.5685       0.0734
+    LSTM      25     32    0.0       0.1979   2990.8337       0.0610
+    LSTM      25     64    0.2       0.1986   2990.9221       0.1154
+    LSTM      25     32    0.2       0.2010   3010.6475       0.0509
+    LSTM      25     64    0.0       0.2011   3017.7681       0.0788
+    LSTM      25    128    0.0       0.2151   3132.9056       0.0619
+     TCN       8     32    0.2       0.1036   2352.3859       0.4919
+     TCN       8     32    0.0       0.1074   2386.2755       0.4748
+     TCN       8     64    0.2       0.1111   2380.9586       0.5081
+     TCN       8     64    0.0       0.1184   2449.1653       0.4888
+     TCN      25     32    0.0       0.1227   2364.6567       0.3240
+     TCN      25     64    0.2       0.1290   2382.3741       0.2755
+     TCN      25     64    0.0       0.1318   2359.1706       0.2183
+     TCN       8    128    0.2       0.1318   2535.3105       0.3906
+     TCN       8    128    0.0       0.1359   2560.0756       0.3697
+     TCN      25    128    0.2       0.1414   2387.6292       0.1716
+     TCN      25    128    0.0       0.1443   2393.4719       0.1578
+     TCN      25     32    0.2       0.1472   2733.0432       0.2214
+{
+ "CNN-LSTM": {
+  "epochs": 8,
+  "width": 32,
+  "noise": 0.0,
+  "weight_decay": 0.001
+ },
+ "Edge-CNN": {
+  "epochs": 8,
+  "width": 16,
+  "noise": 0.2,
+  "weight_decay": 0.001
+ },
+ "Edge-GRU": {
+  "epochs": 8,
+  "width": 16,
+  "noise": 0.0,
+  "weight_decay": 0.001
+ },
+ "GRU": {
+  "epochs": 8,
+  "width": 32,
+  "noise": 0.0,
+  "weight_decay": 0.001
+ },
+ "LSTM": {
+  "epochs": 8,
+  "width": 32,
+  "noise": 0.0,
+  "weight_decay": 0.001
+ },
+ "TCN": {
+  "epochs": 8,
+  "width": 32,
+  "noise": 0.2,
+  "weight_decay": 0.001
+ }
+}
+=== xjtu train Thu Sep 24 09:38:45 CDT 2026
+fold0 seed0 Edge-CNN: 5s
+fold0 seed0 Edge-GRU: 0s
+fold0 seed0 LSTM+DT: 4s
+fold0 seed0 LSTM: 4s
+fold0 seed0 LSTM+DT-point: 4s
+fold0 seed0 GRU+DT: 3s
+fold0 seed0 GRU: 3s
+fold0 seed0 GRU+DT-point: 3s
+fold0 seed0 TCN+DT: 27s
+fold0 seed0 TCN: 25s
+fold0 seed0 TCN+DT-point: 25s
+fold0 seed0 CNN-LSTM+DT: 3s
+fold0 seed0 CNN-LSTM: 3s
+fold0 seed0 CNN-LSTM+DT-point: 3s
+fold0 seed1 Edge-CNN: 5s
+fold0 seed1 Edge-GRU: 0s
+fold0 seed1 LSTM+DT: 4s
+fold0 seed1 LSTM: 4s
+fold0 seed1 LSTM+DT-point: 4s
+fold0 seed1 GRU+DT: 3s
+fold0 seed1 GRU: 3s
+fold0 seed1 GRU+DT-point: 3s
+fold0 seed1 TCN+DT: 27s
+fold0 seed1 TCN: 25s
+fold0 seed1 TCN+DT-point: 25s
+fold0 seed1 CNN-LSTM+DT: 3s
+fold0 seed1 CNN-LSTM: 3s
+fold0 seed1 CNN-LSTM+DT-point: 3s
+fold0 seed2 Edge-CNN: 5s
+fold0 seed2 Edge-GRU: 0s
+fold0 seed2 LSTM+DT: 4s
+fold0 seed2 LSTM: 4s
+fold0 seed2 LSTM+DT-point: 5s
+fold0 seed2 GRU+DT: 3s
+fold0 seed2 GRU: 3s
+fold0 seed2 GRU+DT-point: 3s
+fold0 seed2 TCN+DT: 27s
+fold0 seed2 TCN: 25s
+fold0 seed2 TCN+DT-point: 26s
+fold0 seed2 CNN-LSTM+DT: 4s
+fold0 seed2 CNN-LSTM: 4s
+fold0 seed2 CNN-LSTM+DT-point: 4s
+fold1 seed0 Edge-CNN: 7s
+fold1 seed0 Edge-GRU: 1s
+fold1 seed0 LSTM+DT: 6s
+fold1 seed0 LSTM: 6s
+fold1 seed0 LSTM+DT-point: 7s
+fold1 seed0 GRU+DT: 4s
+fold1 seed0 GRU: 5s
+fold1 seed0 GRU+DT-point: 5s
+fold1 seed0 TCN+DT: 43s
+fold1 seed0 TCN: 41s
+fold1 seed0 TCN+DT-point: 38s
+fold1 seed0 CNN-LSTM+DT: 6s
+fold1 seed0 CNN-LSTM: 6s
+fold1 seed0 CNN-LSTM+DT-point: 6s
+fold1 seed1 Edge-CNN: 7s
+fold1 seed1 Edge-GRU: 1s
+fold1 seed1 LSTM+DT: 6s
+fold1 seed1 LSTM: 7s
+fold1 seed1 LSTM+DT-point: 7s
+fold1 seed1 GRU+DT: 5s
+fold1 seed1 GRU: 5s
+fold1 seed1 GRU+DT-point: 5s
+fold1 seed1 TCN+DT: 43s
+fold1 seed1 TCN: 41s
+fold1 seed1 TCN+DT-point: 38s
+fold1 seed1 CNN-LSTM+DT: 6s
+fold1 seed1 CNN-LSTM: 6s
+fold1 seed1 CNN-LSTM+DT-point: 6s
+fold1 seed2 Edge-CNN: 5s
+fold1 seed2 Edge-GRU: 0s
+fold1 seed2 LSTM+DT: 4s
+fold1 seed2 LSTM: 5s
+fold1 seed2 LSTM+DT-point: 5s
+fold1 seed2 GRU+DT: 3s
+fold1 seed2 GRU: 3s
+fold1 seed2 GRU+DT-point: 3s
+fold1 seed2 TCN+DT: 38s
+fold1 seed2 TCN: 38s
+fold1 seed2 TCN+DT-point: 38s
+fold1 seed2 CNN-LSTM+DT: 6s
+fold1 seed2 CNN-LSTM: 6s
+fold1 seed2 CNN-LSTM+DT-point: 6s
+fold2 seed1 Edge-CNN: 7s
+fold2 seed1 Edge-GRU: 1s
+fold2 seed1 LSTM+DT: 6s
+fold2 seed1 LSTM: 6s
+fold2 seed1 LSTM+DT-point: 7s
+fold2 seed1 GRU+DT: 5s
+fold2 seed1 GRU: 4s
+fold2 seed1 GRU+DT-point: 4s
+fold2 seed1 TCN+DT: 40s
+fold2 seed1 TCN: 43s
+fold2 seed1 TCN+DT-point: 45s
+fold2 seed1 CNN-LSTM+DT: 7s
+fold2 seed1 CNN-LSTM: 7s
+fold2 seed1 CNN-LSTM+DT-point: 7s
+fold2 seed0 Edge-CNN: 6s
+fold2 seed0 Edge-GRU: 1s
+fold2 seed0 LSTM+DT: 6s
+fold2 seed0 LSTM: 6s
+fold2 seed0 LSTM+DT-point: 6s
+fold2 seed0 GRU+DT: 4s
+fold2 seed0 GRU: 4s
+fold2 seed0 GRU+DT-point: 4s
+fold2 seed0 TCN+DT: 44s
+fold2 seed0 TCN: 46s
+fold2 seed0 TCN+DT-point: 46s
+fold2 seed0 CNN-LSTM+DT: 7s
+fold2 seed0 CNN-LSTM: 7s
+fold2 seed0 CNN-LSTM+DT-point: 7s
+fold2 seed2 Edge-CNN: 7s
+fold2 seed2 Edge-GRU: 1s
+fold2 seed2 LSTM+DT: 6s
+fold2 seed2 LSTM: 6s
+fold2 seed2 LSTM+DT-point: 6s
+fold2 seed2 GRU+DT: 4s
+fold2 seed2 GRU: 4s
+fold2 seed2 GRU+DT-point: 4s
+fold2 seed2 TCN+DT: 38s
+fold2 seed2 TCN: 36s
+fold2 seed2 TCN+DT-point: 39s
+fold2 seed2 CNN-LSTM+DT: 6s
+fold2 seed2 CNN-LSTM: 7s
+fold2 seed2 CNN-LSTM+DT-point: 7s
+fold3 seed0 Edge-CNN: 8s
+fold3 seed0 Edge-GRU: 1s
+fold3 seed0 LSTM+DT: 7s
+fold3 seed0 LSTM: 7s
+fold3 seed0 LSTM+DT-point: 7s
+fold3 seed0 GRU+DT: 4s
+fold3 seed0 GRU: 5s
+fold3 seed0 GRU+DT-point: 4s
+fold3 seed0 TCN+DT: 47s
+fold3 seed0 TCN: 48s
+fold3 seed0 TCN+DT-point: 49s
+fold3 seed0 CNN-LSTM+DT: 7s
+fold3 seed0 CNN-LSTM: 7s
+fold3 seed0 CNN-LSTM+DT-point: 7s
+fold4 seed0 Edge-CNN: 6s
+fold4 seed0 Edge-GRU: 1s
+fold4 seed0 LSTM+DT: 6s
+fold4 seed0 LSTM: 6s
+fold4 seed0 LSTM+DT-point: 6s
+fold4 seed0 GRU+DT: 4s
+fold4 seed0 GRU: 4s
+fold4 seed0 GRU+DT-point: 3s
+fold4 seed0 TCN+DT: 37s
+fold4 seed0 TCN: 40s
+fold4 seed0 TCN+DT-point: 41s
+fold4 seed0 CNN-LSTM+DT: 6s
+fold4 seed0 CNN-LSTM: 6s
+fold4 seed0 CNN-LSTM+DT-point: 6s
+fold3 seed1 Edge-CNN: 8s
+fold3 seed1 Edge-GRU: 1s
+fold3 seed1 LSTM+DT: 7s
+fold3 seed1 LSTM: 7s
+fold3 seed1 LSTM+DT-point: 7s
+fold3 seed1 GRU+DT: 5s
+fold3 seed1 GRU: 5s
+fold3 seed1 GRU+DT-point: 4s
+fold3 seed1 TCN+DT: 48s
+fold3 seed1 TCN: 49s
+fold3 seed1 TCN+DT-point: 50s
+fold3 seed1 CNN-LSTM+DT: 8s
+fold3 seed1 CNN-LSTM: 7s
+fold3 seed1 CNN-LSTM+DT-point: 7s
+fold3 seed2 Edge-CNN: 7s
+fold3 seed2 Edge-GRU: 1s
+fold3 seed2 LSTM+DT: 7s
+fold3 seed2 LSTM: 8s
+fold3 seed2 LSTM+DT-point: 7s
+fold3 seed2 GRU+DT: 5s
+fold3 seed2 GRU: 4s
+fold3 seed2 GRU+DT-point: 4s
+fold3 seed2 TCN+DT: 45s
+fold3 seed2 TCN: 44s
+fold3 seed2 TCN+DT-point: 47s
+fold3 seed2 CNN-LSTM+DT: 8s
+fold3 seed2 CNN-LSTM: 9s
+fold3 seed2 CNN-LSTM+DT-point: 8s
+fold4 seed1 Edge-CNN: 6s
+fold4 seed1 Edge-GRU: 1s
+fold4 seed1 LSTM+DT: 6s
+fold4 seed1 LSTM: 6s
+fold4 seed1 LSTM+DT-point: 6s
+fold4 seed1 GRU+DT: 4s
+fold4 seed1 GRU: 4s
+fold4 seed1 GRU+DT-point: 4s
+fold4 seed1 TCN+DT: 39s
+fold4 seed1 TCN: 41s
+fold4 seed1 TCN+DT-point: 42s
+fold4 seed1 CNN-LSTM+DT: 5s
+fold4 seed1 CNN-LSTM: 5s
+fold4 seed1 CNN-LSTM+DT-point: 4s
+fold4 seed2 Edge-CNN: 6s
+fold4 seed2 Edge-GRU: 0s
+fold4 seed2 LSTM+DT: 5s
+fold4 seed2 LSTM: 5s
+fold4 seed2 LSTM+DT-point: 5s
+fold4 seed2 GRU+DT: 4s
+fold4 seed2 GRU: 4s
+fold4 seed2 GRU+DT-point: 4s
+fold4 seed2 TCN+DT: 40s
+fold4 seed2 TCN: 43s
+fold4 seed2 TCN+DT-point: 27s
+fold4 seed2 CNN-LSTM+DT: 3s
+fold4 seed2 CNN-LSTM: 3s
+fold4 seed2 CNN-LSTM+DT-point: 3s
+=== xjtu cvplus Thu Sep 24 09:47:49 CDT 2026
+cv+ fold0 seed2 Edge-CNN: 22s
+cv+ fold0 seed2 GRU+DT: 14s
+cv+ fold0 seed2 GRU: 14s
+cv+ fold0 seed0 Edge-CNN: 22s
+cv+ fold0 seed0 GRU+DT: 14s
+cv+ fold0 seed0 GRU: 14s
+cv+ fold0 seed1 Edge-CNN: 23s
+cv+ fold0 seed1 GRU+DT: 14s
+cv+ fold0 seed1 GRU: 14s
+cv+ fold1 seed0 Edge-CNN: 23s
+cv+ fold1 seed0 GRU+DT: 14s
+cv+ fold1 seed0 GRU: 14s
+cv+ fold1 seed1 Edge-CNN: 24s
+cv+ fold1 seed1 GRU+DT: 15s
+cv+ fold1 seed1 GRU: 14s
+cv+ fold1 seed2 Edge-CNN: 23s
+cv+ fold1 seed2 GRU+DT: 15s
+cv+ fold1 seed2 GRU: 15s
+cv+ fold3 seed0 Edge-CNN: 23s
+cv+ fold3 seed0 GRU+DT: 17s
+cv+ fold3 seed0 GRU: 17s
+cv+ fold2 seed0 Edge-CNN: 25s
+cv+ fold2 seed0 GRU+DT: 18s
+cv+ fold2 seed0 GRU: 18s
+cv+ fold2 seed2 Edge-CNN: 24s
+cv+ fold2 seed2 GRU+DT: 18s
+cv+ fold2 seed2 GRU: 18s
+cv+ fold2 seed1 Edge-CNN: 28s
+cv+ fold2 seed1 GRU+DT: 19s
+cv+ fold2 seed1 GRU: 17s
+cv+ fold3 seed1 Edge-CNN: 24s
+cv+ fold3 seed1 GRU+DT: 16s
+cv+ fold3 seed1 GRU: 19s
+cv+ fold3 seed2 Edge-CNN: 26s
+cv+ fold3 seed2 GRU+DT: 17s
+cv+ fold3 seed2 GRU: 19s
+cv+ fold4 seed0 Edge-CNN: 25s
+cv+ fold4 seed0 GRU+DT: 20s
+cv+ fold4 seed0 GRU: 20s
+cv+ fold4 seed2 Edge-CNN: 25s
+cv+ fold4 seed2 GRU+DT: 21s
+cv+ fold4 seed2 GRU: 18s
+cv+ fold4 seed1 Edge-CNN: 28s
+cv+ fold4 seed1 GRU+DT: 22s
+cv+ fold4 seed1 GRU: 18s
+=== rmax sensitivity Thu Sep 24 09:50:52 CDT 2026
+fold0 seed0 LSTM+DT-point: 39s
+fold2 seed0 LSTM+DT-point: 42s
+fold1 seed0 LSTM+DT-point: 45s
+fold3 seed0 LSTM+DT-point: 46s
+cv+ fold0 seed0 Edge-GRU: 9s
+cv+ fold0 seed0 LSTM+DT: 154s
+cv+ fold0 seed0 LSTM: 174s
+cv+ fold2 seed0 Edge-GRU: 10s
+cv+ fold2 seed0 LSTM+DT: 166s
+cv+ fold2 seed0 LSTM: 184s
+cv+ fold1 seed0 Edge-GRU: 12s
+cv+ fold1 seed0 LSTM+DT: 189s
+cv+ fold1 seed0 LSTM: 193s
+cv+ fold3 seed0 Edge-GRU: 12s
+cv+ fold3 seed0 LSTM+DT: 197s
+cv+ fold3 seed0 LSTM: 193s
+{
+ "r_max": 1500.0,
+ "h_crit": 300.0,
+ "h_plan": 900.0,
+ "policies": [
+  {
+   "policy": "Always-edge",
+   "unsafe_rate": 0.19734345351043645,
+   "missed_urgent": 0.34724857685009486,
+   "false_urgent": 0.06379059206580413,
+   "false_maint": 0.2598320623768315,
+   "action_acc": 0.7181887580859014,
+   "approval_load": 0.28024428462372936,
+   "escalation_rate": 0.0,
+   "rmse": 286.6206970214844
+  },
+  {
+   "policy": "Always-cloud",
+   "unsafe_rate": 0.08349146110056926,
+   "missed_urgent": 0.25616698292220114,
+   "false_urgent": 0.33733184817067946,
+   "false_maint": 0.7342558478279496,
+   "action_acc": 0.2813291012093696,
+   "approval_load": 0.7444654264936317,
+   "escalation_rate": 1.0,
+   "rmse": 365.8017272949219
+  },
+  {
+   "policy": "Cloud point+threshold",
+   "unsafe_rate": 0.3055028462998102,
+   "missed_urgent": 0.5673624288425048,
+   "false_urgent": 0.07077371262102648,
+   "false_maint": 0.23185673892554196,
+   "action_acc": 0.7355056450640846,
+   "approval_load": 0.24601229458797058,
+   "escalation_rate": 1.0,
+   "rmse": 551.4150390625
+  },
+  {
+   "policy": "HERA-full",
+   "unsafe_rate": 0.2428842504743833,
+   "missed_urgent": 0.3225806451612903,
+   "false_urgent": 0.16605260903093136,
+   "false_maint": 0.2401250963927684,
+   "action_acc": 0.7304833460564908,
+   "approval_load": 0.2604765157298405,
+   "escalation_rate": 0.28080678211257987,
+   "rmse": 345.37548828125
+  },
+  {
+   "policy": "Width gate (matched)",
+   "unsafe_rate": 0.2428842504743833,
+   "missed_urgent": 0.3225806451612903,
+   "false_urgent": 0.1662239739525319,
+   "false_maint": 0.24038214377516923,
+   "action_acc": 0.7303226324882478,
+   "approval_load": 0.2607979428663265,
+   "escalation_rate": 0.2811683876411266,
+   "rmse": 345.3624267578125
+  }
+ ],
+ "rul": [
+  {
+   "model": "Edge-GRU",
+   "rmse": 286.78350830078125,
+   "mae": 144.431396484375,
+   "rmse_deg": 658.5686645507812,
+   "raw_picp": 0.8864558640363213,
+   "picp": 0.9278797862509542,
+   "mpiw": 619.3204345703125,
+   "nmpiw": 0.4128803014755249,
+   "interval_score": 991.27294921875,
+   "lower_miss_crit": 0.3719165085388994,
+   "cce": 0.10643557394833061,
+   "picp_bearing_min": 0.5608695652173913,
+   "n_bearing_cov_below": 6.0
+  },
+  {
+   "model": "LSTM+DT",
+   "rmse": 365.8553466796875,
+   "mae": 235.0001220703125,
+   "rmse_deg": 603.2022094726562,
+   "raw_picp": 0.4137570814416007,
+   "picp": 0.9537948491301378,
+   "mpiw": 957.7398681640625,
+   "nmpiw": 0.6384932398796082,
+   "interval_score": 1139.109130859375,
+   "lower_miss_crit": 0.2675521821631879,
+   "cce": 0.14255996625015066,
+   "picp_bearing_min": 0.5608695652173913,
+   "n_bearing_cov_below": 5.0
+  }
+ ]
+}
+fold0 seed0 LSTM+DT-point: 48s
+fold2 seed0 LSTM+DT-point: 51s
+fold1 seed0 LSTM+DT-point: 54s
+fold3 seed0 LSTM+DT-point: 55s
+cv+ fold0 seed0 Edge-GRU: 9s
+cv+ fold0 seed0 LSTM+DT: 157s
+cv+ fold0 seed0 LSTM: 147s
+cv+ fold2 seed0 Edge-GRU: 10s
+cv+ fold2 seed0 LSTM+DT: 172s
+cv+ fold2 seed0 LSTM: 156s
+cv+ fold1 seed0 Edge-GRU: 12s
+cv+ fold1 seed0 LSTM+DT: 189s
+cv+ fold1 seed0 LSTM: 167s
+cv+ fold3 seed0 Edge-GRU: 12s
+cv+ fold3 seed0 LSTM+DT: 203s
+cv+ fold3 seed0 LSTM: 167s
+{
+ "r_max": 6000.0,
+ "h_crit": 1200.0,
+ "h_plan": 3600.0,
+ "policies": [
+  {
+   "policy": "Always-edge",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.16140009722897422,
+   "false_urgent": 0.7078324418789387,
+   "false_maint": 0.9985171847693692,
+   "action_acc": 0.0894371007272289,
+   "approval_load": 0.998875005022299,
+   "escalation_rate": 0.0,
+   "rmse": 1954.11962890625
+  },
+  {
+   "policy": "Always-cloud",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.00583373845405931,
+   "false_urgent": 0.7799608113117619,
+   "false_maint": 1.0,
+   "action_acc": 0.08678532685121941,
+   "approval_load": 1.0,
+   "escalation_rate": 1.0,
+   "rmse": 2216.860107421875
+  },
+  {
+   "policy": "Cloud point+threshold",
+   "unsafe_rate": 0.1920272241127856,
+   "missed_urgent": 0.6820612542537676,
+   "false_urgent": 0.11449451887941535,
+   "false_maint": 0.38865646348567495,
+   "action_acc": 0.5649885491582627,
+   "approval_load": 0.4863996142874362,
+   "escalation_rate": 1.0,
+   "rmse": 2464.034423828125
+  },
+  {
+   "policy": "HERA-full",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.00583373845405931,
+   "false_urgent": 0.7799608113117619,
+   "false_maint": 0.9985171847693692,
+   "action_acc": 0.0879103218289204,
+   "approval_load": 0.998875005022299,
+   "escalation_rate": 0.998875005022299,
+   "rmse": 2216.860107421875
+  },
+  {
+   "policy": "Width gate (matched)",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.00583373845405931,
+   "false_urgent": 0.7799608113117619,
+   "false_maint": 0.9985171847693692,
+   "action_acc": 0.0879103218289204,
+   "approval_load": 0.998875005022299,
+   "escalation_rate": 0.998875005022299,
+   "rmse": 2216.860107421875
+  }
+ ],
+ "rul": [
+  {
+   "model": "Edge-GRU",
+   "rmse": 1955.0875244140625,
+   "mae": 1549.2779541015625,
+   "rmse_deg": 2210.827392578125,
+   "raw_picp": 0.4873237173048335,
+   "picp": 0.928884246052473,
+   "mpiw": 5240.78759765625,
+   "nmpiw": 0.8734645843505859,
+   "interval_score": 6279.40673828125,
+   "lower_miss_crit": 0.22168206125425377,
+   "cce": 0.04357125637831975,
+   "picp_bearing_min": 0.13043478260869565,
+   "n_bearing_cov_below": 4.0
+  },
+  {
+   "model": "LSTM+DT",
+   "rmse": 2218.968505859375,
+   "mae": 1790.010009765625,
+   "rmse_deg": 2050.525146484375,
+   "raw_picp": 0.18076258588131303,
+   "picp": 0.9703885250512274,
+   "mpiw": 5532.12353515625,
+   "nmpiw": 0.9220206141471863,
+   "interval_score": 5788.69580078125,
+   "lower_miss_crit": 0.04521147301895965,
+   "cce": 0.08822672666639882,
+   "picp_bearing_min": 0.391304347826087,
+   "n_bearing_cov_below": 3.0
+  }
+ ]
+}
+fold0 seed0 GRU+DT-point: 3s
+fold1 seed0 GRU+DT-point: 4s
+fold2 seed0 GRU+DT-point: 5s
+fold3 seed0 GRU+DT-point: 6s
+fold4 seed0 GRU+DT-point: 4s
+cv+ fold0 seed0 Edge-CNN: 19s
+cv+ fold0 seed0 GRU+DT: 11s
+cv+ fold0 seed0 GRU: 11s
+cv+ fold1 seed0 Edge-CNN: 19s
+cv+ fold1 seed0 GRU+DT: 12s
+cv+ fold1 seed0 GRU: 12s
+cv+ fold3 seed0 Edge-CNN: 22s
+cv+ fold3 seed0 GRU+DT: 14s
+cv+ fold3 seed0 GRU: 13s
+cv+ fold2 seed0 Edge-CNN: 23s
+cv+ fold2 seed0 GRU+DT: 15s
+cv+ fold2 seed0 GRU: 14s
+cv+ fold4 seed0 Edge-CNN: 30s
+cv+ fold4 seed0 GRU+DT: 18s
+cv+ fold4 seed0 GRU: 17s
+{
+ "r_max": 3000.0,
+ "h_crit": 600.0,
+ "h_plan": 1800.0,
+ "policies": [
+  {
+   "policy": "Always-edge",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.1393939393939394,
+   "false_urgent": 0.3986972917380871,
+   "false_maint": 0.7334018969260656,
+   "action_acc": 0.2750651041666667,
+   "approval_load": 0.7468532986111112,
+   "escalation_rate": 0.0,
+   "rmse": 679.498779296875
+  },
+  {
+   "policy": "Always-cloud",
+   "unsafe_rate": 0.06060606060606061,
+   "missed_urgent": 0.23636363636363636,
+   "false_urgent": 0.08021940349674322,
+   "false_maint": 0.44692035195977603,
+   "action_acc": 0.5481770833333334,
+   "approval_load": 0.4676649305555556,
+   "escalation_rate": 1.0,
+   "rmse": 615.5715942382812
+  },
+  {
+   "policy": "Cloud point+threshold",
+   "unsafe_rate": 0.5393939393939394,
+   "missed_urgent": 1.0,
+   "false_urgent": 0.0082276311278711,
+   "false_maint": 0.052451148440178265,
+   "action_acc": 0.9108072916666666,
+   "approval_load": 0.07085503472222222,
+   "escalation_rate": 1.0,
+   "rmse": 702.6917114257812
+  },
+  {
+   "policy": "HERA-full",
+   "unsafe_rate": 0.06060606060606061,
+   "missed_urgent": 0.23636363636363636,
+   "false_urgent": 0.08021940349674322,
+   "false_maint": 0.20500514226945493,
+   "action_acc": 0.7778862847222222,
+   "approval_load": 0.23795572916666666,
+   "escalation_rate": 0.7468532986111112,
+   "rmse": 590.2271728515625
+  },
+  {
+   "policy": "Width gate (matched)",
+   "unsafe_rate": 0.06060606060606061,
+   "missed_urgent": 0.23636363636363636,
+   "false_urgent": 0.08021940349674322,
+   "false_maint": 0.20511941492400868,
+   "action_acc": 0.7777777777777778,
+   "approval_load": 0.2380642361111111,
+   "escalation_rate": 0.7469618055555556,
+   "rmse": 590.2363891601562
+  }
+ ],
+ "rul": [
+  {
+   "model": "Edge-CNN",
+   "rmse": 987.48583984375,
+   "mae": 822.8101806640625,
+   "rmse_deg": 1169.19287109375,
+   "raw_picp": 0.7097439236111112,
+   "picp": 0.9921875,
+   "mpiw": 1881.17626953125,
+   "nmpiw": 0.627058744430542,
+   "interval_score": 1938.3719482421875,
+   "lower_miss_crit": 0.2545454545454545,
+   "cce": 0.19755859375,
+   "picp_bearing_min": 0.8114754098360656,
+   "n_bearing_cov_below": 2.0
+  },
+  {
+   "model": "GRU+DT",
+   "rmse": 616.0108032226562,
+   "mae": 451.0636901855469,
+   "rmse_deg": 1253.2362060546875,
+   "raw_picp": 0.94921875,
+   "picp": 0.9596354166666666,
+   "mpiw": 1295.662841796875,
+   "nmpiw": 0.4318876266479492,
+   "interval_score": 1664.9130859375,
+   "lower_miss_crit": 0.4484848484848485,
+   "cce": 0.18720703125,
+   "picp_bearing_min": 0.16666666666666666,
+   "n_bearing_cov_below": 5.0
+  }
+ ]
+}
+fold0 seed0 GRU+DT-point: 5s
+fold1 seed0 GRU+DT-point: 7s
+fold2 seed0 GRU+DT-point: 8s
+fold3 seed0 GRU+DT-point: 8s
+fold4 seed0 GRU+DT-point: 5s
+cv+ fold0 seed0 Edge-CNN: 24s
+cv+ fold0 seed0 GRU+DT: 18s
+cv+ fold0 seed0 GRU: 18s
+cv+ fold1 seed0 Edge-CNN: 26s
+cv+ fold1 seed0 GRU+DT: 18s
+cv+ fold1 seed0 GRU: 19s
+cv+ fold3 seed0 Edge-CNN: 31s
+cv+ fold3 seed0 GRU+DT: 21s
+cv+ fold3 seed0 GRU: 25s
+cv+ fold2 seed0 Edge-CNN: 37s
+cv+ fold2 seed0 GRU+DT: 23s
+cv+ fold2 seed0 GRU: 24s
+cv+ fold4 seed0 Edge-CNN: 29s
+cv+ fold4 seed0 GRU+DT: 16s
+cv+ fold4 seed0 GRU: 16s
+{
+ "r_max": 12000.0,
+ "h_crit": 2400.0,
+ "h_plan": 7200.0,
+ "policies": [
+  {
+   "policy": "Always-edge",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.032520325203252036,
+   "false_urgent": 0.5678930651138169,
+   "false_maint": 0.7682636315510852,
+   "action_acc": 0.2720269097222222,
+   "approval_load": 0.8062065972222222,
+   "escalation_rate": 0.0,
+   "rmse": 3358.266845703125
+  },
+  {
+   "policy": "Always-cloud",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.20650406504065041,
+   "false_urgent": 0.3343038644785601,
+   "false_maint": 0.9993382742191635,
+   "action_acc": 0.09906684027777778,
+   "approval_load": 0.9994574652777778,
+   "escalation_rate": 1.0,
+   "rmse": 3801.55859375
+  },
+  {
+   "policy": "Cloud point+threshold",
+   "unsafe_rate": 0.20650406504065041,
+   "missed_urgent": 0.5479674796747968,
+   "false_urgent": 0.021042879830598202,
+   "false_maint": 0.3059820010587613,
+   "action_acc": 0.6312934027777778,
+   "approval_load": 0.3661024305555556,
+   "escalation_rate": 1.0,
+   "rmse": 4501.63232421875
+  },
+  {
+   "policy": "HERA-full",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.20650406504065041,
+   "false_urgent": 0.2717046056114346,
+   "false_maint": 0.7676019057702488,
+   "action_acc": 0.2852647569444444,
+   "approval_load": 0.8056640625,
+   "escalation_rate": 0.8062065972222222,
+   "rmse": 3556.594482421875
+  },
+  {
+   "policy": "Width gate (matched)",
+   "unsafe_rate": 0.0,
+   "missed_urgent": 0.20650406504065041,
+   "false_urgent": 0.2743515087347803,
+   "false_maint": 0.7732927474854421,
+   "action_acc": 0.2805989583333333,
+   "approval_load": 0.8103298611111112,
+   "escalation_rate": 0.8108723958333334,
+   "rmse": 3562.33642578125
+  }
+ ],
+ "rul": [
+  {
+   "model": "Edge-CNN",
+   "rmse": 4075.44775390625,
+   "mae": 3591.66943359375,
+   "rmse_deg": 4310.21435546875,
+   "raw_picp": 0.6854383680555556,
+   "picp": 0.9755859375,
+   "mpiw": 8832.1962890625,
+   "nmpiw": 0.7360163331031799,
+   "interval_score": 9619.236328125,
+   "lower_miss_crit": 0.06991869918699187,
+   "cce": 0.15647786458333335,
+   "picp_bearing_min": 0.819672131147541,
+   "n_bearing_cov_below": 3.0
+  },
+  {
+   "model": "GRU+DT",
+   "rmse": 3801.581787109375,
+   "mae": 3370.8271484375,
+   "rmse_deg": 4037.27001953125,
+   "raw_picp": 0.8590494791666666,
+   "picp": 0.9396701388888888,
+   "mpiw": 8969.1103515625,
+   "nmpiw": 0.7474258542060852,
+   "interval_score": 10880.33984375,
+   "lower_miss_crit": 0.24715447154471545,
+   "cce": 0.04664713541666665,
+   "picp_bearing_min": 0.2857142857142857,
+   "n_bearing_cov_below": 6.0
+  }
+ ]
+}
+=== ALL DONE Thu Sep 24 10:10:46 CDT 2026

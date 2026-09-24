@@ -12,14 +12,14 @@
 
 \begin{document}
 
-\title{HERA-PdM: Uncertainty-Calibrated Escalation in a Hierarchical Edge--Digital-Twin Predictive Maintenance Framework---An Empirical Study on Bearing Run-to-Failure Data}
+\title{HERA-PdM: When Does Uncertainty-Gated Escalation Help Hierarchical Edge--Digital-Twin Predictive Maintenance? Evidence from Two Bearing Datasets}
 
 \author{\IEEEauthorblockN{Pradeep Somasundaram}}
 
 \maketitle
 
 \begin{abstract}
-Hierarchical predictive-maintenance (PdM) systems increasingly combine edge models, Digital Twins and cloud prognostics, yet the rule that decides when the edge must escalate is usually an anomaly threshold or an uncalibrated confidence score. We study HERA-PdM, a hierarchical edge--Digital-Twin framework in which conformalized quantile regression (CQR) produces remaining-useful-life (RUL) intervals, the edge escalates only when its interval does not determine a unique maintenance action (which bounds unsafe edge decisions by the miscoverage level), and high-impact actions are issued as SHAP-supported recommendations for human approval. On all 17 FEMTO/PRONOSTIA bearings with bearing-grouped cross-validation and three seeds, a \edgeParams-parameter edge GRU was the most accurate model (RMSE \rmseEdge\,s versus at least \bestRmse\,s for fog/cloud models), and CQR raised interval coverage from \rawCovMin--\rawCovMax{} to \cqrCovMin--\cqrCovMax{} (nominal 0.90). Point estimates with a fixed threshold left \unsafePoint\% of critical snapshots without maintenance action, versus \unsafeCloud--\unsafeHera\% for calibrated policies, at the price of \fmHera--\fmEdge\% false maintenance. However, the escalation gate sent \escHera\% of snapshots upward and was not better than width-, score- or random-based gates at matched budget. The results locate the bottleneck of hierarchical PdM on this benchmark in failure predictability rather than in inference routing.
+Hierarchical predictive-maintenance (PdM) systems escalate from edge devices to fog/cloud prognostics, usually on anomaly thresholds or uncalibrated confidence. We study HERA-PdM, in which cross-validated conformalized quantile regression (CQR-CV+) gives remaining-useful-life (RUL) intervals, the edge escalates only when its interval does not fix a unique maintenance action, and high-impact actions are SHAP-supported recommendations for human approval. On 17 FEMTO and 15 XJTU-SY run-to-failure bearings (bearing-grouped cross-validation, three seeds, tuned LSTM/GRU/TCN/CNN-LSTM baselines), CQR-CV+ raised coverage to \fePicpEdge--\fePicpCloud{} and \xjPicpCloud--\xjPicpEdge{} (nominal 0.90). Versus point estimates with fixed thresholds, calibrated decisions cut critical snapshots left without action from \feUnsafePoint\% to \feUnsafeHera\% (FEMTO) and \xjUnsafePoint\% to \xjUnsafeHera\% (XJTU-SY), at the cost of more false maintenance. On gradually degrading XJTU-SY bearings, escalating \xjEscHera\% of snapshots matched always-cloud safety with less false maintenance (\xjFmHera\% vs.\ \xjFmCloud\%) and payload; on abrupt FEMTO failures it offered no benefit. The decision-sufficiency gate performed no better than an interval-width gate, and all calibrated policies raised maintenance alarms prematurely for most bearings. Uncertainty-gated hierarchies thus pay off only when degradation is observable early.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -27,30 +27,28 @@ predictive maintenance, remaining useful life, conformal prediction, edge comput
 \end{IEEEkeywords}
 
 \section{Introduction}
-Predictive maintenance (PdM) estimates the remaining useful life (RUL) of machinery from condition-monitoring data so that interventions can be scheduled before failure~\cite{lei2018machinery}. Deep sequence models are the prevailing RUL estimators~\cite{zheng2017lstm,zhu2019mscnn}, but they are usually trained and evaluated as centralized point predictors. In a factory, three further requirements appear. First, vibration streams are produced at the machine, so edge--cloud architectures that keep routine inference local have been proposed~\cite{ren2021cloudedge}. Second, a point estimate says nothing about how far it can be trusted; RUL uncertainty must therefore be quantified and, ideally, calibrated~\cite{basora2025benchmark,javanmardi2023conformal}. Third, Industry~5.0 places the human at the centre of such systems~\cite{xu2021industry5}: decision-makers often do not adopt system-generated maintenance advice~\cite{vanoudenhoven2023pdm5}, so high-impact actions should remain explained recommendations.
+Predictive maintenance (PdM) estimates the remaining useful life (RUL) of machinery from condition data so that interventions are scheduled before failure~\cite{lei2018machinery}. Deep sequence models are the prevailing RUL estimators~\cite{zheng2017lstm,zhu2019mscnn}, but in a factory three further requirements arise. Vibration is sensed at the machine, so edge--cloud architectures keep routine inference local~\cite{ren2021cloudedge}; a point estimate must be accompanied by calibrated uncertainty~\cite{basora2025benchmark,javanmardi2023conformal}; and Industry~5.0 keeps the human in charge~\cite{xu2021industry5}, since decision-makers often do not adopt system-generated maintenance advice~\cite{vanoudenhoven2023pdm5}.
 
-Recent systems integrate these elements with agents and Digital Twins (DTs)~\cite{tao2019dt,saleh2026hama,mendonca2026human,coulibaly2026masdt}. Our literature audit (42 papers; Section~\ref{sec:related}) shows that the \emph{combination} of agents, DTs, edge inference and human oversight is no longer new. What remains unclear is the \emph{escalation rule}: current hierarchical PdM systems escalate on anomaly thresholds~\cite{saleh2026hama} or on uncalibrated confidence~\cite{yao2026ecdistill}, whereas calibrated conformal deferral has so far been studied for classification cascades~\cite{huang2025cab}. We therefore ask whether conformally calibrated RUL intervals computed on the edge can serve as the escalation signal of a hierarchical PdM system, and at what cost in accuracy, safety, communication and latency.
+Recent systems combine these elements with agents and Digital Twins (DTs)~\cite{tao2019dt,saleh2026hama,mendonca2026human,coulibaly2026masdt}; our audit of 42 papers (Section~\ref{sec:related}) shows that this \emph{combination} is no longer new. What remains open is the \emph{escalation rule}: hierarchical PdM systems escalate on anomaly thresholds~\cite{saleh2026hama} or uncalibrated confidence~\cite{yao2026ecdistill}, while calibrated conformal deferral has been studied for classification and numerical cascades~\cite{huang2025cab,hou2025online}. We ask \emph{when} conformally calibrated RUL intervals on the edge are a useful escalation signal, and at what cost in accuracy, safety, alarm timing, communication and latency.
 
-The contributions are as follows:
+Contributions:
 \begin{enumerate}
-\item \textbf{HERA-PdM}, a reproducible four-layer framework (edge monitoring, synchronized DT state, CQR prognostics, human-approved decisions) with a \emph{decision-sufficiency} gate that escalates only when the edge RUL interval straddles a maintenance-decision boundary; this bounds locally resolved unsafe decisions by the edge miscoverage level.
-\item A bearing-grouped evaluation on all 17 FEMTO bearings of ten quantile models (with and without DT context) and point baselines, showing that the smallest (edge) model was the most accurate and that CQR restored, but did not fully reach, nominal coverage.
-\item Decision-level evidence that calibration prevents most unsafe point-threshold decisions but that calibrated and margin-adjusted point policies share one safety/false-alarm frontier.
-\item A system-level negative result: at the nominal level the gate escalated most snapshots and offered no advantage over simpler gates, which identifies failure predictability as the limiting factor.
+\item \textbf{HERA-PdM}, a reproducible four-layer framework with a \emph{decision-sufficiency} gate that escalates only when the edge RUL interval straddles a maintenance-decision boundary, bounding locally resolved unsafe decisions by the edge miscoverage level, and CQR-CV+ calibration on all non-test assets.
+\item A two-dataset, bearing-grouped benchmark (FEMTO with abrupt, XJTU-SY with gradual degradation) of ten tuned quantile models with and without DT context, showing that CQR-CV+ restores nominal coverage and that larger fog/cloud models help only on the gradual dataset.
+\item Snapshot-level, per-bearing and sensitivity evidence that calibration removes most unsafe point-threshold decisions, that uncertainty-gated escalation improves on always-cloud inference only under gradual degradation, and that the specific gate matters less than the interval width.
 \end{enumerate}
 
 \section{Related Work and Research Gap}\label{sec:related}
-\textit{Deep RUL prediction.} LSTM~\cite{zheng2017lstm}, multiscale CNN for bearings~\cite{zhu2019mscnn} and TCN~\cite{bai2018tcn} models are standard RUL estimators; reviews~\cite{lei2018machinery} treat health-stage division, i.e.\ detecting when degradation becomes observable, as a step preceding RUL prediction, which matters for the FEMTO bearings used here~\cite{nectoux2012pronostia}.
-\textit{Digital Twins and agents.} DTs provide a synchronized virtual state of an asset~\cite{tao2019dt}. Agentic DT architectures for PdM, including human-centred ones, have appeared recently~\cite{mendonca2026human,coulibaly2026masdt}; the survey in~\cite{coulibaly2026masdt} lists hierarchical DT orchestration with residual-life estimation and explainability as an open question.
-\textit{Edge and hierarchical PdM.} Ren et~al.~\cite{ren2021cloudedge} run a lightweight TCN at the edge and refine RUL in the cloud; HAMA~\cite{saleh2026hama} escalates from a z-score edge pre-filter to fog ensembles with SHAP and generated operator text; EC-Distill-ZeroDiag~\cite{yao2026ecdistill} offloads uncertain fault-diagnosis cases from an edge agent to a cloud model.
-\textit{Uncertainty quantification.} Bayesian, dropout, ensemble and heteroscedastic RUL uncertainty methods have been benchmarked in~\cite{basora2025benchmark}; split conformal and CQR intervals give finite-sample coverage~\cite{romano2019cqr,angelopoulos2023gentle} and have been applied to C-MAPSS~\cite{javanmardi2023conformal,moccardi2025robust}, where weighted variants were recommended for non-exchangeable conditions~\cite{moccardi2025robust}, and to bearings~\cite{wang2026conformal}. Probabilistic RUL has also been fed into risk-aware maintenance policies~\cite{xu2025riskrl}. For inference cascades, confidence-based deferral~\cite{jitkrittum2023cascade} and conformal edge--cloud offloading for classification and numerical solvers~\cite{huang2025cab,hou2025online} provide the closest methodological precedents.
-\textit{Human-centric PdM.} Behavioural studies of PdM adoption~\cite{vanoudenhoven2023pdm5} motivate advisory, explained recommendations.
+\textit{RUL prediction.} LSTM~\cite{zheng2017lstm}, multiscale CNN for bearings~\cite{zhu2019mscnn} and TCN~\cite{bai2018tcn} models are standard; reviews~\cite{lei2018machinery} treat health-stage division, i.e.\ detecting when degradation becomes observable, as a step preceding RUL prediction, which our two datasets~\cite{nectoux2012pronostia,wang2020xjtu} contrast sharply.
+\textit{DTs and agents.} DTs provide a synchronized virtual asset state~\cite{tao2019dt}; agentic and human-centred DT architectures for PdM have appeared~\cite{mendonca2026human,coulibaly2026masdt}, and~\cite{coulibaly2026masdt} lists hierarchical DT orchestration with residual-life estimation and explainability as an open question.
+\textit{Hierarchical PdM.} Ren et~al.~\cite{ren2021cloudedge} run a lightweight TCN at the edge and refine RUL in the cloud; HAMA~\cite{saleh2026hama} escalates from a z-score edge pre-filter to fog ensembles with SHAP and generated operator text; EC-Distill-ZeroDiag~\cite{yao2026ecdistill} offloads uncertain fault-diagnosis cases from an edge agent to a cloud model.
+\textit{Uncertainty.} Bayesian, dropout and ensemble RUL uncertainty has been benchmarked in~\cite{basora2025benchmark}; split conformal and CQR give finite-sample coverage~\cite{romano2019cqr,angelopoulos2023gentle}, CV+ extends it to cross-fitting~\cite{barber2021jackknife}, and conformal RUL intervals exist for C-MAPSS~\cite{javanmardi2023conformal,moccardi2025robust} and bearings~\cite{wang2026conformal}. Probabilistic RUL also drives risk-aware maintenance policies~\cite{xu2025riskrl}, and confidence-based~\cite{jitkrittum2023cascade} and conformal~\cite{huang2025cab,hou2025online} deferral are the closest methodological precedents.
 
-\textbf{Gap.} Table~\ref{tab:related} summarizes the closest works. To the best of our literature review, no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gating rules of existing systems on public run-to-failure data with communication and latency accounting. The contribution is methodological and incremental; the architecture itself is not new.
+\textbf{Gap.} To the best of our review (Table~\ref{tab:related}), no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gates of existing systems on public run-to-failure data with different degradation regimes. The contribution is methodological and evaluative; the architecture is not new.
 
 \begin{table}[t]
 \centering
-\caption{Closest related work (coded from full text, abstracts or public code; see literature matrix). \checkmark: present, $\circ$: partial, --: absent.}
+\caption{Closest related work (coded from full text, abstracts or public code). \checkmark: present, $\circ$: partial, --: absent.}
 \label{tab:related}
 \setlength{\tabcolsep}{1.6pt}\footnotesize
 \begin{tabular}{lcccccccc}
@@ -61,10 +59,9 @@ Ren et al.~\cite{ren2021cloudedge} & -- & \checkmark & -- & \checkmark & -- & --
 HAMA~\cite{saleh2026hama} & -- & \checkmark & \checkmark & $\circ$ & -- & $\circ$ anomaly & \checkmark & $\circ$ \\
 EC-Distill~\cite{yao2026ecdistill} & -- & \checkmark & \checkmark & -- & -- & \checkmark conf. & $\circ$ & -- \\
 CAb cascade~\cite{huang2025cab} & -- & \checkmark & -- & -- & \checkmark & \checkmark & -- & -- \\
-Javanmardi~\cite{javanmardi2023conformal} & -- & -- & -- & \checkmark & \checkmark & -- & -- & -- \\
 Wang et al.~\cite{wang2026conformal} & -- & -- & -- & \checkmark & \checkmark & -- & -- & -- \\
 Xu \& Zhang~\cite{xu2025riskrl} & -- & -- & $\circ$ & \checkmark & $\circ$ & -- & -- & -- \\
-\textbf{HERA-PdM} & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
+\textbf{HERA-PdM} & $\circ$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -73,98 +70,90 @@ Xu \& Zhang~\cite{xu2025riskrl} & -- & -- & $\circ$ & \checkmark & $\circ$ & -- 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig1_architecture.pdf}
-\caption{HERA-PdM. The edge agent computes a calibrated RUL interval $I^e_t$; the gate escalates only if $I^e_t$ is not decision-sufficient. The fog/cloud prognostics agent uses the Digital Twin context $c_t$. Schedule/urgent actions require human approval.}
+\caption{HERA-PdM. The edge agent computes a calibrated RUL interval $I^e_t$; the gate escalates only if $I^e_t$ is not decision-sufficient; the fog/cloud agent uses the DT context $c_t$; schedule/urgent actions need human approval.}
 \label{fig:arch}
 \end{figure}
 
-Fig.~\ref{fig:arch} shows the four layers. The ``agents'' are software components with fixed responsibilities and message interfaces; no language model is used anywhere in the pipeline.
+Fig.~\ref{fig:arch} shows the four layers. ``Agents'' are software components with fixed responsibilities and messages; no language model is used anywhere.
 
-\textit{Edge Monitoring Agent.} Every 10\,s a 0.1\,s two-axis vibration snapshot is reduced to $x_t\in\mathbb{R}^{d}$, $d{=}28$ (per axis: RMS, kurtosis, skewness, peak-to-peak, crest, impulse and shape factors, spectral centroid and six log band energies). Each feature is z-scored against the asset's first 50 snapshots and passed through $\mathrm{sign}(z)\log(1{+}|z|)$. The health index is $h_t=\log(1+\frac1d\sum_j|z_{t,j}|)$, and the anomaly score $a_t$ is the exponentially smoothed $h_t$ standardized by the mean and spread of the asset's raw baseline $h_t$; the alarm threshold $\tau_a$ is the 99th percentile of $a_t$ on healthy training snapshots (\tauAmin--\tauAmax{} across folds). A tiny model maps the last $W_e{=}16$ snapshots to three quantiles of the RUL.
+\textit{Edge Monitoring Agent.} Each vibration snapshot is reduced to $x_t\in\mathbb{R}^{28}$ (per axis: RMS, kurtosis, skewness, peak-to-peak, crest, impulse and shape factors, spectral centroid, six log band energies), z-scored against the asset's first snapshots and compressed by $\mathrm{sign}(z)\log(1{+}|z|)$. The health index is $h_t=\log(1+\frac1d\sum_j|z_{t,j}|)$; the anomaly score $a_t$ is the smoothed $h_t$ standardized by the asset's raw baseline, with alarm threshold $\tau_a$ at the 99th percentile of healthy training snapshots. A tiny model maps a short window to three RUL quantiles.
 
-\textit{Digital Twin State Agent.} The twin is a synchronized state record $DT_t=\{$operating condition, sensor state, $h_t$, degradation context $c_t$, $\hat R_t$, $I_t$, $u_t$, anomaly state$\}$, updated causally from a 12-byte sync message $(t,h_t,a_t)$ per snapshot. The context $c_t\in\mathbb{R}^6$ contains fast and slow exponential averages of $h_t$, their difference, the running maximum, a 30-snapshot slope and the cumulative excess of $h_t$ over its baseline. Absolute operating time is deliberately excluded because bearing lifetimes range from $2.3\times10^3$ to $2.8\times10^4$\,s.
+\textit{Digital Twin State Agent.} The twin is a synchronized state record $DT_t=\{$condition, sensor state, $h_t$, context $c_t$, $\hat R_t$, $I_t$, $u_t$, anomaly state$\}$ updated from a 12-byte sync $(t,h_t,a_t)$ per snapshot; $c_t\in\mathbb{R}^6$ holds fast/slow averages of $h_t$, their difference, running maximum, slope and cumulative excess over baseline. Absolute operating time is excluded because lifetimes vary by an order of magnitude.
 
-\textit{RUL Prognostics Agent.} For a window $X_t$ of $W_c{=}64$ snapshots and context $c_t$, a sequence model $g_\phi$ outputs non-crossing quantiles $(\hat q^{\,\alpha/2}_t,\hat q^{\,0.5}_t,\hat q^{\,1-\alpha/2}_t)$, with the outer quantiles parametrized as the median minus/plus a softplus term, trained with the pinball loss on the capped label $y_t=\min(\mathrm{RUL}_t,R_{\max})$, $R_{\max}{=}3000$\,s. The median $\hat R_t=\hat q^{\,0.5}_t$ is the point estimate.
+\textit{RUL Prognostics Agent.} A sequence model $g_\phi$ maps a longer window $X_t$ and $c_t$ to non-crossing quantiles $(\hat q^{\,\alpha/2}_t,\hat q^{\,0.5}_t,\hat q^{\,1-\alpha/2}_t)$ trained with the pinball loss on $y_t=\min(\mathrm{RUL}_t,R_{\max})$.
 
-\textit{Calibration.} Split CQR~\cite{romano2019cqr} uses $n$ snapshots of held-out calibration bearings with scores $s_i=\max(\hat q^{\,\alpha/2}_i-y_i,\;y_i-\hat q^{\,1-\alpha/2}_i)$ and the $\lceil(n{+}1)(1{-}\alpha)\rceil$-th smallest score $\hat Q_{1-\alpha}$:
-\begin{equation}
-I_t=[L_t,U_t]=\big[\hat q^{\,\alpha/2}_t-\hat Q_{1-\alpha},\;\hat q^{\,1-\alpha/2}_t+\hat Q_{1-\alpha}\big]\cap[0,R_{\max}].
-\end{equation}
-If calibration and test assets are exchangeable, $\Pr(y_t\notin I_t)\le\alpha$. Snapshots within a bearing are dependent, so this guarantee is only approximate here, which we test empirically. The width $u_t=U_t-L_t$ is the uncertainty.
+\textit{Calibration (CQR-CV+).} The non-test assets are split into $K{=}4$ condition-balanced groups; inner model $g^{(-k)}$ is trained without group $k$, which yields out-of-fold scores $s_i=\max(\hat q^{\,\alpha/2}_i-y_i,\,y_i-\hat q^{\,1-\alpha/2}_i)$ for every non-test snapshot $i$ in group $k(i)$. Following CV+~\cite{barber2021jackknife} with CQR scores~\cite{romano2019cqr},
+\begin{align}
+L_t&=Q^{-}_{\alpha}\{\hat q^{\,\alpha/2,(-k(i))}_t-s_i\},\\
+U_t&=Q^{+}_{1-\alpha}\{\hat q^{\,1-\alpha/2,(-k(i))}_t+s_i\},
+\end{align}
+where $Q^{-}_{\alpha}$ and $Q^{+}_{1-\alpha}$ are the $\lfloor\alpha(n{+}1)\rfloor$-th and $\lceil(1{-}\alpha)(n{+}1)\rceil$-th smallest values over the $n$ calibration snapshots; $\hat R_t$ is the mean inner median. CV+ guarantees coverage $\ge1-2\alpha$ (typically $\approx1-\alpha$) if assets are exchangeable; snapshots within an asset are dependent, so the guarantee is approximate and we test it. Split CQR on three held-out bearings is the baseline calibrator.
 
-\textit{Maintenance decision.} With critical and planning horizons $\Hc{=}600$\,s and $\Hp{=}1800$\,s, the action region of a value $v$ is $r(v)=$\,\textsc{urgent} if $v\le\Hc$, \textsc{schedule} if $\Hc<v\le\Hp$ and \textsc{continue} otherwise. The Maintenance Decision Agent acts on the conservative bound, $\pi_t=r(L_t)$, and downgrades \textsc{continue} to \textsc{inspect} when $a_t>\tau_a$. \textsc{schedule} and \textsc{urgent} are issued as recommendations with an explanation card (RUL, interval, anomaly evidence, top-3 SHAP~\cite{lundberg2017shap} contributors, rationale) and require human approval.
-
-\textit{Decision-sufficiency escalation.} Let $B=\{\Hc,\Hp\}$. The edge escalates when its interval is ambiguous with respect to $B$, or when anomaly evidence contradicts a healthy verdict:
+\textit{Decision and escalation.} With critical and planning horizons $\Hc$ and $\Hp$, the action of a value $v$ is $r(v)=$\,\textsc{urgent} if $v\le\Hc$, \textsc{schedule} if $\Hc<v\le\Hp$, else \textsc{continue}; the Maintenance Decision Agent acts on $\pi_t=r(L_t)$ (\textsc{continue} becomes \textsc{inspect} if $a_t>\tau_a$). \textsc{schedule}/\textsc{urgent} are recommendations with an explanation card (RUL, interval, anomaly evidence, top-3 SHAP~\cite{lundberg2017shap} contributors, rationale) that require approval. With $B=\{\Hc,\Hp\}$, the edge escalates if its interval is ambiguous or contradicts anomaly evidence:
 \begin{equation}
 e_t=\mathbb{I}\big[\exists h{\in}B{:}\,L^e_t{\le} h{<}U^e_t\big]\lor\mathbb{I}\big[a_t{>}\tau_a\wedge r(L^e_t){=}\mathrm{C}\big],
 \end{equation}
-where C denotes \textsc{continue}.
-If $e_t=0$, the edge action $r(L^e_t)$ is final; otherwise the cloud action $r(L^c_t)$ is used. A local \textsc{continue} requires $L^e_t>\Hp\ge\Hc$, so a critical asset ($y_t\le\Hc$) can only be left running locally if $y_t<L^e_t$; hence
+where C denotes \textsc{continue}. A local \textsc{continue} needs $L^e_t>\Hp\ge\Hc$, so a critical asset ($y_t\le\Hc$) is left running locally only if $y_t\notin I^e_t$:
 \begin{equation}
-\Pr\big(e_t{=}0,\ \pi_t{=}\textsc{continue},\ y_t\le\Hc\big)\le\Pr(y_t\notin I^e_t)\le\alpha_e ,
+\Pr\big(e_t{=}0,\ \pi_t{=}\textsc{continue},\ y_t\le\Hc\big)\le\Pr(y_t\notin I^e_t),
 \end{equation}
-and the same argument bounds locally issued false \textsc{urgent} actions. The edge miscoverage $\alpha_e$ is thus the single safety knob of the gate. Unlike an interval-width threshold, the gate ignores wide intervals that lie inside one action region and escalates narrow ones that cross a boundary.
+and false local \textsc{urgent} actions are bounded likewise. Unlike a width threshold, the gate ignores wide intervals inside one action region and escalates narrow ones crossing a boundary.
 
-\textit{Communication and compute model.} Payloads are counted analytically in float32: always-cloud streams $x_t$ (112\,B/snapshot); HERA sends the 12\,B sync every snapshot plus the untransmitted part of the $W_c$ window when $e_t{=}1$. Decision latency is edge time $+\,e_t(\mathrm{RTT}+$cloud time$)$ with an assumed RTT of \rttMs\,ms.
+\textit{Cost model.} Payloads are counted in float32: always-cloud streams $x_t$ (112\,B/snapshot); HERA sends the 12\,B sync plus the untransmitted part of the window when $e_t{=}1$. Latency is edge time $+\,e_t(\mathrm{RTT}+$cloud time$)$ with an assumed RTT of \rttMs\,ms.
 
-\section{Experimental Setup}
-\textit{Data.} FEMTO-ST/PRONOSTIA (IEEE PHM 2012)~\cite{nectoux2012pronostia}: 17 bearings run to failure under three conditions (1800\,rpm/4000\,N, 7 bearings; 1650\,rpm/4200\,N, 7; 1500\,rpm/5000\,N, 3), two accelerometers at 25.6\,kHz, 24{,}889 snapshots. The full test trajectories (Full\_Test\_Set) were used, so every bearing has a known failure time.
-
-\textit{Protocol.} Bearings are split into four condition-balanced folds; each bearing is tested exactly once. In every fold, one bearing per condition is held out for conformal calibration and the rest are used for training. Hyper-parameters were selected on inner validation bearings drawn from training bearings only: AdamW, one-cycle learning rate $2\times10^{-3}$, weight decay $10^{-3}$, 8 epochs, and for fog/cloud models width 32 and input noise 0.2 (edge models: width 16, no noise). Architectures were chosen on calibration-set pinball loss, giving \edgeModel{} (edge) and \cloudModel{}+DT (fog/cloud). Every model was trained with seeds 0--2; metrics are pooled over the 17 test bearings and reported as mean$\pm$std over seeds. The paired Wilcoxon signed-rank test uses bearings as units.
-
-\textit{Baselines.} Prognostics: LSTM, GRU, TCN~\cite{bai2018tcn}, CNN-LSTM, each with and without DT context, plus MSE-trained point models. Policies: always-edge, always-cloud, cloud point estimate with fixed thresholds, and ablations removing uncertainty (point estimate with a margin equal to the edge calibration RMSE), the DT context, or the anomaly term, or replacing the gate by an anomaly trigger (as in~\cite{saleh2026hama}), by interval width (confidence deferral~\cite{jitkrittum2023cascade}), by a linear score of anomaly, width and risk, or by random escalation; the last three use the HERA escalation budget measured on calibration bearings.
-
-\textit{Metrics.} RMSE and MAE (s); coverage (PICP), mean interval width (MPIW) and coverage calibration error (CCE, mean $|$nominal$-$empirical$|$ over $\alpha\in[0.05,0.5]$); detection of $y_t\le\Hc$ (precision, recall, F1, AUROC); \emph{unsafe rate} (critical snapshots with \textsc{continue}/\textsc{inspect}); \emph{false maintenance} (FM: \textsc{schedule}/\textsc{urgent} when $y_t>\Hp$); escalation rate, payload, MACs and latency. The NASA scoring function was not used because it is defined for C-MAPSS cycles. Latency is single-thread CPU wall-clock time on an Apple M2 Pro host, not on embedded hardware; no energy was measured.
-
-\section{Results and Discussion}
 \input{tables/table2_rul.tex}
-\textit{RQ1: accuracy.} Table~\ref{tab:rul} shows that the \edgeParams-parameter \edgeModel{} (\edgeMacs{} MACs) achieved the lowest error (RMSE \rmseEdge\,s, MAE \maeEdge\,s), whereas the best fog/cloud model reached \bestRmse\,s (\bestRmseModel). DT context did not help consistently: it lowered RMSE for TCN but not for GRU or LSTM. Larger windows and capacity did not transfer to unseen bearings, so escalation cannot be justified by accuracy on this benchmark. Quantile training did not hurt point accuracy relative to MSE training.
-
-\textit{RQ2: calibration.} Raw quantiles covered only \rawCovMin--\rawCovMax{} of test snapshots; CQR raised coverage to \cqrCovMin--\cqrCovMax{} (CCE $\le$\,0.08) with wide intervals (MPIW \mpiwEdge\,s for the edge). Coverage stayed below 0.90 and varied strongly across bearings: \nBearingsCovLow{} of 17 bearings fell below 0.90 under HERA's final intervals, and the lowest per-bearing edge coverage was \covMinEdge{} (seed mean), mostly on the 230-snapshot Bearing~2\_7. With three calibration bearings per fold, exchangeability between bearings is the binding assumption; weighted conformal methods~\cite{moccardi2025robust} are a natural remedy. Fig.~\ref{fig:traj} shows typical behaviour: intervals narrow when degradation becomes visible and stay wide during the long healthy phase. An asymmetric CQR variant that calibrates each bound at $\alpha/2$ gave similar coverage (\picpAsymEdge) and width.
-
+\input{tables/table3_policies.tex}
 \begin{figure}[t]
 \centering
 \includegraphics[width=\columnwidth]{figures/fig3_trajectories.pdf}
-\caption{Fog/cloud (\cloudModel+DT) median RUL and 90\% CQR interval in the last 75\,min of three test bearings (seed 0; bearings with the most degradation-phase snapshots). Dotted line: $\Hc$.}
+\caption{Fog/cloud median RUL and 90\% CQR-CV+ interval before failure (seed 0; per dataset the test bearing with most degradation-phase snapshots). Dotted line: $\Hc$.}
 \label{fig:traj}
 \end{figure}
-
-\input{tables/table3_policies.tex}
-\textit{RQ4: unsafe decisions.} Table~\ref{tab:policies} shows that the cloud point estimate with fixed thresholds left \unsafePoint\% of critical snapshots without maintenance action, whereas calibrated policies left \unsafeCloud\% (always-cloud) to \unsafeHera\% (HERA). Across bearings the reduction relative to the point policy was significant ($p$\,\pHeraPoint, \nzHeraPoint{} non-zero pairs), and so was the increase in false maintenance ($p$\,\pFmHeraPoint). Fig.~\ref{fig:tradeoff}(a) sweeps $\alpha$ for calibrated policies and a safety margin $\delta$ for point policies: all policies fall on one safety/false-alarm frontier. Calibration therefore helps by choosing an operating point from held-out data with a stated (though here only approximately met) guarantee, rather than by producing better decisions than a well-tuned margin. The remaining unsafe decisions concentrate on Bearings~2\_3 and 2\_7, whose vibration features show no precursor before failure.
-
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\columnwidth]{figures/fig4_tradeoff.pdf}
-\caption{(a) Unsafe decisions vs.\ false maintenance when sweeping $\alpha$ (calibrated) or margin $\delta$ (point); circles mark $\alpha{=}0.1$. (b) Unsafe decisions vs.\ escalation budget for gates operating on the same $\alpha{=}0.1$ edge intervals.}
+\includegraphics[width=\textwidth]{figures/fig4_tradeoff.pdf}
+\caption{(a,c) Unsafe decisions vs.\ false maintenance when sweeping $\alpha$ (calibrated; circles at $\alpha{=}0.1$) or a margin $\delta$ (point). (b,d) Unsafe decisions vs.\ escalation budget for gates on the same $\alpha{=}0.1$ edge intervals; green line: HERA with $\alpha_e$ swept.}
 \label{fig:tradeoff}
-\end{figure}
+\end{figure*}
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/fig2_escalation.pdf}
-\caption{Decision-sufficiency gate on test Bearing~1\_1 (seed 0). Shaded bands: action regions. During the healthy phase the edge interval straddles $\Hp$, so the gate escalates almost continuously (top bar).}
-\label{fig:gate}
-\end{figure}
+\section{Experimental Setup}
+\textit{Data.} FEMTO-ST/PRONOSTIA~\cite{nectoux2012pronostia}: \feNBearings{} bearings under three conditions, 0.1\,s snapshots every 10\,s (\feNSnap{} snapshots), full test trajectories; several bearings fail abruptly. XJTU-SY~\cite{wang2020xjtu}: \xjNBearings{} bearings under 35\,Hz/12\,kN, 37.5\,Hz/11\,kN and 40\,Hz/10\,kN, 1.28\,s snapshots every minute (\xjNSnap{} snapshots), mostly gradual degradation. RUL caps are $R_{\max}{=}\feRmax$\,s (FEMTO) and \xjRmax\,s (XJTU-SY); $\Hc{=}0.2R_{\max}$, $\Hp{=}0.6R_{\max}$; windows are 16/64 and 8/32 snapshots (edge/cloud).
 
-\textit{RQ3 and RQ5: escalation and system trade-off.} Because 90\% intervals were about \mpiwEdge\,s wide on a 3000\,s range, most edge intervals straddled $\Hp$ (Fig.~\ref{fig:gate}), and HERA escalated \escHera\% of snapshots (Fig.~\ref{fig:tradeoff}(b)). At this budget the width gate behaved almost identically (\unsafeWidth\% unsafe, \fmWidth\% FM), and the linear-score and random gates were within a few points; differences across bearings were not testable (\nzHeraWidth{} non-zero pairs). Relaxing the edge level to $\alpha_e{=}0.3$ reduced escalation to \escAlphaThirty\% but raised unsafe decisions to \unsafeAlphaThirty\%, consistent with the bound $\alpha_e$. The anomaly-trigger gate escalated only \escHeraFixed\% of snapshots because the anomaly score detected few critical snapshots (AUROC \detAnomAuroc, F1 \detAnomFone; Isolation Forest AUROC \detIsoAuroc). HERA's payload (\bytesHera\,B/snapshot) slightly exceeded always-cloud feature streaming (\bytesCloud\,B), and its mean latency (\latHera\,ms) was dominated by the assumed RTT; the edge model alone needed \edgeLat\,ms and the fog model \cloudLat\,ms per inference. Removing the DT context (HERA-no-DT) or the anomaly term changed the unsafe/FM operating point but not the escalation rate.
+\textit{Protocol.} Condition-balanced bearing-grouped folds (\feNFolds{} for FEMTO, \xjNFolds{} for XJTU-SY) test every bearing once. Each architecture's hyper-parameters (width 32--128, 8 or 25 epochs, input noise) and the edge/cloud architecture choice were selected on inner validation bearings from training bearings only (FEMTO: \feEdgeModel/\feCloudModel+DT; XJTU-SY: \xjEdgeModel/\xjCloudModel+DT). Three seeds per model; metrics are pooled over test bearings and reported as mean$\pm$std; paired Wilcoxon tests use bearings as units.
 
-\textit{Explainability and human oversight.} Expected-gradient SHAP on 300 degradation-phase snapshots of one fold (Fig.~\ref{fig:shap}) ranked the DT feature ``cumulative excess health index'', the horizontal spectral centroid and the 0--1\,kHz band energy highest; the attributions were approximate (mean additivity error \shapAdditivity\,s). An automatically generated card for the most critical explained snapshot reads:
+\textit{Baselines and metrics.} LSTM, GRU, TCN~\cite{bai2018tcn} and CNN-LSTM with and without DT context, MSE point models; always-edge, always-cloud and point-with-fixed-threshold policies; ablations without uncertainty (point margin), DT or anomaly term; anomaly-trigger (as in~\cite{saleh2026hama}), width (confidence deferral~\cite{jitkrittum2023cascade}), linear-score and random gates at HERA's budget. We report RMSE, MAE, coverage (Cov.), mean interval width (MPIW), \emph{unsafe rate} (critical snapshots with \textsc{continue}/\textsc{inspect}), false maintenance (FM, \textsc{schedule}/\textsc{urgent} when $y_t>\Hp$), escalation, payload, latency (single-thread host CPU, Apple M2 Pro; no energy measured) and, per bearing, the timing of the first sustained maintenance alarm.
+
+
+\section{Results and Discussion}
+\textit{RQ1: accuracy.} Table~\ref{tab:rul} shows opposite regimes. On FEMTO, the \feEdgeParams-parameter edge model was most accurate (RMSE \feRmseEdge\,s with CQR-CV+ vs.\ \feRmseCloud\,s for \feCloudModel+DT), because abrupt failures leave larger models nothing to exploit. On XJTU-SY, fog/cloud models were clearly better (best split-trained \xjBestCloudRmse\,s, \xjBestCloudModel) than the selected edge model (\xjRmseEdgeSplit\,s). DT context lowered RMSE for \feDtHelps{} of 4 architectures on FEMTO but only \xjDtHelps{} on XJTU-SY; cross-fitted ensembles (CV+) also improved point accuracy.
+
+
+
+\input{tables/table4_timing.tex}
+
+\textit{RQ2: calibration.} Split CQR with three calibration bearings under-covered on FEMTO (\feSplitCovMin--\feSplitCovMax). CQR-CV+, which calibrates on all non-test bearings, reached \fePicpEdge{} (edge) and \fePicpCloud{} (cloud) on FEMTO and \xjPicpCloud--\xjPicpEdge{} on XJTU-SY, at the price of wider intervals (MPIW \feMpiwEdge\,s and \xjMpiwCloud\,s). Per-bearing coverage still varied strongly (lowest cloud coverage \feCovMinCloud{} and \xjCovMinCloud), so exchangeability between bearings remains the binding assumption. Fig.~\ref{fig:traj} shows intervals narrowing once degradation is visible, far earlier on XJTU-SY.
+
+
+
+\textit{RQ4: unsafe decisions.} Point estimates with fixed thresholds left \feUnsafePoint\% (FEMTO) and \xjUnsafePoint\% (XJTU-SY) of critical snapshots without a maintenance action, versus \feUnsafeHera\% and \xjUnsafeHera\% for HERA (Table~\ref{tab:policies}); across bearings the reductions were significant ($p$\,\fePHeraPoint, \nobreak$p{=}$\xjPHeraPoint), and so were the increases in false maintenance ($p$\,\fePFmHeraPoint{} on both). Sweeping $\alpha$ or a point margin $\delta$ (Fig.~\ref{fig:tradeoff}a,c) shows that calibrated and margin-adjusted point policies lie close to one frontier: calibration contributes a principled, held-out choice of operating point rather than better attainable decisions.
+
+
+\textit{RQ3 and RQ5: escalation and system trade-off.} On FEMTO, 90\% edge intervals (\feMpiwEdge\,s on a \feRmax\,s range) almost always straddled $\Hp$, so HERA escalated \feEscHera\% of snapshots, sent more payload than always-cloud streaming (\feBytesHera{} vs.\ \feBytesCloud\,B) and gave no decision benefit. On XJTU-SY, HERA escalated \xjEscHera\%, matched always-cloud safety (\xjUnsafeHera\% vs.\ \xjUnsafeCloud\%) with lower false maintenance (\xjFmHera\% vs.\ \xjFmCloud\%), better RMSE (\xjRmsePolHera{} vs.\ \xjRmsePolCloud\,s), \xjBytesHera{} instead of \xjBytesCloud\,B/snapshot and mean latency \xjLatHera{} vs.\ \xjLatCloud\,ms. Two caveats temper this: per bearing, the FM difference to always-cloud was non-zero for only \xjNzFmHeraCloud{} bearings (the gain comes from the two long-lived condition-3 bearings), and the edge-only calibrated policy traced a better frontier than HERA (Fig.~\ref{fig:tradeoff}c) because the conservative edge intervals rarely under-predict. At matched budget, the width gate gave identical results (\xjUnsafeWidth\%/\xjFmWidth\%) and the linear-score gate nearly so (Fig.~\ref{fig:tradeoff}b,d); the anomaly trigger escalated only \xjEscHeraFixed\% (anomaly AUROC \feDetAnomAuroc/\xjDetAnomAuroc). Relaxing $\alpha_e$ to 0.3 reduced escalation to \feEscAlphaThirty\%/\xjEscAlphaThirty\% while unsafe decisions rose to \feUnsafeAlphaThirty\%/\xjUnsafeAlphaThirty\%. Removing the DT context lowered FM on XJTU-SY (\xjFmHeraNoDT\%) at higher unsafe rate (\xjUnsafeHeraNoDT\%), so the DT context is not uniformly beneficial.
+
+
+\textit{Per-bearing timing and sensitivity.} Table~\ref{tab:timing} exposes the main practical limitation: because the 90\% lower bound falls below $\Hp$ early, every calibrated policy raised its first sustained maintenance alarm while the true RUL still exceeded $R_{\max}$ for \fePremHera{} of \feNBearings{} FEMTO and \xjPremHera{} of \xjNBearings{} XJTU-SY bearings, whereas the point policy was late for \feLatePoint{} and \xjLatePoint{} bearings. Neither is acceptable for scheduling; per-snapshot marginal coverage is the wrong target for alarm timing. In all five horizon settings and all four halved/doubled-$R_{\max}$ runs, HERA left fewer critical snapshots without action than the point policy; with a halved cap on XJTU-SY, HERA reached low false maintenance at the always-cloud unsafe rate (Table~\ref{tab:timing}).
+
+\textit{Explainability and oversight.} Expected-gradient SHAP on 300 degradation-phase snapshots ranked low-frequency band energies and the spectral centroid (FEMTO) and the DT fast health-index average and mid- and high-frequency band energies (XJTU-SY) highest; additivity errors were \feShapRel\% and \xjShapRel\% of the explained deviation. An automatically generated card (FEMTO) reads:
 
 \smallskip\noindent\input{tables/card.tex}
 \smallskip
 
-\noindent All fields come from the predictors; the text is a fixed template, not generated by a language model. Because of wide intervals, \apprHera\% of HERA snapshots produced approval requests; this workload would overwhelm operators and shows that calibrated but uninformative intervals shift burden to humans rather than removing it.
+\noindent All fields come from the predictors via a fixed template. Approval requests covered \feApprHera\% (FEMTO) and \xjApprHera\% (XJTU-SY) of HERA snapshots, an operator load that shows calibrated but wide intervals shift burden to humans.
 
-\begin{figure}[t]
-\centering
-\includegraphics[width=\columnwidth]{figures/fig5_shap.pdf}
-\caption{Top-10 mean $|$SHAP$|$ attributions of the fog/cloud median RUL (fold~2, seed~0). Green: DT context; blue/orange: horizontal/vertical vibration features.}
-\label{fig:shap}
-\end{figure}
-
-\textit{Limitations.} One dataset with 17 bearings and abrupt failures; approximate exchangeability; a lightweight state-based rather than physics-based DT; latency measured on a host CPU and communication counted analytically; no industrial deployment and no user study of the explanation cards.
+\textit{Limitations.} Two bearing datasets (32 bearings); approximate exchangeability; a lightweight state-based DT; host-CPU latency and analytic communication; $R_{\max}$ sensitivity with one seed; no deployment and no user study of the explanation cards.
 
 \section{Conclusion}
-HERA-PdM uses calibrated RUL intervals to decide both when an edge device escalates and which maintenance action is recommended, and its gate bounds unsafe edge decisions by the edge miscoverage level. On FEMTO bearings, calibration prevented most unsafe decisions made by point-threshold policies, but the tiny edge model was the most accurate predictor, intervals were too wide for decision-sufficient local resolution, and the gate did not outperform simpler gates or reduce communication. The results suggest that, before routing rules are refined, hierarchical PdM needs features or sensing with longer warning lead times and calibration methods that account for between-asset heterogeneity; evaluating the gate on datasets with gradual degradation is the next step.
+Conformal RUL intervals from cross-fitted calibration removed most unsafe decisions of point-threshold maintenance on two bearing datasets. Using them to gate edge-to-cloud escalation paid off only on gradually degrading bearings, where it matched always-cloud safety with less false maintenance and communication; on abruptly failing bearings it escalated almost everything. The specific decision-sufficiency rule was no better than a width gate, and per-snapshot calibration produced premature bearing-level alarms. Future hierarchical PdM should calibrate alarm timing rather than snapshot coverage and should decide escalation from observed degradation onset.
 
 \bibliographystyle{IEEEtran}
 \bibliography{references}

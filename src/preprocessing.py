@@ -1,4 +1,13 @@
-"""FEMTO-ST / PRONOSTIA (IEEE PHM 2012) preprocessing.
+"""Preprocessing for FEMTO-ST / PRONOSTIA (IEEE PHM 2012) and XJTU-SY bearings.
+
+Usage: python src/preprocessing.py --dataset femto|xjtu
+
+XJTU-SY (Wang et al., IEEE Trans. Reliab. 2020): 15 bearings run to failure
+under 35 Hz/12 kN, 37.5 Hz/11 kN and 40 Hz/10 kN; every minute a 1.28 s
+snapshot (32768 samples @ 25.6 kHz) of horizontal and vertical acceleration.
+The same 28 condition indicators as for FEMTO are extracted.
+
+FEMTO-ST / PRONOSTIA:
 
 Every 10 s the test rig records a 0.1 s snapshot (2560 samples @ 25.6 kHz) of
 horizontal and vertical acceleration. Each snapshot is reduced to a vector of
@@ -83,6 +92,52 @@ def process_bearing(args) -> pd.DataFrame:
     return df
 
 
+XJTU_RAW = ROOT / "data" / "raw" / "XJTU"
+XJTU_CONDITIONS = {1: ("35Hz12kN", 2100, 12000), 2: ("37.5Hz11kN", 2250, 11000), 3: ("40Hz10kN", 2400, 10000)}
+
+
+def read_xjtu(path: Path) -> np.ndarray:
+    return pd.read_csv(path).to_numpy(dtype=float)[:, :2]   # horizontal, vertical
+
+
+def process_xjtu_bearing(args) -> pd.DataFrame:
+    name, folder = args
+    files = sorted(folder.glob("*.csv"), key=lambda p: int(p.stem))   # numeric order (1.csv, 2.csv, ...)
+    rows = []
+    for i, fp in enumerate(files):
+        sig = read_xjtu(fp)
+        feats = {"snapshot": i}
+        feats.update(channel_features(sig[:, 0], "h"))
+        feats.update(channel_features(sig[:, 1], "v"))
+        rows.append(feats)
+    df = pd.DataFrame(rows)
+    T = len(df)
+    df["bearing"] = name
+    df["condition"] = int(name[7])
+    df["time_s"] = df["snapshot"] * 60.0
+    df["rul_s"] = (T - 1 - df["snapshot"]) * 60.0
+    df["life_frac"] = df["snapshot"] / (T - 1)
+    return df
+
+
+def main_xjtu(workers: int):
+    roots = list(XJTU_RAW.rglob("35Hz12kN"))
+    assert roots, "XJTU-SY not extracted under data/raw/XJTU"
+    base = roots[0].parent
+    jobs = []
+    for c, (sub, _, _) in XJTU_CONDITIONS.items():
+        for i in range(1, 6):
+            jobs.append((f"Bearing{c}_{i}", base / sub / f"Bearing{c}_{i}"))
+    with ProcessPoolExecutor(workers) as ex:
+        dfs = list(ex.map(process_xjtu_bearing, jobs))
+    data = pd.concat(dfs, ignore_index=True)
+    data.to_csv(PROC / "xjtu_features.csv.gz", index=False)
+    summary = data.groupby("bearing").agg(condition=("condition", "first"), snapshots=("snapshot", "size"),
+                                          life_s=("time_s", "max")).reset_index()
+    summary.to_csv(PROC / "xjtu_dataset_summary.csv", index=False)
+    print(summary.to_string(index=False))
+
+
 def truncation_points() -> dict:
     """Official challenge cut-off index for each test bearing (len(Test_set))."""
     return {b: len(list((RAW / "Test_set" / b).glob("acc_*.csv"))) for b in TEST_SPLIT}
@@ -91,8 +146,11 @@ def truncation_points() -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--workers", type=int, default=8)
+    ap.add_argument("--dataset", default="femto", choices=["femto", "xjtu"])
     a = ap.parse_args()
     PROC.mkdir(parents=True, exist_ok=True)
+    if a.dataset == "xjtu":
+        return main_xjtu(a.workers)
     jobs = [(b, RAW / "Learning_set" / b) for b in TRAIN_SPLIT] + \
            [(b, RAW / "Full_Test_Set" / b) for b in TEST_SPLIT]
     with ProcessPoolExecutor(a.workers) as ex:

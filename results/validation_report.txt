@@ -1,9 +1,9 @@
 [PASS] 1 missing citations
 [PASS] 2 unreferenced bibliography entries
-[PASS] 3 missing figure files -- 5 figures found
+[PASS] 3 missing figure files -- 3 figures found
 [PASS] 4 missing table values
 [PASS] 5 placeholder values
-[PASS] 6 page count <= 6 -- 5 pages
+[PASS] 6 page count <= 6 -- 6 pages
 [PASS] 7 references within page limit
 [PASS] 8 unresolved LaTeX warnings
 [PASS] 9 numbers consistent with results -- all results numbers via macros

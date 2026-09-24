@@ -1,0 +1,38 @@
+{
+  "CNN-LSTM": {
+    "epochs": 8,
+    "width": 64,
+    "noise": 0.0,
+    "weight_decay": 0.001
+  },
+  "Edge-CNN": {
+    "epochs": 8,
+    "width": 16,
+    "noise": 0.0,
+    "weight_decay": 0.001
+  },
+  "Edge-GRU": {
+    "epochs": 8,
+    "width": 16,
+    "noise": 0.2,
+    "weight_decay": 0.001
+  },
+  "GRU": {
+    "epochs": 8,
+    "width": 64,
+    "noise": 0.2,
+    "weight_decay": 0.001
+  },
+  "LSTM": {
+    "epochs": 8,
+    "width": 64,
+    "noise": 0.0,
+    "weight_decay": 0.001
+  },
+  "TCN": {
+    "epochs": 25,
+    "width": 64,
+    "noise": 0.0,
+    "weight_decay": 0.001
+  }
+}

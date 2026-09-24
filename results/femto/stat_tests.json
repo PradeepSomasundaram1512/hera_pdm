@@ -1,0 +1,51 @@
+{
+  "unsafe_hera_vs_unsafe_point": {
+    "mean_diff": -0.48826743812279005,
+    "median_diff": -0.5573770491803279,
+    "n_bearings": 17,
+    "n_nonzero": 14,
+    "p_wilcoxon": 0.0001220703125
+  },
+  "unsafe_hera_vs_unsafe_cloud": {
+    "mean_diff": 0.006428801028608164,
+    "median_diff": 0.0,
+    "n_bearings": 17,
+    "n_nonzero": 1,
+    "p_wilcoxon": null
+  },
+  "unsafe_hera_vs_unsafe_width": {
+    "mean_diff": 0.0,
+    "median_diff": 0.0,
+    "n_bearings": 17,
+    "n_nonzero": 0,
+    "p_wilcoxon": null
+  },
+  "unsafe_hera_vs_unsafe_edge": {
+    "mean_diff": 0.0,
+    "median_diff": 0.0,
+    "n_bearings": 17,
+    "n_nonzero": 0,
+    "p_wilcoxon": null
+  },
+  "fm_hera_vs_fm_point": {
+    "mean_diff": 0.7626885154917863,
+    "median_diff": 0.7962454212454212,
+    "n_bearings": 17,
+    "n_nonzero": 17,
+    "p_wilcoxon": 1.52587890625e-05
+  },
+  "fm_hera_vs_fm_cloud": {
+    "mean_diff": -0.02684516427127536,
+    "median_diff": 0.0,
+    "n_bearings": 17,
+    "n_nonzero": 7,
+    "p_wilcoxon": 0.015625
+  },
+  "fm_hera_vs_fm_edge": {
+    "mean_diff": -0.01277737666912007,
+    "median_diff": 0.0,
+    "n_bearings": 17,
+    "n_nonzero": 5,
+    "p_wilcoxon": 0.0625
+  }
+}

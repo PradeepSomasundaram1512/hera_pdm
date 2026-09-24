@@ -102,3 +102,10 @@ Crossref + Semantic Scholar (`search_raw/final.json`, 140 records, 128 unique; 1
 * Mondrian (region-conditional) and asymmetric CQR were explored on fold 0 after the first clean run; neither improved decisions. The pre-planned symmetric split CQR was kept as primary; asymmetric CQR is reported as a variant; Mondrian is not reported in the paper.
 * A defect in process management (orphaned workers of the first run writing into the new results folder) was detected via checkpoint metadata; the 10 affected prediction files and one meta file were deleted and regenerated, and all 168 checkpoints and 4 meta files were verified against the final code.
 
+
+## 9. Version 2 changes (after a strict self-review, 2026-09-24)
+* Added XJTU-SY (15 bearings; Wang et al., IEEE Trans. Reliab. 2020) from the dataset author's official Google-Drive mirror, as a gradual-degradation counterpart to FEMTO.
+* Per-architecture hyper-parameter tuning (width 32–128, 8/25 epochs, noise) and architecture selection on inner validation bearings only (previously: shared GRU setting, selection on calibration loss).
+* Calibration upgraded from split CQR (3 bearings) to CQR-CV+ (Barber et al., Ann. Stat. 2021) using all non-test bearings; implementation verified against brute force (max error 5e-13).
+* New analyses: per-bearing first-sustained-alarm timing, horizon sensitivity (5 settings), R_MAX sensitivity (x0.5, x2; seed 0).
+* Findings changed as follows: coverage now meets nominal (0.93–0.99); on XJTU-SY the hierarchy improves on always-cloud (same unsafe rate, lower false maintenance and payload), on FEMTO it does not; the decision-sufficiency gate still equals a width gate; calibrated policies raise premature bearing-level alarms. The claim remains incremental; no superiority claim for the gate is made.

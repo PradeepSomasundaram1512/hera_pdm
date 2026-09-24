@@ -1,9 +1,11 @@
-"""Generate LaTeX tables and numeric macros for the paper from results/.
+"""Generate LaTeX tables and numeric macros for the paper from results/<dataset>/.
 
 Outputs
-  paper/tables/table2_rul.tex       RUL accuracy + calibration (mean ± std over 3 seeds)
-  paper/tables/table3_policies.tex  hierarchical policies, ablations, system cost
-  paper/numbers.tex                 \\newcommand macros for every number quoted in the text
+  paper/tables/table2_rul.tex       RUL accuracy + calibration, both datasets (table*)
+  paper/tables/table3_policies.tex  hierarchical policies and ablations, both datasets (table*)
+  paper/tables/table4_timing.tex    per-bearing alarm timing and sensitivity
+  paper/tables/card.tex             explanation card (FEMTO)
+  paper/numbers.tex                 \\newcommand macros (prefix fe/xj) for every number quoted in the text
 No number in these files is typed by hand.
 """
 import json
@@ -13,9 +15,15 @@ import numpy as np
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
-RES, OUT = ROOT / "results", ROOT / "paper"
+OUT = ROOT / "paper"
 (OUT / "tables").mkdir(parents=True, exist_ok=True)
+DS = {"fe": "femto", "xj": "xjtu"}
 MACROS = {}
+RMAX_GRID = {"femto": [1500, 6000], "xjtu": [3000, 12000]}
+
+
+def R(ds):
+    return ROOT / "results" / ds
 
 
 def pm(mean, std, fmt="{:.0f}"):
@@ -25,176 +33,251 @@ def pm(mean, std, fmt="{:.0f}"):
 
 
 def macro(name, value):
+    assert name.isalpha(), name
     MACROS[name] = value
 
 
-def table2():
-    r = pd.read_csv(RES / "rul_metrics.csv").set_index("model")
-    sysm = json.loads((RES / "system_metrics.json").read_text())
-    sel = json.loads((RES / "selected_models.json").read_text())
-    order = ["Edge-CNN", "Edge-GRU"] + [f"{a}{s}" for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"] for s in ("", "+DT")]
-    lines = [r"\begin{table}[t]", r"\centering",
-             r"\caption{RUL accuracy and calibration on 17 held-out FEMTO bearings (4 bearing-grouped folds; "
-             r"mean$\pm$std over 3 seeds; RUL capped at 3000\,s; nominal coverage 90\%). "
-             r"Raw: uncalibrated quantiles; CQR: conformalized. $^\dagger$selected on calibration bearings.}",
-             r"\label{tab:rul}", r"\setlength{\tabcolsep}{2.6pt}\footnotesize", r"\resizebox{\columnwidth}{!}{%",
-             r"\begin{tabular}{lrcccccc}", r"\toprule",
-             r"Model & Params & RMSE (s) & MAE (s) & Raw cov. & CQR cov. & MPIW (s) & CCE \\", r"\midrule"]
-    for m in order:
-        if m not in r.index:
+def fmt_p(pv):
+    return "n/a" if pv is None else (f"{pv:.3f}" if pv >= 0.001 else "$<$0.001")
+
+
+def rul_tables():
+    rul = {p: pd.read_csv(R(ds) / "rul_metrics.csv") for p, ds in DS.items()}
+    sel = {p: json.loads((R(ds) / "run_info.json").read_text()) for p, ds in DS.items()}
+    sysm = {p: json.loads((R(ds) / "system_metrics.json").read_text()) for p, ds in DS.items()}
+
+    def row(p, model, calib, point=False):
+        d = rul[p]
+        x = d[(d.model == model) & (d.calib == calib)]
+        if x.empty:
+            return ["--"] * 5
+        x = x.iloc[0]
+        if point:
+            return [pm(x.rmse_mean, x.rmse_std), pm(x.mae_mean, x.mae_std), "--", "--", "--"]
+        return [pm(x.rmse_mean, x.rmse_std), pm(x.mae_mean, x.mae_std), f"{x.raw_picp_mean:.2f}",
+                pm(x.picp_mean, x.picp_std, "{:.2f}"), f"{x.mpiw_mean:.0f}"]
+
+    L = [r"\begin{table*}[t]", r"\centering",
+         r"\caption{RUL accuracy and calibration on held-out bearings (mean$\pm$std over 3 seeds; nominal coverage 0.90). "
+         r"Raw: uncalibrated quantiles; split: CQR calibrated on 3 held-out bearings per fold; CV+: CQR-CV+ calibrated "
+         r"on all non-test bearings. Marks: architecture selected on inner-validation pinball loss for FEMTO ($^\dagger$) "
+         r"and XJTU-SY ($^\ast$).}",
+         r"\label{tab:rul}", r"\setlength{\tabcolsep}{3.2pt}\footnotesize",
+         r"\begin{tabular}{l|ccccc|ccccc}", r"\toprule",
+         r" & \multicolumn{5}{c|}{FEMTO/PRONOSTIA (17 bearings, $R_{\max}{=}3000$\,s)} & "
+         r"\multicolumn{5}{c}{XJTU-SY (15 bearings, $R_{\max}{=}6000$\,s)} \\",
+         r"Model & RMSE (s) & MAE (s) & Raw cov. & Cov. & MPIW (s) & RMSE (s) & MAE (s) & Raw cov. & Cov. & MPIW (s) \\",
+         r"\midrule"]
+    models = ["Edge-CNN", "Edge-GRU", None] + [f"{a}{s}" for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"] for s in ("", "+DT")]
+    for m in models:
+        if m is None:
+            L.append(r"\midrule")
             continue
-        x = r.loc[m]
-        tag = m + (r"$^\dagger$" if m in (sel["edge_model"], sel["cloud_model"] + "+DT") else "")
-        params = sysm.get(m, {}).get("params", float("nan"))
-        lines.append(f"{tag} & {params/1e3:.1f}k & {pm(x.rmse_mean, x.rmse_std)} & {pm(x.mae_mean, x.mae_std)} & "
-                     f"{x.raw_picp_mean:.2f} & {pm(x.picp_mean, x.picp_std, '{:.2f}')} & "
-                     f"{pm(x.mpiw_mean, x.mpiw_std)} & {x.cce_mean:.3f} \\\\")
-        if m == "Edge-GRU":
-            lines.append(r"\midrule")
-    lines.append(r"\midrule")
-    for m in [f"{a}+DT-point" for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"]]:
-        if m in r.index:
-            x = r.loc[m]
-            lines.append(f"{m.replace('-point', ' (MSE)')} & -- & {pm(x.rmse_mean, x.rmse_std)} & "
-                         f"{pm(x.mae_mean, x.mae_std)} & -- & -- & -- & -- \\\\")
-    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table}"]
-    (OUT / "tables" / "table2_rul.tex").write_text("\n".join(lines) + "\n")
-    # macros
-    e, c = sel["edge_model"], sel["cloud_model"]
-    for key, m in [("Edge", e), ("Cloud", c + "+DT"), ("CloudNoDT", c)]:
-        x = r.loc[m]
-        macro(f"rmse{key}", f"{x.rmse_mean:.0f}")
-        macro(f"mae{key}", f"{x.mae_mean:.0f}")
-        macro(f"picp{key}", f"{x.picp_mean:.2f}")
-        macro(f"rawpicp{key}", f"{x.raw_picp_mean:.2f}")
-        macro(f"mpiw{key}", f"{x.mpiw_mean:.0f}")
-        macro(f"picpAsym{key}", f"{x.picp_asym_mean:.2f}")
-        macro(f"mpiwAsym{key}", f"{x.mpiw_asym_mean:.0f}")
-        macro(f"cce{key}", f"{x.cce_mean:.3f}")
-        macro(f"covMin{key}", f"{x.picp_bearing_min_mean:.2f}")
-        macro(f"lowMissCrit{key}", f"{100 * x.lower_miss_crit_mean:.0f}")
-    macro("edgeModel", e)
-    macro("cloudModel", c)
-    rr = r.loc[[m for m in order if m in r.index and not m.startswith("Edge")]]
-    best = rr.rmse_mean.idxmin()
-    macro("bestRmseModel", best)
-    macro("bestRmse", f"{rr.rmse_mean.min():.0f}")
-    raw = r.loc[[m for m in order if m in r.index], "raw_picp_mean"]
-    macro("rawCovMin", f"{raw.min():.2f}")
-    macro("rawCovMax", f"{raw.max():.2f}")
-    cq = r.loc[[m for m in order if m in r.index], "picp_mean"]
-    macro("cqrCovMin", f"{cq.min():.2f}")
-    macro("cqrCovMax", f"{cq.max():.2f}")
+        marks = (r"$^\dagger$" if m in (sel["fe"]["edge_model"], sel["fe"]["cloud_model"] + "+DT") else "") + \
+                (r"$^\ast$" if m in (sel["xj"]["edge_model"], sel["xj"]["cloud_model"] + "+DT") else "")
+        L.append(f"{m}{marks} (split) & " + " & ".join(row("fe", m, "split")) + " & "
+                 + " & ".join(row("xj", m, "split")) + r" \\")
+    L.append(r"\midrule")
+    for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"]:
+        m = a + "+DT-point"
+        L.append(f"{a}+DT (MSE point) & " + " & ".join(row("fe", m, "split", True)) + " & "
+                 + " & ".join(row("xj", m, "split", True)) + r" \\")
+    L.append(r"\midrule")
+    for lab, key in [("Selected edge (CV+)", "edge"), ("Selected cloud+DT (CV+)", "cloud_dt"),
+                     ("Selected cloud, no DT (CV+)", "cloud")]:
+        cells = []
+        for p in DS:
+            m = {"edge": sel[p]["edge_model"], "cloud_dt": sel[p]["cloud_model"] + "+DT",
+                 "cloud": sel[p]["cloud_model"]}[key]
+            cells += row(p, m, "cvplus")
+        L.append(f"{lab} & " + " & ".join(cells) + r" \\")
+    L += [r"\bottomrule", r"\end{tabular}", r"\end{table*}"]
+    (OUT / "tables" / "table2_rul.tex").write_text("\n".join(L) + "\n")
+
+    for p in DS:
+        d = rul[p]
+        e, c = sel[p]["edge_model"], sel[p]["cloud_model"]
+        macro(f"{p}EdgeModel", e)
+        macro(f"{p}CloudModel", c)
+        macro(f"{p}NBearings", str(sel[p]["n_bearings"]))
+        macro(f"{p}NSnap", f"{sel[p]['n_snapshots']:,}".replace(",", "{,}"))
+        macro(f"{p}Rmax", f"{sel[p]['r_max']:.0f}")
+        macro(f"{p}Hc", f"{sel[p]['h_crit']:.0f}")
+        macro(f"{p}Hp", f"{sel[p]['h_plan']:.0f}")
+        macro(f"{p}NFolds", str(sel[p]["n_folds"]))
+        for key, m, calib in [("Edge", e, "cvplus"), ("Cloud", c + "+DT", "cvplus"), ("CloudNoDT", c, "cvplus"),
+                              ("EdgeSplit", e, "split"), ("CloudSplit", c + "+DT", "split")]:
+            x = d[(d.model == m) & (d.calib == calib)].iloc[0]
+            macro(f"{p}Rmse{key}", f"{x.rmse_mean:.0f}")
+            macro(f"{p}Mae{key}", f"{x.mae_mean:.0f}")
+            macro(f"{p}Picp{key}", f"{x.picp_mean:.2f}")
+            macro(f"{p}Mpiw{key}", f"{x.mpiw_mean:.0f}")
+            macro(f"{p}RawPicp{key}", f"{x.raw_picp_mean:.2f}")
+            macro(f"{p}Cce{key}", f"{x.cce_mean:.3f}")
+            macro(f"{p}CovLow{key}", f"{x.n_bearing_cov_below_mean:.1f}")
+            macro(f"{p}CovMin{key}", f"{x.picp_bearing_min_mean:.2f}")
+        sp = d[d.calib == "split"]
+        q = sp[~sp.model.str.endswith("point")]
+        cl = q[~q.model.str.startswith("Edge")]
+        macro(f"{p}BestCloudRmse", f"{cl.rmse_mean.min():.0f}")
+        macro(f"{p}BestCloudModel", cl.loc[cl.rmse_mean.idxmin(), "model"])
+        macro(f"{p}WorstCloudRmse", f"{cl.rmse_mean.max():.0f}")
+        macro(f"{p}RawCovMin", f"{q.raw_picp_mean.min():.2f}")
+        macro(f"{p}RawCovMax", f"{q.raw_picp_mean.max():.2f}")
+        macro(f"{p}SplitCovMin", f"{q.picp_mean.min():.2f}")
+        macro(f"{p}SplitCovMax", f"{q.picp_mean.max():.2f}")
+        macro(f"{p}EdgeParams", f"{sysm[p][e]['params'] / 1e3:.1f}k")
+        macro(f"{p}CloudParams", f"{sysm[p][c + '+DT']['params'] / 1e3:.1f}k")
+        macro(f"{p}EdgeLat", f"{sysm[p][e]['median_ms']:.2f}")
+        macro(f"{p}CloudLat", f"{sysm[p][c + '+DT']['median_ms']:.2f}")
+        macro(f"{p}EdgeMacs", f"{sysm[p][e]['macs'] / 1e3:.0f}k")
+        macro(f"{p}CloudMacs", f"{sysm[p][c + '+DT']['macs'] / 1e6:.2f}M")
+        dtg = [sp[sp.model == a + "+DT"].rmse_mean.iloc[0] < sp[sp.model == a].rmse_mean.iloc[0]
+               for a in ["LSTM", "GRU", "TCN", "CNN-LSTM"]]
+        macro(f"{p}DtHelps", str(int(sum(dtg))))
 
 
 POLICY_ORDER = [
-    ("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"),
-    ("Cloud point+threshold", "Cloud point + fixed thr."),
-    ("HERA-full", r"\textbf{HERA-full}"),
-    ("HERA w/o anomaly term", "HERA w/o anomaly term"), ("HERA-no-DT", "HERA-no-DT"),
+    ("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"), ("Cloud point+threshold", "Cloud point + fixed thr."),
+    ("HERA-full", r"\textbf{HERA-full}"), ("HERA w/o anomaly term", "HERA w/o anomaly term"), ("HERA-no-DT", "HERA-no-DT"),
     ("HERA-no-UQ", "HERA-no-UQ (point margin)"), ("HERA-fixed (anomaly trigger)", "HERA-fixed (anomaly trig.)"),
     ("Width gate (matched)", "Width gate$^\\ddagger$"), ("Linear score gate (matched)", "Linear score gate$^\\ddagger$"),
-    ("Random gate (matched)", "Random gate$^\\ddagger$"),
-]
+    ("Random gate (matched)", "Random gate$^\\ddagger$")]
+NAMES = {"Always-edge": "Edge", "Always-cloud": "Cloud", "Cloud point+threshold": "Point", "HERA-full": "Hera",
+         "HERA w/o anomaly term": "HeraNoA", "HERA-no-DT": "HeraNoDT", "HERA-no-UQ": "HeraNoUQ",
+         "HERA-fixed (anomaly trigger)": "HeraFixed", "Width gate (matched)": "Width",
+         "Linear score gate (matched)": "Score", "Random gate (matched)": "Random"}
 
 
-def table3():
-    p = pd.read_csv(RES / "policy_metrics.csv").set_index("policy")
-    lines = [r"\begin{table}[t]", r"\centering",
-             r"\caption{Hierarchical policies, ablations and system cost (all 17 bearings, mean$\pm$std over 3 seeds). "
-             r"Esc.: escalated snapshots; Unsafe: critical snapshots ($y{\le}H_c$) left without maintenance action; "
-             r"FM: false maintenance on healthy snapshots ($y{>}H_p$); B/s: payload bytes per snapshot; "
-             r"Lat.: mean decision latency with an assumed 50\,ms RTT. $^\ddagger$escalation budget matched to HERA "
-             r"on calibration bearings.}",
-             r"\label{tab:policies}", r"\setlength{\tabcolsep}{2.2pt}\footnotesize", r"\resizebox{\columnwidth}{!}{%",
-             r"\begin{tabular}{lcccccc}", r"\toprule",
-             r"Policy & Esc.\,(\%) & Unsafe\,(\%) & FM\,(\%) & RMSE\,(s) & B/s & Lat.\,(ms) \\", r"\midrule"]
+def policy_tables():
+    pol = {p: pd.read_csv(R(ds) / "policy_metrics.csv").set_index("policy") for p, ds in DS.items()}
+    L = [r"\begin{table*}[t]", r"\centering",
+         r"\caption{Hierarchical policies, ablations and system cost (mean$\pm$std over 3 seeds, all held-out bearings). "
+         r"Esc.: escalated snapshots; Unsafe: critical snapshots ($y{\le}H_c$) left without a maintenance action; "
+         r"FM: false maintenance on healthy snapshots ($y{>}H_p$); B/s: payload bytes per snapshot (analytic). "
+         r"$^\ddagger$escalation budget matched to HERA on calibration data.}",
+         r"\label{tab:policies}", r"\setlength{\tabcolsep}{3.4pt}\footnotesize",
+         r"\begin{tabular}{l|ccccc|ccccc}", r"\toprule",
+         r" & \multicolumn{5}{c|}{FEMTO/PRONOSTIA} & \multicolumn{5}{c}{XJTU-SY} \\",
+         r"Policy & Esc.\,(\%) & Unsafe\,(\%) & FM\,(\%) & RMSE\,(s) & B/s & Esc.\,(\%) & Unsafe\,(\%) & FM\,(\%) & RMSE\,(s) & B/s \\",
+         r"\midrule"]
     for key, lab in POLICY_ORDER:
-        if key not in p.index:
-            continue
-        x = p.loc[key]
-        lines.append(f"{lab} & {100 * x.escalation_rate_mean:.1f} & {pm(100 * x.unsafe_rate_mean, 100 * x.unsafe_rate_std, '{:.1f}')} & "
-                     f"{pm(100 * x.false_maint_mean, 100 * x.false_maint_std, '{:.1f}')} & {x.rmse_mean:.0f} & "
-                     f"{x.bytes_per_snapshot_mean:.0f} & {x.latency_mean_ms_mean:.1f} \\\\")
+        cells = []
+        for p in DS:
+            x = pol[p].loc[key]
+            cells += [f"{100 * x.escalation_rate_mean:.1f}",
+                      pm(100 * x.unsafe_rate_mean, 100 * x.unsafe_rate_std, "{:.1f}"),
+                      pm(100 * x.false_maint_mean, 100 * x.false_maint_std, "{:.1f}"), f"{x.rmse_mean:.0f}",
+                      f"{x.bytes_per_snapshot_mean:.0f}"]
+        L.append(f"{lab} & " + " & ".join(cells) + r" \\")
         if key in ("Cloud point+threshold", "HERA-no-DT", "HERA-fixed (anomaly trigger)"):
-            lines.append(r"\midrule")
-    lines += [r"\bottomrule", r"\end{tabular}}", r"\end{table}"]
-    (OUT / "tables" / "table3_policies.tex").write_text("\n".join(lines) + "\n")
-    names = {"Always-edge": "Edge", "Always-cloud": "Cloud", "Cloud point+threshold": "Point", "HERA-full": "Hera",
-             "HERA w/o anomaly term": "HeraNoA", "HERA-no-DT": "HeraNoDT", "HERA-no-UQ": "HeraNoUQ",
-             "HERA-fixed (anomaly trigger)": "HeraFixed", "Width gate (matched)": "Width",
-             "Linear score gate (matched)": "Score", "Random gate (matched)": "Random"}
-    for key, n in names.items():
-        if key not in p.index:
-            continue
-        x = p.loc[key]
-        macro(f"esc{n}", f"{100 * x.escalation_rate_mean:.1f}")
-        macro(f"unsafe{n}", f"{100 * x.unsafe_rate_mean:.1f}")
-        macro(f"missUrg{n}", f"{100 * x.missed_urgent_mean:.1f}")
-        macro(f"fm{n}", f"{100 * x.false_maint_mean:.1f}")
-        macro(f"furg{n}", f"{100 * x.false_urgent_mean:.1f}")
-        macro(f"rmsePol{n}", f"{x.rmse_mean:.0f}")
-        macro(f"bytes{n}", f"{x.bytes_per_snapshot_mean:.1f}")
-        macro(f"lat{n}", f"{x.latency_mean_ms_mean:.1f}")
-        macro(f"kmacs{n}", f"{x.kmacs_per_snapshot_mean:.0f}")
-        macro(f"appr{n}", f"{100 * x.approval_load_mean:.1f}")
-    cb = p.loc["Always-cloud", "bytes_per_snapshot_mean"]
-    macro("commReduction", f"{100 * (1 - p.loc['HERA-full', 'bytes_per_snapshot_mean'] / cb):.0f}")
-    macro("macsReduction", f"{100 * (1 - p.loc['HERA-full', 'kmacs_per_snapshot_mean'] / p.loc['Always-cloud', 'kmacs_per_snapshot_mean']):.0f}")
+            L.append(r"\midrule")
+    L += [r"\bottomrule", r"\end{tabular}", r"\end{table*}"]
+    (OUT / "tables" / "table3_policies.tex").write_text("\n".join(L) + "\n")
+    for p in DS:
+        for key, n in NAMES.items():
+            x = pol[p].loc[key]
+            macro(f"{p}Esc{n}", f"{100 * x.escalation_rate_mean:.1f}")
+            macro(f"{p}Unsafe{n}", f"{100 * x.unsafe_rate_mean:.1f}")
+            macro(f"{p}Fm{n}", f"{100 * x.false_maint_mean:.1f}")
+            macro(f"{p}RmsePol{n}", f"{x.rmse_mean:.0f}")
+            macro(f"{p}Bytes{n}", f"{x.bytes_per_snapshot_mean:.1f}")
+            macro(f"{p}Lat{n}", f"{x.latency_mean_ms_mean:.1f}")
+            macro(f"{p}Kmacs{n}", f"{x.kmacs_per_snapshot_mean:.0f}")
+            macro(f"{p}Appr{n}", f"{100 * x.approval_load_mean:.1f}")
+
+
+def timing_table():
+    tim = {p: pd.read_csv(R(ds) / "alarm_timing.csv").set_index("policy") for p, ds in DS.items()}
+    info = {p: json.loads((R(ds) / "run_info.json").read_text()) for p, ds in DS.items()}
+    order = [("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"), ("Cloud point+threshold", "Point + thr."),
+             ("HERA-full", r"\textbf{HERA-full}"), ("Width gate (matched)", "Width gate")]
+    L = [r"\begin{table}[t]", r"\centering",
+         r"\caption{Top: outcome of each bearing's first sustained (3 snapshots) schedule/urgent recommendation "
+         r"(number of bearings, mean over 3 seeds): T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), "
+         r"P premature (RUL $>R_{\max}$); lead: median RUL at timely alarms (min). Bottom: sensitivity of "
+         r"unsafe/FM (\%) for HERA-full and the point policy to the horizons and to $R_{\max}$.}",
+         r"\label{tab:timing}", r"\setlength{\tabcolsep}{2.6pt}\footnotesize",
+         r"\begin{tabular}{l|cccc|cccc}", r"\toprule",
+         f" & \\multicolumn{{4}}{{c|}}{{FEMTO ({info['fe']['n_bearings']} bearings)}} & "
+         f"\\multicolumn{{4}}{{c}}{{XJTU-SY ({info['xj']['n_bearings']} bearings)}} \\\\",
+         r"Policy & T & L & P & lead & T & L & P & lead \\", r"\midrule"]
+    for key, lab in order:
+        cells = []
+        for p in DS:
+            x = tim[p].loc[key]
+            lead = x.median_lead_timely_s_mean / 60
+            cells += [f"{x.timely_mean:.1f}", f"{x.late_mean:.1f}", f"{x.premature_mean:.1f}",
+                      "--" if np.isnan(lead) else f"{lead:.0f}"]
+            macro(f"{p}Timely{NAMES[key]}", f"{x.timely_mean:.1f}")
+            macro(f"{p}Late{NAMES[key]}", f"{x.late_mean:.1f}")
+            macro(f"{p}Prem{NAMES[key]}", f"{x.premature_mean:.1f}")
+        L.append(f"{lab} & " + " & ".join(cells) + r" \\")
+    L += [r"\midrule", r"Setting & \multicolumn{2}{c}{HERA} & \multicolumn{2}{c|}{Point} & "
+          r"\multicolumn{2}{c}{HERA} & \multicolumn{2}{c}{Point} \\", r"\midrule"]
+    hs = {p: pd.read_csv(R(ds) / "horizon_sensitivity.csv") for p, ds in DS.items()}
+    for fc, fp in [(0.1, 0.4), (0.2, 0.6), (0.3, 0.8)]:
+        cells = []
+        for p in DS:
+            h = hs[p][np.isclose(hs[p].hc_frac, fc) & np.isclose(hs[p].hp_frac, fp)].set_index("policy")
+            cells += [f"\\multicolumn{{2}}{{c}}{{{100 * h.loc['HERA-full', 'unsafe_rate']:.0f}/{100 * h.loc['HERA-full', 'false_maint']:.0f}}}",
+                      f"\\multicolumn{{2}}{{c{'|' if p == 'fe' else ''}}}{{{100 * h.loc['Cloud point+threshold', 'unsafe_rate']:.0f}/"
+                      f"{100 * h.loc['Cloud point+threshold', 'false_maint']:.0f}}}"]
+        L.append(f"$H_c,H_p{{=}}{fc},{fp}R_{{\\max}}$ & " + " & ".join(cells) + r" \\")
+    for mult, lab in [(0, r"$R_{\max}\times\frac12$ (seed 0)"), (1, r"$R_{\max}\times 2$ (seed 0)")]:
+        cells = []
+        for p, ds in DS.items():
+            f = ROOT / "results" / f"{ds}_rmax{RMAX_GRID[ds][mult]}" / "light_summary.json"
+            bar = "|" if p == "fe" else ""
+            if f.exists():
+                pp = {r["policy"]: r for r in json.loads(f.read_text())["policies"]}
+                cells += [f"\\multicolumn{{2}}{{c}}{{{100 * pp['HERA-full']['unsafe_rate']:.0f}/{100 * pp['HERA-full']['false_maint']:.0f}}}",
+                          f"\\multicolumn{{2}}{{c{bar}}}{{{100 * pp['Cloud point+threshold']['unsafe_rate']:.0f}/"
+                          f"{100 * pp['Cloud point+threshold']['false_maint']:.0f}}}"]
+            else:
+                cells += ["\\multicolumn{2}{c}{--}", f"\\multicolumn{{2}}{{c{bar}}}{{--}}"]
+        L.append(f"{lab} & " + " & ".join(cells) + r" \\")
+    L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
+    (OUT / "tables" / "table4_timing.tex").write_text("\n".join(L) + "\n")
 
 
 def other_macros():
-    sysm = json.loads((RES / "system_metrics.json").read_text())
-    sel = json.loads((RES / "selected_models.json").read_text())
-    e, c = sel["edge_model"], sel["cloud_model"] + "+DT"
-    macro("edgeParams", f"{sysm[e]['params'] / 1e3:.1f}k")
-    macro("cloudParams", f"{sysm[c]['params'] / 1e3:.1f}k")
-    macro("edgeMacs", f"{sysm[e]['macs'] / 1e3:.0f}k")
-    macro("cloudMacs", f"{sysm[c]['macs'] / 1e6:.2f}M")
-    macro("edgeLat", f"{sysm[e]['median_ms']:.2f}")
-    macro("cloudLat", f"{sysm[c]['median_ms']:.2f}")
-    macro("rttMs", f"{sysm['assumptions']['rtt_ms']:.0f}")
-    macro("tauAmin", f"{min(sel['tau_a_per_fold']):.1f}")
-    macro("tauAmax", f"{max(sel['tau_a_per_fold']):.1f}")
-    det = pd.read_csv(RES / "detection_metrics.csv").set_index("detector")
-    for key, n in [("Anomaly score $a_t$ (edge)", "Anom"), ("Isolation Forest", "Iso"),
-                   ("Edge CQR lower bound", "EdgeLB"), ("Cloud CQR lower bound (+DT)", "CloudLB")]:
-        x = det.loc[key]
-        for mtr in ["precision", "recall", "f1", "auroc"]:
-            macro(f"det{n}{mtr.capitalize().replace("1", "one")}", f"{x[mtr + '_mean']:.2f}")
-    st = json.loads((RES / "stat_tests.json").read_text())
-    for k, n in [("unsafe_hera_vs_unsafe_point", "HeraPoint"), ("unsafe_hera_vs_unsafe_cloud", "HeraCloud"),
-                 ("unsafe_hera_vs_unsafe_width", "HeraWidth"), ("false_maint_hera_vs_false_maint_point", "FmHeraPoint")]:
-        pv = st[k]["p_wilcoxon"]
-        macro(f"p{n}", "n/a" if pv is None else (f"{pv:.3f}" if pv >= 0.001 else "$<$0.001"))
-        macro(f"nz{n}", str(st[k]["n_nonzero"]))
-    pb = pd.read_csv(RES / "per_bearing.csv")
-    macro("nBearingsCovLow", str(int((pb.coverage < 0.9).sum())))
-    ex = RES / "explanation_cards.json"
-    if ex.exists():
-        macro("shapAdditivity", f"{json.loads(ex.read_text())['additivity_mae_s']:.1f}")
-    cv = pd.read_csv(RES / "tradeoff_curves.csv")
-    g = cv.groupby(["family", "param"]).mean(numeric_only=True).reset_index()
-    h = g[(g.family == "HERA (decision-sufficiency)")].sort_values("param")
-    for al, n in [(0.05, "Five"), (0.3, "Thirty"), (0.5, "Fifty")]:
-        row = h[np.isclose(h.param, al)].iloc[0]
-        macro(f"escAlpha{n}", f"{100 * row.escalation_rate:.1f}")
-        macro(f"unsafeAlpha{n}", f"{100 * row.unsafe_rate:.1f}")
-        macro(f"fmAlpha{n}", f"{100 * row.false_maint:.1f}")
-
-
-def write_macros():
-    lines = ["% Auto-generated by experiments/make_tables.py -- do not edit"]
-    for k, v in sorted(MACROS.items()):
-        assert k.isalpha(), k
-        lines.append(f"\\newcommand{{\\{k}}}{{{v}}}")
-    (OUT / "numbers.tex").write_text("\n".join(lines) + "\n")
-    (RES / "paper_numbers.json").write_text(json.dumps(MACROS, indent=1))
+    for p, ds in DS.items():
+        info = json.loads((R(ds) / "run_info.json").read_text())
+        macro(f"{p}TauMin", f"{min(info['tau_a_per_fold']):.1f}")
+        macro(f"{p}TauMax", f"{max(info['tau_a_per_fold']):.1f}")
+        det = pd.read_csv(R(ds) / "detection_metrics.csv").set_index("detector")
+        for key, n in [("Anomaly score $a_t$ (edge)", "Anom"), ("Isolation Forest", "Iso"),
+                       ("Edge CQR lower bound", "EdgeLB"), ("Cloud CQR lower bound (+DT)", "CloudLB")]:
+            x = det.loc[key]
+            for mtr, mn in [("precision", "Prec"), ("recall", "Rec"), ("f1", "Fone"), ("auroc", "Auroc")]:
+                macro(f"{p}Det{n}{mn}", f"{x[mtr + '_mean']:.2f}")
+        st = json.loads((R(ds) / "stat_tests.json").read_text())
+        for k, n in [("unsafe_hera_vs_unsafe_point", "HeraPoint"), ("unsafe_hera_vs_unsafe_cloud", "HeraCloud"),
+                     ("unsafe_hera_vs_unsafe_width", "HeraWidth"), ("unsafe_hera_vs_unsafe_edge", "HeraEdge"),
+                     ("fm_hera_vs_fm_point", "FmHeraPoint"), ("fm_hera_vs_fm_cloud", "FmHeraCloud"),
+                     ("fm_hera_vs_fm_edge", "FmHeraEdge")]:
+            macro(f"{p}P{n}", fmt_p(st[k]["p_wilcoxon"]))
+            macro(f"{p}Nz{n}", str(st[k]["n_nonzero"]))
+            macro(f"{p}Diff{n}", f"{100 * st[k]['mean_diff']:.1f}")
+        cv = pd.read_csv(R(ds) / "tradeoff_curves.csv")
+        g = cv.groupby(["family", "param"]).mean(numeric_only=True).reset_index()
+        h = g[g.family == "HERA (decision-sufficiency)"]
+        for al, n in [(0.05, "Five"), (0.3, "Thirty"), (0.5, "Fifty")]:
+            r = h[np.isclose(h.param, al)].iloc[0]
+            macro(f"{p}EscAlpha{n}", f"{100 * r.escalation_rate:.1f}")
+            macro(f"{p}UnsafeAlpha{n}", f"{100 * r.unsafe_rate:.1f}")
+            macro(f"{p}FmAlpha{n}", f"{100 * r.false_maint:.1f}")
+        ex = R(ds) / "explanation_cards.json"
+        if ex.exists():
+            e = json.loads(ex.read_text())
+            macro(f"{p}ShapAdd", f"{e['additivity_mae_s']:.1f}")
+            macro(f"{p}ShapRel", f"{100 * e['additivity_rel']:.0f}")
+    macro("rttMs", "50")
 
 
 def card():
-    """Explanation card of the most critical explained snapshot (explainability.py)."""
-    c = json.loads((RES / "explanation_cards.json").read_text())["cards"][0]
+    c = json.loads((R("femto") / "explanation_cards.json").read_text())["cards"][0]
     top = ", ".join(f"{t['feature'].replace('_', chr(92) + '_')} ({t['shap_s']:+.0f}\\,s)" for t in c["top_contributors"])
     lo, hi = c["interval_90pct_s"]
     body = (f"\\textbf{{Asset}} {c['asset'].replace('_', chr(92) + '_')}, snapshot {c['snapshot']}. "
@@ -206,6 +289,13 @@ def card():
     (OUT / "tables" / "card.tex").write_text("\\fbox{\\parbox{0.96\\columnwidth}{\\footnotesize " + body + "}}\n")
 
 
+def write_macros():
+    lines = ["% Auto-generated by experiments/make_tables.py -- do not edit"]
+    lines += [f"\\newcommand{{\\{k}}}{{{v}}}" for k, v in sorted(MACROS.items())]
+    (OUT / "numbers.tex").write_text("\n".join(lines) + "\n")
+    (ROOT / "results" / "paper_numbers.json").write_text(json.dumps(MACROS, indent=1))
+
+
 if __name__ == "__main__":
-    table2(); table3(); other_macros(); write_macros(); card()
+    rul_tables(); policy_tables(); timing_table(); other_macros(); card(); write_macros()
     print(f"{len(MACROS)} macros; tables in paper/tables/")

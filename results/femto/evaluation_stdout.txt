@@ -1,0 +1,90 @@
+            model  calib  rmse_mean  mae_mean  raw_picp_mean  picp_mean  mpiw_mean  cce_mean
+         Edge-CNN  split   1114.306   850.913          0.370      0.883   2079.847     0.035
+         Edge-GRU  split    819.836   518.055          0.706      0.841   1877.268     0.053
+          LSTM+DT  split   1124.339   750.979          0.370      0.844   2153.764     0.072
+             LSTM  split   1207.994   772.108          0.501      0.851   2262.905     0.028
+           GRU+DT  split   1139.614   771.147          0.321      0.892   2285.564     0.076
+              GRU  split   1171.227   751.281          0.400      0.859   2150.585     0.053
+           TCN+DT  split   1153.326   854.602          0.157      0.891   2455.627     0.024
+              TCN  split   1158.939   826.775          0.165      0.849   2241.068     0.036
+      CNN-LSTM+DT  split   1107.744   747.459          0.278      0.885   2354.942     0.069
+         CNN-LSTM  split   1105.754   674.493          0.398      0.850   2119.137     0.056
+    LSTM+DT-point  split   1090.264   779.981            NaN        NaN        NaN       NaN
+     GRU+DT-point  split   1166.416   857.959            NaN        NaN        NaN       NaN
+     TCN+DT-point  split   1231.732   925.483            NaN        NaN        NaN       NaN
+CNN-LSTM+DT-point  split   1134.843   824.801            NaN        NaN        NaN       NaN
+         Edge-GRU cvplus    753.499   500.627          0.753      0.940   2193.234     0.072
+             LSTM cvplus    953.646   653.152          0.350      0.948   2551.216     0.119
+          LSTM+DT cvplus    892.206   665.090          0.278      0.963   2506.489     0.121
+                              escalation_rate  ...  bytes_per_snapshot
+policy                                         ...                    
+Always-edge                             0.000  ...               0.000
+Always-cloud                            1.000  ...             112.000
+Cloud point+threshold                   1.000  ...             112.000
+HERA-full                               0.971  ...             123.004
+HERA w/o anomaly term                   0.971  ...             123.004
+HERA-no-DT                              0.971  ...             123.004
+HERA-no-UQ                              0.481  ...              88.621
+HERA-fixed (anomaly trigger)            0.039  ...              27.151
+Width gate (matched)                    0.972  ...             123.004
+Linear score gate (matched)             0.943  ...             121.134
+Random gate (matched)                   0.964  ...             123.997
+
+[11 rows x 5 columns]
+               policy  timely_mean  timely_std  late_mean  late_std  premature_mean  premature_std  median_lead_timely_s_mean  median_lead_timely_s_std
+         Always-cloud          1.0         0.0       0.00      0.00           16.00           0.00                     2270.0                      0.00
+          Always-edge          1.0         0.0       0.00      0.00           16.00           0.00                     2270.0                      0.00
+Cloud point+threshold          1.0         1.0       5.33      1.15           10.67           0.58                     2372.5                     81.32
+            HERA-full          1.0         0.0       0.00      0.00           16.00           0.00                     2270.0                      0.00
+ Width gate (matched)          1.0         0.0       0.00      0.00           16.00           0.00                     2270.0                      0.00
+{
+ "unsafe_hera_vs_unsafe_point": {
+  "mean_diff": -0.48826743812279005,
+  "median_diff": -0.5573770491803279,
+  "n_bearings": 17,
+  "n_nonzero": 14,
+  "p_wilcoxon": 0.0001220703125
+ },
+ "unsafe_hera_vs_unsafe_cloud": {
+  "mean_diff": 0.006428801028608164,
+  "median_diff": 0.0,
+  "n_bearings": 17,
+  "n_nonzero": 1,
+  "p_wilcoxon": null
+ },
+ "unsafe_hera_vs_unsafe_width": {
+  "mean_diff": 0.0,
+  "median_diff": 0.0,
+  "n_bearings": 17,
+  "n_nonzero": 0,
+  "p_wilcoxon": null
+ },
+ "unsafe_hera_vs_unsafe_edge": {
+  "mean_diff": 0.0,
+  "median_diff": 0.0,
+  "n_bearings": 17,
+  "n_nonzero": 0,
+  "p_wilcoxon": null
+ },
+ "fm_hera_vs_fm_point": {
+  "mean_diff": 0.7626885154917863,
+  "median_diff": 0.7962454212454212,
+  "n_bearings": 17,
+  "n_nonzero": 17,
+  "p_wilcoxon": 1.52587890625e-05
+ },
+ "fm_hera_vs_fm_cloud": {
+  "mean_diff": -0.02684516427127536,
+  "median_diff": 0.0,
+  "n_bearings": 17,
+  "n_nonzero": 7,
+  "p_wilcoxon": 0.015625
+ },
+ "fm_hera_vs_fm_edge": {
+  "mean_diff": -0.01277737666912007,
+  "median_diff": 0.0,
+  "n_bearings": 17,
+  "n_nonzero": 5,
+  "p_wilcoxon": 0.0625
+ }
+}

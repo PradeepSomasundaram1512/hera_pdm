@@ -1,0 +1,29 @@
+{
+  "edge_model": "Edge-CNN",
+  "cloud_model": "GRU",
+  "criterion": "inner-validation pinball loss",
+  "val_pinball": {
+    "CNN-LSTM": 0.11763,
+    "Edge-CNN": 0.07503,
+    "Edge-GRU": 0.08179,
+    "GRU": 0.09979,
+    "LSTM": 0.13207,
+    "TCN": 0.10364
+  },
+  "alpha": 0.1,
+  "tau_quantile": 0.99,
+  "tau_a_per_fold": [
+    38.76778793334961,
+    25.404020309448242,
+    24.693157196044922,
+    37.32508850097656,
+    38.56867980957031
+  ],
+  "dataset": "xjtu",
+  "n_bearings": 15,
+  "n_snapshots": 9216,
+  "r_max": 6000.0,
+  "h_crit": 1200.0,
+  "h_plan": 3600.0,
+  "n_folds": 5
+}

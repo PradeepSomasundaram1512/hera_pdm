@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\caption{Top: outcome of each bearing's first sustained (3 snapshots) schedule/urgent recommendation (number of bearings, mean over 3 seeds): T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), P premature (RUL $>R_{\max}$); lead: median RUL at timely alarms (min). Bottom: sensitivity of unsafe/FM (\%) for HERA-full and the point policy to the horizons and to $R_{\max}$.}
+\label{tab:timing}
+\setlength{\tabcolsep}{2.6pt}\footnotesize
+\begin{tabular}{l|cccc|cccc}
+\toprule
+ & \multicolumn{4}{c|}{FEMTO (17 bearings)} & \multicolumn{4}{c}{XJTU-SY (15 bearings)} \\
+Policy & T & L & P & lead & T & L & P & lead \\
+\midrule
+Always-edge & 1.0 & 0.0 & 16.0 & 38 & 2.0 & 0.0 & 13.0 & 44 \\
+Always-cloud & 1.0 & 0.0 & 16.0 & 38 & 1.0 & 1.0 & 13.0 & 49 \\
+Point + thr. & 1.0 & 5.3 & 10.7 & 40 & 5.0 & 4.0 & 6.0 & 54 \\
+\textbf{HERA-full} & 1.0 & 0.0 & 16.0 & 38 & 1.0 & 1.0 & 13.0 & 49 \\
+Width gate & 1.0 & 0.0 & 16.0 & 38 & 1.0 & 1.0 & 13.0 & 49 \\
+\midrule
+Setting & \multicolumn{2}{c}{HERA} & \multicolumn{2}{c|}{Point} & \multicolumn{2}{c}{HERA} & \multicolumn{2}{c}{Point} \\
+\midrule
+$H_c,H_p{=}0.1,0.4R_{\max}$ & \multicolumn{2}{c}{13/68} & \multicolumn{2}{c|}{54/15} & \multicolumn{2}{c}{16/15} & \multicolumn{2}{c}{50/5} \\
+$H_c,H_p{=}0.2,0.6R_{\max}$ & \multicolumn{2}{c}{1/95} & \multicolumn{2}{c|}{49/22} & \multicolumn{2}{c}{9/53} & \multicolumn{2}{c}{34/8} \\
+$H_c,H_p{=}0.3,0.8R_{\max}$ & \multicolumn{2}{c}{0/100} & \multicolumn{2}{c|}{37/39} & \multicolumn{2}{c}{2/81} & \multicolumn{2}{c}{23/42} \\
+$R_{\max}\times\frac12$ (seed 0) & \multicolumn{2}{c}{24/24} & \multicolumn{2}{c|}{31/23} & \multicolumn{2}{c}{6/21} & \multicolumn{2}{c}{54/5} \\
+$R_{\max}\times 2$ (seed 0) & \multicolumn{2}{c}{0/100} & \multicolumn{2}{c|}{19/39} & \multicolumn{2}{c}{0/77} & \multicolumn{2}{c}{21/31} \\
+\bottomrule
+\end{tabular}
+\end{table}

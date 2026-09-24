@@ -1,0 +1,13 @@
+{
+  "edge_model": "Edge-GRU",
+  "cloud_model": "LSTM",
+  "criterion": "inner-validation pinball loss",
+  "val_pinball": {
+    "CNN-LSTM": 0.05723,
+    "Edge-CNN": 0.07797,
+    "Edge-GRU": 0.03896,
+    "GRU": 0.0525,
+    "LSTM": 0.0469,
+    "TCN": 0.04895
+  }
+}

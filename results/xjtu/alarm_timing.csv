@@ -1,0 +1,6 @@
+policy,timely_mean,timely_std,late_mean,late_std,premature_mean,premature_std,median_lead_timely_s_mean,median_lead_timely_s_std
+Always-cloud,1.0,0.0,1.0,0.0,13.0,0.0,2940.0,0.0
+Always-edge,2.0,0.0,0.0,0.0,13.0,0.0,2640.0,0.0
+Cloud point+threshold,5.0,1.0,4.0,1.0,6.0,0.0,3260.0,1206.1094477699776
+HERA-full,1.0,0.0,1.0,0.0,13.0,0.0,2940.0,0.0
+Width gate (matched),1.0,0.0,1.0,0.0,13.0,0.0,2940.0,0.0

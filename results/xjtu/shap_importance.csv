@@ -1,0 +1,35 @@
+name,mean_abs_shap_s,group
+DT:hi_fast,725.1062539945796,DT context
+v_band4_6k,630.370829831442,vertical
+v_band1_2k,509.5472826456971,vertical
+h_band8_12k,478.21543857596913,horizontal
+v_band8_12k,462.7723597726923,vertical
+h_band1_2k,460.68383585652657,horizontal
+h_band4_6k,377.5441698036785,horizontal
+h_skew,359.12959375158954,horizontal
+v_rms,339.50800416746426,vertical
+h_band2_4k,322.2626681486698,horizontal
+DT:hi_runmax,320.2602482488138,DT context
+DT:excess_int,311.17494172115414,DT context
+v_band0_1k,298.9954124765463,vertical
+h_band6_8k,297.08128556926334,horizontal
+DT:hi_slow,242.82892676703815,DT context
+v_shape,201.59843815174293,vertical
+v_p2p,191.95129271283088,vertical
+h_shape,188.99427789568028,horizontal
+h_rms,186.68267548977227,horizontal
+h_kurt,186.44947085875597,horizontal
+v_kurt,171.77153839271728,vertical
+h_band0_1k,170.31605413833194,horizontal
+h_p2p,147.0576560329161,horizontal
+v_impulse,126.19984183020307,vertical
+h_impulse,124.04554058793062,horizontal
+v_crest,121.40586307908367,vertical
+v_skew,119.92279047485157,vertical
+v_band6_8k,118.22540965174339,vertical
+h_centroid,109.43024030965113,horizontal
+DT:hi_slope,96.4281191391118,DT context
+v_band2_4k,88.90160623690457,vertical
+v_centroid,81.34241390703392,vertical
+DT:hi_trend,73.39810872353074,DT context
+h_crest,26.662470744086644,horizontal

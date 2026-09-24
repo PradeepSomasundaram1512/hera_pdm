@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 import numpy as np
 import pandas as pd
 
-from utils import BASELINE_N, SNAPSHOT_S
+from utils import BASELINE_N, EWMA_FAST, EWMA_SLOW, SLOPE_K, SNAPSHOT_S
 
 # Elapsed operating time is deliberately excluded: bearing lifetimes span
 # 2.3e3-2.8e4 s, so absolute age is a non-transferable shortcut.
@@ -49,17 +49,17 @@ def anomaly_score(hi: np.ndarray, n: int = BASELINE_N) -> np.ndarray:
     device). Standardizing by the spread of the *raw* baseline avoids the
     over-sensitivity of dividing by the (much smaller) spread of a smoothed
     baseline. The alarm threshold is calibrated on training assets."""
-    f = ewma(hi, 6)
+    f = ewma(hi, EWMA_FAST)
     return (f - hi[:n].mean()) / (hi[:n].std() + 1e-6)
 
 
 def context_features(hi: np.ndarray) -> np.ndarray:
     """Threshold-free long-horizon degradation context maintained by the twin."""
     T = len(hi)
-    fast, slow = ewma(hi, 6), ewma(hi, 60)
+    fast, slow = ewma(hi, EWMA_FAST), ewma(hi, EWMA_SLOW)
     runmax = np.maximum.accumulate(fast)
     slope = np.zeros(T)
-    k = 30
+    k = SLOPE_K
     tt = np.arange(k) - (k - 1) / 2
     for t in range(k, T):
         slope[t] = (tt * fast[t - k + 1:t + 1]).sum() / (tt ** 2).sum()

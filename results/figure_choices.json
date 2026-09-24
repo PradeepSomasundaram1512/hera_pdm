@@ -1,9 +1,11 @@
 {
-  "fig3_bearings": [
-    "Bearing1_1",
-    "Bearing1_2",
-    "Bearing3_2"
-  ],
-  "fig2_bearing": "Bearing1_1",
-  "rule": "Deterministic choice of illustrated bearings: the three test bearings with\nthe most degradation-region snapshots (seed 0), and for Fig. 2 the bearing\nwith the median escalation rate among them. Not chosen by performance."
+  "trajectories": {
+    "femto": [
+      "Bearing1_1"
+    ],
+    "xjtu": [
+      "Bearing1_1"
+    ]
+  },
+  "rule": "Deterministic choice of illustrated bearings: the two test bearings with the\nmost degradation-region snapshots (seed 0). Not chosen by performance."
 }

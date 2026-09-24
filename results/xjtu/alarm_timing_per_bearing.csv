@@ -1,0 +1,226 @@
+bearing,rul_at_alarm_s,outcome,policy,seed
+Bearing1_1,7200.0,premature,Always-edge,0
+Bearing1_2,9480.0,premature,Always-edge,0
+Bearing1_3,9300.0,premature,Always-edge,0
+Bearing1_4,7140.0,premature,Always-edge,0
+Bearing1_5,2940.0,timely,Always-edge,0
+Bearing2_1,29280.0,premature,Always-edge,0
+Bearing2_2,9480.0,premature,Always-edge,0
+Bearing2_3,31800.0,premature,Always-edge,0
+Bearing2_4,2340.0,timely,Always-edge,0
+Bearing2_5,20160.0,premature,Always-edge,0
+Bearing3_1,152100.0,premature,Always-edge,0
+Bearing3_2,149580.0,premature,Always-edge,0
+Bearing3_3,22080.0,premature,Always-edge,0
+Bearing3_4,90720.0,premature,Always-edge,0
+Bearing3_5,6660.0,premature,Always-edge,0
+Bearing1_1,6840.0,premature,Always-cloud,0
+Bearing1_2,9480.0,premature,Always-cloud,0
+Bearing1_3,9300.0,premature,Always-cloud,0
+Bearing1_4,7140.0,premature,Always-cloud,0
+Bearing1_5,2940.0,timely,Always-cloud,0
+Bearing2_1,29280.0,premature,Always-cloud,0
+Bearing2_2,9480.0,premature,Always-cloud,0
+Bearing2_3,31680.0,premature,Always-cloud,0
+Bearing2_4,540.0,late,Always-cloud,0
+Bearing2_5,18900.0,premature,Always-cloud,0
+Bearing3_1,152100.0,premature,Always-cloud,0
+Bearing3_2,149100.0,premature,Always-cloud,0
+Bearing3_3,22080.0,premature,Always-cloud,0
+Bearing3_4,90120.0,premature,Always-cloud,0
+Bearing3_5,6660.0,premature,Always-cloud,0
+Bearing1_1,2460.0,timely,Cloud point+threshold,0
+Bearing1_2,9480.0,premature,Cloud point+threshold,0
+Bearing1_3,2520.0,timely,Cloud point+threshold,0
+Bearing1_4,,late,Cloud point+threshold,0
+Bearing1_5,780.0,late,Cloud point+threshold,0
+Bearing2_1,1980.0,timely,Cloud point+threshold,0
+Bearing2_2,9480.0,premature,Cloud point+threshold,0
+Bearing2_3,13080.0,premature,Cloud point+threshold,0
+Bearing2_4,60.0,late,Cloud point+threshold,0
+Bearing2_5,10080.0,premature,Cloud point+threshold,0
+Bearing3_1,152100.0,premature,Cloud point+threshold,0
+Bearing3_2,147780.0,premature,Cloud point+threshold,0
+Bearing3_3,1500.0,timely,Cloud point+threshold,0
+Bearing3_4,4080.0,timely,Cloud point+threshold,0
+Bearing3_5,2640.0,timely,Cloud point+threshold,0
+Bearing1_1,6840.0,premature,HERA-full,0
+Bearing1_2,9480.0,premature,HERA-full,0
+Bearing1_3,9300.0,premature,HERA-full,0
+Bearing1_4,7140.0,premature,HERA-full,0
+Bearing1_5,2940.0,timely,HERA-full,0
+Bearing2_1,29280.0,premature,HERA-full,0
+Bearing2_2,9480.0,premature,HERA-full,0
+Bearing2_3,31680.0,premature,HERA-full,0
+Bearing2_4,540.0,late,HERA-full,0
+Bearing2_5,18900.0,premature,HERA-full,0
+Bearing3_1,152100.0,premature,HERA-full,0
+Bearing3_2,149100.0,premature,HERA-full,0
+Bearing3_3,22080.0,premature,HERA-full,0
+Bearing3_4,90120.0,premature,HERA-full,0
+Bearing3_5,6660.0,premature,HERA-full,0
+Bearing1_1,6840.0,premature,Width gate (matched),0
+Bearing1_2,9480.0,premature,Width gate (matched),0
+Bearing1_3,9300.0,premature,Width gate (matched),0
+Bearing1_4,7140.0,premature,Width gate (matched),0
+Bearing1_5,2940.0,timely,Width gate (matched),0
+Bearing2_1,29280.0,premature,Width gate (matched),0
+Bearing2_2,9480.0,premature,Width gate (matched),0
+Bearing2_3,31680.0,premature,Width gate (matched),0
+Bearing2_4,540.0,late,Width gate (matched),0
+Bearing2_5,18900.0,premature,Width gate (matched),0
+Bearing3_1,152100.0,premature,Width gate (matched),0
+Bearing3_2,149100.0,premature,Width gate (matched),0
+Bearing3_3,22080.0,premature,Width gate (matched),0
+Bearing3_4,90120.0,premature,Width gate (matched),0
+Bearing3_5,6660.0,premature,Width gate (matched),0
+Bearing1_1,7200.0,premature,Always-edge,1
+Bearing1_2,9480.0,premature,Always-edge,1
+Bearing1_3,9300.0,premature,Always-edge,1
+Bearing1_4,7140.0,premature,Always-edge,1
+Bearing1_5,2940.0,timely,Always-edge,1
+Bearing2_1,29280.0,premature,Always-edge,1
+Bearing2_2,9480.0,premature,Always-edge,1
+Bearing2_3,31800.0,premature,Always-edge,1
+Bearing2_4,2340.0,timely,Always-edge,1
+Bearing2_5,20160.0,premature,Always-edge,1
+Bearing3_1,152100.0,premature,Always-edge,1
+Bearing3_2,149580.0,premature,Always-edge,1
+Bearing3_3,22080.0,premature,Always-edge,1
+Bearing3_4,90720.0,premature,Always-edge,1
+Bearing3_5,6660.0,premature,Always-edge,1
+Bearing1_1,6840.0,premature,Always-cloud,1
+Bearing1_2,9480.0,premature,Always-cloud,1
+Bearing1_3,8880.0,premature,Always-cloud,1
+Bearing1_4,7140.0,premature,Always-cloud,1
+Bearing1_5,2940.0,timely,Always-cloud,1
+Bearing2_1,29280.0,premature,Always-cloud,1
+Bearing2_2,9480.0,premature,Always-cloud,1
+Bearing2_3,31620.0,premature,Always-cloud,1
+Bearing2_4,1020.0,late,Always-cloud,1
+Bearing2_5,10980.0,premature,Always-cloud,1
+Bearing3_1,152100.0,premature,Always-cloud,1
+Bearing3_2,149580.0,premature,Always-cloud,1
+Bearing3_3,22080.0,premature,Always-cloud,1
+Bearing3_4,87480.0,premature,Always-cloud,1
+Bearing3_5,6660.0,premature,Always-cloud,1
+Bearing1_1,780.0,late,Cloud point+threshold,1
+Bearing1_2,9480.0,premature,Cloud point+threshold,1
+Bearing1_3,5040.0,timely,Cloud point+threshold,1
+Bearing1_4,,late,Cloud point+threshold,1
+Bearing1_5,,late,Cloud point+threshold,1
+Bearing2_1,2100.0,timely,Cloud point+threshold,1
+Bearing2_2,9480.0,premature,Cloud point+threshold,1
+Bearing2_3,12480.0,premature,Cloud point+threshold,1
+Bearing2_4,180.0,late,Cloud point+threshold,1
+Bearing2_5,11280.0,premature,Cloud point+threshold,1
+Bearing3_1,152100.0,premature,Cloud point+threshold,1
+Bearing3_2,148080.0,premature,Cloud point+threshold,1
+Bearing3_3,1380.0,timely,Cloud point+threshold,1
+Bearing3_4,5520.0,timely,Cloud point+threshold,1
+Bearing3_5,2640.0,timely,Cloud point+threshold,1
+Bearing1_1,6840.0,premature,HERA-full,1
+Bearing1_2,9480.0,premature,HERA-full,1
+Bearing1_3,8880.0,premature,HERA-full,1
+Bearing1_4,7140.0,premature,HERA-full,1
+Bearing1_5,2940.0,timely,HERA-full,1
+Bearing2_1,29280.0,premature,HERA-full,1
+Bearing2_2,9480.0,premature,HERA-full,1
+Bearing2_3,31620.0,premature,HERA-full,1
+Bearing2_4,1020.0,late,HERA-full,1
+Bearing2_5,10980.0,premature,HERA-full,1
+Bearing3_1,152100.0,premature,HERA-full,1
+Bearing3_2,149580.0,premature,HERA-full,1
+Bearing3_3,22080.0,premature,HERA-full,1
+Bearing3_4,87480.0,premature,HERA-full,1
+Bearing3_5,6660.0,premature,HERA-full,1
+Bearing1_1,6840.0,premature,Width gate (matched),1
+Bearing1_2,9480.0,premature,Width gate (matched),1
+Bearing1_3,8880.0,premature,Width gate (matched),1
+Bearing1_4,7140.0,premature,Width gate (matched),1
+Bearing1_5,2940.0,timely,Width gate (matched),1
+Bearing2_1,29280.0,premature,Width gate (matched),1
+Bearing2_2,9480.0,premature,Width gate (matched),1
+Bearing2_3,31620.0,premature,Width gate (matched),1
+Bearing2_4,1020.0,late,Width gate (matched),1
+Bearing2_5,10980.0,premature,Width gate (matched),1
+Bearing3_1,152100.0,premature,Width gate (matched),1
+Bearing3_2,149580.0,premature,Width gate (matched),1
+Bearing3_3,22080.0,premature,Width gate (matched),1
+Bearing3_4,87480.0,premature,Width gate (matched),1
+Bearing3_5,6660.0,premature,Width gate (matched),1
+Bearing1_1,7200.0,premature,Always-edge,2
+Bearing1_2,9480.0,premature,Always-edge,2
+Bearing1_3,9300.0,premature,Always-edge,2
+Bearing1_4,7140.0,premature,Always-edge,2
+Bearing1_5,2940.0,timely,Always-edge,2
+Bearing2_1,29280.0,premature,Always-edge,2
+Bearing2_2,9480.0,premature,Always-edge,2
+Bearing2_3,31800.0,premature,Always-edge,2
+Bearing2_4,2340.0,timely,Always-edge,2
+Bearing2_5,20160.0,premature,Always-edge,2
+Bearing3_1,152100.0,premature,Always-edge,2
+Bearing3_2,149580.0,premature,Always-edge,2
+Bearing3_3,22080.0,premature,Always-edge,2
+Bearing3_4,90720.0,premature,Always-edge,2
+Bearing3_5,6660.0,premature,Always-edge,2
+Bearing1_1,6840.0,premature,Always-cloud,2
+Bearing1_2,9480.0,premature,Always-cloud,2
+Bearing1_3,8700.0,premature,Always-cloud,2
+Bearing1_4,7140.0,premature,Always-cloud,2
+Bearing1_5,2940.0,timely,Always-cloud,2
+Bearing2_1,29280.0,premature,Always-cloud,2
+Bearing2_2,9480.0,premature,Always-cloud,2
+Bearing2_3,31620.0,premature,Always-cloud,2
+Bearing2_4,480.0,late,Always-cloud,2
+Bearing2_5,11040.0,premature,Always-cloud,2
+Bearing3_1,152100.0,premature,Always-cloud,2
+Bearing3_2,149580.0,premature,Always-cloud,2
+Bearing3_3,21360.0,premature,Always-cloud,2
+Bearing3_4,87360.0,premature,Always-cloud,2
+Bearing3_5,6660.0,premature,Always-cloud,2
+Bearing1_1,,late,Cloud point+threshold,2
+Bearing1_2,9480.0,premature,Cloud point+threshold,2
+Bearing1_3,4500.0,timely,Cloud point+threshold,2
+Bearing1_4,,late,Cloud point+threshold,2
+Bearing1_5,840.0,late,Cloud point+threshold,2
+Bearing2_1,2040.0,timely,Cloud point+threshold,2
+Bearing2_2,9480.0,premature,Cloud point+threshold,2
+Bearing2_3,13620.0,premature,Cloud point+threshold,2
+Bearing2_4,180.0,late,Cloud point+threshold,2
+Bearing2_5,10320.0,premature,Cloud point+threshold,2
+Bearing3_1,139260.0,premature,Cloud point+threshold,2
+Bearing3_2,149580.0,premature,Cloud point+threshold,2
+Bearing3_3,480.0,late,Cloud point+threshold,2
+Bearing3_4,5520.0,timely,Cloud point+threshold,2
+Bearing3_5,4800.0,timely,Cloud point+threshold,2
+Bearing1_1,6840.0,premature,HERA-full,2
+Bearing1_2,9480.0,premature,HERA-full,2
+Bearing1_3,8700.0,premature,HERA-full,2
+Bearing1_4,7140.0,premature,HERA-full,2
+Bearing1_5,2940.0,timely,HERA-full,2
+Bearing2_1,29280.0,premature,HERA-full,2
+Bearing2_2,9480.0,premature,HERA-full,2
+Bearing2_3,31620.0,premature,HERA-full,2
+Bearing2_4,480.0,late,HERA-full,2
+Bearing2_5,11040.0,premature,HERA-full,2
+Bearing3_1,152100.0,premature,HERA-full,2
+Bearing3_2,149580.0,premature,HERA-full,2
+Bearing3_3,21360.0,premature,HERA-full,2
+Bearing3_4,87360.0,premature,HERA-full,2
+Bearing3_5,6660.0,premature,HERA-full,2
+Bearing1_1,6840.0,premature,Width gate (matched),2
+Bearing1_2,9480.0,premature,Width gate (matched),2
+Bearing1_3,8700.0,premature,Width gate (matched),2
+Bearing1_4,7140.0,premature,Width gate (matched),2
+Bearing1_5,2940.0,timely,Width gate (matched),2
+Bearing2_1,29280.0,premature,Width gate (matched),2
+Bearing2_2,9480.0,premature,Width gate (matched),2
+Bearing2_3,31620.0,premature,Width gate (matched),2
+Bearing2_4,480.0,late,Width gate (matched),2
+Bearing2_5,11040.0,premature,Width gate (matched),2
+Bearing3_1,152100.0,premature,Width gate (matched),2
+Bearing3_2,149580.0,premature,Width gate (matched),2
+Bearing3_3,21360.0,premature,Width gate (matched),2
+Bearing3_4,87360.0,premature,Width gate (matched),2
+Bearing3_5,6660.0,premature,Width gate (matched),2

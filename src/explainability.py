@@ -24,7 +24,7 @@ from digital_twin import CONTEXT_NAMES, build_asset, feature_columns  # noqa: E4
 from escalation import ACTION_NAMES, HIGH_IMPACT, decide  # noqa: E402
 from prognostics import WindowData, build_model  # noqa: E402
 from uncertainty import calibrate  # noqa: E402
-from utils import ALPHA, PROC, R_MAX, RESULTS, W_CLOUD, fold_split  # noqa: E402
+from utils import FEATURES, ALPHA, PROC, R_MAX, RESULTS, W_CLOUD, fold_split  # noqa: E402
 
 
 class MedianWrapper(torch.nn.Module):
@@ -43,7 +43,7 @@ def shap_values(model, data: WindowData, idx, bg_idx, seed=0):
     xb, cb, _ = data.batch(torch.as_tensor(bg_idx))
     xs, cs, _ = data.batch(torch.as_tensor(idx))
     ex = shap.GradientExplainer(MedianWrapper(model), [xb, cb])
-    sv = ex.shap_values([xs, cs], nsamples=200, rseed=seed)
+    sv = ex.shap_values([xs, cs], nsamples=1000, rseed=seed)
     sx, sc = sv[0], sv[1]
     return np.asarray(sx).reshape(len(idx), W_CLOUD, -1), np.asarray(sc).reshape(len(idx), -1)
 
@@ -67,7 +67,7 @@ def explanation_card(asset, t, I, a, top, action, tau=3.0) -> dict:
 def main(fold=2, seed=0, arch=None, n_explain=300):
     sel = json.loads((RESULTS / "selected_models.json").read_text())
     arch = arch or sel["cloud_model"]
-    df = pd.read_csv(PROC / "femto_features.csv.gz")
+    df = pd.read_csv(FEATURES)
     feats = feature_columns(df)
     assets = {b: build_asset(g.reset_index(drop=True), feats) for b, g in df.groupby("bearing")}
     train, calib, test = fold_split(fold, sorted(assets))
@@ -111,7 +111,8 @@ def main(fold=2, seed=0, arch=None, n_explain=300):
         k = idx[j]
         cards.append(explanation_card(str(m["test_bearing"][k]), m["test_t"][k], I[k], m["test_a"][k], top, act[j], tau))
     out = {"fold": fold, "seed": seed, "model": f"{arch}+DT", "n_explained": int(len(idx)),
-           "additivity_mae_s": float(np.abs(resid).mean()), "cards": cards}
+           "additivity_mae_s": float(np.abs(resid).mean()),
+           "additivity_rel": float(np.abs(resid).mean() / (np.abs(f_x - f_b).mean() + 1e-9)), "cards": cards}
     (RESULTS / "explanation_cards.json").write_text(json.dumps(out, indent=2))
     print(imp.sort_values("mean_abs_shap_s", ascending=False).head(12).to_string(index=False))
     print(json.dumps(out, indent=1)[:2500])

@@ -1,0 +1,94 @@
+{
+  "r_max": 6000.0,
+  "h_crit": 1200.0,
+  "h_plan": 3600.0,
+  "policies": [
+    {
+      "policy": "Always-edge",
+      "unsafe_rate": 0.0,
+      "missed_urgent": 0.16140009722897422,
+      "false_urgent": 0.7078324418789387,
+      "false_maint": 0.9985171847693692,
+      "action_acc": 0.0894371007272289,
+      "approval_load": 0.998875005022299,
+      "escalation_rate": 0.0,
+      "rmse": 1954.11962890625
+    },
+    {
+      "policy": "Always-cloud",
+      "unsafe_rate": 0.0,
+      "missed_urgent": 0.00583373845405931,
+      "false_urgent": 0.7799608113117619,
+      "false_maint": 1.0,
+      "action_acc": 0.08678532685121941,
+      "approval_load": 1.0,
+      "escalation_rate": 1.0,
+      "rmse": 2216.860107421875
+    },
+    {
+      "policy": "Cloud point+threshold",
+      "unsafe_rate": 0.1920272241127856,
+      "missed_urgent": 0.6820612542537676,
+      "false_urgent": 0.11449451887941535,
+      "false_maint": 0.38865646348567495,
+      "action_acc": 0.5649885491582627,
+      "approval_load": 0.4863996142874362,
+      "escalation_rate": 1.0,
+      "rmse": 2464.034423828125
+    },
+    {
+      "policy": "HERA-full",
+      "unsafe_rate": 0.0,
+      "missed_urgent": 0.00583373845405931,
+      "false_urgent": 0.7799608113117619,
+      "false_maint": 0.9985171847693692,
+      "action_acc": 0.0879103218289204,
+      "approval_load": 0.998875005022299,
+      "escalation_rate": 0.998875005022299,
+      "rmse": 2216.860107421875
+    },
+    {
+      "policy": "Width gate (matched)",
+      "unsafe_rate": 0.0,
+      "missed_urgent": 0.00583373845405931,
+      "false_urgent": 0.7799608113117619,
+      "false_maint": 0.9985171847693692,
+      "action_acc": 0.0879103218289204,
+      "approval_load": 0.998875005022299,
+      "escalation_rate": 0.998875005022299,
+      "rmse": 2216.860107421875
+    }
+  ],
+  "rul": [
+    {
+      "model": "Edge-GRU",
+      "rmse": 1955.0875244140625,
+      "mae": 1549.2779541015625,
+      "rmse_deg": 2210.827392578125,
+      "raw_picp": 0.4873237173048335,
+      "picp": 0.928884246052473,
+      "mpiw": 5240.78759765625,
+      "nmpiw": 0.8734645843505859,
+      "interval_score": 6279.40673828125,
+      "lower_miss_crit": 0.22168206125425377,
+      "cce": 0.04357125637831975,
+      "picp_bearing_min": 0.13043478260869565,
+      "n_bearing_cov_below": 4.0
+    },
+    {
+      "model": "LSTM+DT",
+      "rmse": 2218.968505859375,
+      "mae": 1790.010009765625,
+      "rmse_deg": 2050.525146484375,
+      "raw_picp": 0.18076258588131303,
+      "picp": 0.9703885250512274,
+      "mpiw": 5532.12353515625,
+      "nmpiw": 0.9220206141471863,
+      "interval_score": 5788.69580078125,
+      "lower_miss_crit": 0.04521147301895965,
+      "cce": 0.08822672666639882,
+      "picp_bearing_min": 0.391304347826087,
+      "n_bearing_cov_below": 3.0
+    }
+  ]
+}

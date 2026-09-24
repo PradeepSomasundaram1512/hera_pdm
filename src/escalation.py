@@ -24,11 +24,20 @@ CONTINUE, INSPECT, SCHEDULE, URGENT = 0, 1, 2, 3
 ACTION_NAMES = {CONTINUE: "continue operation", INSPECT: "inspect", SCHEDULE: "schedule maintenance",
                 URGENT: "urgent maintenance"}
 HIGH_IMPACT = {SCHEDULE, URGENT}   # require human authorization
-BOUNDARIES = (H_CRIT, H_PLAN)
+_H = {"c": H_CRIT, "p": H_PLAN}
+
+
+def set_horizons(h_crit: float, h_plan: float) -> None:
+    """Override the decision horizons (used only by the sensitivity analysis)."""
+    _H["c"], _H["p"] = float(h_crit), float(h_plan)
+
+
+def boundaries():
+    return (_H["c"], _H["p"])
 
 
 def region(v: np.ndarray) -> np.ndarray:
-    return np.where(v <= H_CRIT, URGENT, np.where(v <= H_PLAN, SCHEDULE, CONTINUE))
+    return np.where(v <= _H["c"], URGENT, np.where(v <= _H["p"], SCHEDULE, CONTINUE))
 
 
 def decide(I: np.ndarray, a: np.ndarray | None = None, tau_a: float = 3.0) -> np.ndarray:
@@ -43,7 +52,7 @@ def decide(I: np.ndarray, a: np.ndarray | None = None, tau_a: float = 3.0) -> np
 def gate_hera(I_edge, a, tau_a=3.0, use_anomaly=True):
     L, U = I_edge[:, 0], I_edge[:, 2]
     ambiguous = np.zeros(len(L), bool)
-    for h in BOUNDARIES:
+    for h in boundaries():
         ambiguous |= (L <= h) & (U > h)
     if use_anomaly:
         ambiguous |= (a > tau_a) & (region(L) == CONTINUE)
@@ -68,7 +77,7 @@ def gate_anomaly(a, tau_a):
 
 def gate_point_margin(m_edge, delta):
     esc = np.zeros(len(m_edge), bool)
-    for h in BOUNDARIES:
+    for h in boundaries():
         esc |= np.abs(m_edge - h) < delta
     return esc
 
@@ -82,8 +91,8 @@ def hierarchical_decision(esc, act_edge, act_cloud):
 
 
 def decision_metrics(act: np.ndarray, y: np.ndarray, esc: np.ndarray | None = None) -> dict:
-    crit = y <= H_CRIT
-    healthy = y > H_PLAN
+    crit = y <= _H["c"]
+    healthy = y > _H["p"]
     true_r = region(y)
     no_maint = (act == CONTINUE) | (act == INSPECT)
     out = {

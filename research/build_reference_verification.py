@@ -37,6 +37,8 @@ CLAIMS = {
     "vanoudenhoven2023pdm5": ("Crossref DOI", "yes - decision-makers often do not adopt system-generated PdM advice (abstract)"),
     "coulibaly2026masdt": ("arXiv API", "yes - survey lists hierarchical DT orchestration with residual-life estimation and XAI as open question (abstract)"),
     "moccardi2025robust": ("Crossref DOI", "yes - conformal RUL on C-MAPSS; recommends weighted conformal under non-exchangeability (abstract)"),
+    "barber2021jackknife": ("Crossref DOI", "yes - jackknife+/CV+ predictive intervals with 1-2alpha guarantee (Ann. Stat.); used for CQR-CV+"),
+    "wang2020xjtu": ("Crossref DOI + dataset author's official repository README", "yes - XJTU-SY dataset source paper requested by the dataset authors"),
     "hou2025online": ("arXiv API", "yes - conformal calibration with adaptive edge-cloud offloading for probabilistic linear solvers (abstract)"),
 }
 
