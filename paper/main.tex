@@ -7,6 +7,12 @@
 \usepackage{array}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
+\usepackage{etoolbox}
+% "Abstract:" and "Index Terms:" instead of the class's em dash
+\makeatletter
+\def\hera@nodash#1{\loop\patchcmd{#1}{---}{:\ }{\let\hera@more\iftrue}{\let\hera@more\iffalse}\hera@more\repeat}
+\hera@nodash\abstract \hera@nodash\IEEEkeywords
+\makeatother
 \input{numbers.tex}
 \newcommand{\Hc}{H_{\mathrm{c}}}
 \newcommand{\Hp}{H_{\mathrm{p}}}
