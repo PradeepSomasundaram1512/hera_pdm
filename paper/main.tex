@@ -27,24 +27,25 @@ AI deployment, predictive maintenance, edge AI, conformal prediction, explainabl
 \end{IEEEkeywords}
 
 \section{Introduction}
-Predictive maintenance (PdM) estimates the remaining useful life (RUL) of machinery from condition data so that interventions are scheduled before failure~\cite{lei2018machinery}. Deep sequence models are the prevailing RUL estimators~\cite{zheng2017lstm,zhu2019mscnn}, but in a factory three further requirements arise. Vibration is sensed at the machine, so edge--cloud architectures keep routine inference local~\cite{ren2021cloudedge}; a point estimate must be accompanied by calibrated uncertainty~\cite{basora2025benchmark,javanmardi2023conformal}; and Industry~5.0 keeps the human in charge~\cite{xu2021industry5}, since decision-makers often do not adopt system-generated maintenance advice~\cite{vanoudenhoven2023pdm5}.
+Predictive maintenance (PdM) estimates the remaining useful life (RUL) of machinery from condition data so that interventions are scheduled before failure~\cite{lei2018machinery}. Deploying it on a factory floor raises three questions that accuracy benchmarks ignore: \emph{where} inference runs, since vibration is sensed at the machine and edge--cloud architectures keep routine inference local~\cite{ren2021cloudedge}; \emph{how far} a prediction can be trusted, which calls for calibrated uncertainty rather than point estimates~\cite{romano2019cqr,javanmardi2023conformal}; and \emph{who} acts on it, since Industry~5.0 keeps humans in charge of consequential decisions~\cite{xu2021industry5}.
 
-Recent systems combine these elements with agents and Digital Twins (DTs)~\cite{tao2019dt,saleh2026hama,mendonca2026human,coulibaly2026masdt}; our audit of 42 papers (Section~\ref{sec:related}) shows that this \emph{combination} is no longer new. What remains open is the \emph{escalation rule}: hierarchical PdM systems escalate on anomaly thresholds~\cite{saleh2026hama} or uncalibrated confidence~\cite{yao2026ecdistill}, while calibrated conformal deferral has been studied for classification and numerical cascades~\cite{huang2025cab,hou2025online}. We ask \emph{when} conformally calibrated RUL intervals on the edge are a useful escalation signal, and at what cost in accuracy, safety, alarm timing, communication and latency.
+Hierarchical PdM systems that combine edge devices, Digital Twins (DTs) and agents already exist~\cite{saleh2026hama,yao2026ecdistill}; they escalate from edge to cloud on anomaly thresholds~\cite{saleh2026hama} or uncalibrated confidence~\cite{yao2026ecdistill}. Calibrated conformal deferral with guarantees has been developed for classification cascades~\cite{huang2025cab} but not for RUL-based maintenance. We therefore ask \emph{when} conformally calibrated RUL intervals computed on the edge are a useful escalation signal, and what they cost in safety, false maintenance, alarm timing, communication and latency.
+
+\textit{Key findings.} On two public bearing datasets with contrasting degradation behaviour, (i)~calibration removes most unsafe decisions of point-threshold maintenance; (ii)~uncertainty-gated escalation pays off only when degradation is observable early; (iii)~the precise gating rule matters less than the interval width; and (iv)~snapshot-level guarantees do not yield timely bearing-level alarms, while bearing-level guarantees need larger fleets than public datasets provide.
 
 Contributions:
 \begin{enumerate}
 \item \textbf{HERA-PdM}, a reproducible four-layer framework with a \emph{decision-sufficiency} gate that escalates only when the edge RUL interval straddles a maintenance-decision boundary, bounding locally resolved unsafe decisions by the edge miscoverage level, and CQR-CV+ calibration on all non-test assets.
-\item A two-dataset, bearing-grouped benchmark (FEMTO with abrupt, XJTU-SY with gradual degradation) of ten tuned quantile models with and without DT context, showing that CQR-CV+ restores nominal coverage and that larger fog/cloud models help only on the gradual dataset.
-\item Snapshot-level, per-bearing and sensitivity evidence that calibration removes most unsafe point-threshold decisions, that uncertainty-gated escalation improves on always-cloud inference only under gradual degradation, and that the specific gate matters less than the interval width.
+\item A two-dataset, bearing-grouped benchmark of ten tuned quantile models with and without DT context, showing that CQR-CV+ restores nominal coverage and that larger fog/cloud models help only under gradual degradation.
+\item Snapshot-level, bearing-level and sensitivity evidence, with bootstrap intervals over bearings, that turns findings (i)--(iv) into six deployment lessons.
 \end{enumerate}
 
 \section{Related Work and Research Gap}\label{sec:related}
-\textit{RUL prediction.} LSTM~\cite{zheng2017lstm}, multiscale CNN for bearings~\cite{zhu2019mscnn} and TCN~\cite{bai2018tcn} models are standard; reviews~\cite{lei2018machinery} treat health-stage division, i.e.\ detecting when degradation becomes observable, as a step preceding RUL prediction, which our two datasets~\cite{nectoux2012pronostia,wang2020xjtu} contrast sharply.
-\textit{DTs and agents.} DTs provide a synchronized virtual asset state~\cite{tao2019dt}; agentic and human-centred DT architectures for PdM have appeared~\cite{mendonca2026human,coulibaly2026masdt}, and~\cite{coulibaly2026masdt} lists hierarchical DT orchestration with residual-life estimation and explainability as an open question.
+\textit{RUL prediction.} Deep sequence models such as temporal convolutional networks~\cite{bai2018tcn} are standard RUL estimators; reviews~\cite{lei2018machinery} treat health-stage division, i.e.\ detecting when degradation becomes observable, as a prerequisite for prognosis, a property our two datasets~\cite{nectoux2012pronostia,wang2020xjtu} contrast sharply.
 \textit{Hierarchical PdM.} Ren et~al.~\cite{ren2021cloudedge} run a lightweight TCN at the edge and refine RUL in the cloud; HAMA~\cite{saleh2026hama} escalates from a z-score edge pre-filter to fog ensembles with SHAP and generated operator text; EC-Distill-ZeroDiag~\cite{yao2026ecdistill} offloads uncertain fault-diagnosis cases from an edge agent to a cloud model.
-\textit{Uncertainty.} Bayesian, dropout and ensemble RUL uncertainty has been benchmarked in~\cite{basora2025benchmark}; split conformal and CQR give finite-sample coverage~\cite{romano2019cqr,angelopoulos2023gentle}, CV+ extends it to cross-fitting~\cite{barber2021jackknife}, and conformal RUL intervals exist for C-MAPSS~\cite{javanmardi2023conformal,moccardi2025robust} and bearings~\cite{wang2026conformal}. Probabilistic RUL also drives risk-aware maintenance policies~\cite{xu2025riskrl}, and confidence-based~\cite{jitkrittum2023cascade} and conformal~\cite{huang2025cab,hou2025online} deferral are the closest methodological precedents.
+\textit{Calibrated uncertainty.} Conformalized quantile regression (CQR)~\cite{romano2019cqr} and CV+~\cite{barber2021jackknife} give distribution-free coverage; conformal RUL intervals exist for turbofans~\cite{javanmardi2023conformal} and bearings~\cite{wang2026conformal}, but without a decision or routing layer. Conformal risk control~\cite{angelopoulos2024crc} bounds expected monotone losses, and conformal alignment certifies edge--cloud cascades for classification~\cite{huang2025cab}.
 
-\textbf{Gap.} To the best of our review (Table~\ref{tab:related}), no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gates of existing systems on public run-to-failure data with different degradation regimes. The contribution is methodological and evaluative; the architecture is not new.
+\textbf{Gap.} To the best of our audit of 42 papers (Table~\ref{tab:related}), no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gates of existing systems on public run-to-failure data with different degradation regimes. The contribution is methodological and evaluative; the architecture is not new.
 
 \begin{table}[t]
 \centering
@@ -60,7 +61,6 @@ HAMA~\cite{saleh2026hama} & -- & \checkmark & \checkmark & $\circ$ & -- & $\circ
 EC-Distill~\cite{yao2026ecdistill} & -- & \checkmark & \checkmark & -- & -- & \checkmark conf. & $\circ$ & -- \\
 CAb cascade~\cite{huang2025cab} & -- & \checkmark & -- & -- & \checkmark & \checkmark & -- & -- \\
 Wang et al.~\cite{wang2026conformal} & -- & -- & -- & \checkmark & \checkmark & -- & -- & -- \\
-Xu \& Zhang~\cite{xu2025riskrl} & -- & -- & $\circ$ & \checkmark & $\circ$ & -- & -- & -- \\
 \textbf{HERA-PdM} & $\circ$ & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark & \checkmark \\
 \bottomrule
 \end{tabular}
@@ -121,7 +121,7 @@ and false local \textsc{urgent} actions are bounded likewise. Unlike a width thr
 
 \textit{Protocol.} Condition-balanced bearing-grouped folds (\feNFolds{} for FEMTO, \xjNFolds{} for XJTU-SY) test every bearing once. Each architecture's hyper-parameters (width 32--128, 8 or 25 epochs, input noise) and the edge/cloud architecture choice were selected on inner validation bearings from training bearings only (FEMTO: \feEdgeModel/\feCloudModel+DT; XJTU-SY: \xjEdgeModel/\xjCloudModel+DT). Three seeds per model; metrics are pooled over test bearings and reported as mean$\pm$std; paired Wilcoxon tests use bearings as units.
 
-\textit{Baselines and metrics.} LSTM, GRU, TCN~\cite{bai2018tcn} and CNN-LSTM with and without DT context, MSE point models; always-edge, always-cloud and point-with-fixed-threshold policies; ablations without uncertainty (point margin), DT or anomaly term; anomaly-trigger (as in~\cite{saleh2026hama}), width (confidence deferral~\cite{jitkrittum2023cascade}), linear-score and random gates at HERA's budget. We report RMSE, MAE, coverage (Cov.), mean interval width (MPIW), \emph{unsafe rate} (critical snapshots with \textsc{continue}/\textsc{inspect}), false maintenance (FM, \textsc{schedule}/\textsc{urgent} when $y_t>\Hp$), escalation, payload, latency (single-thread host CPU, Apple M2 Pro; no energy measured) and, per bearing, the timing of the first sustained maintenance alarm.
+\textit{Baselines and metrics.} LSTM, GRU, TCN~\cite{bai2018tcn} and CNN-LSTM with and without DT context, MSE point models; always-edge, always-cloud and point-with-fixed-threshold policies; ablations without uncertainty (point margin), DT or anomaly term; anomaly-trigger (as in~\cite{saleh2026hama}), width (confidence-style deferral), linear-score and random gates at HERA's budget. We report RMSE, MAE, coverage (Cov.), mean interval width (MPIW), \emph{unsafe rate} (critical snapshots with \textsc{continue}/\textsc{inspect}), false maintenance (FM, \textsc{schedule}/\textsc{urgent} when $y_t>\Hp$), escalation, payload, latency (single-thread host CPU, Apple M2 Pro; no energy measured) and, per bearing, the timing of the first sustained maintenance alarm.
 
 
 \section{Results and Discussion}
@@ -152,12 +152,31 @@ and false local \textsc{urgent} actions are bounded likewise. Unlike a width thr
 
 \noindent All fields come from the predictors via a fixed template. Approval requests covered \feApprHera\% (FEMTO) and \xjApprHera\% (XJTU-SY) of HERA snapshots, an operator load that shows calibrated but wide intervals shift burden to humans.
 
-\textit{Lessons for deployment.} (i)~\emph{Calibrate before routing}: calibrated intervals removed most unsafe point-threshold decisions on both datasets. (ii)~\emph{Hierarchy pays only if degradation is observable early}: escalation helped on XJTU-SY and not on FEMTO. (iii)~\emph{Small fleets strain calibration}: three calibration bearings under-covered, cross-fitting on all assets fixed pooled coverage, and per-asset coverage still varied. (iv)~\emph{The interval width matters more than the gate}: decision-sufficiency and width gates coincided. (v)~\emph{Snapshot guarantees are not alarm guarantees}: timely bearing-level alarms need larger fleets. (vi)~\emph{Wide intervals move work to humans}: approval load, not model accuracy, limits human-centric use. Limitations: 32 bearings, approximate exchangeability, a state-based DT, host-CPU latency, analytic communication, one-seed $R_{\max}$ sensitivity, and no deployment or user study.
+\begin{table}[t]
+\centering
+\caption{Deployment guide derived from the measured results (FEMTO / XJTU-SY).}
+\label{tab:guide}
+\footnotesize\setlength{\tabcolsep}{2pt}
+\begin{tabular}{p{2.35cm}p{2.3cm}p{3.3cm}}
+\toprule
+Plant condition & Recommended policy & Evidence \\
+\midrule
+Safety-critical, any fleet & Decide on calibrated lower bound & unsafe \feUnsafeHera\%/\xjUnsafeHera\% vs.\ \feUnsafePoint\%/\xjUnsafePoint\% for point thresholds \\
+Degradation visible early & Uncertainty-gated escalation & XJTU-SY: same unsafe rate as always-cloud, FM \xjFmHera\% vs.\ \xjFmCloud\% (CI reaches 0) \\
+Abrupt, warning-free failures & Always-edge calibrated & FEMTO: HERA escalated \feEscHera\%, no benefit; edge RMSE \feRmseEdge\,s best \\
+Limited bandwidth & Gate on interval width & width gate equal to decision-sufficiency gate on both datasets \\
+Alarm-timing guarantee needed & Conformal risk control with $n\ge(1{-}\varepsilon)/(\varepsilon{-}\pi)$ units & with $\approx$12 units: late \feLateCrcTen\%/\xjLateCrcTen\% but premature \fePremCrcTen\%/\xjPremCrcTen\% \\
+Limited operator capacity & Relax $\alpha$ or add onset detection & approval load \feApprHera\%/\xjApprHera\% at $\alpha{=}0.1$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\textit{Lessons for deployment.} Table~\ref{tab:guide} condenses the evidence. (i)~\emph{Calibrate before routing}: calibrated intervals removed most unsafe point-threshold decisions on both datasets. (ii)~\emph{Hierarchy pays only if degradation is observable early}: escalation helped on XJTU-SY and not on FEMTO. (iii)~\emph{Small fleets strain calibration}: three calibration bearings under-covered, cross-fitting on all assets fixed pooled coverage, and per-asset coverage still varied. (iv)~\emph{The interval width matters more than the gate}: decision-sufficiency and width gates coincided. (v)~\emph{Snapshot guarantees are not alarm guarantees}: timely bearing-level alarms need larger fleets. (vi)~\emph{Wide intervals move work to humans}: approval load, not model accuracy, limits human-centric use. Limitations: 32 bearings, approximate exchangeability, a state-based DT, host-CPU latency, analytic communication, one-seed $R_{\max}$ sensitivity, and no deployment or user study.
 
 \section{Conclusion}
 Conformal RUL intervals from cross-fitted calibration removed most unsafe decisions of point-threshold maintenance on two bearing datasets. Using them to gate edge-to-cloud escalation paid off only on gradually degrading bearings, where it matched always-cloud safety with less false maintenance and communication; on abruptly failing bearings it escalated almost everything. The specific decision-sufficiency rule was no better than a width gate, and per-snapshot calibration produced premature bearing-level alarms. Calibrating alarm timing directly with conformal risk control met a bearing-level lateness target but, with about a dozen calibration bearings, only by alarming early. Useful timing guarantees will require larger run-to-failure fleets and features with longer warning lead times.
 
-\IEEEtriggeratref{20}
+\IEEEtriggeratref{9}
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
