@@ -41,7 +41,7 @@ Hierarchical PdM systems that combine edge devices, Digital Twins (DTs) and agen
 
 Contributions:
 \begin{enumerate}
-\item \textbf{HERA-PdM}, a reproducible four-layer framework with a \emph{decision-sufficiency} gate that escalates only when the edge RUL interval straddles a maintenance-decision boundary, bounding locally resolved unsafe decisions by the edge miscoverage level, and CQR-CV+ calibration on all non-test assets.
+\item HERA-PdM, a reproducible four-layer framework with a \emph{decision-sufficiency} gate that escalates only when the edge RUL interval straddles a maintenance-decision boundary, bounding locally resolved unsafe decisions by the edge miscoverage level, and CQR-CV+ calibration on all non-test assets.
 \item A two-dataset, bearing-grouped benchmark of ten tuned quantile models with and without DT context, showing that CQR-CV+ restores nominal coverage and that larger fog/cloud models help only under gradual degradation.
 \item Snapshot-, unit- and fleet-level evidence, with bootstrap intervals and a feasibility bound for unit-level risk control (Proposition~1) validated on \flN{} trucks, that turns findings (i)--(v) into deployment lessons.
 \end{enumerate}
@@ -51,7 +51,7 @@ Contributions:
 \textit{Hierarchical PdM.} Ren et~al.~\cite{ren2021cloudedge} run a lightweight TCN at the edge and refine RUL in the cloud; HAMA~\cite{saleh2026hama} escalates from a z-score edge pre-filter to fog ensembles with SHAP and generated operator text; EC-Distill-ZeroDiag~\cite{yao2026ecdistill} offloads uncertain fault-diagnosis cases from an edge agent to a cloud model.
 \textit{Calibrated uncertainty.} Conformalized quantile regression (CQR)~\cite{romano2019cqr} and CV+~\cite{barber2021jackknife} give distribution-free coverage; conformal RUL intervals exist for bearings~\cite{wang2026conformal}, but without a decision or routing layer. Conformal risk control~\cite{angelopoulos2024crc} bounds expected monotone losses, and conformal alignment certifies edge--cloud cascades for classification~\cite{huang2025cab}.
 
-\textbf{Gap.} To the best of our audit of 42 papers (Table~\ref{tab:related}), no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gates of existing systems on public run-to-failure data with different degradation regimes. The contribution is methodological and evaluative; the architecture is not new.
+\textit{Gap.} To the best of our audit of 42 papers (Table~\ref{tab:related}), no study uses conformal RUL intervals computed on the edge as the escalation rule of a hierarchical PdM system, relates escalation to maintenance-decision boundaries, and evaluates it against the gates of existing systems on public run-to-failure data with different degradation regimes. The contribution is methodological and evaluative; the architecture is not new.
 
 \begin{table}[t]
 \centering
@@ -185,7 +185,7 @@ Safety-critical, any fleet & Decide on calibrated lower bound & unsafe \feUnsafe
 Degradation visible early & Uncertainty-gated escalation & XJTU-SY: same unsafe rate as always-cloud, FM \xjFmHera\% vs.\ \xjFmCloud\% (CI reaches 0) \\
 Abrupt, warning-free failures & Always-edge calibrated & FEMTO: HERA escalated \feEscHera\%, no benefit; edge RMSE \feRmseEdge\,s best \\
 Limited bandwidth & Gate on interval width & width gate equal to decision-sufficiency gate on both datasets \\
-Alarm-timing guarantee needed & Conformal risk control with $n\ge(1{-}\varepsilon)/(\varepsilon{-}\pi)$ units & bearings ($\approx$12 units): premature \fePremCrcTen\%/\xjPremCrcTen\%; trucks (1000): late \flHeBigLate\% at target 10\% \\
+Alarm-timing guarantee needed & Conformal risk control with enough units (Prop.~1) & bearings ($\approx$12 units): premature \fePremCrcTen\%/\xjPremCrcTen\%; trucks (1000): late \flHeBigLate\% at target 10\% \\
 Limited operator capacity & Relax $\alpha$ or add onset detection & approval load \feApprHera\%/\xjApprHera\% at $\alpha{=}0.1$ \\
 \bottomrule
 \end{tabular}

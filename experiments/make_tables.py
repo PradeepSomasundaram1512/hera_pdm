@@ -380,7 +380,7 @@ def card():
             f"\\textbf{{RUL}} {c['predicted_RUL_s']}\\,s, 90\\% interval [{lo}, {hi}]\\,s. "
             f"\\textbf{{Anomaly}} $a_t$={c['anomaly_evidence']['score']} (threshold {c['anomaly_evidence']['alarm_threshold']}, "
             f"{'alarm' if c['anomaly_evidence']['alarm'] else 'no alarm'}). \\textbf{{Top SHAP}} {top}. "
-            f"\\textbf{{Recommendation}} {c['recommended_action']} --- \\emph{{requires human approval}}. "
+            f"\\textbf{{Recommendation}} {c['recommended_action']}; \\emph{{requires human approval}}. "
             f"\\textbf{{Rationale}} lower bound {lo}\\,s $\\le H_{{\\mathrm{{c}}}}$.")
     (OUT / "tables" / "card.tex").write_text("\\fbox{\\parbox{0.96\\columnwidth}{\\footnotesize " + body + "}}\n")
 
