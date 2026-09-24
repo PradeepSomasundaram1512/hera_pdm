@@ -1,0 +1,32 @@
+{
+ "unsafe|HERA-full|Cloud point+threshold": {
+  "diff_pp": -24.973544973544975,
+  "ci_lo": -41.7989417989418,
+  "ci_hi": -10.687830687830688
+ },
+ "fm|HERA-full|Cloud point+threshold": {
+  "diff_pp": 44.91935806619443,
+  "ci_lo": 17.012574848029683,
+  "ci_hi": 60.78876190013853
+ },
+ "unsafe|HERA-full|Always-cloud": {
+  "diff_pp": 0.0,
+  "ci_lo": 0.0,
+  "ci_hi": 0.0
+ },
+ "fm|HERA-full|Always-cloud": {
+  "diff_pp": -15.896266058350339,
+  "ci_lo": -35.17930959123495,
+  "ci_hi": 0.0
+ },
+ "unsafe|HERA-full|Width gate (matched)": {
+  "diff_pp": 0.0,
+  "ci_lo": 0.0,
+  "ci_hi": 0.0
+ },
+ "fm|HERA-full|Width gate (matched)": {
+  "diff_pp": -0.08004162164324535,
+  "ci_lo": -0.16454771955951908,
+  "ci_hi": 0.0
+ }
+}

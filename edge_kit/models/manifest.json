@@ -1,0 +1,38 @@
+{
+  "femto_edge.pt": {
+    "dataset": "femto",
+    "role": "edge",
+    "model": "Edge-GRU",
+    "window": 16,
+    "ctx_dim": 1,
+    "params": 2531,
+    "snapshot_samples": 2560
+  },
+  "femto_cloud.pt": {
+    "dataset": "femto",
+    "role": "cloud",
+    "model": "LSTM+DT",
+    "window": 64,
+    "ctx_dim": 6,
+    "params": 62083,
+    "snapshot_samples": 2560
+  },
+  "xjtu_edge.pt": {
+    "dataset": "xjtu",
+    "role": "edge",
+    "model": "Edge-CNN",
+    "window": 8,
+    "ctx_dim": 1,
+    "params": 2723,
+    "snapshot_samples": 32768
+  },
+  "xjtu_cloud.pt": {
+    "dataset": "xjtu",
+    "role": "cloud",
+    "model": "GRU+DT",
+    "window": 32,
+    "ctx_dim": 6,
+    "params": 13635,
+    "snapshot_samples": 32768
+  }
+}

@@ -274,6 +274,20 @@ def other_macros():
             macro(f"{p}ShapAdd", f"{e['additivity_mae_s']:.1f}")
             macro(f"{p}ShapRel", f"{100 * e['additivity_rel']:.0f}")
     macro("rttMs", "50")
+    # bootstrap CIs over bearings and required alarm offsets (experiments/robustness.py)
+    keys = {"unsafe|HERA-full|Cloud point+threshold": "UnsafePt", "fm|HERA-full|Cloud point+threshold": "FmPt",
+            "fm|HERA-full|Always-cloud": "FmCl", "unsafe|HERA-full|Always-cloud": "UnsafeCl"}
+    for p, ds in DS.items():
+        bc = json.loads((R(ds) / "bootstrap_ci.json").read_text())
+        for k, n in keys.items():
+            v = bc[k]
+            neg = lambda x: f"{x:.1f}".replace("-", "$-$")  # noqa: E731
+            macro(f"{p}Ci{n}", f"{neg(v['diff_pp'])}\\,pp, 95\\% CI [{neg(v['ci_lo'])}, {neg(v['ci_hi'])}]")
+        ro = pd.read_csv(R(ds) / "required_offset.csv").sort_values("required_offset_frac")
+        macro(f"{p}ReqOffMed", f"{ro.required_offset_frac.median():.2f}")
+        macro(f"{p}ReqOffTop", f"{ro.required_offset_frac.iloc[-2]:.2f}--{ro.required_offset_frac.iloc[-1]:.2f}")
+    ss = pd.read_csv(ROOT / "results" / "crc_sample_size.csv")
+    macro("nMinTenFive", str(int(ss[(np.isclose(ss.eps, 0.1)) & (np.isclose(ss.pi_no_warning, 0.05))].n_min.iloc[0])))
     # bearing-level conformal risk control (v3 exploration; src/evaluate_alarms.py)
     for p, ds in DS.items():
         a = pd.read_csv(R(ds) / "alarm_eps_sweep.csv")
