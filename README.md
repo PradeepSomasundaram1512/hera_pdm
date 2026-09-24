@@ -1,4 +1,4 @@
-# HERA-PdM — When does uncertainty-gated edge–cloud predictive maintenance help?
+# HERA-PdM: when does uncertainty-gated edge–cloud predictive maintenance help?
 
 Code, results and paper for *"When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet"*. HERA-PdM (Hierarchical Edge Reasoning Agents) is used as an experimental framework, not as a claimed best system.
 

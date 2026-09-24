@@ -1,4 +1,4 @@
-# PAPER_AUDIT — HERA-PdM (version 4, evidence-calibrated)
+# PAPER_AUDIT: HERA-PdM (version 4, evidence-calibrated)
 
 ## A. Final paper title
 When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet

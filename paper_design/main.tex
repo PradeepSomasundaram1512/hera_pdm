@@ -5,6 +5,12 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}
+\usepackage{etoolbox}
+% "Abstract:" and "Index Terms:" instead of the class's em dash
+\makeatletter
+\def\hera@nodash#1{\loop\patchcmd{#1}{---}{:\ }{\let\hera@more\iftrue}{\let\hera@more\iffalse}\hera@more\repeat}
+\hera@nodash\abstract \hera@nodash\IEEEkeywords
+\makeatother
 \input{../paper/numbers.tex}
 \newcommand{\Hc}{H_{\mathrm{c}}}
 \newcommand{\Hp}{H_{\mathrm{p}}}
@@ -19,7 +25,7 @@
 \maketitle
 
 \begin{abstract}
-This design paper proposes HERA-PdM, a reference architecture for hierarchical predictive maintenance (PdM) in human-centric Industry~5.0 plants. Four software agents---edge monitoring, Digital Twin state, fog/cloud prognostics and maintenance decision---exchange explicit messages; every remaining-useful-life (RUL) estimate carries a conformally calibrated interval; the edge escalates to higher tiers only when its interval cannot fix a maintenance action; and schedule/urgent actions are issued as explained recommendations that require human approval. We specify the agents, message schemas, decision rules and the safety property the escalation rule provides, describe how the architecture maps onto a production line through an explicitly hypothetical deployment scenario, and summarize preliminary evidence from a companion empirical study on two public bearing datasets, which shows when the design is expected to help and when it is not. We close with the open problems that a deployment would have to solve, notably bearing-level alarm-timing guarantees and operator workload.
+This design paper proposes HERA-PdM, a reference architecture for hierarchical predictive maintenance (PdM) in human-centric Industry~5.0 plants. Four software agents (edge monitoring, Digital Twin state, fog/cloud prognostics and maintenance decision) exchange explicit messages; every remaining-useful-life (RUL) estimate carries a conformally calibrated interval; the edge escalates to higher tiers only when its interval cannot fix a maintenance action; and schedule/urgent actions are issued as explained recommendations that require human approval. We specify the agents, message schemas, decision rules and the safety property the escalation rule provides, describe how the architecture maps onto a production line through an explicitly hypothetical deployment scenario, and summarize preliminary evidence from a companion empirical study on two public bearing datasets, which shows when the design is expected to help and when it is not. We close with the open problems that a deployment would have to solve, notably bearing-level alarm-timing guarantees and operator workload.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -92,6 +98,6 @@ On FEMTO (\feNBearings{} bearings, abrupt failures) and XJTU-SY (\xjNBearings{} 
 HERA-PdM specifies how calibrated uncertainty can drive both computation placement and human-approved maintenance recommendations in a hierarchical plant architecture. Preliminary evidence indicates that the design is worthwhile when degradation is observable early and that alarm-timing guarantees, operator workload and embedded validation are the next problems to solve.
 
 \bibliographystyle{IEEEtran}
-\bibliography{../paper/references}
+\bibliography{../research/references_full}
 
 \end{document}

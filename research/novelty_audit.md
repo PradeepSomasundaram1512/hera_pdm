@@ -1,4 +1,4 @@
-# HERA-PdM — Novelty Audit
+# HERA-PdM: Novelty Audit
 
 Status: **Phase-1 gate passed with a narrowed claim** (the originally proposed claim did *not* survive; see §4).
 Final re-search after experiments: see §7.
@@ -17,7 +17,7 @@ Final re-search after experiments: see §7.
 
 | Component | Already published (examples) |
 |---|---|
-| Agents + Digital Twin + predictive maintenance | L16, L18, L19, L20, L21, L14, L13 — including human-centred (L19) and safety-constrained (L20) agentic DTs |
+| Agents + Digital Twin + predictive maintenance | L16, L18, L19, L20, L21, L14, L13, including human-centred (L19) and safety-constrained (L20) agentic DTs |
 | Hierarchical edge/fog/cloud multi-agent PdM | L07 HAMA (IEEE Access 2026), L08 SEMAS, L03, L05 |
 | Cloud–edge RUL prediction (edge fast, cloud with history) | L01 (Ren et al., IEEE IoT-J 2021) |
 | Conformal / calibrated RUL intervals | L23, L25, L26 (C-MAPSS), **L24 (bearings, XJTU-SY)** |
@@ -42,7 +42,7 @@ Final re-search after experiments: see §7.
 | L24 Wang et al. 2026 (PHME) | ✓ | – | – | – | ✓ conformal | – | – | – | no decision layer, no hierarchy |
 | L26 Diao et al. 2026 (Sensors) | ✓ | – | – | – | ✓ CQR | – | – | – | no hierarchy / routing |
 | L30 Xu & Zhang 2025 (CAIS) | ✓ | – | – | ◐ RL agent | ✓ | – | – | – | UQ drives decisions, not computation |
-| **HERA-PdM (this work)** | ✓ | ✓ lightweight state | ✓ | ✓ | ✓ CQR | ✓ decision-sufficiency | ✓ SHAP | ✓ advisory | — |
+| **HERA-PdM (this work)** | ✓ | ✓ lightweight state | ✓ | ✓ | ✓ CQR | ✓ decision-sufficiency | ✓ SHAP | ✓ advisory | no |
 
 ✓ present, ◐ partial, – absent, ? not determinable from accessible text.
 
@@ -56,7 +56,7 @@ Final re-search after experiments: see §7.
 * calibrated/probabilistic RUL feeding maintenance decisions in a centralized model (L30);
 * human-centred agentic DT for PdM (L19, L21, L34).
 
-**Q3. What exact gap remains?** To the best of our review, no study (i) uses *conformally calibrated RUL intervals computed on the edge* as the escalation signal of a hierarchical PdM system, (ii) defines escalation by whether the interval is **decision-sufficient** — i.e. lies inside one maintenance-action region delimited by the critical/planning horizons — which gives a finite-sample bound on unsafe edge-resolved decisions, and (iii) evaluates that rule against the gating rules used in the closest systems (anomaly-threshold pre-filter as in L07/L08, confidence/width deferral as in L02/L11, a linear escalation score, point-estimate margins, and random deferral at matched budget) on public run-to-failure data with communication, latency and compute accounting.
+**Q3. What exact gap remains?** To the best of our review, no study (i) uses *conformally calibrated RUL intervals computed on the edge* as the escalation signal of a hierarchical PdM system, (ii) defines escalation by whether the interval is **decision-sufficient**, i.e. lies inside one maintenance-action region delimited by the critical/planning horizons: which gives a finite-sample bound on unsafe edge-resolved decisions, and (iii) evaluates that rule against the gating rules used in the closest systems (anomaly-threshold pre-filter as in L07/L08, confidence/width deferral as in L02/L11, a linear escalation score, point-estimate margins, and random deferral at matched budget) on public run-to-failure data with communication, latency and compute accounting.
 
 **Q4. What measurable contribution can be defended?**
 1. The decision-sufficiency gate and its edge-safety bound: P(local CONTINUE ∧ RUL ≤ H_c) ≤ α_edge (marginal, under exchangeability of calibration and test assets).
@@ -85,10 +85,10 @@ Final re-search after experiments: see §7.
 Crossref + Semantic Scholar (`search_raw/final.json`, 140 records, 128 unique; 12 S2 requests rate-limited); arXiv queried separately with relaxed term sets because the all-terms AND query returned ~0 hits (`search_raw/final_arxiv*.json`); targeted web searches with the final contribution wording.
 
 **New relevant items found (added as L39–L42):**
-* L39 Moccardi et al., *Future Internet* 2025 — conformal RUL on C-MAPSS; recommends **weighted conformal** under non-exchangeability → now cited in Related Work and in the calibration discussion (directly explains our coverage shortfall).
-* L40 Kwon & Kim, *Sci. Rep.* 2026 — conformal selective prediction with cost-aware deferral (clinical triage) → confirms decision-aware conformal deferral exists outside PdM (matrix only).
-* L41 Hou et al., arXiv 2025 — online conformal calibration with adaptive edge–cloud offloading (probabilistic linear solvers) → cited next to L09 as evidence that conformal edge–cloud offloading is an active general topic.
-* L42 Xue et al., arXiv 2026 — risk-controlled device–edge routing for LLMs (matrix only).
+* L39 Moccardi et al., *Future Internet* 2025: conformal RUL on C-MAPSS; recommends **weighted conformal** under non-exchangeability → now cited in Related Work and in the calibration discussion (directly explains our coverage shortfall).
+* L40 Kwon & Kim, *Sci. Rep.* 2026: conformal selective prediction with cost-aware deferral (clinical triage) → confirms decision-aware conformal deferral exists outside PdM (matrix only).
+* L41 Hou et al., arXiv 2025: online conformal calibration with adaptive edge–cloud offloading (probabilistic linear solvers) → cited next to L09 as evidence that conformal edge–cloud offloading is an active general topic.
+* L42 Xue et al., arXiv 2026: risk-controlled device–edge routing for LLMs (matrix only).
 * SSRN preprints on stage-adaptive conformal RUL calibration and hierarchical adaptive conformal inference for edge medical wearables (not peer-reviewed; not cited).
 
 **Conclusion.** No retrieved work uses conformal RUL intervals on an edge device as the escalation rule of a hierarchical PdM system with maintenance-decision regions. The narrowed methodological claim survives, but the neighbourhood is crowded (L09, L41, L42), so the paper states the contribution as *incremental* and positions itself explicitly after these works.
@@ -110,12 +110,12 @@ Crossref + Semantic Scholar (`search_raw/final.json`, 140 records, 128 unique; 1
 * New analyses: per-bearing first-sustained-alarm timing, horizon sensitivity (5 settings), R_MAX sensitivity (x0.5, x2; seed 0).
 * Findings changed as follows: coverage now meets nominal (0.93–0.99); on XJTU-SY the hierarchy improves on always-cloud (same unsafe rate, lower false maintenance and payload), on FEMTO it does not; the decision-sufficiency gate still equals a width gate; calibrated policies raise premature bearing-level alarms. The claim remains incremental; no superiority claim for the gate is made.
 
-## 10. Version 3 exploration: lead-time-calibrated, onset-gated alarms (2026-09-24) — NOT adopted in the paper
+## 10. Version 3 exploration: lead-time-calibrated, onset-gated alarms (2026-09-24): NOT adopted in the paper
 * Method: two-stage alarm (edge onset gate -> fog/cloud alarm) with one offset lambda calibrated by conformal risk control (Angelopoulos et al., ICLR 2024) so that P(late or missing alarm per bearing) <= eps; variant v3b with a training-fixed onset gate and burn-in. Code: `src/alarm_crc.py`, `src/evaluate_alarms.py`; results: `results/<ds>/alarm_*.csv`.
 * Outcome: where feasible, the bearing-level guarantee held on held-out bearings (late rate 2 % FEMTO / 4.4 % XJTU-SY at eps = 0.1), but only by alarming in the healthy phase (premature 94 % / 80 %; escalation ~99 %). With ~12 calibration bearings, eps = 0.1 tolerates zero late calibration bearings, so lambda must cover the least predictable bearing. The decoupled onset gate (v3b) opened too late on FEMTO (57 % late for every eps; guarantee infeasible) and matched always-cloud on XJTU-SY.
 * Conclusion: not a working method on 15–17-bearing datasets; recorded as a negative exploratory result. Bearing-level risk control likely needs fleets with many more run-to-failure units.
 
-## 11. Envelope-feature exploration (2026-09-24) — not adopted
+## 11. Envelope-feature exploration (2026-09-24): not adopted
 * Bearing geometry for fault frequencies was verified for XJTU-SY (LDK UER204: D = 34.55 mm, d = 7.92 mm, 8 balls, 0 deg; official dataset introduction) but could not be verified for FEMTO (not in the PRONOSTIA paper); values from memory were not used. Geometry-free envelope-analysis features were therefore added (`HERA_FEATSET=env`, 6 per channel).
 * Pre-check (single-feature AUROC after asset-baseline normalization): FEMTO best envelope 0.69 vs best original 0.79 (RUL <= H_p); XJTU-SY 0.914 vs 0.909. The PRONOSTIA authors themselves report that frequency-signature models do not work on their data. No retraining was performed; the feature set is kept in the code for reproducibility.
 

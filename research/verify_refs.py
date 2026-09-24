@@ -57,7 +57,7 @@ CANDIDATES = [
     "Conformalized Quantile Regression",
     "Conformal Prediction: A Gentle Introduction",
     "Adaptive Conformal Inference Under Distribution Shift",
-    "Industry 4.0 and Industry 5.0—Inception, conception and perception",
+    "Industry 4.0 and Industry 5.0: Inception, conception and perception",
     "Digital Twin in Industry: State-of-the-Art",
     "Machinery health prognostics: A systematic review from data acquisition to RUL prediction",
     "A Unified Approach to Interpreting Model Predictions",
