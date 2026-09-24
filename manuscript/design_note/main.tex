@@ -1,6 +1,7 @@
 \documentclass[conference]{IEEEtran}
 \IEEEoverridecommandlockouts
 \usepackage{cite}
+\renewcommand{\citedash}{-}% citation ranges print as [7]-[9]
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{graphicx}
 \usepackage{booktabs}
@@ -86,7 +87,7 @@ Consider a hypothetical packaging line with conveyor drive bearings instrumented
 
 \section{Preliminary Evidence (Measured)}
 \emph{All numbers in this section come from the companion empirical study (public data, bearing-grouped cross-validation, three seeds).}
-On FEMTO (\feNBearings{} bearings, abrupt failures) and XJTU-SY (\xjNBearings{} bearings, gradual degradation)~\cite{nectoux2012pronostia,wang2020xjtu}: cross-fitted CQR reached \fePicpEdge--\fePicpCloud{} and \xjPicpCloud--\xjPicpEdge{} coverage at nominal 0.90; calibrated decisions left \feUnsafeHera\% and \xjUnsafeHera\% of critical snapshots without action versus \feUnsafePoint\% and \xjUnsafePoint\% for point estimates with fixed thresholds. On XJTU-SY the escalation rule matched always-cloud safety with less false maintenance (\xjFmHera\% vs.\ \xjFmCloud\%) while escalating \xjEscHera\% of snapshots; on FEMTO it escalated \feEscHera\% and gave no benefit. The decision-sufficiency rule behaved like an interval-width gate, and per-snapshot calibration produced premature bearing-level alarms.
+On FEMTO (\feNBearings{} bearings, abrupt failures) and XJTU-SY (\xjNBearings{} bearings, gradual degradation)~\cite{nectoux2012pronostia,wang2020xjtu}: cross-fitted CQR reached \fePicpEdge-\fePicpCloud{} and \xjPicpCloud-\xjPicpEdge{} coverage at nominal 0.90; calibrated decisions left \feUnsafeHera\% and \xjUnsafeHera\% of critical snapshots without action versus \feUnsafePoint\% and \xjUnsafePoint\% for point estimates with fixed thresholds. On XJTU-SY the escalation rule matched always-cloud safety with less false maintenance (\xjFmHera\% vs.\ \xjFmCloud\%) while escalating \xjEscHera\% of snapshots; on FEMTO it escalated \feEscHera\% and gave no benefit. The decision-sufficiency rule behaved like an interval-width gate, and per-snapshot calibration produced premature bearing-level alarms.
 
 \section{Open Problems}
 \textit{Alarm-timing guarantees.} Conformal risk control~\cite{angelopoulos2024crc} can bound the probability that a bearing's alarm is late, but with about a dozen calibration bearings it met the target only by alarming early (\fePremCrcTen\% and \xjPremCrcTen\% premature); fleet-scale run-to-failure data are needed.

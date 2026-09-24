@@ -1668,6 +1668,27 @@ FUNCTION {format.paper}
 }
 
 
+% Collapses any run of dashes to a single hyphen (page ranges print as "799-834").
+FUNCTION {n.hyphenate}
+{ large.number.separate
+  't :=
+  ""
+    { t empty$ not }
+    { t #1 #1 substring$ "-" =
+        { "-" *
+            { t #1 #1 substring$ "-" = }
+            { t #2 global.max$ substring$ 't := }
+          while$
+        }
+        { t #1 #1 substring$ *
+          t #2 global.max$ substring$ 't :=
+        }
+      if$
+    }
+  while$
+}
+
+
 FUNCTION {format.pages}
 { pages duplicate$ empty$ 'skip$
     { this.to.prev.status
@@ -1675,7 +1696,7 @@ FUNCTION {format.pages}
       duplicate$ is.multiple.pages
         {
           bbl.pages swap$
-          n.dashify
+          n.hyphenate
         }
         {
           bbl.page swap$

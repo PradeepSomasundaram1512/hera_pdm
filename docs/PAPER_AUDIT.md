@@ -1,7 +1,7 @@
 # PAPER_AUDIT: HERA-PdM (version 4, evidence-calibrated)
 
 ## A. Final paper title
-When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet
+When Does Uncertainty-Gated Edge-Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet
 
 ## B. Research question
 Under which conditions (degradation observability, calibration sample size, decision structure) does conformal, uncertainty-gated edge-to-cloud escalation improve PdM decisions over point thresholds, simpler gates, and calibrated edge-only or cloud-only inference?

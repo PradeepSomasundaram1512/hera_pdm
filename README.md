@@ -1,8 +1,8 @@
-# When does uncertainty-gated edge–cloud predictive maintenance help?
+# When does uncertainty-gated edge-cloud predictive maintenance help?
 
 Code, data pipeline, results and manuscript for
 
-> P. Somasundaram, *When Does Uncertainty-Gated Edge–Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet*, submitted to ICAIET 2027.
+> P. Somasundaram, *When Does Uncertainty-Gated Edge-Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet*, submitted to ICAIET 2027.
 
 HERA-PdM (Hierarchical Edge Reasoning Agents) is the experimental framework used in the paper, not a claimed best system. Conformalized quantile regression with CV+ (CQR-CV+) gives remaining-useful-life (RUL) intervals, and the edge escalates to a fog/cloud model only when its interval spans a maintenance-decision boundary. The study asks when that is worth doing.
 

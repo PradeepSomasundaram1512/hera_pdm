@@ -52,10 +52,10 @@ def rul_tables():
         d = rul[p]
         x = d[(d.model == model) & (d.calib == calib)]
         if x.empty:
-            return ["--"] * 5
+            return ["-"] * 5
         x = x.iloc[0]
         if point:
-            return [pm(x.rmse_mean, x.rmse_std), pm(x.mae_mean, x.mae_std), "--", "--", "--"]
+            return [pm(x.rmse_mean, x.rmse_std), pm(x.mae_mean, x.mae_std), "-", "-", "-"]
         return [pm(x.rmse_mean, x.rmse_std), pm(x.mae_mean, x.mae_std), f"{x.raw_picp_mean:.2f}",
                 pm(x.picp_mean, x.picp_std, "{:.2f}"), f"{x.mpiw_mean:.0f}"]
 
@@ -205,7 +205,7 @@ def timing_table():
             x = tim[p].loc[key]
             lead = x.median_lead_timely_s_mean / 60
             cells += [f"{x.timely_mean:.1f}", f"{x.late_mean:.1f}", f"{x.premature_mean:.1f}",
-                      "--" if np.isnan(lead) else f"{lead:.0f}"]
+                      "-" if np.isnan(lead) else f"{lead:.0f}"]
             macro(f"{p}Timely{NAMES[key]}", f"{x.timely_mean:.1f}")
             macro(f"{p}Late{NAMES[key]}", f"{x.late_mean:.1f}")
             macro(f"{p}Prem{NAMES[key]}", f"{x.premature_mean:.1f}")
@@ -232,7 +232,7 @@ def timing_table():
                           f"\\multicolumn{{2}}{{c{bar}}}{{{100 * pp['Cloud point+threshold']['unsafe_rate']:.0f}/"
                           f"{100 * pp['Cloud point+threshold']['false_maint']:.0f}}}"]
             else:
-                cells += ["\\multicolumn{2}{c}{--}", f"\\multicolumn{{2}}{{c{bar}}}{{--}}"]
+                cells += ["\\multicolumn{2}{c}{-}", f"\\multicolumn{{2}}{{c{bar}}}{{-}}"]
         L.append(f"{lab} & " + " & ".join(cells) + r" \\")
     L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
     (OUT / "tables" / "tab_timing.tex").write_text("\n".join(L) + "\n")
@@ -282,7 +282,7 @@ def other_macros():
             macro(f"{p}Ci{n}", f"{neg(v['diff_pp'])}\\,pp, 95\\% CI [{neg(v['ci_lo'])}, {neg(v['ci_hi'])}]")
         ro = pd.read_csv(R(ds) / "required_offset.csv").sort_values("required_offset_frac")
         macro(f"{p}ReqOffMed", f"{ro.required_offset_frac.median():.2f}")
-        macro(f"{p}ReqOffTop", f"{ro.required_offset_frac.iloc[-2]:.2f}--{ro.required_offset_frac.iloc[-1]:.2f}")
+        macro(f"{p}ReqOffTop", f"{ro.required_offset_frac.iloc[-2]:.2f}-{ro.required_offset_frac.iloc[-1]:.2f}")
     ss = pd.read_csv(ROOT / "results" / "crc_sample_size.csv")
     macro("nMinTenFive", str(int(ss[(np.isclose(ss.eps, 0.1)) & (np.isclose(ss.pi_no_warning, 0.05))].n_min.iloc[0])))
     # bearing-level conformal risk control (v3 exploration; src/evaluate_alarms.py)
@@ -354,7 +354,7 @@ def fleet_table():
     for lab, pol, eps, n in rows:
         x = get(pol, eps, n)
         late = f"{100 * x.late:.1f}" + ("" if eps is None else f" [{100 * x.late_q95:.1f}]")
-        L.append(f"{lab} & {'--' if n == 0 else n} & {late} & {100 * x.false_alarm:.1f} & {100 * x.esc:.0f} \\\\")
+        L.append(f"{lab} & {'-' if n == 0 else n} & {late} & {100 * x.false_alarm:.1f} & {100 * x.esc:.0f} \\\\")
         if pol == "cloud_fixed0.5" or (pol == "cloud" and n == 12):
             L.append(r"\midrule")
     L += [r"\bottomrule", r"\end{tabular}", r"\end{table}"]
