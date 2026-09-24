@@ -1,0 +1,91 @@
+{
+  "host": "Pradeeps-MacBook-Pro.local",
+  "machine": "arm64",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "processor": "arm",
+  "torch": "2.14.0",
+  "threads": 1,
+  "models": {
+    "femto_edge.pt": {
+      "dataset": "femto",
+      "role": "edge",
+      "model": "Edge-GRU",
+      "window": 16,
+      "ctx_dim": 1,
+      "params": 2531,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 0.16999999934341758,
+        "p95_ms": 0.18927085038740185,
+        "p99_ms": 0.23335991754720448
+      },
+      "feature_extraction": {
+        "median_ms": 0.32889550129766576,
+        "p95_ms": 0.39384584961226204,
+        "p99_ms": 0.49510926241055103
+      },
+      "file_kb": 22.572265625
+    },
+    "femto_cloud.pt": {
+      "dataset": "femto",
+      "role": "cloud",
+      "model": "LSTM+DT",
+      "window": 64,
+      "ctx_dim": 6,
+      "params": 62083,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 1.2650210010178853,
+        "p95_ms": 1.4351457994052907,
+        "p99_ms": 1.5469943389325636
+      },
+      "feature_extraction": {
+        "median_ms": 0.3261874990130309,
+        "p95_ms": 0.38930655355215993,
+        "p99_ms": 0.48513991096115194
+      },
+      "file_kb": 257.96875
+    },
+    "xjtu_edge.pt": {
+      "dataset": "xjtu",
+      "role": "edge",
+      "model": "Edge-CNN",
+      "window": 8,
+      "ctx_dim": 1,
+      "params": 2723,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 0.05179100116947666,
+        "p95_ms": 0.05483510612975806,
+        "p99_ms": 0.08666249748785046
+      },
+      "feature_extraction": {
+        "median_ms": 3.1169789981504437,
+        "p95_ms": 3.274921153933974,
+        "p99_ms": 3.426660090772202
+      },
+      "file_kb": 29.93359375
+    },
+    "xjtu_cloud.pt": {
+      "dataset": "xjtu",
+      "role": "cloud",
+      "model": "GRU+DT",
+      "window": 32,
+      "ctx_dim": 6,
+      "params": 13635,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 0.5982079965178855,
+        "p95_ms": 0.6900097996549447,
+        "p99_ms": 0.7464311576040927
+      },
+      "feature_extraction": {
+        "median_ms": 3.127145999314962,
+        "p95_ms": 3.307211903302232,
+        "p99_ms": 3.3589579092222235
+      },
+      "file_kb": 68.697265625
+    }
+  },
+  "peak_rss_mb": 213.453125
+}

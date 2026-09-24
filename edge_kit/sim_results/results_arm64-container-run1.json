@@ -1,0 +1,91 @@
+{
+  "host": "arm64-container-run1",
+  "machine": "aarch64",
+  "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+  "processor": "",
+  "torch": "2.14.0+cpu",
+  "threads": 1,
+  "models": {
+    "femto_edge.pt": {
+      "dataset": "femto",
+      "role": "edge",
+      "model": "Edge-GRU",
+      "window": 16,
+      "ctx_dim": 1,
+      "params": 2531,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 0.6171540000039499,
+        "p95_ms": 0.7860989500194647,
+        "p99_ms": 48.46356866999343
+      },
+      "feature_extraction": {
+        "median_ms": 0.2813990000021249,
+        "p95_ms": 0.3533085500009746,
+        "p99_ms": 0.6329792699824441
+      },
+      "file_kb": 22.572265625
+    },
+    "femto_cloud.pt": {
+      "dataset": "femto",
+      "role": "cloud",
+      "model": "LSTM+DT",
+      "window": 64,
+      "ctx_dim": 6,
+      "params": 62083,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 2.25752800000123,
+        "p95_ms": 2.482493200015767,
+        "p99_ms": 9.634783400014722
+      },
+      "feature_extraction": {
+        "median_ms": 0.2819409999972322,
+        "p95_ms": 0.3284873499978855,
+        "p99_ms": 0.4579482500102469
+      },
+      "file_kb": 257.96875
+    },
+    "xjtu_edge.pt": {
+      "dataset": "xjtu",
+      "role": "edge",
+      "model": "Edge-CNN",
+      "window": 8,
+      "ctx_dim": 1,
+      "params": 2723,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 0.10466800000585863,
+        "p95_ms": 0.1390037499874097,
+        "p99_ms": 0.2782461600119745
+      },
+      "feature_extraction": {
+        "median_ms": 2.7555334999931347,
+        "p95_ms": 3.0190058000016506,
+        "p99_ms": 3.156096509991925
+      },
+      "file_kb": 29.93359375
+    },
+    "xjtu_cloud.pt": {
+      "dataset": "xjtu",
+      "role": "cloud",
+      "model": "GRU+DT",
+      "window": 32,
+      "ctx_dim": 6,
+      "params": 13635,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 2.4614549999881774,
+        "p95_ms": 7.577655149990884,
+        "p99_ms": 55.07146148999226
+      },
+      "feature_extraction": {
+        "median_ms": 2.7681555000071967,
+        "p95_ms": 3.0180631999840553,
+        "p99_ms": 3.1469641700010675
+      },
+      "file_kb": 68.697265625
+    }
+  },
+  "peak_rss_mb": 260.9375
+}

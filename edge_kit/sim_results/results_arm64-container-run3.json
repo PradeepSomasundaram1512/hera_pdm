@@ -1,0 +1,91 @@
+{
+  "host": "arm64-container-run3",
+  "machine": "aarch64",
+  "platform": "Linux-6.8.0-117-generic-aarch64-with-glibc2.41",
+  "processor": "",
+  "torch": "2.14.0+cpu",
+  "threads": 1,
+  "models": {
+    "femto_edge.pt": {
+      "dataset": "femto",
+      "role": "edge",
+      "model": "Edge-GRU",
+      "window": 16,
+      "ctx_dim": 1,
+      "params": 2531,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 0.6500454999809335,
+        "p95_ms": 0.8246788999798581,
+        "p99_ms": 48.20328257998112
+      },
+      "feature_extraction": {
+        "median_ms": 0.28230199998802163,
+        "p95_ms": 0.3615341999847032,
+        "p99_ms": 0.44133546998237816
+      },
+      "file_kb": 22.572265625
+    },
+    "femto_cloud.pt": {
+      "dataset": "femto",
+      "role": "cloud",
+      "model": "LSTM+DT",
+      "window": 64,
+      "ctx_dim": 6,
+      "params": 62083,
+      "snapshot_samples": 2560,
+      "inference": {
+        "median_ms": 2.3978175000110014,
+        "p95_ms": 2.604546100003801,
+        "p99_ms": 9.008795390006695
+      },
+      "feature_extraction": {
+        "median_ms": 0.28161449999686283,
+        "p95_ms": 0.3733990500080608,
+        "p99_ms": 0.43347576998115717
+      },
+      "file_kb": 257.96875
+    },
+    "xjtu_edge.pt": {
+      "dataset": "xjtu",
+      "role": "edge",
+      "model": "Edge-CNN",
+      "window": 8,
+      "ctx_dim": 1,
+      "params": 2723,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 0.11119150001093203,
+        "p95_ms": 0.13301125000992897,
+        "p99_ms": 0.2452346799930182
+      },
+      "feature_extraction": {
+        "median_ms": 2.755659999991167,
+        "p95_ms": 3.0394694999912986,
+        "p99_ms": 4.032871579997267
+      },
+      "file_kb": 29.93359375
+    },
+    "xjtu_cloud.pt": {
+      "dataset": "xjtu",
+      "role": "cloud",
+      "model": "GRU+DT",
+      "window": 32,
+      "ctx_dim": 6,
+      "params": 13635,
+      "snapshot_samples": 32768,
+      "inference": {
+        "median_ms": 2.5729839999968362,
+        "p95_ms": 48.334995250019105,
+        "p99_ms": 54.79591654999979
+      },
+      "feature_extraction": {
+        "median_ms": 2.755589499997768,
+        "p95_ms": 3.0255404500081795,
+        "p99_ms": 3.093908159996202
+      },
+      "file_kb": 68.697265625
+    }
+  },
+  "peak_rss_mb": 260.6796875
+}
