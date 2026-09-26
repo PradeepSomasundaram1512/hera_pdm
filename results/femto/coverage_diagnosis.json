@@ -1,0 +1,11 @@
+{
+ "n_bearings": 17,
+ "n_low": 4,
+ "below_share_low": 0.905871142582209,
+ "spearman_cov_vs_abs_log_life_rel": 0.056507875835241195,
+ "spearman_p": 0.8294457460259166,
+ "worst_bearing": "Bearing2_7",
+ "worst_cov": 0.2971014492753623,
+ "worst_life_rel": 0.2876884422110553,
+ "edge_n_low": 6
+}

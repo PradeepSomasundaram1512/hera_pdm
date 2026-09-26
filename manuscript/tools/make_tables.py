@@ -61,9 +61,10 @@ def rul_tables():
 
     L = [r"\begin{table*}[t]", r"\centering",
          r"\caption{RUL accuracy and calibration on held-out bearings (mean$\pm$std over 3 seeds; nominal coverage 0.90). "
-         r"Raw: uncalibrated quantiles; split: CQR calibrated on 3 held-out bearings per fold; CV+: CQR-CV+ calibrated "
-         r"on all non-test bearings. Marks: architecture selected on inner-validation pinball loss for FEMTO ($^\dagger$) "
-         r"and XJTU-SY ($^\ast$).}",
+         r"RMSE/MAE: root-mean-square/mean absolute error of the median RUL; Raw cov.: coverage of the uncalibrated 90\% "
+         r"interval; Cov.: coverage after calibration; MPIW: mean interval width; +DT: with state (Digital Twin) context. "
+         r"Split: CQR calibrated on 3 held-out bearings per fold; CV+: CQR-CV+ calibrated on all non-test bearings. "
+         r"Marks: architecture selected on inner-validation pinball loss for FEMTO ($^\dagger$) and XJTU-SY ($^\ast$).}",
          r"\label{tab:rul}", r"\setlength{\tabcolsep}{3.2pt}\footnotesize",
          r"\begin{tabular}{l|ccccc|ccccc}", r"\toprule",
          r" & \multicolumn{5}{c|}{FEMTO/PRONOSTIA (17 bearings, $R_{\max}{=}3000$\,s)} & "
@@ -151,8 +152,10 @@ def policy_tables():
     L = [r"\begin{table*}[t]", r"\centering",
          r"\caption{Hierarchical policies, ablations and system cost (mean$\pm$std over 3 seeds, all held-out bearings). "
          r"Esc.: escalated snapshots; Unsafe: critical snapshots ($y{\le}H_c$) left without a maintenance action; "
-         r"FM: false maintenance on healthy snapshots ($y{>}H_p$); B/s: payload bytes per snapshot (analytic). "
-         r"$^\ddagger$escalation budget matched to HERA on calibration data.}",
+         r"FM: false maintenance on healthy snapshots ($y{>}H_p$); RMSE: error of the median RUL used for the decision; "
+         r"B/s: payload bytes per snapshot (analytic). HERA-full: decision-aware gate on calibrated edge intervals; "
+         r"w/o anomaly term, no-DT (cloud model without state context) and no-UQ (point estimates with a margin) are "
+         r"ablations. $^\ddagger$Escalation budget matched to HERA on calibration data.}",
          r"\label{tab:policies}", r"\setlength{\tabcolsep}{3.4pt}\footnotesize",
          r"\begin{tabular}{l|ccccc|ccccc}", r"\toprule",
          r" & \multicolumn{5}{c|}{FEMTO/PRONOSTIA} & \multicolumn{5}{c}{XJTU-SY} \\",
@@ -193,7 +196,8 @@ def timing_table():
          r"\caption{Top: outcome of each bearing's first sustained (3 snapshots) schedule/urgent recommendation "
          r"(number of bearings, mean over 3 seeds): T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), "
          r"P premature (RUL $>R_{\max}$); lead: median RUL at timely alarms (min). Bottom: sensitivity of "
-         r"unsafe/FM (\%) for HERA-full and the point policy to the horizons and to $R_{\max}$.}",
+         r"unsafe/FM (\%) for HERA-full and the point policy to the horizons and to $R_{\max}$. Point + thr.: cloud "
+         r"point estimate with fixed thresholds; FM: false maintenance.}",
          r"\label{tab:timing}", r"\setlength{\tabcolsep}{2.6pt}\footnotesize",
          r"\begin{tabular}{l|cccc|cccc}", r"\toprule",
          f" & \\multicolumn{{4}}{{c|}}{{FEMTO ({info['fe']['n_bearings']} bearings)}} & "
@@ -347,7 +351,9 @@ def fleet_table():
     L = [r"\begin{table}[t]", r"\centering",
          r"\caption{Fleet scale (SCANIA Component X, " + f"{info['n_vehicles']:,}".replace(",", "{,}") + r" trucks, "
          + f"{info['n_failing']:,}".replace(",", "{,}") + r" failing; 50 random calibration/test splits). Late: failing trucks "
-         r"without alarm before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the cloud.}",
+         r"without alarm before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the cloud; "
+         r"$p$: predicted probability that RUL $\le H_p$; CRC: conformal risk control at target late rate $\varepsilon$; "
+         r"$n_{\mathrm{cal}}$: failing trucks used for calibration.}",
          r"\label{tab:fleet}", r"\footnotesize\setlength{\tabcolsep}{2.2pt}",
          r"\begin{tabular}{lrccc}", r"\toprule",
          r"Policy & $n_{\mathrm{cal}}$ & Late (\%) & FA (\%) & Esc.\ (\%) \\", r"\midrule"]
@@ -411,6 +417,12 @@ def coverage_macros():
         macro(f"{p}PbCovMed", f"{pb.cov_cloud.median():.2f}")
         macro(f"{p}PbCovMin", f"{pb.cov_cloud.min():.2f}")
         macro(f"{p}PbCovLow", str(int((pb.cov_cloud < 0.9).sum())))
+        cd = json.loads((R(ds) / "coverage_diagnosis.json").read_text())   # experiments/coverage_diagnosis.py
+        macro(f"{p}CovBelow", f"{100 * cd['below_share_low']:.0f}")
+        macro(f"{p}CovWorst", cd["worst_bearing"].replace("_", "\\_"))
+        macro(f"{p}CovWorstLife", f"{100 * cd['worst_life_rel']:.0f}")
+        macro(f"{p}CovRho", f"{cd['spearman_cov_vs_abs_log_life_rel']:.2f}")
+        macro(f"{p}CovEdgeLow", str(cd["edge_n_low"]))
 
 
 def robustness_macros():

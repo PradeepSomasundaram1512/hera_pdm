@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathptmx}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
+\newcommand{\rc}[1]{\par\medskip\textbf{Comment.} \emph{#1}\par}
+\newcommand{\rs}{\textbf{Response.} }
+
+\begin{document}
+\begin{center}
+{\large\textbf{Response to Reviewers}}\\[4pt]
+ICAIET 2027, Paper ID 1572\\
+\emph{When Does Uncertainty-Gated Edge-Cloud Predictive Maintenance Help? Evidence from Bearings and a Truck Fleet}\\
+Pradeep Somasundaram
+\end{center}
+
+We thank both reviewers for their careful reading and constructive comments. We address each point below. All new numbers are generated from the released results by the scripts in the public repository (\url{https://github.com/PradeepSomasundaram1512/hera_pdm}), and the revised paper remains within the 6-page limit.
+
+\section*{Reviewer 1}
+
+\rc{Pooled marginal coverage hides significant asset-level performance gaps, with multiple individual bearings falling well below the nominal 0.90 coverage target.}
+
+\rs We agree that this is an important limitation, and we have expanded its analysis rather than only reporting it (Section~V, \emph{Accuracy and calibration}). The revised text now explains \emph{why} the gaps occur:
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item The misses are one-sided and in the unsafe direction: on the under-covered bearings, the true RUL lay below the interval in 91\% (FEMTO) and 79\% (XJTU-SY) of missed snapshots, i.e.\ the models expected a longer life than the bearing had.
+\item The worst-covered bearing in each dataset (Bearing2\_7 and Bearing2\_4) failed after only 29\% and 12\% of the median life of bearings run under the same condition, so it was atypical relative to the calibration set.
+\item Calibration pools errors across bearings, while snapshots of one bearing are strongly dependent, so an atypical bearing is missed for long stretches rather than 10\% of the time. This is consistent with conformal coverage being marginal over exchangeable units rather than conditional on the asset.
+\item We also report that lifetime deviation alone does not predict coverage (Spearman $\rho=0.06$ and $-0.23$), to avoid over-interpreting the worst cases, and that the wider edge intervals under-covered only 1 of 15 XJTU-SY bearings.
+\end{itemize}
+The Discussion now names group-aware calibration for atypical assets as a direct remedy, alongside narrower and better-calibrated edge intervals. The analysis is reproducible with \texttt{experiments/coverage\_diagnosis.py}.
+
+\section*{Reviewer 2}
+
+\rc{1. Briefly clarify the selection of the model architectures and hyperparameters used in the experiments.}
+
+\rs Section~IV (\emph{Protocol}) now states the full selection procedure. The candidates were four standard sequence models for the fog/cloud tier (LSTM, GRU, TCN and CNN-LSTM) and two small edge models (a one-layer GRU and a two-layer dilated 1-D CNN, about 2.5k parameters each). For every architecture we searched width $\{32, 64, 128\}$ (edge models: 16), 8 or 25 epochs and input noise 0 or 0.2, trained with AdamW (learning rate $2\times10^{-3}$, one-cycle schedule, weight decay $10^{-3}$, batch size 256). The setting and the edge and cloud architectures with the lowest pinball loss on two inner validation bearings, held out from the training bearings of two folds, were selected with seed 0 and then frozen for all folds and seeds. Test and calibration bearings were never used for selection.
+
+\rc{2. Provide a short explanation for the variation in calibration coverage across individual bearings.}
+
+\rs Thank you; Reviewer~1 raised the same point. We added the explanation described above: misses concentrate on bearings whose degradation is atypical for their operating condition (the worst ones failed after 29\% and 12\% of the typical life), they are mostly in the direction of overestimated RUL, and because snapshots within a bearing are dependent while calibration is pooled across bearings, such a bearing is missed over long stretches. This follows from the marginal nature of the conformal guarantee.
+
+\rc{3. Improve the readability of the figures and tables, particularly by defining important abbreviations.}
+
+\rs All table and figure captions now define their abbreviations:
+\begin{itemize}[leftmargin=*,itemsep=1pt]
+\item Table~I: DT, calibrated UQ, XAI and HIL.
+\item Table~II: RMSE, MAE, raw and calibrated coverage, MPIW and +DT.
+\item Table~III: HERA-full and each ablation (without anomaly term, no-DT, no-UQ), RMSE, FM and B/s.
+\item Table~IV: the point policy and FM.
+\item Table~V: $p$, CRC, $\varepsilon$ and $n_{\mathrm{cal}}$.
+\item Fig.~2: unsafe decisions, false maintenance, $\alpha$, $\delta$ and $\alpha_e$.
+\end{itemize}
+We also regenerated Fig.~2 with larger fonts (7 to 8\,pt axis labels, legend and panel titles, previously 5.6 to 6.8\,pt) and shorter panel titles, and enlarged the layer labels in Fig.~1.
+
+\rc{4. A minor proofreading of grammar, formatting, and sentence structure is recommended throughout the manuscript.}
+
+\rs We proofread the full manuscript. We unified spelling to American English (e.g.\ ``behavior'', ``modeled'', ``hyperparameters''), corrected a duplicated ``CI'' label in Section~V, shortened long sentences, removed repetition between the Results and Discussion, and made the typography consistent.
+
+\medskip
+We hope these revisions address the reviewers' concerns, and we thank them again for their time.
+
+\end{document}

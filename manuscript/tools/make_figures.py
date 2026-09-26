@@ -23,8 +23,8 @@ from utils import H_CRIT, H_PLAN, R_MAX  # noqa: E402
 
 FIG = ROOT / "manuscript" / "icaiet2027" / "figures"
 FIG.mkdir(exist_ok=True)
-plt.rcParams.update({"font.family": "serif", "font.size": 7.5, "axes.labelsize": 7.5, "legend.fontsize": 6.5,
-                     "xtick.labelsize": 6.5, "ytick.labelsize": 6.5, "axes.linewidth": 0.6,
+plt.rcParams.update({"font.family": "serif", "font.size": 8, "axes.labelsize": 8, "legend.fontsize": 7,
+                     "xtick.labelsize": 7, "ytick.labelsize": 7, "axes.linewidth": 0.6,
                      "lines.linewidth": 1.0, "pdf.fonttype": 42})
 C = {"edge": "#2a6f97", "cloud": "#c05621", "true": "#111111", "hera": "#2f855a", "grey": "#718096",
      "red": "#c53030", "amber": "#d69e2e"}
@@ -45,12 +45,12 @@ def arrow(ax, p, q, style="-|>", color="#333", ls="-", lw=0.7, text=None, tx=0, 
 
 
 def fig1():
-    fig, ax = plt.subplots(figsize=(W1, 2.35))
+    fig, ax = plt.subplots(figsize=(W1, 2.15))
     ax.set_xlim(0, 1); ax.set_ylim(0, 1); ax.axis("off")
     for y0, h, lab, col in [(0.0, 0.30, "L1 edge", "#ebf4fa"), (0.34, 0.30, "L2-L3 fog/cloud", "#fdf1e7"),
                             (0.68, 0.32, "L4 decision", "#edf7ef")]:
         ax.add_patch(FancyBboxPatch((0.0, y0), 1.0, h, boxstyle="square,pad=0", fc=col, ec="none"))
-        ax.text(0.005, y0 + h - 0.015, lab, fontsize=5.5, va="top", color="#4a5568", style="italic")
+        ax.text(0.005, y0 + h - 0.015, lab, fontsize=6.5, va="top", color="#4a5568", style="italic")
     box(ax, 0.02, 0.04, 0.17, 0.17, "Vibration\nsensors", "white")
     box(ax, 0.25, 0.04, 0.34, 0.17, "Edge Monitoring Agent\nHI, $a_t$, tiny GRU\n$I^e_t=[L^e_t,U^e_t]$", "white")
     box(ax, 0.66, 0.04, 0.32, 0.17, "Escalation gate $e_t$\n$I^e_t$ ambiguous\nw.r.t. $H_c,H_p$?", "white", ec=C["hera"])
@@ -119,7 +119,7 @@ def fig_traj():
 
 
 def fig_tradeoff():
-    fig, axs = plt.subplots(1, 4, figsize=(7.16, 1.75))
+    fig, axs = plt.subplots(1, 4, figsize=(7.16, 1.95))
     pareto = {"P: Always-edge (CQR)": (C["edge"], "o", "-", "edge, CQR-CV+ ($\\alpha$)"),
               "P: Always-cloud (CQR)": (C["cloud"], "s", "-", "cloud, CQR-CV+ ($\\alpha$)"),
               "P: HERA": (C["hera"], "^", "-", "HERA ($\\alpha$)"),
@@ -143,7 +143,7 @@ def fig_tradeoff():
                    label="point, fixed thr.")
         ax.set_xlabel("false maintenance (%)")
         ax.set_ylabel("unsafe decisions (%)")
-        ax.set_title(f"({'ac'[j]}) {title.split('/')[0]}: decision frontier", fontsize=6.3, pad=2)
+        ax.set_title(f"({'ac'[j]}) {title.split('/')[0]}: frontier", fontsize=7.5, pad=2)
         ax.grid(alpha=0.25, lw=0.4)
         ax = axs[2 * j + 1]
         for fam, (col, mk, ls) in gates.items():
@@ -157,13 +157,13 @@ def fig_tradeoff():
                    label="HERA ($\\alpha_e$ sweep, $\\star$=0.1)")
         ax.set_xlabel("escalated snapshots (%)")
         ax.set_ylim(bottom=0, top=max(2.0, g[g.family.isin(list(gates))].unsafe_rate.max() * 110))
-        ax.set_title(f"({'bd'[j]}) {title.split('/')[0]}: gates at $\\alpha{{=}}0.1$", fontsize=6.3, pad=2)
+        ax.set_title(f"({'bd'[j]}) {title.split('/')[0]}: gates", fontsize=7.5, pad=2)
         ax.grid(alpha=0.25, lw=0.4)
     h1, l1 = axs[0].get_legend_handles_labels()
     h2, l2 = axs[1].get_legend_handles_labels()
-    fig.legend(h1 + h2, l1 + l2, loc="upper center", ncol=6, frameon=False, bbox_to_anchor=(0.5, 1.13),
-               fontsize=5.6, handlelength=1.6, columnspacing=0.9)
-    fig.subplots_adjust(wspace=0.36)
+    fig.legend(h1 + h2, l1 + l2, loc="upper center", ncol=6, frameon=False, bbox_to_anchor=(0.5, 1.2),
+               fontsize=7, handlelength=1.6, columnspacing=0.9)
+    fig.subplots_adjust(wspace=0.4)
     fig.savefig(FIG / "fig_tradeoff.pdf", bbox_inches="tight", pad_inches=0.01)
     plt.close(fig)
 
