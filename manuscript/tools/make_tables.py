@@ -193,11 +193,10 @@ def timing_table():
     order = [("Always-edge", "Always-edge"), ("Always-cloud", "Always-cloud"), ("Cloud point+threshold", "Point + thr."),
              ("HERA-full", "HERA-full"), ("Width gate (matched)", "Width gate")]
     L = [r"\begin{table}[t]", r"\centering",
-         r"\caption{Top: outcome of each bearing's first sustained (3 snapshots) schedule/urgent recommendation "
-         r"(number of bearings, mean over 3 seeds): T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), "
-         r"P premature (RUL $>R_{\max}$); lead: median RUL at timely alarms (min). Bottom: sensitivity of "
-         r"unsafe/FM (\%) for HERA-full and the point policy to the horizons and to $R_{\max}$. Point + thr.: cloud "
-         r"point estimate with fixed thresholds; FM: false maintenance.}",
+         r"\caption{Top: first sustained (3-snapshot) maintenance alarm per bearing (bearings, mean over 3 seeds): "
+         r"T timely ($H_c\le$ RUL $\le R_{\max}$), L late (RUL $<H_c$ or never), P premature (RUL $>R_{\max}$); "
+         r"lead: median RUL at timely alarms (min). Bottom: unsafe/FM (\%) of HERA-full and the point policy under other "
+         r"horizons and $R_{\max}$. Point + thr.: cloud point estimate, fixed thresholds; FM: false maintenance.}",
          r"\label{tab:timing}", r"\setlength{\tabcolsep}{2.6pt}\footnotesize",
          r"\begin{tabular}{l|cccc|cccc}", r"\toprule",
          f" & \\multicolumn{{4}}{{c|}}{{FEMTO ({info['fe']['n_bearings']} bearings)}} & "
@@ -349,11 +348,11 @@ def fleet_table():
             ("Edge, CRC $\\varepsilon{=}0.1$", "edge", 0.1, 1000), ("HERA, CRC $\\varepsilon{=}0.1$", "hera", 0.1, 1000),
             ("HERA, CRC $\\varepsilon{=}0.05$", "hera", 0.05, 1000), ("HERA, CRC $\\varepsilon{=}0.2$", "hera", 0.2, 1000)]
     L = [r"\begin{table}[t]", r"\centering",
-         r"\caption{Fleet scale (SCANIA Component X, " + f"{info['n_vehicles']:,}".replace(",", "{,}") + r" trucks, "
-         + f"{info['n_failing']:,}".replace(",", "{,}") + r" failing; 50 random calibration/test splits). Late: failing trucks "
-         r"without alarm before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the cloud; "
-         r"$p$: predicted probability that RUL $\le H_p$; CRC: conformal risk control at target late rate $\varepsilon$; "
-         r"$n_{\mathrm{cal}}$: failing trucks used for calibration.}",
+         r"\caption{Fleet scale (SCANIA, " + f"{info['n_vehicles']:,}".replace(",", "{,}") + r" trucks, "
+         + f"{info['n_failing']:,}".replace(",", "{,}") + r" failing; 50 calibration/test splits). Late: failing trucks "
+         r"not alarmed before RUL $<H_c$ (mean [95th pct.]); FA: healthy trucks alarmed $>H_p$ early; Esc.: readouts sent to the "
+         r"cloud; $p$: predicted $\Pr(\mathrm{RUL}\le H_p)$; CRC: conformal risk control at target $\varepsilon$; "
+         r"$n_{\mathrm{cal}}$: failing trucks used to calibrate.}",
          r"\label{tab:fleet}", r"\footnotesize\setlength{\tabcolsep}{2.2pt}",
          r"\begin{tabular}{lrccc}", r"\toprule",
          r"Policy & $n_{\mathrm{cal}}$ & Late (\%) & FA (\%) & Esc.\ (\%) \\", r"\midrule"]
